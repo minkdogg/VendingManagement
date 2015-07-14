@@ -87,17 +87,7 @@ namespace VendingManagement
         //
         // Select Single Database Entry
         //
-        //public Product Select(string id)
-        //{
-        //    return null;
-        //}
-
-
-
-        //
-        // SelectAll Matchuing Database Entries
-        //
-        public List<Product> SelectAll(string id)
+        public List<Product> Select(string id)
         {
             List<Product> returnResult = new List<Product>();
             foreach (Product product in listProduct)
@@ -108,6 +98,15 @@ namespace VendingManagement
                 }
             }
             return returnResult;
+        }
+
+
+
+        //
+        // SelectAll Matchuing Database Entries
+        public List<Product> SelectAllProduct()
+        {
+            return listProduct;
         }
 
 

@@ -24,6 +24,11 @@ namespace VendingManagement
 
         private void button1_Click(object sender, EventArgs e)
         {
+            Database database = new Database();
+            database.generateInitialData();
+            List<Product> data = database.SelectAllProduct();
+
+            dataGridView2.DataSource = data;
 
         }
 

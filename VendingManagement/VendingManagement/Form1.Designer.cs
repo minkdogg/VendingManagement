@@ -31,13 +31,6 @@
             this.components = new System.ComponentModel.Container();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.MachineID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MaxProducts = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ProductList = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.City = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Location = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NeedService = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NeedRestock = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
@@ -78,56 +71,18 @@
             // 
             // dataGridView2
             // 
-            this.dataGridView2.AllowUserToOrderColumns = true;
+            this.dataGridView2.AllowUserToAddRows = false;
+            this.dataGridView2.AllowUserToDeleteRows = false;
+            this.dataGridView2.AllowUserToResizeColumns = false;
+            this.dataGridView2.AllowUserToResizeRows = false;
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.MachineID,
-            this.MaxProducts,
-            this.ProductList,
-            this.City,
-            this.Location,
-            this.NeedService,
-            this.NeedRestock});
+            this.dataGridView2.Enabled = false;
             this.dataGridView2.Location = new System.Drawing.Point(194, 89);
             this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.ReadOnly = true;
             this.dataGridView2.Size = new System.Drawing.Size(907, 317);
             this.dataGridView2.TabIndex = 1;
             this.dataGridView2.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellContentClick);
-            // 
-            // MachineID
-            // 
-            this.MachineID.HeaderText = "Machine ID";
-            this.MachineID.Name = "MachineID";
-            // 
-            // MaxProducts
-            // 
-            this.MaxProducts.HeaderText = "Max Products";
-            this.MaxProducts.Name = "MaxProducts";
-            // 
-            // ProductList
-            // 
-            this.ProductList.HeaderText = "Product List";
-            this.ProductList.Name = "ProductList";
-            // 
-            // City
-            // 
-            this.City.HeaderText = "City";
-            this.City.Name = "City";
-            // 
-            // Location
-            // 
-            this.Location.HeaderText = "Location";
-            this.Location.Name = "Location";
-            // 
-            // NeedService
-            // 
-            this.NeedService.HeaderText = "Need Service";
-            this.NeedService.Name = "NeedService";
-            // 
-            // NeedRestock
-            // 
-            this.NeedRestock.HeaderText = "Need Restock";
-            this.NeedRestock.Name = "NeedRestock";
             // 
             // button1
             // 
@@ -302,13 +257,6 @@
 
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DataGridView dataGridView2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn MachineID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn MaxProducts;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ProductList;
-        private System.Windows.Forms.DataGridViewTextBoxColumn City;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Location;
-        private System.Windows.Forms.DataGridViewTextBoxColumn NeedService;
-        private System.Windows.Forms.DataGridViewTextBoxColumn NeedRestock;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.MenuStrip menuStrip1;
