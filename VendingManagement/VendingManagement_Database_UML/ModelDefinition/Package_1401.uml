@@ -1,0 +1,3670 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+  dslVersion="1.0.0.0"
+  Id="f007d1cf-0381-456d-b138-20e106c7eb95"
+  name="VendingManagement"
+  visibility="Private" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <referencesInternal>
+    <reference
+      Id="89638636-f5c4-4290-9be3-a806f85d845c"
+      handle="viewcode://./CodeSchema_Namespace?Namespace%3DVendingManagement"
+      tag="ViewCode" />
+  </referencesInternal>
+  <packagedElements>
+    <packageHasNamedElement>
+      <class
+        Id="e7da886f-b9f6-40b1-8f48-93003f5efeca"
+        name="Database"
+        visibility="Package"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="9d29f800-7672-4489-8d7d-ed6011090819"
+            handle="viewcode://./CodeSchema_Class?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2Fmkohlmann_he%2FDropbox%2FCS_Programs%2FVending Management%2FVendingManagement%2FVendingManagement%2Fbin%2FDebug%2FVendingManagement.exe&quot; Namespace%3DVendingManagement Type%3DDatabase"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="73637653-42c6-4bee-8341-f0dc27d9db76"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="973bd9be-c58d-4873-a448-7d0ff08cc1b8">
+                <propertyInstance
+                  Id="ef0488c1-d559-4683-bde6-0fca4c5b9fd4"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="71fa9d69-00bb-4070-8a0e-5b368e56fc0f">
+                <propertyInstance
+                  Id="b062d114-4238-4092-903e-cad8eef93a81"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="5633cf65-3763-4703-8cd7-19bb32b6b211">
+                <propertyInstance
+                  Id="1446fdb0-c920-45b3-b456-3fe3096c15a9"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="afd13477-b17d-4a7c-ad5c-cd3845ea38e2">
+                <propertyInstance
+                  Id="05900007-cd37-47ee-9331-2d86d2dbfed7"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="75c327ab-775d-4424-a2b6-1dc57412ef97">
+                <propertyInstance
+                  Id="66c3d3d0-083f-45ac-b996-4468f2437150"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <targetEnds>
+          <association
+            Id="dcc4e87b-423d-4d71-a721-b96c0272483d"
+            isDerived="false"
+            sourceEndRoleName="Database"
+            targetEndRoleName="Employee"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="3593e31a-cb66-44ec-84d4-aa3e9c733e63"
+              LastKnownName="Employee"
+              LastKnownLocation="Package_1401.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="5e63f133-b7d8-40fa-8d46-5c0c35ea2770"
+                  name="Database"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="89b1aee0-ac74-4007-9d62-27ed39b8537b"
+                      name="Lower" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="ff2da9d8-212b-4d45-a9b9-2ce47de37c18"
+                      name="Upper" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="e0d6e10a-7be4-4c0e-a32e-13b30ac956ed"
+                  name="Employee"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="de70af75-88f4-480a-8590-9cedd2efcdbc"
+                      name="Lower"
+                      value="0" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="a1bea804-322a-4e81-bec1-ac13c9ccf240"
+                      name="Upper"
+                      value="*" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="4f4460fd-c672-42fb-80aa-fc9b2968a8e0"
+            isDerived="false"
+            sourceEndRoleName="Database"
+            targetEndRoleName="City"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="a909d1a0-9974-4860-ab9e-a657b4b739e6"
+              LastKnownName="City"
+              LastKnownLocation="Package_1401.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="16f64621-0710-493e-b0f4-df1f4d26d2a3"
+                  name="Database"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="24e905de-7de3-44d7-9180-bf47859714a9"
+                      name="Lower" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="23a2b922-b3e6-4bb9-9c51-9992057ae868"
+                      name="Upper" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="86e04f6c-f5ac-416d-8af9-ceefa6a3a849"
+                  name="City"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="e641b4cb-cc23-4b0b-98b2-b193807c56d4"
+                      name="Lower"
+                      value="0" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="c4e34e17-65ec-4f28-8e19-5f56ee01da09"
+                      name="Upper"
+                      value="*" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="4624e37b-5400-480d-ba8c-920ad44f7620"
+            isDerived="false"
+            sourceEndRoleName="Database"
+            targetEndRoleName="Machine"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="e12b9f9e-d62d-46d2-a274-4f011d9b61ee"
+              LastKnownName="Machine"
+              LastKnownLocation="Package_1401.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="ca019a6d-c3f0-48be-b160-4a64a9a664aa"
+                  name="Database"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="71d419d3-0bf2-4a83-822d-8e9fb7dab630"
+                      name="Lower" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="d410e3cb-cebe-4121-9459-6748d13baae2"
+                      name="Upper" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="9b2b4add-ce63-4f59-8790-f783fe2a1718"
+                  name="Machine"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="c45ad553-d63e-407e-8005-260c883137db"
+                      name="Lower"
+                      value="0" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="904540e4-f093-4ff6-8c9e-573b8c93c343"
+                      name="Upper"
+                      value="*" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="ddfceca8-2670-44f4-adef-5925602b9cc6"
+            isDerived="false"
+            sourceEndRoleName="Database"
+            targetEndRoleName="Product"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="4cfee858-0e4d-420d-bbe6-531bef55b0ca"
+              LastKnownName="Product"
+              LastKnownLocation="Package_1401.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="d25ffc69-1f9d-4805-8144-3cb8ee128d27"
+                  name="Database"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="5f4dc34f-5a0e-468e-a958-f9d2372eed7d"
+                      name="Lower" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="9511e832-fac0-430c-86ae-89d06ee7edd8"
+                      name="Upper" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="93e12dd6-6726-4991-8f9d-f53cfe729ea9"
+                  name="Product"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="26980c42-0eba-4d69-bb24-d4ebe185e227"
+                      name="Lower"
+                      value="0" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="827410c3-c91b-4637-bbe0-b41251c5860d"
+                      name="Upper"
+                      value="*" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="fc2cd7d4-b206-43e2-9533-ea3e53df4f41"
+            isDerived="false"
+            sourceEndRoleName="Database"
+            targetEndRoleName="Transactions"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="cee7496e-4b34-4200-b438-e6b691fb0bc6"
+              LastKnownName="Transactions"
+              LastKnownLocation="Package_1401.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="8638a5d3-af0e-4264-9c27-2ecddb7dcaca"
+                  name="Database"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="9422fb6b-0ab6-41fb-b1fc-e3dcf52b3a1e"
+                      name="Lower" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="4e00f1de-d229-4b0f-af34-bbe8a2bd3bcb"
+                      name="Upper" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="12a5822f-c4dc-46e8-9e0d-411b8767cbb1"
+                  name="Transactions"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="3ab7e30e-814b-4088-b8e9-3472ccb9ef64"
+                      name="Lower"
+                      value="0" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="89dd60dd-348a-4822-a645-d56f0616abee"
+                      name="Upper"
+                      value="*" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="ad1289b2-a041-4542-941f-21cbd7395b67"
+            isDerived="false"
+            sourceEndRoleName="Database"
+            targetEndRoleName="Vehicle"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="7680e4ed-2fce-4c9c-90f2-2be3037c85d5"
+              LastKnownName="Vehicle"
+              LastKnownLocation="Package_1401.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="531e3c8e-7a48-48a7-815a-ea687262fe7f"
+                  name="Database"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="e073de2e-ab11-451c-877a-4fa4fc102fa7"
+                      name="Lower" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="4b3b0953-8aa1-4e02-9d37-3ad85d9a6d7c"
+                      name="Upper" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="1698cc52-9972-40f5-948c-0a64e0f845c2"
+                  name="Vehicle"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="0fd61572-ab15-46f9-aebf-028b6ca410c3"
+                      name="Lower"
+                      value="0" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="3b01d69e-a5f9-4517-853b-bce4c451e5cb"
+                      name="Upper"
+                      value="*" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+        <ownedAttributesInternal>
+          <property
+            Id="a26a2204-c9dd-4915-81f5-d37e47c47eb4"
+            name="listProduct"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="98d16480-5b34-4e76-9b6b-4d662167ad10"
+                handle="viewcode://./CodeSchema_Field?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2Fmkohlmann_he%2FDropbox%2FCS_Programs%2FVending Management%2FVendingManagement%2FVendingManagement%2Fbin%2FDebug%2FVendingManagement.exe&quot; Namespace%3DVendingManagement Type%3DDatabase Member%3DlistProduct"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="93ee740a-e2a1-44f6-9083-ad3225b34fbc"
+                name="field"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="8a3ceb2b-1203-4c61-9f99-6c1a20b792f3">
+                    <propertyInstance
+                      Id="3052cd53-36c8-465f-986f-b42b254711fb"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="af11ebc6-223e-4c86-b102-f50085fda116">
+                    <propertyInstance
+                      Id="503760cd-b261-4fcc-8809-af2b27143d32"
+                      name="IsConst"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="b5c67698-d3c0-4e95-ad8c-956052722781">
+                    <propertyInstance
+                      Id="3d5c38ad-fe31-4c62-804c-043db4ae6c49"
+                      name="IsNullable"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="c18e7911-58b3-444d-8435-295d90645a79">
+                    <propertyInstance
+                      Id="199c2a85-87ed-48a7-a5d8-cda10b16b032"
+                      name="IsVolatile"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="219cb506-7e33-4d29-8e8b-ffec92b337a3">
+                    <propertyInstance
+                      Id="0397d975-70df-48fd-9f41-9fdd03f6df2a"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <classMoniker
+                Id="bc08c594-ffc6-48f1-83ba-29a5d03d609e"
+                LastKnownName="List&lt;Product‎&gt;"
+                LastKnownLocation="Package3_1401.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="8dafebc8-05a4-40b4-add8-287bc7a42bf8"
+            name="listMachine"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="473a610f-5512-4e06-be89-16ef675e9d3d"
+                handle="viewcode://./CodeSchema_Field?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2Fmkohlmann_he%2FDropbox%2FCS_Programs%2FVending Management%2FVendingManagement%2FVendingManagement%2Fbin%2FDebug%2FVendingManagement.exe&quot; Namespace%3DVendingManagement Type%3DDatabase Member%3DlistMachine"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="06f726f3-47bc-4a7e-a159-639b8f495fea"
+                name="field"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="2356bccd-bb87-421c-963a-fa1f7d880e1b">
+                    <propertyInstance
+                      Id="644d1e07-8787-4c15-9224-efc12deb94ae"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="7c729f37-eb49-4513-b798-cb89605de103">
+                    <propertyInstance
+                      Id="602d3d35-fba7-4dc7-b494-983bbc3e2cbb"
+                      name="IsConst"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="0f386872-acb6-4de1-a8d9-b3824d066c92">
+                    <propertyInstance
+                      Id="1f305784-c290-4ad7-9d92-a1c5df437c01"
+                      name="IsNullable"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="95ed1b19-19e4-4339-9be3-f6a6fa031715">
+                    <propertyInstance
+                      Id="768fbc52-64e6-42b0-9dad-41439a0f31f8"
+                      name="IsVolatile"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="d2ac41ec-b835-4e34-8776-c9821201b3d6">
+                    <propertyInstance
+                      Id="0e9f83e3-dcf8-490b-8095-0c90d1522f63"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <classMoniker
+                Id="72020b62-1b0e-448a-81a1-d463c89ef9a2"
+                LastKnownName="List&lt;Machine‎&gt;"
+                LastKnownLocation="Package3_1401.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="c2f9070f-858c-4b35-8d06-d79f77012f05"
+            name="listCity"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="e08cbcdd-e218-4a32-a761-553eee1e12d1"
+                handle="viewcode://./CodeSchema_Field?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2Fmkohlmann_he%2FDropbox%2FCS_Programs%2FVending Management%2FVendingManagement%2FVendingManagement%2Fbin%2FDebug%2FVendingManagement.exe&quot; Namespace%3DVendingManagement Type%3DDatabase Member%3DlistCity"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="f3a258c3-4de9-4b65-97ef-350517a667fd"
+                name="field"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="21e22436-9e97-4a5a-a710-81670e2cb18f">
+                    <propertyInstance
+                      Id="28ff6f7c-2e44-4fb4-a2a5-6a22abc3c85a"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="e017a374-cc67-4d22-831d-151c875e7a64">
+                    <propertyInstance
+                      Id="08decd1d-97d0-4b56-ad2e-43a67eee44d6"
+                      name="IsConst"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="630522fc-1b8a-47d8-a6ef-323b08784efc">
+                    <propertyInstance
+                      Id="1a016694-cd3a-47e0-8407-f88742af3ba4"
+                      name="IsNullable"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="e362a1b3-e4e2-41d2-a455-acc969de9141">
+                    <propertyInstance
+                      Id="865080b9-edc7-4a2d-b8cc-698c11e334c0"
+                      name="IsVolatile"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="6abbd4a4-ab8a-4d5a-a257-e11e80b4a3cf">
+                    <propertyInstance
+                      Id="4fa16cc5-ca79-46a4-b00b-2dd96d3bf580"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <classMoniker
+                Id="c31339bb-e017-4134-8ecd-faef61611e6d"
+                LastKnownName="List&lt;City‎&gt;"
+                LastKnownLocation="Package3_1401.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="d8302d7b-db50-4b6f-95e7-9d3a21f2475f"
+            name="listEmployee"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="be12032e-55f1-45db-8a17-673f0ebc5fb9"
+                handle="viewcode://./CodeSchema_Field?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2Fmkohlmann_he%2FDropbox%2FCS_Programs%2FVending Management%2FVendingManagement%2FVendingManagement%2Fbin%2FDebug%2FVendingManagement.exe&quot; Namespace%3DVendingManagement Type%3DDatabase Member%3DlistEmployee"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="a97458a0-cb4c-4afa-bc1a-6abe42fd8197"
+                name="field"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="21bd2ded-7e8c-4b86-a77c-cfd44e8084da">
+                    <propertyInstance
+                      Id="0ba933eb-3a34-4f02-80d5-a1074626e1e6"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="f06ef726-2ab8-4ab5-b9ce-ba8f6146123a">
+                    <propertyInstance
+                      Id="cf7c2fd9-19d8-4d48-ba12-3fc9a4925fa9"
+                      name="IsConst"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="c078ac00-dc7f-4697-89c6-0755a59a248c">
+                    <propertyInstance
+                      Id="bdbf6339-3387-4462-949c-ffa0b81b84ba"
+                      name="IsNullable"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="be00a751-e543-461c-842e-4a885fd38e2e">
+                    <propertyInstance
+                      Id="0476f839-6f6f-4f95-825c-46ceb8ea2e1f"
+                      name="IsVolatile"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="9c3189d5-0b51-43ea-a401-afa2a75a2b83">
+                    <propertyInstance
+                      Id="efce6577-dbac-4af8-9d9f-4352ba0ffcc9"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <classMoniker
+                Id="af7daf85-1884-4a3f-af4e-6052e1ce49bc"
+                LastKnownName="List&lt;Employee‎&gt;"
+                LastKnownLocation="Package3_1401.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="8204ba1c-5c60-419a-b971-f255e72a2daf"
+            name="listVehicle"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="98c51f70-d182-4f00-bb64-40c7d8f2715b"
+                handle="viewcode://./CodeSchema_Field?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2Fmkohlmann_he%2FDropbox%2FCS_Programs%2FVending Management%2FVendingManagement%2FVendingManagement%2Fbin%2FDebug%2FVendingManagement.exe&quot; Namespace%3DVendingManagement Type%3DDatabase Member%3DlistVehicle"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="6252683b-6248-426f-955e-5048b3a38c95"
+                name="field"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="5ec3c697-a393-48d4-b451-ab4b4cc43c96">
+                    <propertyInstance
+                      Id="a974ae84-cd58-4493-8a9e-4d4ebfacab79"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="6174754b-586b-4d6c-81c8-8024ec0305cc">
+                    <propertyInstance
+                      Id="ab0e7c9c-2a46-4a14-9616-1a86ad426f88"
+                      name="IsConst"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="43077f96-0bc2-4055-b420-9eecb6f43829">
+                    <propertyInstance
+                      Id="164f1442-e6da-475d-8729-90ea4ebd6043"
+                      name="IsNullable"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="f3b78c1f-9aa9-4868-89aa-db9aa9a551dd">
+                    <propertyInstance
+                      Id="eb82f393-d78e-4749-8b2f-d989c089bd37"
+                      name="IsVolatile"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="85426181-7d3f-4c4f-879e-a9889e03acfc">
+                    <propertyInstance
+                      Id="fabbca64-d685-45ab-92b3-574c5069f3b7"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <classMoniker
+                Id="ecee701b-6032-4309-8bd4-42dae8ec1387"
+                LastKnownName="List&lt;Vehicle‎&gt;"
+                LastKnownLocation="Package3_1401.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="5d91f3d2-02a2-4a3e-bbb0-d625b224d264"
+            name="listTransactions"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="2fc35d3a-c34c-4e34-80ed-f3680fb50934"
+                handle="viewcode://./CodeSchema_Field?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2Fmkohlmann_he%2FDropbox%2FCS_Programs%2FVending Management%2FVendingManagement%2FVendingManagement%2Fbin%2FDebug%2FVendingManagement.exe&quot; Namespace%3DVendingManagement Type%3DDatabase Member%3DlistTransactions"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="f101e1e0-b552-4ab6-8315-7e82e6788358"
+                name="field"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="d3955525-052d-4d46-ac84-90631faaccaf">
+                    <propertyInstance
+                      Id="7521b336-ae8d-4e84-b003-76a41de595f9"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="d90e6e2d-ab1c-41af-a8e1-1f0d4a825ba8">
+                    <propertyInstance
+                      Id="ed64d6c8-0c48-4391-91fe-af819d5db5ef"
+                      name="IsConst"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="7cc10d73-8a18-4d3d-b60b-286022d6973b">
+                    <propertyInstance
+                      Id="1e60a2a3-30b2-4854-9306-eeee9ac64a4b"
+                      name="IsNullable"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="267d9091-b03f-4e3b-83df-71b9b690cca7">
+                    <propertyInstance
+                      Id="a2ff437e-c9ec-4bb8-90d4-ddeca5afb000"
+                      name="IsVolatile"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="43125283-66f6-4605-848a-52fdaed09228">
+                    <propertyInstance
+                      Id="45469f47-4763-4c98-a089-ef2fcfbfafaf"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <classMoniker
+                Id="0501b410-e95b-4fd6-a11c-f60cf2e7146e"
+                LastKnownName="List&lt;Transactions‎&gt;"
+                LastKnownLocation="Package3_1401.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="db44a225-46cb-4e80-8f8a-946056f8d51a"
+            name="generateInitialData"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="bfae02df-b95f-48b7-b694-9db9fc007bf9"
+                handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2Fmkohlmann_he%2FDropbox%2FCS_Programs%2FVending Management%2FVendingManagement%2FVendingManagement%2Fbin%2FDebug%2FVendingManagement.exe&quot; Namespace%3DVendingManagement Type%3DDatabase Member%3DgenerateInitialData"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="546eff8d-5a86-4680-971f-2c5614ab9487"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="a6b64bde-02b2-4b71-96aa-f9afd636b8cb">
+                    <propertyInstance
+                      Id="73f9a1c8-f5ab-4c82-b196-b1d94a82f281"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="cbfe7f6c-4819-4200-bf80-88fab60ef4b7">
+                    <propertyInstance
+                      Id="3a8d7658-a0cc-497c-896a-db92a611aaf9"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="bee05f24-4657-4fcd-8441-880d1b15c575">
+                    <propertyInstance
+                      Id="acc5383f-0339-42d4-9175-a3ea19dddd70"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="1c0bff9a-4ca5-46f0-aa40-ef71f92487de">
+                    <propertyInstance
+                      Id="5d22c08a-f010-4cf1-8ead-9398b699c285"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="4c8c072d-b83d-49fb-ae8e-f565a0faed55">
+                    <propertyInstance
+                      Id="836c77ac-29ab-41cc-ad92-148fc6016bec"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="e23f4502-db01-433a-b1a8-be4487d0702f">
+                    <propertyInstance
+                      Id="3d1327f6-4e82-4c4b-ae16-d8bde5b03bc0"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+          </operation>
+          <operation
+            Id="9f7e477f-6ffc-4f98-96c3-77a5e204de2c"
+            name="Append"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="6c20dcd5-574b-4dbd-8cd5-99527bd6c3cd"
+                handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2Fmkohlmann_he%2FDropbox%2FCS_Programs%2FVending Management%2FVendingManagement%2FVendingManagement%2Fbin%2FDebug%2FVendingManagement.exe&quot; Namespace%3DVendingManagement Type%3DDatabase Member%3D(Name%3DAppend OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2Fmkohlmann_he%2FDropbox%2FCS_Programs%2FVending Management%2FVendingManagement%2FVendingManagement%2Fbin%2FDebug%2FVendingManagement.exe&quot; Namespace%3DVendingManagement Type%3DProduct)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="1812d82b-181a-42e7-9ad1-61296c0efbd4"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="2b881b17-7c28-494e-8c5a-c5df695fd581">
+                    <propertyInstance
+                      Id="6f2a5734-76d7-4b69-85d7-29780f7e2b7d"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="135c848f-94b2-43f1-93a7-46af7b113553">
+                    <propertyInstance
+                      Id="27a489cc-2724-4fc7-bb32-9ff3c08fbaf3"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="25302d98-c90a-407b-b174-3182add66e5f">
+                    <propertyInstance
+                      Id="50166413-6121-4ab5-b522-0a1d86944b01"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="e3d711d4-9c0f-4b81-ac82-7ab8abe9f62d">
+                    <propertyInstance
+                      Id="9ad02a22-5983-4dc3-82d8-89724cca9985"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="01a2cb43-889e-445c-9f0f-3541cf922d1d">
+                    <propertyInstance
+                      Id="340a626a-32c0-41c6-982d-5807d6cbbcef"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="c696ceae-b38b-4fc8-a115-107886bdff95">
+                    <propertyInstance
+                      Id="fb53c79f-1bab-43a5-8475-9df13cd42ec3"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="971c64f3-3fa6-4a26-8b3d-5fc59061292d"
+                  name="entry"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="9675de90-087d-4887-9d0a-659a6ca771db"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2Fmkohlmann_he%2FDropbox%2FCS_Programs%2FVending Management%2FVendingManagement%2FVendingManagement%2Fbin%2FDebug%2FVendingManagement.exe&quot; Namespace%3DVendingManagement Type%3DDatabase Member%3D(Name%3DAppend OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2Fmkohlmann_he%2FDropbox%2FCS_Programs%2FVending Management%2FVendingManagement%2FVendingManagement%2Fbin%2FDebug%2FVendingManagement.exe&quot; Namespace%3DVendingManagement Type%3DProduct)]) ParameterIdentifier%3Dentry"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="4cfee858-0e4d-420d-bbe6-531bef55b0ca"
+                      LastKnownName="Product"
+                      LastKnownLocation="Package_1401.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="2708886b-7135-471d-841a-bbe40d665fff"
+            name="Append"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="7c025bbf-fd46-45db-9cee-2d39a310ba53"
+                handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2Fmkohlmann_he%2FDropbox%2FCS_Programs%2FVending Management%2FVendingManagement%2FVendingManagement%2Fbin%2FDebug%2FVendingManagement.exe&quot; Namespace%3DVendingManagement Type%3DDatabase Member%3D(Name%3DAppend OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2Fmkohlmann_he%2FDropbox%2FCS_Programs%2FVending Management%2FVendingManagement%2FVendingManagement%2Fbin%2FDebug%2FVendingManagement.exe&quot; Namespace%3DVendingManagement Type%3DMachine)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="17b0f3d1-64d4-4796-87b6-00692f6c9eb9"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="7e84d717-0116-435b-b856-e76732f265f8">
+                    <propertyInstance
+                      Id="f36df580-fb81-46c7-8b50-d70c71293bca"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="14290ee4-1325-4300-8b2e-58bde2ad1e45">
+                    <propertyInstance
+                      Id="2565d807-eb4f-4ee2-8cf1-5fe175531d4a"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="5dc44127-0d6d-4e96-bf0c-f8982e7d4f83">
+                    <propertyInstance
+                      Id="c0b81a8d-01ab-4d0d-9413-b72e69cfda94"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="92d6380e-d278-4c63-85dc-1dfceb212c9d">
+                    <propertyInstance
+                      Id="d3a2f572-27bd-4d45-b542-c608112b1774"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="a430ce5e-adc8-4f31-ba51-22a60f56ed9e">
+                    <propertyInstance
+                      Id="f4824782-52e0-4416-b69e-0c630ab24674"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="4dd0e194-4801-4cbc-92e7-c551e79cf39f">
+                    <propertyInstance
+                      Id="fc68afb0-9abc-4dfd-8354-9ba5706d15d5"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="ef1242bc-0f0c-4f61-b468-08fdd44f1b42"
+                  name="entry"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="d33b0478-29b6-409e-8f07-67c5b8c020a9"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2Fmkohlmann_he%2FDropbox%2FCS_Programs%2FVending Management%2FVendingManagement%2FVendingManagement%2Fbin%2FDebug%2FVendingManagement.exe&quot; Namespace%3DVendingManagement Type%3DDatabase Member%3D(Name%3DAppend OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2Fmkohlmann_he%2FDropbox%2FCS_Programs%2FVending Management%2FVendingManagement%2FVendingManagement%2Fbin%2FDebug%2FVendingManagement.exe&quot; Namespace%3DVendingManagement Type%3DMachine)]) ParameterIdentifier%3Dentry"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="e12b9f9e-d62d-46d2-a274-4f011d9b61ee"
+                      LastKnownName="Machine"
+                      LastKnownLocation="Package_1401.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="27d2a111-8ed9-4179-9811-dbe541606855"
+            name="Append"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="0ccd06c2-2b80-479b-9e7f-816395195616"
+                handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2Fmkohlmann_he%2FDropbox%2FCS_Programs%2FVending Management%2FVendingManagement%2FVendingManagement%2Fbin%2FDebug%2FVendingManagement.exe&quot; Namespace%3DVendingManagement Type%3DDatabase Member%3D(Name%3DAppend OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2Fmkohlmann_he%2FDropbox%2FCS_Programs%2FVending Management%2FVendingManagement%2FVendingManagement%2Fbin%2FDebug%2FVendingManagement.exe&quot; Namespace%3DVendingManagement Type%3DCity)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="8d2d8f15-5c6a-4b02-a830-125221aa157c"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="9545bc47-7844-483a-962a-9edd15f5139c">
+                    <propertyInstance
+                      Id="5c69c36b-a7e8-4bb0-bf06-4b1de0320673"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="3d9c648d-8ce6-409b-afae-0d64648f35d8">
+                    <propertyInstance
+                      Id="d2970ad2-aae3-464c-a349-e624e089b8f2"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="97730b4f-0e69-41fb-b1f9-87d36024d919">
+                    <propertyInstance
+                      Id="a9335292-7c0a-4efe-97a6-4c56d713ba78"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="1843c479-1f7b-48f3-9cd1-6a8220c62048">
+                    <propertyInstance
+                      Id="b0afa824-3799-4669-a4ef-94840e35cecf"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="85d984a1-1b0e-47fd-b33f-4f57b21e5e15">
+                    <propertyInstance
+                      Id="a5c90fb2-0578-4d31-ab06-2e556e1ba815"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="bc5dd388-969a-4936-abe0-3e556e97b53e">
+                    <propertyInstance
+                      Id="8b23222a-359c-414c-9971-2817b780d8ac"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="2c2dca4a-a6b8-4362-937e-61e45b75c6db"
+                  name="entry"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="9bf3298b-d013-4bab-9280-61b04f0c0a82"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2Fmkohlmann_he%2FDropbox%2FCS_Programs%2FVending Management%2FVendingManagement%2FVendingManagement%2Fbin%2FDebug%2FVendingManagement.exe&quot; Namespace%3DVendingManagement Type%3DDatabase Member%3D(Name%3DAppend OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2Fmkohlmann_he%2FDropbox%2FCS_Programs%2FVending Management%2FVendingManagement%2FVendingManagement%2Fbin%2FDebug%2FVendingManagement.exe&quot; Namespace%3DVendingManagement Type%3DCity)]) ParameterIdentifier%3Dentry"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="a909d1a0-9974-4860-ab9e-a657b4b739e6"
+                      LastKnownName="City"
+                      LastKnownLocation="Package_1401.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="4dcfd8c6-387d-4819-bda4-e6dcd985ff25"
+            name="Append"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="8f902acf-ab90-4bdd-bef3-0f8bf867bee1"
+                handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2Fmkohlmann_he%2FDropbox%2FCS_Programs%2FVending Management%2FVendingManagement%2FVendingManagement%2Fbin%2FDebug%2FVendingManagement.exe&quot; Namespace%3DVendingManagement Type%3DDatabase Member%3D(Name%3DAppend OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2Fmkohlmann_he%2FDropbox%2FCS_Programs%2FVending Management%2FVendingManagement%2FVendingManagement%2Fbin%2FDebug%2FVendingManagement.exe&quot; Namespace%3DVendingManagement Type%3DEmployee)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="a186bf20-3490-4f6f-9456-9c58c803c93a"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="a7dd240a-0c8e-4757-bc9b-a56a143ec514">
+                    <propertyInstance
+                      Id="104105c9-f9f8-4646-8af7-91d982fb2254"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="bc0abda5-a32e-4101-adf6-538d89e23151">
+                    <propertyInstance
+                      Id="7848ba45-e503-4791-9171-d5a9ca606b11"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="6b00e3d9-ebb2-4a25-9c51-40d9a307ac7a">
+                    <propertyInstance
+                      Id="ed1a0606-7ad1-4765-94e4-54f2b309b3b8"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="a42519e9-81d5-4667-8b70-b29097f09085">
+                    <propertyInstance
+                      Id="3af36876-b088-4893-9520-f003614be4a4"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="1e82e8a6-4337-4d3d-8e98-753986f5bb4d">
+                    <propertyInstance
+                      Id="6ba70067-9c76-4550-b8c6-4bc9fab29076"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="685edf9b-c585-4c8f-8b26-13c7cce4c6f3">
+                    <propertyInstance
+                      Id="c732431c-1125-4ed2-925f-d1ac5ac118a7"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="42364d58-4ee3-4034-81d7-39a029e61eaa"
+                  name="entry"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="33c9c325-64d7-4217-94a6-00f599410a85"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2Fmkohlmann_he%2FDropbox%2FCS_Programs%2FVending Management%2FVendingManagement%2FVendingManagement%2Fbin%2FDebug%2FVendingManagement.exe&quot; Namespace%3DVendingManagement Type%3DDatabase Member%3D(Name%3DAppend OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2Fmkohlmann_he%2FDropbox%2FCS_Programs%2FVending Management%2FVendingManagement%2FVendingManagement%2Fbin%2FDebug%2FVendingManagement.exe&quot; Namespace%3DVendingManagement Type%3DEmployee)]) ParameterIdentifier%3Dentry"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="3593e31a-cb66-44ec-84d4-aa3e9c733e63"
+                      LastKnownName="Employee"
+                      LastKnownLocation="Package_1401.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="b907495a-afbe-453e-bb42-2394043d2216"
+            name="Append"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="d8b3213b-a5c0-4231-ad5e-a607f3a60c6f"
+                handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2Fmkohlmann_he%2FDropbox%2FCS_Programs%2FVending Management%2FVendingManagement%2FVendingManagement%2Fbin%2FDebug%2FVendingManagement.exe&quot; Namespace%3DVendingManagement Type%3DDatabase Member%3D(Name%3DAppend OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2Fmkohlmann_he%2FDropbox%2FCS_Programs%2FVending Management%2FVendingManagement%2FVendingManagement%2Fbin%2FDebug%2FVendingManagement.exe&quot; Namespace%3DVendingManagement Type%3DVehicle)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="33086c01-9df1-4e64-8c96-fbd8846ded83"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="15e25781-a6bd-4541-84bf-b3a4be0ce4f2">
+                    <propertyInstance
+                      Id="7eeca8e2-5f80-4827-b0ca-51a1048432b2"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="c5eaa59d-8c43-4595-abd7-69657c954d9d">
+                    <propertyInstance
+                      Id="45a5f9b4-1276-4141-aa60-5533508c9668"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="f28550ad-1dbd-45fe-8424-ba79f568abdd">
+                    <propertyInstance
+                      Id="70039e8a-7b5f-4119-8e17-b74bedd9d18a"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="a2537263-cf22-4c08-9c23-d64afa92b923">
+                    <propertyInstance
+                      Id="f767aea8-eb2b-46bc-81b8-c662622226fe"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="a51df361-990f-4514-9901-a6019cb3e0cf">
+                    <propertyInstance
+                      Id="7690a4b4-fef2-4e52-a7d9-649d2c35db85"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="ef9f7a98-a7c2-4f03-bd09-027d3fa531c3">
+                    <propertyInstance
+                      Id="0cdc33a3-e4ee-47fc-82ca-8e2638964da2"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="6be6b073-af1b-4d0f-8b80-5d46645c8bb3"
+                  name="entry"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="c3962ce9-d09b-4afa-af7e-355687243711"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2Fmkohlmann_he%2FDropbox%2FCS_Programs%2FVending Management%2FVendingManagement%2FVendingManagement%2Fbin%2FDebug%2FVendingManagement.exe&quot; Namespace%3DVendingManagement Type%3DDatabase Member%3D(Name%3DAppend OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2Fmkohlmann_he%2FDropbox%2FCS_Programs%2FVending Management%2FVendingManagement%2FVendingManagement%2Fbin%2FDebug%2FVendingManagement.exe&quot; Namespace%3DVendingManagement Type%3DVehicle)]) ParameterIdentifier%3Dentry"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="7680e4ed-2fce-4c9c-90f2-2be3037c85d5"
+                      LastKnownName="Vehicle"
+                      LastKnownLocation="Package_1401.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="4cf9a889-1289-4f37-a851-f37252f29591"
+            name="Append"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="cacf62f9-6735-44ff-bbcb-b052cac30e47"
+                handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2Fmkohlmann_he%2FDropbox%2FCS_Programs%2FVending Management%2FVendingManagement%2FVendingManagement%2Fbin%2FDebug%2FVendingManagement.exe&quot; Namespace%3DVendingManagement Type%3DDatabase Member%3D(Name%3DAppend OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2Fmkohlmann_he%2FDropbox%2FCS_Programs%2FVending Management%2FVendingManagement%2FVendingManagement%2Fbin%2FDebug%2FVendingManagement.exe&quot; Namespace%3DVendingManagement Type%3DTransactions)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="49a3674a-e091-49f4-a516-59966ae9dd2d"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="c2a5138c-860e-4a54-afb7-8bc0dc5adfc8">
+                    <propertyInstance
+                      Id="e6d71411-c245-4da8-9a0c-700594dc0a8f"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="3a10dabe-868b-4984-ba80-632f8edf575d">
+                    <propertyInstance
+                      Id="09c92234-dbf6-46ed-8b88-cfd2f038fc34"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="fcb90414-2f22-4201-9535-644fe04031e9">
+                    <propertyInstance
+                      Id="99b43f1a-05da-4f9c-86b8-986aa6b2d322"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="daa2c310-24f8-4914-92c8-051a2cf7bfb5">
+                    <propertyInstance
+                      Id="d6c5524a-85cf-4b5a-bbd3-9e477904649f"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="e3ee36c8-d9d6-40c0-b701-46a4c135f2d8">
+                    <propertyInstance
+                      Id="f8dd9d30-e00f-43cf-ba39-a1f542918c1a"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="3ed4e54a-a93c-477a-a6b9-988c691be688">
+                    <propertyInstance
+                      Id="cd3bebc4-25d8-445b-9139-ba902afaa719"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="57df3d90-d31b-4a83-964d-f38d27c21c09"
+                  name="entry"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="e33dc97a-a851-420a-8b58-3eb5518c4f70"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2Fmkohlmann_he%2FDropbox%2FCS_Programs%2FVending Management%2FVendingManagement%2FVendingManagement%2Fbin%2FDebug%2FVendingManagement.exe&quot; Namespace%3DVendingManagement Type%3DDatabase Member%3D(Name%3DAppend OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2Fmkohlmann_he%2FDropbox%2FCS_Programs%2FVending Management%2FVendingManagement%2FVendingManagement%2Fbin%2FDebug%2FVendingManagement.exe&quot; Namespace%3DVendingManagement Type%3DTransactions)]) ParameterIdentifier%3Dentry"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="cee7496e-4b34-4200-b438-e6b691fb0bc6"
+                      LastKnownName="Transactions"
+                      LastKnownLocation="Package_1401.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="6f2182fb-058c-43cc-8c23-efac66ffbfbf"
+            name="Remove"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="b6edaa13-4179-4b21-9909-2570fc3ed991"
+                handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2Fmkohlmann_he%2FDropbox%2FCS_Programs%2FVending Management%2FVendingManagement%2FVendingManagement%2Fbin%2FDebug%2FVendingManagement.exe&quot; Namespace%3DVendingManagement Type%3DDatabase Member%3D(Name%3DRemove OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2Fmkohlmann_he%2FDropbox%2FCS_Programs%2FVending Management%2FVendingManagement%2FVendingManagement%2Fbin%2FDebug%2FVendingManagement.exe&quot; Namespace%3DVendingManagement Type%3DProduct)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="9b9d82b8-cfe8-43e5-9a3e-f26d53a392f4"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="6b7d7bf1-d601-4555-97cb-beaab1d372fe">
+                    <propertyInstance
+                      Id="99dcb1e3-2253-45c4-aa74-b89718fa5e25"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="10d84cb8-aadf-4d50-9962-090018bf2af6">
+                    <propertyInstance
+                      Id="1120b6e8-53c7-4bba-acb0-3e1097c24b94"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="78ede582-582b-4aac-a52a-e40059376cff">
+                    <propertyInstance
+                      Id="bf1fd7e4-554d-43cc-9875-100afc589c8c"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="f2b8807b-f9ac-4a7a-b634-223ac13cb74e">
+                    <propertyInstance
+                      Id="82b13472-5d07-4e4f-ac27-8c17ac779e2f"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="a0e37b4e-0a36-4bf1-a56c-843ba0e072e8">
+                    <propertyInstance
+                      Id="e37e33a6-bdad-46d5-a4cf-bdf5060c169c"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="d72b785b-f9e8-47e0-8342-ccada291d771">
+                    <propertyInstance
+                      Id="445fc1ab-1890-4a21-9133-b88820e417f3"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="28000bfc-372e-4185-9087-8d9a5a6e712b"
+                  name="entry"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="2a0a68dd-8c34-4fce-9352-4ce969109073"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2Fmkohlmann_he%2FDropbox%2FCS_Programs%2FVending Management%2FVendingManagement%2FVendingManagement%2Fbin%2FDebug%2FVendingManagement.exe&quot; Namespace%3DVendingManagement Type%3DDatabase Member%3D(Name%3DRemove OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2Fmkohlmann_he%2FDropbox%2FCS_Programs%2FVending Management%2FVendingManagement%2FVendingManagement%2Fbin%2FDebug%2FVendingManagement.exe&quot; Namespace%3DVendingManagement Type%3DProduct)]) ParameterIdentifier%3Dentry"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="4cfee858-0e4d-420d-bbe6-531bef55b0ca"
+                      LastKnownName="Product"
+                      LastKnownLocation="Package_1401.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="a28f3a2f-6c67-4977-ad1a-612bf3848b43"
+            name="Remove"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="729af1b7-1fe7-43b0-9f12-a143170ca2b5"
+                handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2Fmkohlmann_he%2FDropbox%2FCS_Programs%2FVending Management%2FVendingManagement%2FVendingManagement%2Fbin%2FDebug%2FVendingManagement.exe&quot; Namespace%3DVendingManagement Type%3DDatabase Member%3D(Name%3DRemove OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2Fmkohlmann_he%2FDropbox%2FCS_Programs%2FVending Management%2FVendingManagement%2FVendingManagement%2Fbin%2FDebug%2FVendingManagement.exe&quot; Namespace%3DVendingManagement Type%3DMachine)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="994668b2-76df-437c-9e25-84fe5f63f292"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="dd140c15-f4b2-47c8-91f9-d970fad9662b">
+                    <propertyInstance
+                      Id="6d89ef39-938f-45fc-bfba-4d07a8ee8c47"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="9fadcd0f-a7a0-404e-8037-d170793f4658">
+                    <propertyInstance
+                      Id="2fd39470-0e48-49b7-9026-e0b86007ec3d"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="c0096730-306c-4cb8-9497-bbcbc1a4cc18">
+                    <propertyInstance
+                      Id="8beed26d-8d26-4aa9-80d7-7b9bc4656204"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="677b8e00-d850-44d5-8634-100f1bf79b92">
+                    <propertyInstance
+                      Id="9ad44498-71d7-4ec4-aaa3-dbbe0ad5e853"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="ccbaa351-b732-426a-bcd8-621a6d6f4db0">
+                    <propertyInstance
+                      Id="e05dce27-3151-4181-b816-d08e32c87a94"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="3332178f-a67b-4a81-b525-b75effd42cd9">
+                    <propertyInstance
+                      Id="4a1d94df-100f-48e8-ac48-1d091f6186a5"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="0c295b06-b15b-44f5-a2ad-24ab666dcc84"
+                  name="entry"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="78168521-b012-4fea-a2f0-54796b17accb"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2Fmkohlmann_he%2FDropbox%2FCS_Programs%2FVending Management%2FVendingManagement%2FVendingManagement%2Fbin%2FDebug%2FVendingManagement.exe&quot; Namespace%3DVendingManagement Type%3DDatabase Member%3D(Name%3DRemove OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2Fmkohlmann_he%2FDropbox%2FCS_Programs%2FVending Management%2FVendingManagement%2FVendingManagement%2Fbin%2FDebug%2FVendingManagement.exe&quot; Namespace%3DVendingManagement Type%3DMachine)]) ParameterIdentifier%3Dentry"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="e12b9f9e-d62d-46d2-a274-4f011d9b61ee"
+                      LastKnownName="Machine"
+                      LastKnownLocation="Package_1401.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="1df4dcbf-d695-4eb3-bbce-b710cb3479b1"
+            name="Remove"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="da05750d-e546-481a-801a-d26fcdc5510a"
+                handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2Fmkohlmann_he%2FDropbox%2FCS_Programs%2FVending Management%2FVendingManagement%2FVendingManagement%2Fbin%2FDebug%2FVendingManagement.exe&quot; Namespace%3DVendingManagement Type%3DDatabase Member%3D(Name%3DRemove OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2Fmkohlmann_he%2FDropbox%2FCS_Programs%2FVending Management%2FVendingManagement%2FVendingManagement%2Fbin%2FDebug%2FVendingManagement.exe&quot; Namespace%3DVendingManagement Type%3DCity)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="128f351c-a836-4937-acea-e65d678368ba"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="643c9061-b010-4765-996d-3445494fc675">
+                    <propertyInstance
+                      Id="bb786e93-b3f2-42d5-9e75-c2178ac97b79"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="1e7f24c8-73f5-4826-80d6-0567d46f89f0">
+                    <propertyInstance
+                      Id="8b4ed901-7237-4961-a06c-725f6e4ee31d"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="148de08f-1c66-4e3d-b35e-06426b41e381">
+                    <propertyInstance
+                      Id="133858a3-f8e0-44b4-b49a-bf40b8594467"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="56e9b321-92b0-4a30-9b53-ec69afbbe580">
+                    <propertyInstance
+                      Id="12b0fb6c-ab8f-46c6-ba16-a237aa7ff9b8"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="3eea3166-785d-46b9-8193-eb3feebca5c0">
+                    <propertyInstance
+                      Id="db2cf352-f60b-4531-94cd-5150fae9cc7c"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="1989f839-7c33-45b5-b2f8-3a49ef14dcab">
+                    <propertyInstance
+                      Id="3ed93a0e-81b2-455b-9d36-05c19402d806"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="56683fe0-e072-48b3-8038-bddba91de5f6"
+                  name="entry"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="4fd043a7-3a0c-4f05-a580-248dee5275b9"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2Fmkohlmann_he%2FDropbox%2FCS_Programs%2FVending Management%2FVendingManagement%2FVendingManagement%2Fbin%2FDebug%2FVendingManagement.exe&quot; Namespace%3DVendingManagement Type%3DDatabase Member%3D(Name%3DRemove OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2Fmkohlmann_he%2FDropbox%2FCS_Programs%2FVending Management%2FVendingManagement%2FVendingManagement%2Fbin%2FDebug%2FVendingManagement.exe&quot; Namespace%3DVendingManagement Type%3DCity)]) ParameterIdentifier%3Dentry"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="a909d1a0-9974-4860-ab9e-a657b4b739e6"
+                      LastKnownName="City"
+                      LastKnownLocation="Package_1401.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="249e7822-b91d-43c7-b7b1-5f0db402b7fe"
+            name="Remove"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="e937acb3-554c-4852-8445-22d0f8850bc4"
+                handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2Fmkohlmann_he%2FDropbox%2FCS_Programs%2FVending Management%2FVendingManagement%2FVendingManagement%2Fbin%2FDebug%2FVendingManagement.exe&quot; Namespace%3DVendingManagement Type%3DDatabase Member%3D(Name%3DRemove OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2Fmkohlmann_he%2FDropbox%2FCS_Programs%2FVending Management%2FVendingManagement%2FVendingManagement%2Fbin%2FDebug%2FVendingManagement.exe&quot; Namespace%3DVendingManagement Type%3DEmployee)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="f4331797-9eae-4346-aaaf-68be52ec9d0b"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="2a0c862e-8292-465c-a839-2ff76a90a0c4">
+                    <propertyInstance
+                      Id="0d6de8a7-5231-4a35-a2f1-87b0f0ae365a"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="8572e33b-75d5-4626-96a8-1270e59bd892">
+                    <propertyInstance
+                      Id="e84cf3c3-c455-48c1-88da-82c99c40e0eb"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="f784cec6-73c6-4178-b480-bd4a9b5660f3">
+                    <propertyInstance
+                      Id="32069988-e080-4149-bb71-6b2e21109472"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="4ec5cb81-e169-48f8-8bfd-ac01695a816c">
+                    <propertyInstance
+                      Id="668db29a-4ff1-4d03-a8f6-dfb22d1c63bb"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="8e68d180-8520-401c-83d8-53f8968f4dd5">
+                    <propertyInstance
+                      Id="22d364ff-2584-4f89-9387-f5ae1f3885be"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="835609ca-a788-475c-8bfc-707ed68f4c93">
+                    <propertyInstance
+                      Id="37984d1a-e08b-4a51-9408-6674d63384d5"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="887c4872-fc7c-447a-923f-d946b45cefd9"
+                  name="entry"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="5eddcae2-18ed-4c26-a0fa-3911cec244e2"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2Fmkohlmann_he%2FDropbox%2FCS_Programs%2FVending Management%2FVendingManagement%2FVendingManagement%2Fbin%2FDebug%2FVendingManagement.exe&quot; Namespace%3DVendingManagement Type%3DDatabase Member%3D(Name%3DRemove OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2Fmkohlmann_he%2FDropbox%2FCS_Programs%2FVending Management%2FVendingManagement%2FVendingManagement%2Fbin%2FDebug%2FVendingManagement.exe&quot; Namespace%3DVendingManagement Type%3DEmployee)]) ParameterIdentifier%3Dentry"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="3593e31a-cb66-44ec-84d4-aa3e9c733e63"
+                      LastKnownName="Employee"
+                      LastKnownLocation="Package_1401.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="31dbe774-191d-457c-b8fa-2f6502981402"
+            name="Remove"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="95d93fc6-30ac-4d7f-bf58-8b269b8fb9b3"
+                handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2Fmkohlmann_he%2FDropbox%2FCS_Programs%2FVending Management%2FVendingManagement%2FVendingManagement%2Fbin%2FDebug%2FVendingManagement.exe&quot; Namespace%3DVendingManagement Type%3DDatabase Member%3D(Name%3DRemove OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2Fmkohlmann_he%2FDropbox%2FCS_Programs%2FVending Management%2FVendingManagement%2FVendingManagement%2Fbin%2FDebug%2FVendingManagement.exe&quot; Namespace%3DVendingManagement Type%3DVehicle)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="dfbb1f7c-911d-40b1-997e-297f2063e912"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="718ad5be-edb6-4f73-9d0c-49a2a0cb47a6">
+                    <propertyInstance
+                      Id="c622eaf8-dec1-4e0f-b265-b77a5ae70e79"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="18de3afa-1fd5-4e8f-bb40-3b627d196c72">
+                    <propertyInstance
+                      Id="8c3ee983-ba02-432a-b878-0f14c95aba07"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="995ee99e-f9e3-49ce-a0a3-7023a94f02fb">
+                    <propertyInstance
+                      Id="837870d6-2104-4c53-a2a9-b5a93cb9c764"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="67df3538-387b-46f7-9cad-023211ca32f5">
+                    <propertyInstance
+                      Id="6dda4118-dc29-4812-9c6c-4140cb76559b"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="2652cd26-f199-412a-aa14-a02cb6b462c9">
+                    <propertyInstance
+                      Id="e97c6d5a-a7d1-48ba-b904-f5d2c3fb6688"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="16598b9f-7268-45a8-b66d-02128ac994d5">
+                    <propertyInstance
+                      Id="f91b1db5-10f1-435f-8ccf-7566e9c7bf10"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="3191836d-f3d9-48f3-91cf-4a0bc98f7d42"
+                  name="entry"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="2976b372-11ba-42d5-a511-5c62aa360a17"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2Fmkohlmann_he%2FDropbox%2FCS_Programs%2FVending Management%2FVendingManagement%2FVendingManagement%2Fbin%2FDebug%2FVendingManagement.exe&quot; Namespace%3DVendingManagement Type%3DDatabase Member%3D(Name%3DRemove OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2Fmkohlmann_he%2FDropbox%2FCS_Programs%2FVending Management%2FVendingManagement%2FVendingManagement%2Fbin%2FDebug%2FVendingManagement.exe&quot; Namespace%3DVendingManagement Type%3DVehicle)]) ParameterIdentifier%3Dentry"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="7680e4ed-2fce-4c9c-90f2-2be3037c85d5"
+                      LastKnownName="Vehicle"
+                      LastKnownLocation="Package_1401.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="78a538ff-b24d-4e6c-ac52-ed25f3933b4e"
+            name="Remove"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="7950668a-638e-4f34-b7eb-1078ad608c33"
+                handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2Fmkohlmann_he%2FDropbox%2FCS_Programs%2FVending Management%2FVendingManagement%2FVendingManagement%2Fbin%2FDebug%2FVendingManagement.exe&quot; Namespace%3DVendingManagement Type%3DDatabase Member%3D(Name%3DRemove OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2Fmkohlmann_he%2FDropbox%2FCS_Programs%2FVending Management%2FVendingManagement%2FVendingManagement%2Fbin%2FDebug%2FVendingManagement.exe&quot; Namespace%3DVendingManagement Type%3DTransactions)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="8825609d-81d7-4f49-a214-5157beb02f3c"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="5cd37db5-66f9-4e4a-870e-86e82bed74ed">
+                    <propertyInstance
+                      Id="0fbccc24-d20c-42e8-b052-35f05a77f442"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="0413f9fc-00a8-4fc7-bc8a-1fe027d9e37d">
+                    <propertyInstance
+                      Id="a24d57f4-cd46-44d2-9522-b9b05fee770f"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="db678d50-b0be-43a8-982d-68f09504e1be">
+                    <propertyInstance
+                      Id="8f64eb68-ca88-4731-b695-11c0cad40bf8"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="ff4866e3-ffdd-4ecc-9f74-c999d4a14dad">
+                    <propertyInstance
+                      Id="818374fc-381e-4276-a315-2610401fae2a"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="6baea3df-4efb-41e6-a0da-c9823f0a6fa0">
+                    <propertyInstance
+                      Id="161cb4d0-88d2-44e9-b956-58170e796043"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="9373bee6-c85d-466f-b7cc-8db3339d2536">
+                    <propertyInstance
+                      Id="229cb392-7662-4ed1-9ad9-620f31b01fb2"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="1bf32d37-f6fc-4786-9c2f-eda9725184eb"
+                  name="entry"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="36ba8e18-5074-46c0-8389-f8d72f936720"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2Fmkohlmann_he%2FDropbox%2FCS_Programs%2FVending Management%2FVendingManagement%2FVendingManagement%2Fbin%2FDebug%2FVendingManagement.exe&quot; Namespace%3DVendingManagement Type%3DDatabase Member%3D(Name%3DRemove OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2Fmkohlmann_he%2FDropbox%2FCS_Programs%2FVending Management%2FVendingManagement%2FVendingManagement%2Fbin%2FDebug%2FVendingManagement.exe&quot; Namespace%3DVendingManagement Type%3DTransactions)]) ParameterIdentifier%3Dentry"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="cee7496e-4b34-4200-b438-e6b691fb0bc6"
+                      LastKnownName="Transactions"
+                      LastKnownLocation="Package_1401.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="3f805384-c364-4ad7-b3b3-06ee28d84f87"
+            name="SelectAll"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="38cce3de-df77-48b1-b1f2-be582c2a5e37"
+                handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2Fmkohlmann_he%2FDropbox%2FCS_Programs%2FVending Management%2FVendingManagement%2FVendingManagement%2Fbin%2FDebug%2FVendingManagement.exe&quot; Namespace%3DVendingManagement Type%3DDatabase Member%3D(Name%3DSelectAll OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="24da46d0-7949-48b3-8521-5ef0c605cb75"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="b2449680-30b7-4701-818c-9ec17fd9ac2c">
+                    <propertyInstance
+                      Id="f1c54630-d2ee-4adb-99ce-716b53d1d008"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="b2e83b26-1108-46cb-913d-f325fbbbf9ec">
+                    <propertyInstance
+                      Id="64974ca2-6aca-4c88-8317-168e1163ba27"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="54b9f347-ec6d-45c3-b487-5930fec60414">
+                    <propertyInstance
+                      Id="aa533d87-20ee-471f-8aec-bce2182e9aab"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="b0bf5236-2539-41fe-bf4d-3e0ebf6fcf87">
+                    <propertyInstance
+                      Id="d439a0a6-6f37-4736-8e7d-e647d2fc4f15"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="ddbd32a0-bb75-4945-b1f4-33f3841c40d8">
+                    <propertyInstance
+                      Id="f4ec3191-1a70-4ffe-bc1c-3cd9e4d84f31"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="daac80f7-0511-461e-811d-715c600afd29">
+                    <propertyInstance
+                      Id="7f08d27b-3aa5-4ba3-affd-b2bffec7d563"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="3b8863db-aaea-4485-8a7c-6d4a220cbffe"
+                  direction="Return">
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="bc08c594-ffc6-48f1-83ba-29a5d03d609e"
+                      LastKnownName="List&lt;Product‎&gt;"
+                      LastKnownLocation="Package3_1401.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="8db7a1ce-5c14-4bb5-a530-723c2f99dfc5"
+                  name="id"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="4781c66e-f3a4-40a6-8a37-765f31fe47b7"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2Fmkohlmann_he%2FDropbox%2FCS_Programs%2FVending Management%2FVendingManagement%2FVendingManagement%2Fbin%2FDebug%2FVendingManagement.exe&quot; Namespace%3DVendingManagement Type%3DDatabase Member%3D(Name%3DSelectAll OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)]) ParameterIdentifier%3Did"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                      LastKnownName="String"
+                      LastKnownLocation="VendingManagement_Database_UML.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="7405f5ea-c9c8-4366-84de-a79e986f9126"
+            name="generateInitialProducts"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="e21bda58-9ccf-40c1-8a32-3a5dec98d0dc"
+                handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2Fmkohlmann_he%2FDropbox%2FCS_Programs%2FVending Management%2FVendingManagement%2FVendingManagement%2Fbin%2FDebug%2FVendingManagement.exe&quot; Namespace%3DVendingManagement Type%3DDatabase Member%3DgenerateInitialProducts"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="4dbfd2ca-6807-4a02-bb64-885a12080339"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="ca6452f1-035b-4e16-a5ce-48a71b2286a4">
+                    <propertyInstance
+                      Id="339a13d0-720a-4e54-81e8-12e671ee5401"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="b17fb353-48d3-4236-bebb-1aff6778ad0d">
+                    <propertyInstance
+                      Id="08b4cbd2-7738-4e02-a2c7-0bfbd0d4b6f1"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="d6127726-2cec-4be5-be43-a92d8a8e5a23">
+                    <propertyInstance
+                      Id="1c09f228-8266-4957-b5cb-a9752db32137"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="f0840889-6eea-4655-990b-30aca4b2053e">
+                    <propertyInstance
+                      Id="181f7e49-1410-4349-989b-b92afe5fbef5"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="ce990e5a-e806-4f5e-bae6-db2e69aac938">
+                    <propertyInstance
+                      Id="3d9e1449-3cdd-42ef-8e5c-05c59356eb03"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="54e58289-ec89-4839-985f-93c7207b7b16">
+                    <propertyInstance
+                      Id="f36c8fab-c655-431d-9957-7cca0053baf3"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+          </operation>
+          <operation
+            Id="2c1259d4-05a0-4c16-83cc-f51c4f02e691"
+            name="generateInitialMachines"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="acd6d78c-134f-4158-ba1d-b44b65aa7c4c"
+                handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2Fmkohlmann_he%2FDropbox%2FCS_Programs%2FVending Management%2FVendingManagement%2FVendingManagement%2Fbin%2FDebug%2FVendingManagement.exe&quot; Namespace%3DVendingManagement Type%3DDatabase Member%3DgenerateInitialMachines"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="497bdb1b-d3b9-48b0-b1b6-34e228afd2f0"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="5620b207-f21a-46b8-b421-2d034048cc00">
+                    <propertyInstance
+                      Id="bc0f20bb-881b-4df2-a89a-f7a6fbc32436"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="050837fa-ddaa-46d7-9ec3-4da1a4de39db">
+                    <propertyInstance
+                      Id="63f94cfe-e180-4bee-b1ed-877c5a070c94"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="23bf62f4-7fe8-4a1e-af62-e7cfe32a1392">
+                    <propertyInstance
+                      Id="f76d7d28-6d3b-4e8c-a162-993c6f16e2ee"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="1aaf048b-1556-46d8-9730-9ec9677bc831">
+                    <propertyInstance
+                      Id="9c8e327f-edf6-4690-ac90-06c2b690f1f3"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="52d16c6e-05f3-432f-adce-221f3c0f14a6">
+                    <propertyInstance
+                      Id="75975648-15a5-421c-a9a5-827b541192e7"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="9a800a0b-58eb-444e-beba-a3c156c48b02">
+                    <propertyInstance
+                      Id="bbd4cd6e-f249-4c8f-9dda-b87712801ea9"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+          </operation>
+          <operation
+            Id="0ac70c06-bd8c-416f-824b-bed6e7e0ddc8"
+            name="generateInitialCities"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="a461b9ee-7819-47ec-b53e-67802c6fad1c"
+                handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2Fmkohlmann_he%2FDropbox%2FCS_Programs%2FVending Management%2FVendingManagement%2FVendingManagement%2Fbin%2FDebug%2FVendingManagement.exe&quot; Namespace%3DVendingManagement Type%3DDatabase Member%3DgenerateInitialCities"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="a6b4cb9e-4dad-4071-85f2-cef01b1b7481"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="c6ad72d6-bcc8-4bc9-b43d-7049ec02c6d7">
+                    <propertyInstance
+                      Id="fdd92168-fbdd-4dfd-804d-96b049099d54"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="3f1d0b24-9b5a-4219-8d60-c700ad97ed89">
+                    <propertyInstance
+                      Id="0c9e8999-91e3-4b58-ae1c-75923c9d76cb"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="4067ca8c-e0a6-40cc-8887-284f5e3f9940">
+                    <propertyInstance
+                      Id="814788bf-b0ef-459a-8cd6-bcf11c9816ee"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="5e7be1a4-3782-4523-a4a0-46bb6e6f9ae0">
+                    <propertyInstance
+                      Id="c2d8a12b-8a62-4131-886c-8dc85d2194d4"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="4aabeb95-135b-4b3f-8976-871f6aa1f25b">
+                    <propertyInstance
+                      Id="06aadfc6-5d26-4e97-8ed1-82fb324472d7"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="b770bab5-3c5b-4546-95a5-9d7afb2dd7d6">
+                    <propertyInstance
+                      Id="9fc2f0b5-7782-4e41-a911-808001d09b01"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+          </operation>
+          <operation
+            Id="b9b6226e-6f06-4db8-8b07-77bb09fa8c3a"
+            name="generateInitialEmployees"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="9626b848-deb6-4a9a-a00e-5ae8354dc2aa"
+                handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2Fmkohlmann_he%2FDropbox%2FCS_Programs%2FVending Management%2FVendingManagement%2FVendingManagement%2Fbin%2FDebug%2FVendingManagement.exe&quot; Namespace%3DVendingManagement Type%3DDatabase Member%3DgenerateInitialEmployees"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="ec949b54-8b1e-42a0-ab83-ca4d85ec484f"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="705773ef-4161-4409-bf66-bd42c9935255">
+                    <propertyInstance
+                      Id="9079cca0-7542-4242-8b8f-fbc7ac7331d3"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="ed6fff97-e537-4dca-a1ba-7912bef3c0d3">
+                    <propertyInstance
+                      Id="2a39eaf3-0ac5-4d56-9777-e72d326aca2f"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="b679d8de-922b-4857-ac54-c7608c7e1bab">
+                    <propertyInstance
+                      Id="4df744af-dcc1-4380-aa02-6f940912010d"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="3e5d447d-9c17-4b82-9868-3c718e68afc9">
+                    <propertyInstance
+                      Id="8df1a537-f483-44b5-a188-d65b95591cc1"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="b9bb6681-3758-40db-b6a6-477398b38739">
+                    <propertyInstance
+                      Id="8a30169a-41ca-45f4-8e8f-7ab02d1afcb4"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="4ddeca0c-5ef3-415e-8865-a8760c1327e9">
+                    <propertyInstance
+                      Id="63001a06-dbc8-4e56-a50a-79f80159ad21"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+          </operation>
+          <operation
+            Id="7801d00e-8460-456a-b00d-138aedb79202"
+            name="generateInitialVehicles"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="5d5e5cee-3094-42ab-a1ec-2d04cb1788c6"
+                handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2Fmkohlmann_he%2FDropbox%2FCS_Programs%2FVending Management%2FVendingManagement%2FVendingManagement%2Fbin%2FDebug%2FVendingManagement.exe&quot; Namespace%3DVendingManagement Type%3DDatabase Member%3DgenerateInitialVehicles"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="a2a95500-0617-4121-9b2d-82cb342a1daa"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="d2df6eb5-1e03-492c-af9e-9ba0f5847768">
+                    <propertyInstance
+                      Id="f9260122-a8df-44e6-bc17-8f7124b01515"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="5fce6aa3-3f12-4d03-99ef-a3249af6a3d1">
+                    <propertyInstance
+                      Id="35d6c031-c711-4fd7-88ba-604a0b599939"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="20cf5002-3adf-41a9-aeb0-bb8eb3f31fc9">
+                    <propertyInstance
+                      Id="2165dba4-615a-468d-9f95-20438b3a1773"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="c5115182-5996-4fcf-926e-b921fba897fe">
+                    <propertyInstance
+                      Id="17b42588-3d25-4bca-b935-5ef833fa49e6"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="14ab7ec8-093a-403c-9b66-091b6e27b1b1">
+                    <propertyInstance
+                      Id="3b522d16-6e00-41fa-8af9-91ca397f0827"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="4f0f78ac-2457-44d8-acfe-d2fe19420609">
+                    <propertyInstance
+                      Id="390aeac6-4411-497a-b861-6a3b47eb8943"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+          </operation>
+          <operation
+            Id="b8f29de6-567a-4d2b-8128-b570128bc8ee"
+            name="generateInitialTransactions"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="ff8c1b52-972c-4a9f-bf32-d7693585e864"
+                handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2Fmkohlmann_he%2FDropbox%2FCS_Programs%2FVending Management%2FVendingManagement%2FVendingManagement%2Fbin%2FDebug%2FVendingManagement.exe&quot; Namespace%3DVendingManagement Type%3DDatabase Member%3DgenerateInitialTransactions"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="0a1438e9-b7e6-4750-8c57-37f298ce4010"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="900f127a-9b7c-4ab7-831c-fe201e9a1d10">
+                    <propertyInstance
+                      Id="7aa2c7ac-d251-4f7c-8a33-848cff2967e2"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="143d8c2a-0520-4b68-8c50-ca9bedafbcd5">
+                    <propertyInstance
+                      Id="7fc339f5-da39-4862-964c-0d92bd44b89b"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="e99e7470-9a81-48a6-ad2d-d2818dd9ea1d">
+                    <propertyInstance
+                      Id="a71e1774-8526-41a1-a7dc-3332aedddf37"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="73b43d36-cb1a-48c5-97c9-ce40a4664b0d">
+                    <propertyInstance
+                      Id="79ac0243-e574-4487-b587-c0e42b465cd5"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="3c020227-d05b-4f0a-82d6-ef72c803b5af">
+                    <propertyInstance
+                      Id="bf9cca1c-0e21-4d77-8f8d-2c1b77563b8b"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="a75994e4-3a35-4760-8c62-094a35e0d5f0">
+                    <propertyInstance
+                      Id="d3685fc0-ad6d-432d-ab3d-44dc34ef2b8e"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+          </operation>
+          <operation
+            Id="78ac46c0-8e05-418a-bdc2-1e436a71ebe3"
+            name="Database"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="f1a791e8-71db-44bb-9dc9-671507560a30"
+                handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2Fmkohlmann_he%2FDropbox%2FCS_Programs%2FVending Management%2FVendingManagement%2FVendingManagement%2Fbin%2FDebug%2FVendingManagement.exe&quot; Namespace%3DVendingManagement Type%3DDatabase Member%3D.ctor"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="36dfdc37-1673-47ac-94e6-813ce3193b07"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="a834c99f-dd3b-4bfb-8214-e73922e2fe98">
+                    <propertyInstance
+                      Id="6ea14062-855d-4fac-a068-a11c818ff5ab"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="a91e3a24-b4f9-4d89-8145-67bd80064338">
+                    <propertyInstance
+                      Id="e79fb7c0-682b-410c-a703-47eec09707ff"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="8a3be7d5-20a1-4041-a06f-43ee431ab2a6">
+                    <propertyInstance
+                      Id="a0dc1090-e570-4b53-8382-e8cad1ab3cc4"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="7d529070-c62c-4166-b9dd-dbde8889f26c">
+                    <propertyInstance
+                      Id="ced05675-29e2-4b2b-ada5-adf8c4e04fe8"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="56d930ad-7474-4b0d-9399-8a11647a53bb">
+                    <propertyInstance
+                      Id="28a79aed-fb28-4003-b464-63492c3ebb50"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="6067b898-76c7-45e4-aac8-9f6c4af9cf5f">
+                    <propertyInstance
+                      Id="2ce95410-2b26-4513-a1bc-100316f34abf"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="4cfee858-0e4d-420d-bbe6-531bef55b0ca"
+        name="Product"
+        visibility="Package"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="5873e317-c542-4a7a-9286-450e21f5d389"
+            handle="viewcode://./CodeSchema_Class?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2Fmkohlmann_he%2FDropbox%2FCS_Programs%2FVending Management%2FVendingManagement%2FVendingManagement%2Fbin%2FDebug%2FVendingManagement.exe&quot; Namespace%3DVendingManagement Type%3DProduct"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="60c1be20-63e4-4b98-9de3-0c0d903b62bf"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="427f9d5f-4914-4a7f-af05-3315124aebed">
+                <propertyInstance
+                  Id="41008f7b-91d9-4020-a168-b77cfe8975b7"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="feeae441-37e2-4662-8f77-ce6d3bf0e872">
+                <propertyInstance
+                  Id="02875829-b214-45fc-b0a2-76c36787d6d5"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="41239331-c02d-4c76-8967-132e5b3c9f51">
+                <propertyInstance
+                  Id="4a6980ae-3972-46d4-9c6a-27bd56880ab2"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="ba87f84c-f690-490e-a930-c11af27cae40">
+                <propertyInstance
+                  Id="ce66f5a3-cb47-4715-8091-e51e801b10ba"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="a9e56641-6d6a-4a3b-b96d-eb3840522b6f">
+                <propertyInstance
+                  Id="11ad3b1b-122d-48d6-981d-4d273cd21bfb"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <targetEnds>
+          <association
+            Id="15e55d81-18c8-4e58-8717-6c855b38d796"
+            isDerived="false"
+            sourceEndRoleName="Product"
+            targetEndRoleName="WholeSalePrice"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="187fc279-1ab5-4429-a375-31a32d456c5f"
+              LastKnownName="Single"
+              LastKnownLocation="Package1_1401.uml" />
+            <description>Property WholeSalePrice references type Single.</description>
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="4ee32348-3838-49c8-9ce6-752722186465"
+                  name="Product"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="b758bb52-18aa-447a-87aa-b9727c3686b2"
+                      name="Lower"
+                      value="*" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="d7752dd9-3608-4cfb-be62-5ce675712d13"
+                      name="Upper"
+                      value="*" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="9933c8a3-e4bb-489a-91b2-3e2e64f75218"
+                  name="WholeSalePrice"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="ccb9200b-15d9-4852-9c5b-a92bd05e0e4b"
+                      name="Lower"
+                      value="1" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="c1f79709-7e1e-44ce-adcb-0c2a1a4424d7"
+                      name="Upper"
+                      value="1" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+        <ownedAttributesInternal>
+          <property
+            Id="a6a74b37-b485-40d8-9b6e-1dc9f9f07cd5"
+            name="Name"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="9e6858e8-8877-4947-9aba-4550b93f6220"
+                handle="viewcode://./CodeSchema_Property?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2Fmkohlmann_he%2FDropbox%2FCS_Programs%2FVending Management%2FVendingManagement%2FVendingManagement%2Fbin%2FDebug%2FVendingManagement.exe&quot; Namespace%3DVendingManagement Type%3DProduct Member%3DName"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="e3679244-b0dc-47a1-8696-d96b8e872535"
+                name="property"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="201bbb6b-26a9-450a-8b32-d7d46eec2cfd">
+                    <propertyInstance
+                      Id="bc9eb02b-9f14-47c8-952e-db608deb5601"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="261c7de5-e815-4b85-9956-5db98250ca73">
+                    <propertyInstance
+                      Id="a36c97a5-c327-4c69-8dbf-b9d0e72e5861"
+                      name="Get"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="77b84c9f-e021-46ba-90d7-f86afffc36e2">
+                    <propertyInstance
+                      Id="09c38168-773e-43f4-85bc-0d7b041fc4ae"
+                      name="HasBody"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="3542aa19-952a-4a84-bea4-6cb593f5e115">
+                    <propertyInstance
+                      Id="d670fbdd-544d-40a5-93e1-bf5d2a6fdf8d"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="c130c558-b3eb-4e8c-b7f0-aa40354ab0ff">
+                    <propertyInstance
+                      Id="2ef098c0-6186-43e9-a579-af3485c96c71"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="8318ee65-dd16-42be-a4de-ecc1232b81c9">
+                    <propertyInstance
+                      Id="6ce8a20f-3128-47fd-b024-59d7ce8d1ab7"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="80f802db-2bd6-4545-97ec-86ef5d68dd3e">
+                    <propertyInstance
+                      Id="feb65e05-5212-474f-88a6-552145f525b3"
+                      name="Set"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                LastKnownName="String"
+                LastKnownLocation="VendingManagement_Database_UML.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="93a72fda-9e7b-4eba-8ead-2738a4348173"
+            name="WholeSalePrice"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="96a850fb-97f1-4a05-a7ac-ef0c46b4b331"
+                handle="viewcode://./CodeSchema_Property?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2Fmkohlmann_he%2FDropbox%2FCS_Programs%2FVending Management%2FVendingManagement%2FVendingManagement%2Fbin%2FDebug%2FVendingManagement.exe&quot; Namespace%3DVendingManagement Type%3DProduct Member%3DWholeSalePrice"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="e03f85c2-686d-48be-8d31-2559ccb268b0"
+                name="property"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="81bc0b70-96bc-4a1b-8d74-341a3337c98a">
+                    <propertyInstance
+                      Id="3dfc5c0c-0526-4660-9032-114cc460305d"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="fc8fa645-061c-4049-b9a0-b041642bf3ba">
+                    <propertyInstance
+                      Id="40300bad-258c-45dc-bb67-e7853c0789e9"
+                      name="Get"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="595ca485-d09f-4465-b830-944686863e7c">
+                    <propertyInstance
+                      Id="b5bc0169-02e8-4a33-bdff-5e23db416c0a"
+                      name="HasBody"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="052563a5-2df3-4b13-912b-bfca3a909b2e">
+                    <propertyInstance
+                      Id="656dd3ff-d554-4b42-8c70-9f2f68240704"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="963d80ab-159c-4902-9ebf-991f95119008">
+                    <propertyInstance
+                      Id="ba25b270-2a7a-4f69-99b8-1fecb3b15956"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="be0b314b-8f03-4c4d-a22d-af9baf45c3f3">
+                    <propertyInstance
+                      Id="f1377b8a-1767-4ee1-a34a-31623570eefe"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="375641d9-2b37-4b1d-8584-275cf75b5ad7">
+                    <propertyInstance
+                      Id="11e58978-df0e-4571-b572-0273ca65308a"
+                      name="Set"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <classMoniker
+                Id="187fc279-1ab5-4429-a375-31a32d456c5f"
+                LastKnownName="Single"
+                LastKnownLocation="Package1_1401.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="ac5726d2-5573-4608-a4c0-f7117be28c63"
+            name="name"
+            visibility="Protected"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="ec031216-2c63-4d91-95ad-f83a2d4cac20"
+                handle="viewcode://./CodeSchema_Field?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2Fmkohlmann_he%2FDropbox%2FCS_Programs%2FVending Management%2FVendingManagement%2FVendingManagement%2Fbin%2FDebug%2FVendingManagement.exe&quot; Namespace%3DVendingManagement Type%3DProduct Member%3Dname"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="8e0f08e5-d12f-4934-a54c-100e26f174c5"
+                name="field"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="04f67f80-6e94-40cb-9227-e4988bf6e0af">
+                    <propertyInstance
+                      Id="2e7acf9a-f5f8-4695-94bb-514647546de6"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="344da237-4419-4426-b45d-dd4340a8e209">
+                    <propertyInstance
+                      Id="f41dfbcd-0648-4928-86bd-53052de89101"
+                      name="IsConst"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="560c3e06-f6ee-4068-b3a0-5172f2f84177">
+                    <propertyInstance
+                      Id="f32350e6-168e-456d-9f29-84447fef2fd9"
+                      name="IsNullable"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="22b20295-f5e3-4888-a974-f340152d4615">
+                    <propertyInstance
+                      Id="0c9b8580-9336-45e5-9ba7-895623996f6d"
+                      name="IsVolatile"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="57df9d77-f2f1-4f45-b080-839cc86484bc">
+                    <propertyInstance
+                      Id="3f97d1c7-191b-4c8c-9262-503d302bdca4"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                LastKnownName="String"
+                LastKnownLocation="VendingManagement_Database_UML.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="52a50d45-7b2a-4aa1-bcd1-4380c3eca983"
+            name="wholeSalePrice"
+            visibility="Protected"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="4a992be0-aaf8-4e6e-95a3-e59985b9b527"
+                handle="viewcode://./CodeSchema_Field?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2Fmkohlmann_he%2FDropbox%2FCS_Programs%2FVending Management%2FVendingManagement%2FVendingManagement%2Fbin%2FDebug%2FVendingManagement.exe&quot; Namespace%3DVendingManagement Type%3DProduct Member%3DwholeSalePrice"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="7cdb8d28-c2c2-426e-b57a-35373513e703"
+                name="field"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="6d7e7d57-d463-4c82-bb91-80fbc6d6a37b">
+                    <propertyInstance
+                      Id="ed54e7b3-9296-498d-8ab3-0fda42d47ea1"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="59ecf514-9625-40ea-83ac-0522ee5026d8">
+                    <propertyInstance
+                      Id="db0ec345-6596-4f5e-83a3-3094ddda60b8"
+                      name="IsConst"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="cf90caa8-d01a-4164-9d6c-40c30f5fea8c">
+                    <propertyInstance
+                      Id="0c611c74-477a-4122-8394-6772ad1c5bd0"
+                      name="IsNullable"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="8cd37fdb-2295-463a-9bc5-e535a950a25b">
+                    <propertyInstance
+                      Id="903964be-e83e-4f5b-b17f-44b49bbeaf6e"
+                      name="IsVolatile"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="a8a5e416-7185-422a-b376-15bc194b0fe7">
+                    <propertyInstance
+                      Id="d82da079-58e1-4937-82be-d2b11ec3458b"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <classMoniker
+                Id="187fc279-1ab5-4429-a375-31a32d456c5f"
+                LastKnownName="Single"
+                LastKnownLocation="Package1_1401.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="f304ef10-9846-4e0b-8863-af7e3d7d1226"
+            name="Product"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="9c546656-27fd-4dd6-a7b4-4c8a67bf41fa"
+                handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2Fmkohlmann_he%2FDropbox%2FCS_Programs%2FVending Management%2FVendingManagement%2FVendingManagement%2Fbin%2FDebug%2FVendingManagement.exe&quot; Namespace%3DVendingManagement Type%3DProduct Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DSingle)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="c353e145-bead-4b73-9ff8-3af4c5afe06b"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="d77c106e-23f2-4a04-af39-1a151905f2ab">
+                    <propertyInstance
+                      Id="6969a6c2-e0de-4929-b6ed-b1fd7ae7a32b"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="9b838a7f-0f0c-4529-aa0a-d28d7431e2c7">
+                    <propertyInstance
+                      Id="bd297b35-bf88-4568-af94-14cf27c55383"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="d797bed9-f42c-4b16-9ba7-8403e5011e87">
+                    <propertyInstance
+                      Id="0cb5d465-1614-4e49-b361-41c65c82aac5"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="9626942e-7a68-47a9-a4aa-b4e665bf11dc">
+                    <propertyInstance
+                      Id="c788d878-545f-43c9-8c5b-835a64907d6d"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="e3279154-9bf9-4c36-a7de-1b164d5a8f18">
+                    <propertyInstance
+                      Id="37694644-85cd-4557-9deb-a9680ed20f9b"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="87364fdb-e965-48b1-b978-459bc15e01d9">
+                    <propertyInstance
+                      Id="75b8f452-1e6f-4b66-9453-42f72801dbb9"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="ce09ffa8-49c8-45d6-adc6-8b4f0b486a56"
+                  name="name"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="8c5a48b3-6c4d-4791-b359-e8300ad38e58"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2Fmkohlmann_he%2FDropbox%2FCS_Programs%2FVending Management%2FVendingManagement%2FVendingManagement%2Fbin%2FDebug%2FVendingManagement.exe&quot; Namespace%3DVendingManagement Type%3DProduct Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DSingle)]) ParameterIdentifier%3Dname"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                      LastKnownName="String"
+                      LastKnownLocation="VendingManagement_Database_UML.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="9ea458ff-a1fd-4f17-bc08-56d550e5bcd0"
+                  name="wholeSalePrice"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="200b22ed-9f92-4b59-8f5f-a4a5103a718d"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2Fmkohlmann_he%2FDropbox%2FCS_Programs%2FVending Management%2FVendingManagement%2FVendingManagement%2Fbin%2FDebug%2FVendingManagement.exe&quot; Namespace%3DVendingManagement Type%3DProduct Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DSingle)]) ParameterIdentifier%3DwholeSalePrice"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="187fc279-1ab5-4429-a375-31a32d456c5f"
+                      LastKnownName="Single"
+                      LastKnownLocation="Package1_1401.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="e12b9f9e-d62d-46d2-a274-4f011d9b61ee"
+        name="Machine"
+        visibility="Package"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="c8251929-c160-423d-bfb0-c8035e00e477"
+            handle="viewcode://./CodeSchema_Class?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2Fmkohlmann_he%2FDropbox%2FCS_Programs%2FVending Management%2FVendingManagement%2FVendingManagement%2Fbin%2FDebug%2FVendingManagement.exe&quot; Namespace%3DVendingManagement Type%3DMachine"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="437166b7-3e01-48f5-ac39-291ac60ddd9e"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="149ba79c-b802-4c57-aa74-d1b0f06370ac">
+                <propertyInstance
+                  Id="c92ec1e1-f55a-4740-867a-083c70da0b7a"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="fb55e481-32c4-4102-abd9-fba69ebe5b6d">
+                <propertyInstance
+                  Id="3d65fcae-c3f0-4e2f-a640-2accf924208f"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="02f62d4e-a230-46ae-bd6e-14bec5820639">
+                <propertyInstance
+                  Id="0b791a49-112f-4958-9666-f260fa4399e6"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="db54e23c-5aec-4029-813c-2c079f22569c">
+                <propertyInstance
+                  Id="de25e336-dc70-423d-b1c8-a8d20f0c5619"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="e7941260-95c8-4692-bab9-2fc4bfa9b60d">
+                <propertyInstance
+                  Id="bbe33254-efe3-40ed-8f58-18aa556f9b9a"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="d820d03f-c373-4f84-b4fd-76bb7de9f9ab"
+            name="Machine"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="0e5530bc-79a3-4300-bb56-d2c95c497427"
+                handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2Fmkohlmann_he%2FDropbox%2FCS_Programs%2FVending Management%2FVendingManagement%2FVendingManagement%2Fbin%2FDebug%2FVendingManagement.exe&quot; Namespace%3DVendingManagement Type%3DMachine Member%3D.ctor"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="a71520f2-cb77-48a3-9132-04ec14d42ed3"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="ce9255f7-8b04-472f-9720-9ec4da80d0fc">
+                    <propertyInstance
+                      Id="5acc8e63-279f-47c5-a232-bdb729d20255"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="02760802-fe3a-4074-bf4e-f50555bae70a">
+                    <propertyInstance
+                      Id="eb50c1e2-736a-4f3a-b79f-b63b94738d26"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="bd68e510-b394-4104-acca-e9d01e1e5ec0">
+                    <propertyInstance
+                      Id="4eee4d92-c5d2-4f67-b56c-875a649d4556"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="4dc9841f-6b6d-4ff6-8674-638e3dcf11b8">
+                    <propertyInstance
+                      Id="20742f92-8cf6-4cf5-b47f-a7a16af024c2"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="2e4f5225-ea0e-46d5-8dd0-951464a0d122">
+                    <propertyInstance
+                      Id="9bf94a52-867f-482b-95a8-09512966bf3d"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="98b82d99-22ef-4a0e-86dc-95f8a7f6c9eb">
+                    <propertyInstance
+                      Id="b84ccce2-92ae-464a-8609-2c297ec3d466"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="a909d1a0-9974-4860-ab9e-a657b4b739e6"
+        name="City"
+        visibility="Package"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="e29e36e5-7333-44ef-86de-b2eefb92f14e"
+            handle="viewcode://./CodeSchema_Class?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2Fmkohlmann_he%2FDropbox%2FCS_Programs%2FVending Management%2FVendingManagement%2FVendingManagement%2Fbin%2FDebug%2FVendingManagement.exe&quot; Namespace%3DVendingManagement Type%3DCity"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="6eefd4f8-0ce7-4ba2-8d61-032b3117beef"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="ebf90c9a-2757-4f3d-8b40-a5ff5e45698b">
+                <propertyInstance
+                  Id="6d48f282-eb06-4c55-8856-d7de4c1691a6"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="1026a35a-418e-4a83-b017-11aecdf5c5bf">
+                <propertyInstance
+                  Id="8b3aa482-1df1-4edc-99fe-60c1eeff6a5a"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="5c9cac89-d881-407d-9ba5-df6baaad3539">
+                <propertyInstance
+                  Id="318edc81-14bc-4683-86c3-759baa440470"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="5394342f-7f3b-448a-b998-0ac3a7edf7b1">
+                <propertyInstance
+                  Id="28309259-054b-4af8-a3ac-67f451478e83"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="7964a8fc-7790-43b2-b39a-838006f50ec7">
+                <propertyInstance
+                  Id="ca360c10-20ca-4686-98db-d89c3d323468"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="ce9f1eba-6da1-4d81-8ac4-6c294f96d127"
+            name="City"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="860f6d2b-c3a6-49f7-b851-0ef881c7b013"
+                handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2Fmkohlmann_he%2FDropbox%2FCS_Programs%2FVending Management%2FVendingManagement%2FVendingManagement%2Fbin%2FDebug%2FVendingManagement.exe&quot; Namespace%3DVendingManagement Type%3DCity Member%3D.ctor"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="2f163d94-1593-4a1c-ac22-e3c02f6ceb18"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="bf2b29d4-0000-47fa-b73a-6a6f60b98875">
+                    <propertyInstance
+                      Id="12dca534-ab81-4a76-b37b-4fcfdffe184f"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="cce605dd-c1ae-4fc0-a8db-f932a48d530f">
+                    <propertyInstance
+                      Id="0b85096f-61c3-496b-8ba0-74aa117ac78b"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="762d93c3-cf4f-49cc-bac5-7093995ea900">
+                    <propertyInstance
+                      Id="cf19a425-fbc1-4347-904a-92292c26be62"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="c8da9fda-ce87-4cb6-a6b3-25d9f6c51ac0">
+                    <propertyInstance
+                      Id="32935223-0114-4214-a740-411ff6071756"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="04eb7573-ed14-4b42-b23f-614b8ab63dfe">
+                    <propertyInstance
+                      Id="5b564d48-df5f-499e-92a3-bb2b18d139d5"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="cf793fe1-4698-4478-bc35-c33d4c804d57">
+                    <propertyInstance
+                      Id="35fdee28-e433-432d-99a2-4bebba8c391e"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="3593e31a-cb66-44ec-84d4-aa3e9c733e63"
+        name="Employee"
+        visibility="Package"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="1d9183aa-7534-4180-ba30-e02a2f29b8bc"
+            handle="viewcode://./CodeSchema_Class?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2Fmkohlmann_he%2FDropbox%2FCS_Programs%2FVending Management%2FVendingManagement%2FVendingManagement%2Fbin%2FDebug%2FVendingManagement.exe&quot; Namespace%3DVendingManagement Type%3DEmployee"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="dde4e0ed-f177-4887-b019-699aa5bb0ab4"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="828ab0eb-f41a-4b5f-9576-7848b866c212">
+                <propertyInstance
+                  Id="7726d564-ffca-438e-9002-b8acfc22d32f"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="f47a0611-8f7c-4f97-a384-c01ceebf1b54">
+                <propertyInstance
+                  Id="d72f5e0a-8dd3-42eb-a84e-0a809cff430a"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="9f7f13ea-e2ea-4d98-996e-c11989cfec43">
+                <propertyInstance
+                  Id="8e76b8e1-64e7-4490-9f54-369b19ab0cc3"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="75994a7f-a923-4906-899d-dcf5edc91d9a">
+                <propertyInstance
+                  Id="fdd42066-26b2-49fc-b675-050632b431a8"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="f2d4c507-55a8-4f41-a07a-7cdaf2a2e405">
+                <propertyInstance
+                  Id="31bc3b54-4866-48ce-aadc-8a34738a1b96"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="77732c7d-0b67-4f83-9135-67c0aaf63a11"
+            name="Employee"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="6590f7bd-892e-4081-805d-b11e3f75bd9d"
+                handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2Fmkohlmann_he%2FDropbox%2FCS_Programs%2FVending Management%2FVendingManagement%2FVendingManagement%2Fbin%2FDebug%2FVendingManagement.exe&quot; Namespace%3DVendingManagement Type%3DEmployee Member%3D.ctor"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="6558e152-c517-4d36-a910-d29f3dc4b881"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="30461e0e-b5dd-4e3d-a9ff-93f7dae4a090">
+                    <propertyInstance
+                      Id="254376e1-62c3-48d2-98a7-450a8155d3fe"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="876bae30-fe91-4d0a-97be-763e834705d3">
+                    <propertyInstance
+                      Id="22e1ca11-ceea-4a20-a9f4-d818d59acb02"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="f7bfee76-0c26-43aa-b016-1415c238f284">
+                    <propertyInstance
+                      Id="f14b9eeb-bfca-42bc-997e-d5a4a2d71c1f"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="85859991-cd97-48fb-b701-9ef7453e35de">
+                    <propertyInstance
+                      Id="3bec7868-8bb2-40be-899c-1aed3704c4dc"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="0a6a9fc1-c6b6-4001-9f41-ef094d3cc42f">
+                    <propertyInstance
+                      Id="30693d9f-6f51-4d96-8c52-948ebf649d7c"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="b4577e2f-4f3c-48bc-a05e-6a1a2761732a">
+                    <propertyInstance
+                      Id="f1a036e3-3c01-439d-92cc-73689ebcf8a8"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="7680e4ed-2fce-4c9c-90f2-2be3037c85d5"
+        name="Vehicle"
+        visibility="Package"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="1ebdaba8-1aa2-4c0d-9628-b14ccd9a6239"
+            handle="viewcode://./CodeSchema_Class?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2Fmkohlmann_he%2FDropbox%2FCS_Programs%2FVending Management%2FVendingManagement%2FVendingManagement%2Fbin%2FDebug%2FVendingManagement.exe&quot; Namespace%3DVendingManagement Type%3DVehicle"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="0a7f7cca-9f0c-4c2c-9e42-f0da26981c67"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="cb78b4de-6995-404d-ab25-55b96e403971">
+                <propertyInstance
+                  Id="bef81d50-a712-4d52-8c91-34df951655c6"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="c2a64a2b-6fa8-45fc-8740-71c9826c8000">
+                <propertyInstance
+                  Id="2938b487-e125-43f4-b6b7-1abef4914192"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="f1172d67-f870-4fcb-b97a-51a4de32c783">
+                <propertyInstance
+                  Id="5ece0ac0-09d9-4b8b-9ad2-56ff8cf81b02"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="76c54d6f-a9a6-4e79-83f1-4b5f8968809b">
+                <propertyInstance
+                  Id="3b2ad8d5-ce80-40ce-8957-4267e279966b"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="f9aaea95-79c7-4b33-a017-000311d2b8e1">
+                <propertyInstance
+                  Id="84e9e8b3-256a-4150-9e28-f477e2c74871"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="7cc65000-f64e-4279-8be7-0af7dced5b99"
+            name="Vehicle"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="d368a8f4-c646-4cce-a532-de4645296aab"
+                handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2Fmkohlmann_he%2FDropbox%2FCS_Programs%2FVending Management%2FVendingManagement%2FVendingManagement%2Fbin%2FDebug%2FVendingManagement.exe&quot; Namespace%3DVendingManagement Type%3DVehicle Member%3D.ctor"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="475751a9-8b30-4c0a-ac8e-f15fde2d5e7b"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="50a1ee70-dbbe-4046-a763-a46d54aeba28">
+                    <propertyInstance
+                      Id="b125ee44-d84c-4c95-b0e7-5635a1f36c32"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="ea14aa12-6da2-468b-a65f-fdcf8fdbc617">
+                    <propertyInstance
+                      Id="8e1cb498-92a3-4da9-a958-b68bc708fda1"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="eb186144-c88e-425d-8b2c-b4c98b847939">
+                    <propertyInstance
+                      Id="5a6d914b-5eaf-4c0f-a5b3-75e156dd0b35"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="2ff3f389-4fcb-49ef-9459-6905b348fe61">
+                    <propertyInstance
+                      Id="8e3af0c3-4178-4aa9-a2e9-a57e97a64451"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="a5c26b2f-b971-46c0-bf2f-49c30bcfbb6f">
+                    <propertyInstance
+                      Id="8ccba56f-5730-4cc1-8566-b2119534eede"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="d9243345-4ed8-4fc6-8486-b989a9630835">
+                    <propertyInstance
+                      Id="fd2e7644-c57f-45c5-a6b6-27fd5629ff97"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="cee7496e-4b34-4200-b438-e6b691fb0bc6"
+        name="Transactions"
+        visibility="Package"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="0b318f50-a721-4751-8d00-1b776d48fc87"
+            handle="viewcode://./CodeSchema_Class?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2Fmkohlmann_he%2FDropbox%2FCS_Programs%2FVending Management%2FVendingManagement%2FVendingManagement%2Fbin%2FDebug%2FVendingManagement.exe&quot; Namespace%3DVendingManagement Type%3DTransactions"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="4262e6ae-1457-4b85-9f78-2da89d6cd2e2"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="3d789020-d480-4a9c-bcf6-069c11cb7832">
+                <propertyInstance
+                  Id="baa5dbb8-1427-4942-9921-c68f3087d6e8"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="c0a68c08-a587-48a0-8cf9-e2ab4273fdca">
+                <propertyInstance
+                  Id="99b3f5ee-d9a1-48a9-94d7-45103fabb644"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="80138beb-4835-428f-bdb7-495a4dda535c">
+                <propertyInstance
+                  Id="2c5260e4-e888-4e32-9596-5d6573a1455a"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="c23db50f-7b00-49da-8268-67786cc1d9a5">
+                <propertyInstance
+                  Id="26c6dbb6-3924-4c43-beac-82bf6269cd66"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="40e58641-2169-4a46-afcc-78b45e7b035a">
+                <propertyInstance
+                  Id="ff43cb4b-3aea-4403-bd03-4a1e4d53325d"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="163fae5e-357e-4f3f-9050-a0756c9241fb"
+            name="Transactions"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="0d70c50f-7b2c-4e85-ab1c-af723447faea"
+                handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2Fmkohlmann_he%2FDropbox%2FCS_Programs%2FVending Management%2FVendingManagement%2FVendingManagement%2Fbin%2FDebug%2FVendingManagement.exe&quot; Namespace%3DVendingManagement Type%3DTransactions Member%3D.ctor"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="eea2ffcc-11c7-4340-9ae2-638283d614d8"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="bb30cd82-5cfb-4c82-8244-9c0b9ce6c5d6">
+                    <propertyInstance
+                      Id="5d8fbae0-dfd5-469c-a707-bbb506336da8"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="12ace897-3b3d-4125-b851-06c1b87cf688">
+                    <propertyInstance
+                      Id="75172d8f-85ab-4918-a515-9df50aca5e30"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="52f63ef4-47b9-4b7c-8fac-9a6fe252f454">
+                    <propertyInstance
+                      Id="52bb821f-dff3-492f-8eee-07acb674f2d3"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="7e9fcf86-c8a0-4e1a-958b-26d3ef6280d3">
+                    <propertyInstance
+                      Id="05050bdd-7325-4912-bfa3-057607c6eb77"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="4ce505e2-5dff-4976-ad44-c803f7dd3f88">
+                    <propertyInstance
+                      Id="96b10901-a7bb-4bcf-bd8b-a539b5ac00d5"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="b0a1f3dd-4439-4dc2-8eb3-a7338a01be32">
+                    <propertyInstance
+                      Id="5e6dbf7e-350f-4286-af2e-55b574de6a03"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+  </packagedElements>
+</package>
