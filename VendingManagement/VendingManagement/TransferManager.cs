@@ -46,7 +46,7 @@ namespace VendingManagement
 
 
         //
-        // Transfer product in bulk out of Machine
+        // Transfer bulk product out of Machine
         //
         public void TransferFromMachine(Machine machine, List<Product> productList)
         {
@@ -54,12 +54,12 @@ namespace VendingManagement
             float totalCost = 0;
             string productName = productList[0].Name;
 
-            int repeat = productList.Count();
-            for (int i = 0; i < repeat; ++i)
+            int repeat = productList.Count()-1;
+            for (int i = repeat; i >= 0; --i)
             {
-                totalCost += productList[0].WholeSalePrice;
-                this.database.Append(productList[0]);
-                machine.removeProduct(productList[0]);
+                totalCost += productList[i].WholeSalePrice;
+                this.database.Append(productList[i]);
+                machine.removeProduct(productList[i]);
             }
             this.database.Append(new Transactions(transactionID, DateTime.Now, "Checking", productName, -totalCost));
             this.database.Append(new Transactions((transactionID + 1), DateTime.Now, machine.MachineID, productName, +totalCost));

@@ -63,24 +63,22 @@ namespace Database_Unit_Test
             List<Product> listProduct = database.SelectAllProduct();
 
             Machine machine = new Machine("Milwaukee", "", "M101");
+            database.Append(machine);
             transferManager.TransferToMachine(machine, listProduct);
             Assert.AreEqual(machine.getSingleQuantity("Snickers"), 5);
-
+            List<Product> transferList = machine.selectAllProductByType("Snickers");
 
             // Action
-            //Product testProduct = machine.removeMultipleProduct();
-
+            transferManager.TransferFromMachine(machine, transferList);
 
             // Assert
-            int SnickerQuantity = machine.getSingleQuantity("Snickers");
-            int AllQuantity = machine.getAllQuantity();
-            listProduct = database.SelectAllProduct();
+            Assert.AreEqual(database.SelectAllProduct().Count, 5);
+            Assert.AreEqual(machine.getSingleQuantity("Snickers"), 0);
+
+
             List<Transactions> listTransactions = database.SelectAllTransactions();
-            Assert.AreEqual(listProduct.Count, 0);
-            Assert.AreEqual(SnickerQuantity, 5);
-            Assert.AreEqual(AllQuantity, 5);
-            Assert.AreEqual(listTransactions.Count, 3);
-            Assert.AreEqual(listTransactions[2].Amount, -1.25);
+            Assert.AreEqual(listTransactions.Count, 5);
+            Assert.AreEqual(listTransactions[4].Amount, 1.25f);
         }
 
 
