@@ -81,35 +81,28 @@ namespace VendingManagement
 
 
         // removes product from product list. If there is no product left, then type is removed from product Type.
-        public bool removeProduct(Product product)
+        public Product removeProduct(Product product)
         {
             int getProductQuantity = getSingleQuantity(product.Name);
             if (getProductQuantity == 1)
             {
                 removeProductType(product.Name);
             }
-            return products.Remove(product);
+            Product removedProduct = products.Find(x => x.Name == product.Name); 
+            products.Remove(product);
+            return removedProduct;
         }
 
-        public bool removeMultipleProduct(List<Product> multipleProduct)
+        public List<Product> removeMultipleProduct(List<Product> multipleProduct)
         {
+            List<Product> multipleProductReturn = new List<Product>();
             int removeCount = multipleProduct.Count();    
             foreach (Product product in multipleProduct)
                 {
-                    bool removeCheck = removeProduct(product);
-                    if (removeCheck == true)
-                    {
-                        removeCount -= 1;
-                    }
+                    Product removeMultipleProduct = removeProduct(product);
+                    multipleProductReturn.Add(removeMultipleProduct);
                 }
-            if (removeCount == 0)
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
+            return multipleProductReturn;
        }
             
         
