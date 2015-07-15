@@ -6,7 +6,28 @@ using System.Threading.Tasks;
 
 namespace VendingManagement
 {
-    class City
+    public class City
     {
+        string name;
+        string location;
+
+        public string Name
+        {
+            get { return name; }
+            set { name = value; }
+        }
+
+        public string Location
+        {
+            get { return location; }
+            set { location = value; }
+        }
+        
+        public City(string name, string location)
+        {
+            this.name = name;
+            this.location = location;
+        }
+
     }
 }

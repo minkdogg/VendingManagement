@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace VendingManagement
 {
-    class Machine
+    public class Machine
     {
         public List<Product> products = new List<Product> { };
         
@@ -123,15 +123,30 @@ namespace VendingManagement
             return restockItems;
         }
 
-       
+        public void updateRetailPrice(string name, float price)
+        {
+            foreach (Product product in products)
+            {
+                if (name == product.name)
+                {
+                    product.retailPrice = price;
+                }
+            }
+        }
 
+
+        public int getMachineCount()
+        {
+            int count = Database.listMachine.Count();
+            return count;
+        }
 
 
         public Machine(string city, string location)
         {
             this.city = city;
             this.location = location;
-            this.machineNum = 1;
+            this.machineNum = getMachineCount()+ 1;
         }
 
 

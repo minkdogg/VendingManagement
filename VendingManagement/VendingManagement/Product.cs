@@ -6,11 +6,14 @@ using System.Threading.Tasks;
 
 namespace VendingManagement
 {
-    class Product
+    public class Product
     {
 
-        protected string name;
+        public string name;
         protected float wholeSalePrice;
+        public float retailPrice;
+        protected List<string> productTypes = new List<string> { "Snickers", "Coke", "Milky Way", "Almond Joy", "Sprite", "Dr. Pepper", "Doritos", "Fritos", "Lays" };
+
 
         public string Name
         {
@@ -36,10 +39,16 @@ namespace VendingManagement
             }
         }
 
+        public void addType(string type)
+        {
+            productTypes.Add(type);
+        }
+
         public Product(string name, float wholeSalePrice)
         {
             this.name = name;
             this.wholeSalePrice = wholeSalePrice;
+            this.retailPrice = wholeSalePrice;
         }
 
     }
