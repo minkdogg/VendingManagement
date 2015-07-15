@@ -28,37 +28,10 @@ namespace VendingManagement
             this.maxCapacity = 25;
         }
 
-        public int MaxCapacity
-        {
-            get{ return maxCapacity; }
-            set{ maxCapacity = value; }
-        }
 
 
-        public string City
-        {
-            get { return city; }
-            set { city = value; }
-        }
-
-        public string Location
-        {
-            get { return location; }
-            set { location = value; }
-        }
-
-        public bool NeedService
-        {
-            get { return NeedService; }
-            set { needService = value; }
-        }
-
-        public bool NeedRestock
-        {
-            get { return NeedRestock; }
-            set { needRestock = value; }
-        }
-
+        // adds product to products list and if necessary adds type to productTypes
+        // assigns min stock level to be defaultMinStock for type if necessary.
         public bool addProduct(Product product)
         {
             if (products.Count() < maxCapacity)
@@ -88,11 +61,63 @@ namespace VendingManagement
             }
         }
 
+        public bool addMultipleProduct(List<Product> multipleProduct)
+        {
+            int newProductCount = products.Count() + multipleProduct.Count();
+            if (newProductCount < maxCapacity)
+            {
+                foreach(Product product in multipleProduct)
+                {
+                    addProduct(product);
+                }
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+
+
+        // removes product from product list. If there is no product left, then type is removed from product Type.
         public bool removeProduct(Product product)
         {
+            int getProductQuantity = getSingleQuantity(product.Name);
+            if (getProductQuantity == 1)
+            {
+                removeProductType(product.Name);
+            }
             return products.Remove(product);
         }
 
+        public bool removeMultipleProduct(List<Product> multipleProduct)
+        {
+            int removeCount = multipleProduct.Count();    
+            foreach (Product product in multipleProduct)
+                {
+                    bool removeCheck = removeProduct(product);
+                    if (removeCheck == true)
+                    {
+                        removeCount -= 1;
+                    }
+                }
+            if (removeCount == 0)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+       }
+            
+        
+
+
+
+
+        // removes productType based on type entered.
         public void removeProductType(string type)
         {
             List<string> productNames = getProductTypeNames();
@@ -100,6 +125,7 @@ namespace VendingManagement
             productTypes.RemoveAt(indexName);
         }
 
+        // adds new product type if necessary with new minStock level.
         public bool addProductType(string type, int minStock)
         {
             List<string> productNames = getProductTypeNames();
@@ -120,13 +146,14 @@ namespace VendingManagement
         }
 
 
-
-        public int checkAllQuantity()
+        //returns total count of product in machine
+        public int getAllQuantity()
         {
             int countProduct = products.Count();
             return countProduct;
         }
 
+        //returns single count of product based on type (i.e. how many "Snickers" bars in machine)
         public int getSingleQuantity(string type)
         {
             List<string> productNames = getProductNames();
@@ -146,6 +173,98 @@ namespace VendingManagement
             return groupCount;
         }
 
+
+
+        
+
+       
+
+
+        // returns list of items needed for restock
+        public List<string> getItemsRestock()
+        {
+            
+            List<string> restockItems = new List<string> {};
+            List<int> restockMin = new List<int>{};
+            List<string> productNames = getProductNames();
+            List<string> uniqueProductNames = productNames.Distinct().ToList();
+
+            var groupProduct = productNames.GroupBy(i => i);
+
+            foreach (var list in productTypes)
+            {
+                if (uniqueProductNames.Contains(list[0]))
+                {
+                    int typeCount = getSingleQuantity(list[0]);
+                    if(Convert.ToInt32(list[1]) <= typeCount)
+                    {
+                        restockItems.Add(list[0]);
+                    }
+                }
+            }
+
+            return restockItems;
+        }
+
+        //checks to single item to see if it needs restock
+        public bool checkSingleItemRestock(string type)
+        {
+            int restockMin = getSingleTypeMinStock(type);
+            int typeCount = getSingleQuantity(type);
+            if (typeCount <= restockMin)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+
+        public void updateMinStockType(string name, int minStock)
+        {
+            List<string> productNames = getProductTypeNames();
+            if (productNames.Contains(name))
+            {
+                int index = productNames.IndexOf(name);
+                productTypes[index][1] = minStock.ToString();
+            }
+        }
+
+        
+        //Getter and Setter Section
+        public int MaxCapacity
+        {
+            get { return maxCapacity; }
+            set { maxCapacity = value; }
+        }
+
+
+        public string City
+        {
+            get { return city; }
+            set { city = value; }
+        }
+
+        public string Location
+        {
+            get { return location; }
+            set { location = value; }
+        }
+
+        public bool NeedService
+        {
+            get { return NeedService; }
+            set { needService = value; }
+        }
+
+        public bool NeedRestock
+        {
+            get { return NeedRestock; }
+            set { needRestock = value; }
+        }
+
         public int DefaultMinStock
         {
             get { return defaultMinStock; }
@@ -157,9 +276,12 @@ namespace VendingManagement
             get { return machineID; }
             set { machineID = value; }
         }
+        
+        //End of Setter/Getter Section
 
+        //Start of Helper functions for class
 
-
+        // returns list of all product names in product list
         public List<string> getProductNames()
         {
             List<string> productNames = new List<string> { };
@@ -170,6 +292,7 @@ namespace VendingManagement
             return productNames;
         }
 
+        // returns list of all product types in product type list.
         public List<string> getProductTypeNames()
         {
             List<string> productNames = new List<string> { };
@@ -182,6 +305,7 @@ namespace VendingManagement
             return productNames;
         }
 
+        // retrieves product Type needed for restock
         public List<int> getProductTypeRestock()
         {
             List<int> productRestock = new List<int> { };
@@ -209,57 +333,6 @@ namespace VendingManagement
         }
 
 
-
-        public List<string> checkItemsRestock()
-        {
-            
-            List<string> restockItems = new List<string> {};
-            List<int> restockMin = new List<int>{};
-            List<string> productNames = getProductNames();
-            List<string> uniqueProductNames = productNames.Distinct().ToList();
-
-            var groupProduct = productNames.GroupBy(i => i);
-
-            foreach (var list in productTypes)
-            {
-                if (uniqueProductNames.Contains(list[0]))
-                {
-                    int typeCount = getSingleQuantity(list[0]);
-                    if(Convert.ToInt32(list[1]) <= typeCount)
-                    {
-                        restockItems.Add(list[0]);
-                    }
-                }
-            }
-
-            return restockItems;
-        }
-
-        public bool checkSingleItemRestock(string type)
-        {
-            int restockMin = getSingleTypeMinStock(type);
-            int typeCount = getSingleQuantity(type);
-            if (typeCount <= restockMin)
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
-        }
-
-        public void updateMinStockType(string name, int minStock)
-        {
-            List<string> productNames = getProductTypeNames();
-            if (productNames.Contains(name))
-            {
-                int index = productNames.IndexOf(name);
-                productTypes[index][1] = minStock.ToString();
-            }
-        }
-        
-        
         
         
         //public void updateRetailPrice(string name, float price)
