@@ -183,11 +183,69 @@ namespace VendingManagement
 
         public void generateInitialMachines()
         {
-            Machine machine1 = new Machine();
-            Machine machine2 = new Machine();
-            Machine machine3 = new Machine();
-            Machine machine4 = new Machine();
-            Machine machine5 = new Machine();
+            Machine machine1 = new Machine("Milwaukee", "");
+            Machine machine2 = new Machine("Waukesha","");
+            Machine machine3 = new Machine("Brookfield", "");
+            Machine machine4 = new Machine("Milwaukee", "");
+            Machine machine5 = new Machine("Brookfield", "");
+
+            machine1.MaxCapacity = 10;
+            machine1.NeedRestock = false;
+            machine1.NeedService = true;
+            machine1.minStock = 1;
+            machine1.addProduct(new Product("Snickers", .25f));
+            machine1.addProduct(new Product("Snickers", .25f));
+            machine1.addProduct(new Product("Snickers", .25f));
+            machine1.addProduct(new Product("Mounds", .25f));
+            machine1.addProduct(new Product("Mounds", .25f));
+            machine1.addProduct(new Product("Mounds", .25f));
+            machine1.addProduct(new Product("Snickers", .25f));
+            machine1.addProduct(new Product("Snickers", .25f));
+
+            machine2.MaxCapacity = 10;
+            machine2.NeedRestock = false;
+            machine2.NeedService = false;
+            machine2.minStock = 1;
+            machine2.addProduct(new Product("Coke", .25f));
+            machine2.addProduct(new Product("Coke", .25f));
+            machine2.addProduct(new Product("Sprite", .25f));
+            machine2.addProduct(new Product("Sprite", .25f));
+            machine2.addProduct(new Product("Dr. Pepper", .25f));
+            machine2.addProduct(new Product("Dr. Pepper", .25f));
+            machine2.addProduct(new Product("Fritos", .25f));
+            machine2.addProduct(new Product("Fritos", .25f));
+
+            machine3.MaxCapacity = 5;
+            machine3.NeedRestock = true;
+            machine3.NeedService = true;
+            machine3.minStock = 1;
+            machine3.addProduct(new Product("Coke", .25f));
+
+            machine4.MaxCapacity = 10;
+            machine4.NeedRestock = false;
+            machine4.NeedService = false;
+            machine4.minStock = 4;
+            machine4.addProduct(new Product("Coke", .25f));
+            machine4.addProduct(new Product("Coke", .25f));
+            machine4.addProduct(new Product("Sprite", .25f));
+            machine4.addProduct(new Product("Sprite", .25f));
+            machine4.addProduct(new Product("Dr. Pepper", .25f));
+            machine4.addProduct(new Product("Dr. Pepper", .25f));
+            machine4.addProduct(new Product("Fritos", .25f));
+            machine4.addProduct(new Product("Fritos", .25f));
+
+            machine5.MaxCapacity = 20;
+            machine5.NeedRestock = true;
+            machine5.NeedService = true;
+            machine5.minStock = 4;
+            machine5.addProduct(new Product("Coke", .25f));
+            machine5.addProduct(new Product("Coke", .25f));
+            machine5.addProduct(new Product("Sprite", .25f));
+            machine5.addProduct(new Product("Sprite", .25f));
+            machine5.addProduct(new Product("Dr. Pepper", .25f));
+            machine5.addProduct(new Product("Dr. Pepper", .25f));
+            machine5.addProduct(new Product("Fritos", .25f));
+            machine5.addProduct(new Product("Fritos", .25f));
 
             listMachine.Add(machine1);
             listMachine.Add(machine2);
@@ -271,8 +329,8 @@ namespace VendingManagement
             Transactions transaction26 = new Transactions(26, date.AddMinutes(1325), 2, "Coke", .35f, .50f);
             Transactions transaction27 = new Transactions(27, date.AddMinutes(1625), 1, "Dr. Pepper", .25f, .50f);
             Transactions transaction28 = new Transactions(28, date.AddMinutes(1725), 3, "Doritos", .25f, .75f);
-            Transactions transaction29 = new Transactions(29, date.AddMinutes(1825), 1, "Sprite", .25f, .50f);
-            Transactions transaction30 = new Transactions(30, date.AddMinutes(1925), 3, "Mounds", .25f, .75f);
+            Transactions transaction29 = new Transactions(29, date.AddMinutes(1825), 4, "Sprite", .25f, .50f);
+            Transactions transaction30 = new Transactions(30, date.AddMinutes(1925), 5, "Mounds", .25f, .75f);
 
             listTransactions.Add(transaction1);
             listTransactions.Add(transaction2);
