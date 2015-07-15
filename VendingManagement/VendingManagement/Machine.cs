@@ -79,20 +79,17 @@ namespace VendingManagement
         }
 
 
-        public Product selectProduct(Product product)
-        {
-            Product selectProduct = products.Find(x => x.Name == product.Name);
-            return selectProduct;
-        }
 
-        public List<Product> selectMultipleProduct(List<Product> multipleProduct)
+        public List<Product> selectAllProductByType(string id)
         {
             List<Product> multipleProductReturn = new List<Product>();
             
-            foreach (Product product in multipleProduct)
+            foreach (Product product in this.products)
             {
-                Product removeMultipleProduct = selectProduct(product);
-                multipleProductReturn.Add(removeMultipleProduct);
+                if (product.Name == id)
+                {
+                    multipleProductReturn.Add(product);
+                }
             }
             return multipleProductReturn;
         }
@@ -100,28 +97,22 @@ namespace VendingManagement
 
 
         // removes product from product list. If there is no product left, then type is removed from product Type.
-        public Product removeProduct(Product product)
+        public void removeProduct(Product product)
         {
             int getProductQuantity = getSingleQuantity(product.Name);
             if (getProductQuantity == 1)
             {
                 removeProductType(product.Name);
-            }
-            Product removedProduct = products.Find(x => x.Name == product.Name); 
+            } 
             products.Remove(product);
-            return removedProduct;
         }
 
-        public List<Product> removeMultipleProduct(List<Product> multipleProduct)
-        {
-            List<Product> multipleProductReturn = new List<Product>();
-            int removeCount = multipleProduct.Count();    
+        public void removeMultipleProduct(List<Product> multipleProduct)
+        {    
             foreach (Product product in multipleProduct)
                 {
-                    Product removeMultipleProduct = removeProduct(product);
-                    multipleProductReturn.Add(removeMultipleProduct);
+                    this.removeProduct(product);
                 }
-            return multipleProductReturn;
        }
             
         
