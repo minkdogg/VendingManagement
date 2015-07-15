@@ -196,19 +196,19 @@ namespace VendingManagement
         
         public void generateInitialProducts()
         {
+            int transactionID = 1;
             for (int i = 0; i < 50; i++)
             {
-                Product product1 = new Product("Snickers", .25f);
-                Product product2 = new Product("Milky Way", .25f);
-                Product product3 = new Product("Mounds", .25f);
-                Product product4 = new Product("Almond Joy", .25f);
-                Product product5 = new Product("Coke", .25f);
-                Product product6 = new Product("Sprite", .25f);
-                Product product7 = new Product("Dr. Pepper", .25f);
-                Product product8 = new Product("Doritos", .25f);
-                Product product9 = new Product("Fritos", .25f);
-                Product product10 = new Product("Lays", .25f);
-
+                Product product1 = new Product("Snickers");
+                Product product2 = new Product("Milky Way");
+                Product product3 = new Product("Mounds");
+                Product product4 = new Product("Almond Joy");
+                Product product5 = new Product("Coke");
+                Product product6 = new Product("Sprite");
+                Product product7 = new Product("Dr. Pepper");
+                Product product8 = new Product("Doritos");
+                Product product9 = new Product("Fritos");
+                Product product10 = new Product("Lays");
                 listProduct.Add(product1);
                 listProduct.Add(product2);
                 listProduct.Add(product3);
@@ -219,6 +219,38 @@ namespace VendingManagement
                 listProduct.Add(product8);
                 listProduct.Add(product9);
                 listProduct.Add(product10);
+
+                Transactions transaction1 = new Transactions(transactionID, DateTime.Now.AddMinutes(-2900), "Checking", "Snickers", -.25f);
+                transactionID++;
+                Transactions transaction2 = new Transactions(transactionID, DateTime.Now.AddMinutes(-2900), "Checking", "Milky Way", -.25f);
+                transactionID++;
+                Transactions transaction3 = new Transactions(transactionID, DateTime.Now.AddMinutes(-2900), "Checking", "Mounds", -.25f);
+                transactionID++;
+                Transactions transaction4 = new Transactions(transactionID, DateTime.Now.AddMinutes(-2900), "Checking", "Almond Joy", -.25f);
+                transactionID++;
+                Transactions transaction5 = new Transactions(transactionID, DateTime.Now.AddMinutes(-2900), "Checking", "Coke", -.25f);
+                transactionID++;
+                Transactions transaction6 = new Transactions(transactionID, DateTime.Now.AddMinutes(-2900), "Checking", "Sprite", -.25f);
+                transactionID++;
+                Transactions transaction7 = new Transactions(transactionID, DateTime.Now.AddMinutes(-2900), "Checking", "Dr. Pepper", -.25f);
+                transactionID++;
+                Transactions transaction8 = new Transactions(transactionID, DateTime.Now.AddMinutes(-2900), "Checking", "Doritos", -.25f);
+                transactionID++;
+                Transactions transaction9 = new Transactions(transactionID, DateTime.Now.AddMinutes(-2900), "Checking", "Fritos", -.25f);
+                transactionID++;
+                Transactions transaction10 = new Transactions(transactionID, DateTime.Now.AddMinutes(-2900), "Checking", "Lays", -.25f);
+                transactionID++;
+
+                listTransactions.Add(transaction1);
+                listTransactions.Add(transaction2);
+                listTransactions.Add(transaction3);
+                listTransactions.Add(transaction4);
+                listTransactions.Add(transaction5);
+                listTransactions.Add(transaction6);
+                listTransactions.Add(transaction7);
+                listTransactions.Add(transaction8);
+                listTransactions.Add(transaction9);
+                listTransactions.Add(transaction10);
             }
         }
 
@@ -239,59 +271,59 @@ namespace VendingManagement
             machine1.NeedRestock = false;
             machine1.NeedService = true;
             machine1.DefaultMinStock = 1;
-            machine1.addProduct(new Product("Snickers", .25f));
-            machine1.addProduct(new Product("Snickers", .25f));
-            machine1.addProduct(new Product("Snickers", .25f));
-            machine1.addProduct(new Product("Mounds", .25f));
-            machine1.addProduct(new Product("Mounds", .25f));
-            machine1.addProduct(new Product("Mounds", .25f));
-            machine1.addProduct(new Product("Snickers", .25f));
-            machine1.addProduct(new Product("Snickers", .25f));
+            machine1.addProduct(new Product("Snickers"));
+            machine1.addProduct(new Product("Snickers"));
+            machine1.addProduct(new Product("Snickers"));
+            machine1.addProduct(new Product("Mounds"));
+            machine1.addProduct(new Product("Mounds"));
+            machine1.addProduct(new Product("Mounds"));
+            machine1.addProduct(new Product("Snickers"));
+            machine1.addProduct(new Product("Snickers"));
 
             machine2.MaxCapacity = 10;
             machine2.NeedRestock = false;
             machine2.NeedService = false;
             machine2.DefaultMinStock = 1;
-            machine2.addProduct(new Product("Coke", .25f));
-            machine2.addProduct(new Product("Coke", .25f));
-            machine2.addProduct(new Product("Sprite", .25f));
-            machine2.addProduct(new Product("Sprite", .25f));
-            machine2.addProduct(new Product("Dr. Pepper", .25f));
-            machine2.addProduct(new Product("Dr. Pepper", .25f));
-            machine2.addProduct(new Product("Fritos", .25f));
-            machine2.addProduct(new Product("Fritos", .25f));
+            machine2.addProduct(new Product("Coke"));
+            machine2.addProduct(new Product("Coke"));
+            machine2.addProduct(new Product("Sprite"));
+            machine2.addProduct(new Product("Sprite"));
+            machine2.addProduct(new Product("Dr. Pepper"));
+            machine2.addProduct(new Product("Dr. Pepper"));
+            machine2.addProduct(new Product("Fritos"));
+            machine2.addProduct(new Product("Fritos"));
 
             machine3.MaxCapacity = 5;
             machine3.NeedRestock = true;
             machine3.NeedService = true;
             machine3.DefaultMinStock = 1;
-            machine3.addProduct(new Product("Coke", .25f));
+            machine3.addProduct(new Product("Coke"));
 
             machine4.MaxCapacity = 10;
             machine4.NeedRestock = false;
             machine4.NeedService = false;
             machine4.DefaultMinStock = 2;
-            machine4.addProduct(new Product("Coke", .25f));
-            machine4.addProduct(new Product("Coke", .25f));
-            machine4.addProduct(new Product("Sprite", .25f));
-            machine4.addProduct(new Product("Sprite", .25f));
-            machine4.addProduct(new Product("Dr. Pepper", .25f));
-            machine4.addProduct(new Product("Dr. Pepper", .25f));
-            machine4.addProduct(new Product("Fritos", .25f));
-            machine4.addProduct(new Product("Fritos", .25f));
+            machine4.addProduct(new Product("Coke"));
+            machine4.addProduct(new Product("Coke"));
+            machine4.addProduct(new Product("Sprite"));
+            machine4.addProduct(new Product("Sprite"));
+            machine4.addProduct(new Product("Dr. Pepper"));
+            machine4.addProduct(new Product("Dr. Pepper"));
+            machine4.addProduct(new Product("Fritos"));
+            machine4.addProduct(new Product("Fritos"));
 
             machine5.MaxCapacity = 20;
             machine5.NeedRestock = true;
             machine5.NeedService = true;
             machine5.DefaultMinStock = 2;
-            machine5.addProduct(new Product("Coke", .25f));
-            machine5.addProduct(new Product("Coke", .25f));
-            machine5.addProduct(new Product("Sprite", .25f));
-            machine5.addProduct(new Product("Sprite", .25f));
-            machine5.addProduct(new Product("Dr. Pepper", .25f));
-            machine5.addProduct(new Product("Dr. Pepper", .25f));
-            machine5.addProduct(new Product("Fritos", .25f));
-            machine5.addProduct(new Product("Fritos", .25f));
+            machine5.addProduct(new Product("Coke"));
+            machine5.addProduct(new Product("Coke"));
+            machine5.addProduct(new Product("Sprite"));
+            machine5.addProduct(new Product("Sprite"));
+            machine5.addProduct(new Product("Dr. Pepper"));
+            machine5.addProduct(new Product("Dr. Pepper"));
+            machine5.addProduct(new Product("Fritos"));
+            machine5.addProduct(new Product("Fritos"));
 
             listMachine.Add(machine1);
             listMachine.Add(machine2);

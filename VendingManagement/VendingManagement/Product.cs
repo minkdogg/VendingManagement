@@ -13,10 +13,9 @@ namespace VendingManagement
         protected float wholeSalePrice;
         protected List<string> productTypes = new List<string> { "Snickers", "Coke", "Milky Way", "Almond Joy", "Sprite", "Dr. Pepper", "Doritos", "Fritos", "Lays" };
 
-        public Product(string name, float wholeSalePrice)
+        public Product(string name)
         {
             this.name = name;
-            this.wholeSalePrice = wholeSalePrice;
         }
 
 
@@ -24,12 +23,6 @@ namespace VendingManagement
         {
             get{ return name; }
             set{ name = value; }
-        }
-
-        public float WholeSalePrice
-        {
-            get{ return wholeSalePrice; }
-            set{ wholeSalePrice = value; }
         }
 
         public void addType(string type)

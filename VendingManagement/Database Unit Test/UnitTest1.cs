@@ -12,8 +12,8 @@ namespace Database_Unit_Test
         public void Append_SelectAll_Product()
         {
             Database database = new Database();
-            Product product1 = new Product("This is Not a Product", 2.00f);
-            Product product2 = new Product("This is Not a Product2", 2.00f);
+            Product product1 = new Product("This is Not a Product");
+            Product product2 = new Product("This is Not a Product2");
             database.Append(product1);
             database.Append(product2);
             List<Product> productList = database.SelectAllProduct();
@@ -21,18 +21,18 @@ namespace Database_Unit_Test
             Assert.AreSame(productList[1], product2);
         }
 
-        [TestMethod]
-        public void Append_SelectAll_Machine()
-        {
-            Database database = new Database();
-            Product product1 = new Product("This is Not a Product", 2.00f);
-            Product product2 = new Product("This is Not a Product2", 2.00f);
-            database.Append(product1);
-            database.Append(product2);
-            List<Product> productList = database.SelectAllProduct();
-            Assert.AreSame(productList[0], product1);
-            Assert.AreSame(productList[1], product2);
-        }
+        //[TestMethod]
+        //public void Append_SelectAll_Machine()
+        //{
+        //    Database database = new Database();
+        //    Product product1 = new Product("This is Not a Product");
+        //    Product product2 = new Product("This is Not a Product2");
+        //    database.Append(product1);
+        //    database.Append(product2);
+        //    List<Product> productList = database.SelectAllProduct();
+        //    Assert.AreSame(productList[0], product1);
+        //    Assert.AreSame(productList[1], product2);
+        //}
 
         [TestMethod]
         public void Append_SelectAll_Transaction()
