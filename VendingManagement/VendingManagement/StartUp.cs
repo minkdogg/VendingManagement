@@ -13,6 +13,9 @@ namespace VendingManagement
     public partial class StartUp : Form
     {
         Database database = new Database();
+        protected bool businessVisited = false;
+        protected bool cityVisited = false;
+        protected bool machineVisited = false;
         
         public StartUp()
         {
