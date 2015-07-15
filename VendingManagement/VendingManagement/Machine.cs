@@ -79,6 +79,25 @@ namespace VendingManagement
         }
 
 
+        public Product selectProduct(Product product)
+        {
+            Product selectProduct = products.Find(x => x.Name == product.Name);
+            return selectProduct;
+        }
+
+        public List<Product> selectMultipleProduct(List<Product> multipleProduct)
+        {
+            List<Product> multipleProductReturn = new List<Product>();
+            
+            foreach (Product product in multipleProduct)
+            {
+                Product removeMultipleProduct = selectProduct(product);
+                multipleProductReturn.Add(removeMultipleProduct);
+            }
+            return multipleProductReturn;
+        }
+
+
 
         // removes product from product list. If there is no product left, then type is removed from product Type.
         public Product removeProduct(Product product)
