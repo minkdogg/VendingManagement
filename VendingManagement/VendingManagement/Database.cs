@@ -129,6 +129,7 @@ namespace VendingManagement
 
         //
         // SelectAll Matching Database Entries
+        //
         public List<Product> SelectAllProduct()
         {
             return listProduct;
@@ -154,8 +155,7 @@ namespace VendingManagement
             return listTransactions;
         }
 
-
-
+        
         public void generateInitialProducts()
         {
             Product product1 = new Product("Snickers", .25f);
@@ -189,6 +189,7 @@ namespace VendingManagement
             Machine machine4 = new Machine("Milwaukee", "");
             Machine machine5 = new Machine("Brookfield", "");
 
+            machine1.MachineNum = 1;
             machine1.MaxCapacity = 10;
             machine1.NeedRestock = false;
             machine1.NeedService = true;
@@ -202,6 +203,7 @@ namespace VendingManagement
             machine1.addProduct(new Product("Snickers", .25f));
             machine1.addProduct(new Product("Snickers", .25f));
 
+            machine2.MachineNum = 2;
             machine2.MaxCapacity = 10;
             machine2.NeedRestock = false;
             machine2.NeedService = false;
@@ -215,12 +217,14 @@ namespace VendingManagement
             machine2.addProduct(new Product("Fritos", .25f));
             machine2.addProduct(new Product("Fritos", .25f));
 
+            machine3.MachineNum = 3;
             machine3.MaxCapacity = 5;
             machine3.NeedRestock = true;
             machine3.NeedService = true;
             machine3.minStock = 1;
             machine3.addProduct(new Product("Coke", .25f));
 
+            machine4.MachineNum = 4;
             machine4.MaxCapacity = 10;
             machine4.NeedRestock = false;
             machine4.NeedService = false;
@@ -234,6 +238,7 @@ namespace VendingManagement
             machine4.addProduct(new Product("Fritos", .25f));
             machine4.addProduct(new Product("Fritos", .25f));
 
+            machine5.MachineNum = 5;
             machine5.MaxCapacity = 20;
             machine5.NeedRestock = true;
             machine5.NeedService = true;
@@ -257,9 +262,9 @@ namespace VendingManagement
 
         public void generateInitialCities()
         {
-            City city1 = new City();
-            City city2 = new City();
-            City city3 = new City();
+            City city1 = new City("Milwaukee", "");
+            City city2 = new City("Brookfield", "");
+            City city3 = new City("Waukesha", "");
 
             listCity.Add(city1);
             listCity.Add(city2);
