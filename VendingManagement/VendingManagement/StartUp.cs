@@ -15,6 +15,9 @@ namespace VendingManagement
         public StartUp()
         {
             InitializeComponent();
+            BusinessTabs.SelectedIndexChanged += new EventHandler(BusinessTabs_SelectedIndexChanged);
+            CityTabs.SelectedIndexChanged += new EventHandler(CityTabs_SelectedIndexChanged);
+            MachineTabs.SelectedIndexChanged += new EventHandler(MachineTabs_SelectedIndexChanged);
         }
 
         private void treeView1_AfterSelect(object sender, TreeViewEventArgs e)
@@ -89,13 +92,23 @@ namespace VendingManagement
             }
         }
 
+
+        //SIDEBAR TREE VIEW NAVIGATION
         private void treeView1_AfterSelect_1(object sender, TreeViewEventArgs e)
         {
             switch (e.Node.Text)
             {
-                //BUSINESS
+                //Business
                 case "Business":
                     MainField.SelectTab(MainTab1);
+                    break;
+                case "Product Warehouse":
+                    MainField.SelectTab(MainTab1);
+                    BusinessTabs.SelectTab(BusinessProductWarehouse);
+                    break;
+                case "Transactions":
+                    MainField.SelectTab(MainTab1);
+                    BusinessTabs.SelectTab(BusinessTransactions);
                     break;
                 case "Employees":
                     MainField.SelectTab(MainTab1);
@@ -105,12 +118,8 @@ namespace VendingManagement
                     MainField.SelectTab(MainTab1);
                     BusinessTabs.SelectTab(BusinessVehicles);
                     break;
-                case "Transactions":
-                    MainField.SelectTab(MainTab1);
-                    BusinessTabs.SelectTab(BusinessTransactions);
-                    break;
 
-                //CITY
+                //City
                 case "City":
                     MainField.SelectTab(MainTab2);
                     break;
@@ -127,7 +136,7 @@ namespace VendingManagement
                     CityTabs.SelectTab(CitySalesByItem);
                     break;
                 
-                //MACHINE
+                //Machine
                 case "Machine":
                     MainField.SelectTab(MainTab3);
                     break;
@@ -143,6 +152,124 @@ namespace VendingManagement
                     MainField.SelectTab(MainTab3);
                     MachineTabs.SelectTab(MachineProductItems);
                     break;
+            }
+        }
+
+
+        //BUSINESS TABS ==> load data on tab change
+        private void BusinessTabs_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (BusinessTabs.SelectedTab == BusinessProductWarehouse)
+            {
+                List<Product> data;
+
+                Database database = new Database();
+                database.generateInitialData();
+                data = database.SelectAllProduct();
+
+                ProductWarehouseDataGrid.DataSource = data;
+            }
+            else if (BusinessTabs.SelectedTab == BusinessTransactions)
+            {
+                List<Transactions> data;
+
+                Database database = new Database();
+                database.generateInitialData();
+                data = database.SelectAllTransactions();
+
+                TransactionsDataGrid.DataSource = data;
+            }
+            else if (BusinessTabs.SelectedTab == BusinessEmployees)
+            {
+                List<Employee> data;
+
+                Database database = new Database();
+                database.generateInitialData();
+                data = database.SelectAllEmployee();
+
+                EmployeesDataGrid.DataSource = data;
+            }
+            else if (BusinessTabs.SelectedTab == BusinessVehicles)
+            {
+                List<Vehicle> data;
+
+                Database database = new Database();
+                database.generateInitialData();
+                data = database.SelectAllVehicle();
+
+                VehiclesDataGrid.DataSource = data;
+            }
+        }
+
+
+        //CITY TABS ==> load data on tab change
+        private void CityTabs_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (CityTabs.SelectedTab == CityMachines)
+            {
+                List<Machine> data;
+
+                Database database = new Database();
+                database.generateInitialData();
+                data = database.SelectAllMachine();
+
+                CityMachinesDataGrid.DataSource = data;
+            }
+            else if (CityTabs.SelectedTab == CityTotalRevenue)
+            {
+                List<Transactions> data;
+
+                Database database = new Database();
+                database.generateInitialData();
+                data = database.SelectAllTransactions();
+
+                CityTotalRevenueDataGrid.DataSource = data;
+            }
+            else if (CityTabs.SelectedTab == CitySalesByItem)
+            {
+                List<Transactions> data;
+
+                Database database = new Database();
+                database.generateInitialData();
+                data = database.SelectAllTransactions();
+
+                CitySalesByItemDataGrid.DataSource = data;
+            }
+        }
+
+
+        //MACHINE TABS ==> load data on tab change
+        private void MachineTabs_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (MachineTabs.SelectedTab == MachineListAll)
+            {
+                List<Machine> data;
+
+                Database database = new Database();
+                database.generateInitialData();
+                data = database.SelectAllMachine();
+
+                MachineListAllDataGrid.DataSource = data;
+            }
+            else if (MachineTabs.SelectedTab == MachineType)
+            {
+                List<Machine> data;
+
+                Database database = new Database();
+                database.generateInitialData();
+                data = database.SelectAllMachine();
+
+                MachineTypeDataGrid.DataSource = data;
+            }
+            else if (MachineTabs.SelectedTab == MachineProductItems)
+            {
+                List<Machine> data;
+
+                Database database = new Database();
+                database.generateInitialData();
+                data = database.SelectAllMachine();
+
+                MachineProductItemsDataGrid.DataSource = data;
             }
         }
     }
