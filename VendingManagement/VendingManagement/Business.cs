@@ -6,7 +6,13 @@ using System.Threading.Tasks;
 
 namespace VendingManagement
 {
-    class Business
+    public class Business
     {
+        public List<string> Accounts = new List<string>();
+
+        public Business()
+        {
+            this.Accounts.Add("Checking");
+        }
     }
 }

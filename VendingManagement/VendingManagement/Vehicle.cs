@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace VendingManagement
 {
-    class Vehicle
+    public class Vehicle
     {
     }
 }

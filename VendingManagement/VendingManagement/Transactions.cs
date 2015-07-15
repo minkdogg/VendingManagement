@@ -8,25 +8,23 @@ namespace VendingManagement
 {
     public class Transactions
     {   
-        public Transactions (int id, DateTime date, int machineID, string productID, float SalePrice, float WholeSalePrice)
+        public Transactions (int id, DateTime date, string account, string productID, float amount)
         {
             this.TransactionID = id;
             this.Date = date;
             this.ProductID = productID;
-            this.SalePrice = SalePrice;
-            this.WholeSalePrice = WholeSalePrice;
-            this.MachineID = machineID;
+            this.Amount = amount;
+            this.Account = account;
         }
 
         //
         // Asseccors (Properties)
         //
         public int TransactionID { get; set; }
-        public int MachineID { get; set; }
+        public string Account { get; set; }
         public DateTime Date { get; set; }
         public String ProductID { get; set; }
-        public float SalePrice { get; set; }
-        public float WholeSalePrice { get; set; }
+        public float Amount { get; set; }
 
     }
 }

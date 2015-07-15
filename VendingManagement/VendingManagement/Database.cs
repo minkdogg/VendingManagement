@@ -8,17 +8,20 @@ namespace VendingManagement
 {
     public class Database
     {
-        List<Product> listProduct = new List<Product>();
-        List<Machine> listMachine = new List<Machine>();
-        List<City> listCity = new List<City>();
-        List<Employee> listEmployee = new  List<Employee>();
-        List<Vehicle> listVehicle = new List<Vehicle>();
-        List<Transactions> listTransactions = new List<Transactions>();
+        protected Business business = new Business();
+        protected List<Product> listProduct = new List<Product>();
+        protected List<Machine> listMachine = new List<Machine>();
+        protected List<City> listCity = new List<City>();
+        protected List<Employee> listEmployee = new  List<Employee>();
+        protected List<Vehicle> listVehicle = new List<Vehicle>();
+        protected List<Transactions> listTransactions = new List<Transactions>();
 
         
 
         public void generateInitialData()
         {
+            Transactions startupCash = new Transactions(0, DateTime.Now.AddMinutes(-3000), "Checking", "", 1000);
+            this.Append(startupCash);
             this.generateInitialProducts();
             this.generateInitialCities();
             this.generateInitialMachines();            
@@ -193,36 +196,44 @@ namespace VendingManagement
         
         public void generateInitialProducts()
         {
-            Product product1 = new Product("Snickers", .25f);
-            Product product2 = new Product("Milky Way", .25f);
-            Product product3 = new Product("Mounds", .25f);
-            Product product4 = new Product("Almond Joy", .25f);
-            Product product5 = new Product("Coke", .25f);
-            Product product6 = new Product("Sprite", .25f);
-            Product product7 = new Product("Dr. Pepper", .25f);
-            Product product8 = new Product("Doritos", .25f);
-            Product product9 = new Product("Fritos", .25f);
-            Product product10 = new Product("Lays", .25f);
+            for (int i = 0; i < 50; i++)
+            {
+                Product product1 = new Product("Snickers", .25f);
+                Product product2 = new Product("Milky Way", .25f);
+                Product product3 = new Product("Mounds", .25f);
+                Product product4 = new Product("Almond Joy", .25f);
+                Product product5 = new Product("Coke", .25f);
+                Product product6 = new Product("Sprite", .25f);
+                Product product7 = new Product("Dr. Pepper", .25f);
+                Product product8 = new Product("Doritos", .25f);
+                Product product9 = new Product("Fritos", .25f);
+                Product product10 = new Product("Lays", .25f);
 
-            listProduct.Add(product1);
-            listProduct.Add(product2);
-            listProduct.Add(product3);
-            listProduct.Add(product4);
-            listProduct.Add(product5);
-            listProduct.Add(product6);
-            listProduct.Add(product7);
-            listProduct.Add(product8);
-            listProduct.Add(product9);
-            listProduct.Add(product10);
+                listProduct.Add(product1);
+                listProduct.Add(product2);
+                listProduct.Add(product3);
+                listProduct.Add(product4);
+                listProduct.Add(product5);
+                listProduct.Add(product6);
+                listProduct.Add(product7);
+                listProduct.Add(product8);
+                listProduct.Add(product9);
+                listProduct.Add(product10);
+            }
         }
 
         public void generateInitialMachines()
         {
             Machine machine1 = new Machine("Milwaukee", "", "M101");
+            business.Accounts.Add("M101");
             Machine machine2 = new Machine("Waukesha", "", "M102");
+            business.Accounts.Add("M102");
             Machine machine3 = new Machine("Brookfield", "", "M103");
+            business.Accounts.Add("M103");
             Machine machine4 = new Machine("Milwaukee", "", "M104");
+            business.Accounts.Add("M104");
             Machine machine5 = new Machine("Brookfield", "", "M105");
+            business.Accounts.Add("M105");
 
             machine1.MaxCapacity = 10;
             machine1.NeedRestock = false;
@@ -335,37 +346,38 @@ namespace VendingManagement
 
         public void generateInitialTransactions()
         {
+            // These are specifically Sales Transactions, the original business transactions are added in the creation of the machines
             DateTime date = DateTime.Now.AddMinutes(-2000);
-            Transactions transaction1 = new Transactions(1, date.AddMinutes(100), 1, "Snickers", .25f, .50f);
-            Transactions transaction2 = new Transactions(2, date.AddMinutes(101), 1, "Mounds", .25f, .50f);
-            Transactions transaction3 = new Transactions(3, date.AddMinutes(102), 1, "Snickers", .25f, .50f);
-            Transactions transaction4 = new Transactions(4, date.AddMinutes(103), 2, "Snickers", .25f, .50f);
-            Transactions transaction5 = new Transactions(5, date.AddMinutes(104), 3, "Snickers", .25f, .75f);
-            Transactions transaction6 = new Transactions(6, date.AddMinutes(110), 2, "Coke", .35f, .50f);
-            Transactions transaction7 = new Transactions(7, date.AddMinutes(114), 3, "Lays", .25f, .75f);
-            Transactions transaction8 = new Transactions(8, date.AddMinutes(115), 1, "Doritos", .25f, .50f);
-            Transactions transaction9 = new Transactions(9, date.AddMinutes(116), 1, "Lays", .25f, .50f);
-            Transactions transaction10 = new Transactions(10, date.AddMinutes(225), 3, "Mounds", .25f, .75f);
-            Transactions transaction11 = new Transactions(11, date.AddMinutes(325), 2, "Doritos", .25f, .50f);
-            Transactions transaction12 = new Transactions(12, date.AddMinutes(425), 3, "Mounds", .25f, .75f);
-            Transactions transaction13 = new Transactions(13, date.AddMinutes(525), 1, "Fritos", .25f, .50f);
-            Transactions transaction14 = new Transactions(14, date.AddMinutes(625), 3, "Dr. Pepper", .25f, .75f);
-            Transactions transaction15 = new Transactions(15, date.AddMinutes(725), 2, "Almond Joy", .25f, .50f);
-            Transactions transaction16 = new Transactions(16, date.AddMinutes(825), 3, "Milky Way", .25f, .75f);
-            Transactions transaction17 = new Transactions(17, date.AddMinutes(925), 1, "Mounds", .25f, .50f);
-            Transactions transaction18 = new Transactions(18, date.AddMinutes(1025), 1, "Sprite", .25f, .50f);
-            Transactions transaction19 = new Transactions(19, date.AddMinutes(1105), 1, "Coke", .35f, .50f);
-            Transactions transaction20 = new Transactions(20, date.AddMinutes(1125), 1, "Fritos", .25f, .50f);
-            Transactions transaction21 = new Transactions(21, date.AddMinutes(1135), 2, "Almond Joy", .25f, .50f);
-            Transactions transaction22 = new Transactions(22, date.AddMinutes(1155), 3, "Coke", .35f, .75f);
-            Transactions transaction23 = new Transactions(23, date.AddMinutes(1225), 2, "Fritos", .25f, .50f);
-            Transactions transaction24 = new Transactions(24, date.AddMinutes(1227), 3, "Snickers", .25f, .75f);
-            Transactions transaction25 = new Transactions(25, date.AddMinutes(1235), 3, "Lays", .25f, .75f);
-            Transactions transaction26 = new Transactions(26, date.AddMinutes(1325), 2, "Coke", .35f, .50f);
-            Transactions transaction27 = new Transactions(27, date.AddMinutes(1625), 1, "Dr. Pepper", .25f, .50f);
-            Transactions transaction28 = new Transactions(28, date.AddMinutes(1725), 3, "Doritos", .25f, .75f);
-            Transactions transaction29 = new Transactions(29, date.AddMinutes(1825), 4, "Sprite", .25f, .50f);
-            Transactions transaction30 = new Transactions(30, date.AddMinutes(1925), 5, "Mounds", .25f, .75f);
+            Transactions transaction1 = new Transactions(1, date.AddMinutes(100), "M101", "Snickers", .50f);
+            Transactions transaction2 = new Transactions(2, date.AddMinutes(101), "M101", "Mounds", .50f);
+            Transactions transaction3 = new Transactions(3, date.AddMinutes(102), "M101", "Snickers", .50f);
+            Transactions transaction4 = new Transactions(4, date.AddMinutes(103), "M102", "Snickers", .50f);
+            Transactions transaction5 = new Transactions(5, date.AddMinutes(104), "M103", "Snickers", .75f);
+            Transactions transaction6 = new Transactions(6, date.AddMinutes(110), "M102", "Coke", .50f);
+            Transactions transaction7 = new Transactions(7, date.AddMinutes(114), "M103", "Lays", .75f);
+            Transactions transaction8 = new Transactions(8, date.AddMinutes(115), "M101", "Doritos", .50f);
+            Transactions transaction9 = new Transactions(9, date.AddMinutes(116), "M101", "Lays", .50f);
+            Transactions transaction10 = new Transactions(10, date.AddMinutes(225), "M103", "Mounds", .75f);
+            Transactions transaction11 = new Transactions(11, date.AddMinutes(325), "M102", "Doritos", .50f);
+            Transactions transaction12 = new Transactions(12, date.AddMinutes(425), "M103", "Mounds",  .75f);
+            Transactions transaction13 = new Transactions(13, date.AddMinutes(525), "M101", "Fritos", .50f);
+            Transactions transaction14 = new Transactions(14, date.AddMinutes(625), "M103", "Dr. Pepper", .75f);
+            Transactions transaction15 = new Transactions(15, date.AddMinutes(725), "M102", "Almond Joy", .50f);
+            Transactions transaction16 = new Transactions(16, date.AddMinutes(825), "M103", "Milky Way", .75f);
+            Transactions transaction17 = new Transactions(17, date.AddMinutes(925), "M101", "Mounds", .50f);
+            Transactions transaction18 = new Transactions(18, date.AddMinutes(1025), "M101", "Sprite", .50f);
+            Transactions transaction19 = new Transactions(19, date.AddMinutes(1105), "M101", "Coke", .50f);
+            Transactions transaction20 = new Transactions(20, date.AddMinutes(1125), "M101", "Fritos", .50f);
+            Transactions transaction21 = new Transactions(21, date.AddMinutes(1135), "M102", "Almond Joy", .50f);
+            Transactions transaction22 = new Transactions(22, date.AddMinutes(1155), "M103", "Coke",.75f);
+            Transactions transaction23 = new Transactions(23, date.AddMinutes(1225), "M102", "Fritos", .50f);
+            Transactions transaction24 = new Transactions(24, date.AddMinutes(1227), "M103", "Snickers", .75f);
+            Transactions transaction25 = new Transactions(25, date.AddMinutes(1235), "M103", "Lays", .75f);
+            Transactions transaction26 = new Transactions(26, date.AddMinutes(1325), "M102", "Coke", .50f);
+            Transactions transaction27 = new Transactions(27, date.AddMinutes(1625), "M101", "Dr. Pepper",  .50f);
+            Transactions transaction28 = new Transactions(28, date.AddMinutes(1725), "M103", "Doritos", .75f);
+            Transactions transaction29 = new Transactions(29, date.AddMinutes(1825), "M103", "Sprite", .50f);
+            Transactions transaction30 = new Transactions(30, date.AddMinutes(1925), "M103", "Mounds", .75f);
 
             listTransactions.Add(transaction1);
             listTransactions.Add(transaction2);
