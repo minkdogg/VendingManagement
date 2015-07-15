@@ -20,17 +20,20 @@ namespace VendingManagement
         protected bool needRestock;
         protected string machineID;
 
+        public Machine(string city, string location, string machineID)
+        {
+            this.city = city;
+            this.location = location;
+            this.machineID = machineID;
+            this.maxCapacity = 25;
+        }
+
         public int MaxCapacity
         {
             get{ return maxCapacity; }
             set{ maxCapacity = value; }
         }
 
-        public float SalePrice
-        {
-            get { return salePrice; }
-            set { salePrice = value; }
-        }
 
         public string City
         {
@@ -124,6 +127,25 @@ namespace VendingManagement
             return countProduct;
         }
 
+        public int getSingleQuantity(string type)
+        {
+            List<string> productNames = getProductNames();
+            int groupCount = 0;
+
+            var groupProduct = productNames.GroupBy(i => i);
+
+            foreach (var grp in groupProduct)
+            {
+                if (grp.Key == type)
+                {
+                    groupCount = grp.Count();
+                    return groupCount;
+                }
+            }
+
+            return groupCount;
+        }
+
         public int DefaultMinStock
         {
             get { return defaultMinStock; }
@@ -172,34 +194,58 @@ namespace VendingManagement
             return productRestock;
         }
 
+        public int getSingleTypeMinStock(string type)
+        {
+            int minStock = 0;
+            foreach (var list in productTypes)
+            {
+                if (list[0] == type)
+                {
+                    minStock = Convert.ToInt32(list[1]);
+                    return minStock;
+                }
+            }
+            return minStock;
+        }
+
 
 
         public List<string> checkItemsRestock()
         {
             
             List<string> restockItems = new List<string> {};
+            List<int> restockMin = new List<int>{};
             List<string> productNames = getProductNames();
             List<string> uniqueProductNames = productNames.Distinct().ToList();
 
             var groupProduct = productNames.GroupBy(i => i);
 
-            foreach (var group in groupProduct)
+            foreach (var list in productTypes)
             {
-                
-                restockItems.Add(group.Key);
+                if (uniqueProductNames.Contains(list[0]))
+                {
+                    int typeCount = getSingleQuantity(list[0]);
+                    if(Convert.ToInt32(list[1]) <= typeCount)
+                    {
+                        restockItems.Add(list[0]);
+                    }
+                }
             }
 
             return restockItems;
         }
 
-        public void updateRetailPrice(string name, float price)
+        public bool checkSingleItemRestock(string type)
         {
-            foreach (Product product in products)
+            int restockMin = getSingleTypeMinStock(type);
+            int typeCount = getSingleQuantity(type);
+            if (typeCount <= restockMin)
             {
-                if (name == product.name)
-                {
-                    product.retailPrice = price;
-                }
+                return true;
+            }
+            else
+            {
+                return false;
             }
         }
 
@@ -212,18 +258,21 @@ namespace VendingManagement
                 productTypes[index][1] = minStock.ToString();
             }
         }
-
-
         
+        
+        
+        
+        //public void updateRetailPrice(string name, float price)
+        //{
+        //    foreach (Product product in products)
+        //    {
+        //        if (name == product.name)
+        //        {
+        //            product.retailPrice = price;
+        //        }
+        //    }
+        //}
 
-
-        public Machine(string city, string location, string machineID)
-        {
-            this.city = city;
-            this.location = location;
-            this.machineID = machineID;
-            this.maxCapacity = 25;
-        }
 
 
 
