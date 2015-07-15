@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace VendingManagement
 {
-    class Database
+    public class Database
     {
         List<Product> listProduct = new List<Product>();
         List<Machine> listMachine = new List<Machine>();
@@ -42,14 +42,14 @@ namespace VendingManagement
         {
             listCity.Add(entry);
         }
-        public void Append(Employee entry)
-        {
-            listEmployee.Add(entry);
-        }
-        public void Append(Vehicle entry)
-        {
-            listVehicle.Add(entry);
-        }
+        //public void Append(Employee entry)
+        //{
+        //    listEmployee.Add(entry);
+        //}
+        //public void Append(Vehicle entry)
+        //{
+        //    listVehicle.Add(entry);
+        //}
         public void Append(Transactions entry)
         {
             listTransactions.Add(entry);
@@ -70,14 +70,14 @@ namespace VendingManagement
         {
             listCity.Remove(entry);
         }
-        public void Remove(Employee entry)
-        {
-            listEmployee.Remove(entry);
-        }
-        public void Remove(Vehicle entry)
-        {
-            listVehicle.Remove(entry);
-        }
+        //public void Remove(Employee entry)
+        //{
+        //    listEmployee.Remove(entry);
+        //}
+        //public void Remove(Vehicle entry)
+        //{
+        //    listVehicle.Remove(entry);
+        //}
         public void Remove(Transactions entry)
         {
             listTransactions.Remove(entry);
@@ -99,31 +99,66 @@ namespace VendingManagement
             }
             return returnResult;
         }
-        //public List<Machine> SelectMachine(string id)
+        public List<Machine> SelectMachine(int id)
+        {
+            List<Machine> returnResult = new List<Machine>();
+            foreach (Machine machine in listMachine)
+            {
+                if (machine.MachineNum == id)
+                {
+                    returnResult.Add(machine);
+                }
+            }
+            return returnResult;
+        }
+        public List<City> SelectCity(string id)
+        {
+            List<City> returnResult = new List<City>();
+            foreach (City city in listCity)
+            {
+                if (city.Name == id)
+                {
+                    returnResult.Add(city);
+                }
+            }
+            return returnResult;
+        }
+        //public List<Employee> SelectEmployee(string id)
         //{
-        //    List<Machine> returnResult = new List<Machine>();
-        //    foreach (Machine machine in listMachine)
+        //    List<Employee> returnResult = new List<Employee>();
+        //    foreach (Employee employee in listEmployee)
         //    {
-        //        if (machine.id == id)
+        //        if (employee.EmployeeID == id)
         //        {
-        //            returnResult.Add(product);
+        //            returnResult.Add(employee);
         //        }
         //    }
         //    return returnResult;
         //}
-        //public List<City> SelectCity(string id)
+        //public List<Vehicle> SelectVehicle(string id)
         //{
-        //    List<City> returnResult = new List<City>();
-        //    foreach (City city in listCity)
+        //    List<Vehicle> returnResult = new List<Vehicle>();
+        //    foreach (Vehicle vehicle in listVehicle)
         //    {
-        //        if (city.Name == id)
+        //        if (vehicle.VehicleID == id)
         //        {
-        //            returnResult.Add(city);
+        //            returnResult.Add(vehicle);
         //        }
         //    }
         //    return returnResult;
         //}
-
+        public List<Transactions> SelectTransactions(int id)
+        {
+            List<Transactions> returnResult = new List<Transactions>();
+            foreach (Transactions transaction in listTransactions)
+            {
+                if (transaction.TransactionID == id)
+                {
+                    returnResult.Add(transaction);
+                }
+            }
+            return returnResult;
+        }
 
 
 
@@ -142,14 +177,14 @@ namespace VendingManagement
         {
             return listCity;
         }
-        public List<Employee> SelectAllEmployee()
-        {
-            return listEmployee;
-        }
-        public List<Vehicle> SelectAllVehicle()
-        {
-            return listVehicle;
-        }
+        //public List<Employee> SelectAllEmployee()
+        //{
+        //    return listEmployee;
+        //}
+        //public List<Vehicle> SelectAllVehicle()
+        //{
+        //    return listVehicle;
+        //}
         public List<Transactions> SelectAllTransactions()
         {
             return listTransactions;

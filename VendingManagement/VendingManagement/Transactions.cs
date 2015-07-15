@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace VendingManagement
 {
-    class Transactions
+    public class Transactions
     {   
         public Transactions (int id, DateTime date, int machineID, string productID, float SalePrice, float WholeSalePrice)
         {
