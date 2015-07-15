@@ -12,9 +12,12 @@ namespace VendingManagement
 {
     public partial class StartUp : Form
     {
+        Database database = new Database();
+        
         public StartUp()
         {
             InitializeComponent();
+            this.database.generateInitialData();
             BusinessTabs.SelectedIndexChanged += new EventHandler(BusinessTabs_SelectedIndexChanged);
             CityTabs.SelectedIndexChanged += new EventHandler(CityTabs_SelectedIndexChanged);
             MachineTabs.SelectedIndexChanged += new EventHandler(MachineTabs_SelectedIndexChanged);
@@ -162,41 +165,25 @@ namespace VendingManagement
             if (BusinessTabs.SelectedTab == BusinessProductWarehouse)
             {
                 List<Product> data;
-
-                Database database = new Database();
-                database.generateInitialData();
-                data = database.SelectAllProduct();
-
+                data = this.database.SelectAllProduct();
                 ProductWarehouseDataGrid.DataSource = data;
             }
             else if (BusinessTabs.SelectedTab == BusinessTransactions)
             {
                 List<Transactions> data;
-
-                Database database = new Database();
-                database.generateInitialData();
-                data = database.SelectAllTransactions();
-
+                data = this.database.SelectAllTransactions();
                 TransactionsDataGrid.DataSource = data;
             }
             else if (BusinessTabs.SelectedTab == BusinessEmployees)
             {
                 List<Employee> data;
-
-                Database database = new Database();
-                database.generateInitialData();
-                data = database.SelectAllEmployee();
-
+                data = this.database.SelectAllEmployee();
                 EmployeesDataGrid.DataSource = data;
             }
             else if (BusinessTabs.SelectedTab == BusinessVehicles)
             {
                 List<Vehicle> data;
-
-                Database database = new Database();
-                database.generateInitialData();
-                data = database.SelectAllVehicle();
-
+                data = this.database.SelectAllVehicle();
                 VehiclesDataGrid.DataSource = data;
             }
         }
@@ -208,31 +195,19 @@ namespace VendingManagement
             if (CityTabs.SelectedTab == CityMachines)
             {
                 List<Machine> data;
-
-                Database database = new Database();
-                database.generateInitialData();
-                data = database.SelectAllMachine();
-
+                data = this.database.SelectAllMachine();
                 CityMachinesDataGrid.DataSource = data;
             }
             else if (CityTabs.SelectedTab == CityTotalRevenue)
             {
                 List<Transactions> data;
-
-                Database database = new Database();
-                database.generateInitialData();
-                data = database.SelectAllTransactions();
-
+                data = this.database.SelectAllTransactions();
                 CityTotalRevenueDataGrid.DataSource = data;
             }
             else if (CityTabs.SelectedTab == CitySalesByItem)
             {
                 List<Transactions> data;
-
-                Database database = new Database();
-                database.generateInitialData();
-                data = database.SelectAllTransactions();
-
+                data = this.database.SelectAllTransactions();
                 CitySalesByItemDataGrid.DataSource = data;
             }
         }
@@ -244,31 +219,19 @@ namespace VendingManagement
             if (MachineTabs.SelectedTab == MachineListAll)
             {
                 List<Machine> data;
-
-                Database database = new Database();
-                database.generateInitialData();
-                data = database.SelectAllMachine();
-
+                data = this.database.SelectAllMachine();
                 MachineListAllDataGrid.DataSource = data;
             }
             else if (MachineTabs.SelectedTab == MachineType)
             {
                 List<Machine> data;
-
-                Database database = new Database();
-                database.generateInitialData();
-                data = database.SelectAllMachine();
-
+                data = this.database.SelectAllMachine();
                 MachineTypeDataGrid.DataSource = data;
             }
             else if (MachineTabs.SelectedTab == MachineProductItems)
             {
                 List<Machine> data;
-
-                Database database = new Database();
-                database.generateInitialData();
-                data = database.SelectAllMachine();
-
+                data = this.database.SelectAllMachine();
                 MachineProductItemsDataGrid.DataSource = data;
             }
         }
