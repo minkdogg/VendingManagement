@@ -24,6 +24,11 @@ namespace VendingManagement
            
         }
 
+        public string VehicleID
+        {
+            get { return this.vehicleID; }
+            set { this.vehicleID = value; }
+        }
         public int Year
         {
             get { return year; }

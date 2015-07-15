@@ -126,30 +126,30 @@ namespace VendingManagement
             }
             return returnResult;
         }
-        //public List<Employee> SelectEmployee(string id)
-        //{
-        //    List<Employee> returnResult = new List<Employee>();
-        //    foreach (Employee employee in listEmployee)
-        //    {
-        //        if (employee.EmployeeID == id)
-        //        {
-        //            returnResult.Add(employee);
-        //        }
-        //    }
-        //    return returnResult;
-        //}
-        //public List<Vehicle> SelectVehicle(string id)
-        //{
-        //    List<Vehicle> returnResult = new List<Vehicle>();
-        //    foreach (Vehicle vehicle in listVehicle)
-        //    {
-        //        if (vehicle.VehicleID == id)
-        //        {
-        //            returnResult.Add(vehicle);
-        //        }
-        //    }
-        //    return returnResult;
-        //}
+        public List<Employee> SelectEmployee(string id)
+        {
+            List<Employee> returnResult = new List<Employee>();
+            foreach (Employee employee in listEmployee)
+            {
+                if (employee.EmployeeID == id)
+                {
+                    returnResult.Add(employee);
+                }
+            }
+            return returnResult;
+        }
+        public List<Vehicle> SelectVehicle(string id)
+        {
+            List<Vehicle> returnResult = new List<Vehicle>();
+            foreach (Vehicle vehicle in listVehicle)
+            {
+                if (vehicle.VehicleID == id)
+                {
+                    returnResult.Add(vehicle);
+                }
+            }
+            return returnResult;
+        }
         public List<Transactions> SelectTransactions(int id)
         {
             List<Transactions> returnResult = new List<Transactions>();
@@ -180,14 +180,14 @@ namespace VendingManagement
         {
             return listCity;
         }
-        //public List<Employee> SelectAllEmployee()
-        //{
-        //    return listEmployee;
-        //}
-        //public List<Vehicle> SelectAllVehicle()
-        //{
-        //    return listVehicle;
-        //}
+        public List<Employee> SelectAllEmployee()
+        {
+            return listEmployee;
+        }
+        public List<Vehicle> SelectAllVehicle()
+        {
+            return listVehicle;
+        }
         public List<Transactions> SelectAllTransactions()
         {
             return listTransactions;

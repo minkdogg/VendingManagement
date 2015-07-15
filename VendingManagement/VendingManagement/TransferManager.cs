@@ -24,11 +24,13 @@ namespace VendingManagement
             int transactionID = this.newTransactionID();
             float totalCost = 0;
             string productName = productList[0].Name;
-            foreach (Product product in productList)
+            
+            int repeat = productList.Count();
+            for (int i = 0; i < repeat; ++i)
             {
-                totalCost += product.WholeSalePrice;
-                machine.addProduct(product);
-                this.database.Remove(product);
+                totalCost += productList[0].WholeSalePrice;
+                machine.addProduct(productList[0]);
+                this.database.Remove(productList[0]);
             }
             this.database.Append(new Transactions(transactionID, DateTime.Now, "Checking", productName, totalCost));
             this.database.Append(new Transactions((transactionID + 1), DateTime.Now, machine.MachineID, productName, -totalCost));
@@ -51,11 +53,13 @@ namespace VendingManagement
             int transactionID = this.newTransactionID();
             float totalCost = 0;
             string productName = productList[0].Name;
-            foreach (Product product in productList)
+
+            int repeat = productList.Count();
+            for (int i = 0; i < repeat; ++i)
             {
-                totalCost += product.WholeSalePrice;
-                this.database.Append(product);
-                machine.removeProduct(product);
+                totalCost += productList[0].WholeSalePrice;
+                this.database.Append(productList[0]);
+                machine.removeProduct(productList[0]);
             }
             this.database.Append(new Transactions(transactionID, DateTime.Now, "Checking", productName, -totalCost));
             this.database.Append(new Transactions((transactionID + 1), DateTime.Now, machine.MachineID, productName, +totalCost));
