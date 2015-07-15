@@ -8,9 +8,9 @@ namespace VendingManagement
 {
     public class Database
     {
-        protected Business business = new Business();
-        protected List<Product> listProduct = new List<Product>();
-        protected List<Machine> listMachine = new List<Machine>();
+        protected Business business = new Business(); // Our company
+        protected List<Product> listProduct = new List<Product>(); // equivalent to our bulk warehouse
+        protected List<Machine> listMachine = new List<Machine>(); // equivalent to all our machines (incuding thier own inventory)
         protected List<City> listCity = new List<City>();
         protected List<Employee> listEmployee = new  List<Employee>();
         protected List<Vehicle> listVehicle = new List<Vehicle>();
@@ -199,16 +199,16 @@ namespace VendingManagement
             int transactionID = 1;
             for (int i = 0; i < 50; i++)
             {
-                Product product1 = new Product("Snickers");
-                Product product2 = new Product("Milky Way");
-                Product product3 = new Product("Mounds");
-                Product product4 = new Product("Almond Joy");
-                Product product5 = new Product("Coke");
-                Product product6 = new Product("Sprite");
-                Product product7 = new Product("Dr. Pepper");
-                Product product8 = new Product("Doritos");
-                Product product9 = new Product("Fritos");
-                Product product10 = new Product("Lays");
+                Product product1 = new Product("Snickers", .25f);
+                Product product2 = new Product("Milky Way", .25f);
+                Product product3 = new Product("Mounds", .25f);
+                Product product4 = new Product("Almond Joy", .25f);
+                Product product5 = new Product("Coke", .25f);
+                Product product6 = new Product("Sprite", .25f);
+                Product product7 = new Product("Dr. Pepper", .25f);
+                Product product8 = new Product("Doritos", .25f);
+                Product product9 = new Product("Fritos", .25f);
+                Product product10 = new Product("Lays", .25f);
                 listProduct.Add(product1);
                 listProduct.Add(product2);
                 listProduct.Add(product3);
@@ -267,10 +267,15 @@ namespace VendingManagement
             Machine machine5 = new Machine("Brookfield", "", "M105");
             business.Accounts.Add("M105");
 
+            // Pull inventory of warehouse
+            List<Product> transferList = this.SelectAllProduct();
+
+            // Create Machines and transfer product into machine
             machine1.MaxCapacity = 10;
             machine1.NeedRestock = false;
             machine1.NeedService = true;
             machine1.DefaultMinStock = 1;
+
             machine1.addProduct(new Product("Snickers"));
             machine1.addProduct(new Product("Snickers"));
             machine1.addProduct(new Product("Snickers"));
@@ -444,7 +449,10 @@ namespace VendingManagement
         }
 
 
+        public void Transfer(Machine machine, Product product, Database database)
+        {
 
+        }
         
 
     }
