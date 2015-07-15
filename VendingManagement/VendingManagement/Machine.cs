@@ -258,13 +258,13 @@ namespace VendingManagement
 
         public bool NeedService
         {
-            get { return NeedService; }
+            get { return needService; }
             set { needService = value; }
         }
 
         public bool NeedRestock
         {
-            get { return NeedRestock; }
+            get { return needRestock; }
             set { needRestock = value; }
         }
 

@@ -31,7 +31,7 @@ namespace VendingManagement
         
         public string FullName
         {
-            get { return FullName;}
+            get { return fullName;}
         }
 
         public DateTime DateStarted
