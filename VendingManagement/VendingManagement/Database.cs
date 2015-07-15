@@ -99,12 +99,12 @@ namespace VendingManagement
             }
             return returnResult;
         }
-        public List<Machine> SelectMachine(int id)
+        public List<Machine> SelectMachine(string id)
         {
             List<Machine> returnResult = new List<Machine>();
             foreach (Machine machine in listMachine)
             {
-                if (machine.MachineNum == id)
+                if (machine.MachineID == id)
                 {
                     returnResult.Add(machine);
                 }
@@ -218,17 +218,16 @@ namespace VendingManagement
 
         public void generateInitialMachines()
         {
-            Machine machine1 = new Machine("Milwaukee", "");
-            Machine machine2 = new Machine("Waukesha","");
-            Machine machine3 = new Machine("Brookfield", "");
-            Machine machine4 = new Machine("Milwaukee", "");
-            Machine machine5 = new Machine("Brookfield", "");
+            Machine machine1 = new Machine("Milwaukee", "", "M101");
+            Machine machine2 = new Machine("Waukesha", "", "M102");
+            Machine machine3 = new Machine("Brookfield", "", "M103");
+            Machine machine4 = new Machine("Milwaukee", "", "M104");
+            Machine machine5 = new Machine("Brookfield", "", "M105");
 
-            machine1.MachineNum = 1;
             machine1.MaxCapacity = 10;
             machine1.NeedRestock = false;
             machine1.NeedService = true;
-            machine1.minStock = 1;
+            machine1.DefaultMinStock = 1;
             machine1.addProduct(new Product("Snickers", .25f));
             machine1.addProduct(new Product("Snickers", .25f));
             machine1.addProduct(new Product("Snickers", .25f));
@@ -238,11 +237,10 @@ namespace VendingManagement
             machine1.addProduct(new Product("Snickers", .25f));
             machine1.addProduct(new Product("Snickers", .25f));
 
-            machine2.MachineNum = 2;
             machine2.MaxCapacity = 10;
             machine2.NeedRestock = false;
             machine2.NeedService = false;
-            machine2.minStock = 1;
+            machine2.DefaultMinStock = 1;
             machine2.addProduct(new Product("Coke", .25f));
             machine2.addProduct(new Product("Coke", .25f));
             machine2.addProduct(new Product("Sprite", .25f));
@@ -252,18 +250,16 @@ namespace VendingManagement
             machine2.addProduct(new Product("Fritos", .25f));
             machine2.addProduct(new Product("Fritos", .25f));
 
-            machine3.MachineNum = 3;
             machine3.MaxCapacity = 5;
             machine3.NeedRestock = true;
             machine3.NeedService = true;
-            machine3.minStock = 1;
+            machine3.DefaultMinStock = 1;
             machine3.addProduct(new Product("Coke", .25f));
 
-            machine4.MachineNum = 4;
             machine4.MaxCapacity = 10;
             machine4.NeedRestock = false;
             machine4.NeedService = false;
-            machine4.minStock = 4;
+            machine4.DefaultMinStock = 2;
             machine4.addProduct(new Product("Coke", .25f));
             machine4.addProduct(new Product("Coke", .25f));
             machine4.addProduct(new Product("Sprite", .25f));
@@ -273,11 +269,10 @@ namespace VendingManagement
             machine4.addProduct(new Product("Fritos", .25f));
             machine4.addProduct(new Product("Fritos", .25f));
 
-            machine5.MachineNum = 5;
             machine5.MaxCapacity = 20;
             machine5.NeedRestock = true;
             machine5.NeedService = true;
-            machine5.minStock = 4;
+            machine5.DefaultMinStock = 2;
             machine5.addProduct(new Product("Coke", .25f));
             machine5.addProduct(new Product("Coke", .25f));
             machine5.addProduct(new Product("Sprite", .25f));
