@@ -220,26 +220,16 @@ namespace VendingManagement
                 listProduct.Add(product9);
                 listProduct.Add(product10);
 
-                Transactions transaction1 = new Transactions(transactionID, DateTime.Now.AddMinutes(-2900), "Checking", "Snickers", -.25f);
-                transactionID++;
-                Transactions transaction2 = new Transactions(transactionID, DateTime.Now.AddMinutes(-2900), "Checking", "Milky Way", -.25f);
-                transactionID++;
-                Transactions transaction3 = new Transactions(transactionID, DateTime.Now.AddMinutes(-2900), "Checking", "Mounds", -.25f);
-                transactionID++;
-                Transactions transaction4 = new Transactions(transactionID, DateTime.Now.AddMinutes(-2900), "Checking", "Almond Joy", -.25f);
-                transactionID++;
-                Transactions transaction5 = new Transactions(transactionID, DateTime.Now.AddMinutes(-2900), "Checking", "Coke", -.25f);
-                transactionID++;
-                Transactions transaction6 = new Transactions(transactionID, DateTime.Now.AddMinutes(-2900), "Checking", "Sprite", -.25f);
-                transactionID++;
-                Transactions transaction7 = new Transactions(transactionID, DateTime.Now.AddMinutes(-2900), "Checking", "Dr. Pepper", -.25f);
-                transactionID++;
-                Transactions transaction8 = new Transactions(transactionID, DateTime.Now.AddMinutes(-2900), "Checking", "Doritos", -.25f);
-                transactionID++;
-                Transactions transaction9 = new Transactions(transactionID, DateTime.Now.AddMinutes(-2900), "Checking", "Fritos", -.25f);
-                transactionID++;
-                Transactions transaction10 = new Transactions(transactionID, DateTime.Now.AddMinutes(-2900), "Checking", "Lays", -.25f);
-                transactionID++;
+                Transactions transaction1 = new Transactions(++transactionID, DateTime.Now.AddMinutes(-2900), "Checking", "Snickers", -.25f);
+                Transactions transaction2 = new Transactions(++transactionID, DateTime.Now.AddMinutes(-2900), "Checking", "Milky Way", -.25f);
+                Transactions transaction3 = new Transactions(++transactionID, DateTime.Now.AddMinutes(-2900), "Checking", "Mounds", -.25f);
+                Transactions transaction4 = new Transactions(++transactionID, DateTime.Now.AddMinutes(-2900), "Checking", "Almond Joy", -.25f);
+                Transactions transaction5 = new Transactions(++transactionID, DateTime.Now.AddMinutes(-2900), "Checking", "Coke", -.25f);
+                Transactions transaction6 = new Transactions(++transactionID, DateTime.Now.AddMinutes(-2900), "Checking", "Sprite", -.25f);
+                Transactions transaction7 = new Transactions(++transactionID, DateTime.Now.AddMinutes(-2900), "Checking", "Dr. Pepper", -.25f);
+                Transactions transaction8 = new Transactions(++transactionID, DateTime.Now.AddMinutes(-2900), "Checking", "Doritos", -.25f);
+                Transactions transaction9 = new Transactions(++transactionID, DateTime.Now.AddMinutes(-2900), "Checking", "Fritos", -.25f);
+                Transactions transaction10 = new Transactions(++transactionID, DateTime.Now.AddMinutes(-2900), "Checking", "Lays", -.25f);
 
                 listTransactions.Add(transaction1);
                 listTransactions.Add(transaction2);
@@ -269,6 +259,8 @@ namespace VendingManagement
 
             // Pull inventory of warehouse
             List<Product> transferList = this.SelectAllProduct();
+            TransferManager transferManager = new TransferManager(this);
+            int index = 0;
 
             // Create Machines and transfer product into machine
             machine1.MaxCapacity = 10;
@@ -276,59 +268,51 @@ namespace VendingManagement
             machine1.NeedService = true;
             machine1.DefaultMinStock = 1;
 
-            machine1.addProduct(new Product("Snickers"));
-            machine1.addProduct(new Product("Snickers"));
-            machine1.addProduct(new Product("Snickers"));
-            machine1.addProduct(new Product("Mounds"));
-            machine1.addProduct(new Product("Mounds"));
-            machine1.addProduct(new Product("Mounds"));
-            machine1.addProduct(new Product("Snickers"));
-            machine1.addProduct(new Product("Snickers"));
+            transferManager.TransferToMachine(machine1, transferList[++index]);
+            transferManager.TransferToMachine(machine1, transferList[++index]);
+            transferManager.TransferToMachine(machine1, transferList[++index]);
+            transferManager.TransferToMachine(machine1, transferList[++index]);
+            transferManager.TransferToMachine(machine1, transferList[++index]);
+            transferManager.TransferToMachine(machine1, transferList[++index]);
+            transferManager.TransferToMachine(machine1, transferList[++index]);
+            transferManager.TransferToMachine(machine1, transferList[++index]);
+            transferManager.TransferToMachine(machine1, transferList[++index]);
 
-            machine2.MaxCapacity = 10;
-            machine2.NeedRestock = false;
-            machine2.NeedService = false;
-            machine2.DefaultMinStock = 1;
-            machine2.addProduct(new Product("Coke"));
-            machine2.addProduct(new Product("Coke"));
-            machine2.addProduct(new Product("Sprite"));
-            machine2.addProduct(new Product("Sprite"));
-            machine2.addProduct(new Product("Dr. Pepper"));
-            machine2.addProduct(new Product("Dr. Pepper"));
-            machine2.addProduct(new Product("Fritos"));
-            machine2.addProduct(new Product("Fritos"));
+
 
             machine3.MaxCapacity = 5;
             machine3.NeedRestock = true;
             machine3.NeedService = true;
             machine3.DefaultMinStock = 1;
-            machine3.addProduct(new Product("Coke"));
+            transferManager.TransferToMachine(machine1, transferList[++index]);
+            transferManager.TransferToMachine(machine1, transferList[++index]);
 
             machine4.MaxCapacity = 10;
             machine4.NeedRestock = false;
             machine4.NeedService = false;
             machine4.DefaultMinStock = 2;
-            machine4.addProduct(new Product("Coke"));
-            machine4.addProduct(new Product("Coke"));
-            machine4.addProduct(new Product("Sprite"));
-            machine4.addProduct(new Product("Sprite"));
-            machine4.addProduct(new Product("Dr. Pepper"));
-            machine4.addProduct(new Product("Dr. Pepper"));
-            machine4.addProduct(new Product("Fritos"));
-            machine4.addProduct(new Product("Fritos"));
+            transferManager.TransferToMachine(machine1, transferList[++index]);
+            transferManager.TransferToMachine(machine1, transferList[++index]);
+            transferManager.TransferToMachine(machine1, transferList[++index]);
+            transferManager.TransferToMachine(machine1, transferList[++index]);
+            transferManager.TransferToMachine(machine1, transferList[++index]);
+            transferManager.TransferToMachine(machine1, transferList[++index]);
+            transferManager.TransferToMachine(machine1, transferList[++index]);
+            transferManager.TransferToMachine(machine1, transferList[++index]);
 
             machine5.MaxCapacity = 20;
             machine5.NeedRestock = true;
             machine5.NeedService = true;
             machine5.DefaultMinStock = 2;
-            machine5.addProduct(new Product("Coke"));
-            machine5.addProduct(new Product("Coke"));
-            machine5.addProduct(new Product("Sprite"));
-            machine5.addProduct(new Product("Sprite"));
-            machine5.addProduct(new Product("Dr. Pepper"));
-            machine5.addProduct(new Product("Dr. Pepper"));
-            machine5.addProduct(new Product("Fritos"));
-            machine5.addProduct(new Product("Fritos"));
+            transferManager.TransferToMachine(machine1, transferList[++index]);
+            transferManager.TransferToMachine(machine1, transferList[++index]);
+            transferManager.TransferToMachine(machine1, transferList[++index]);
+            transferManager.TransferToMachine(machine1, transferList[++index]);
+            transferManager.TransferToMachine(machine1, transferList[++index]);
+            transferManager.TransferToMachine(machine1, transferList[++index]);
+            transferManager.TransferToMachine(machine1, transferList[++index]);
+            transferManager.TransferToMachine(machine1, transferList[++index]);
+            transferManager.TransferToMachine(machine1, transferList[++index]);
 
             listMachine.Add(machine1);
             listMachine.Add(machine2);
@@ -353,11 +337,11 @@ namespace VendingManagement
 
         public void generateInitialEmployees()
         {
-            Employee employee1 = new Employee();
-            Employee employee2 = new Employee();
-            Employee employee3 = new Employee();
-            Employee employee4 = new Employee();
-            Employee employee5 = new Employee();
+            Employee employee1 = new Employee("Joe", "Schmoe", "E001","Milwaukee");
+            Employee employee2 = new Employee("Joe", "Smith", "E002", "Milwaukee");
+            Employee employee3 = new Employee("Jill", "Johnson", "E003", "Waukesha");
+            Employee employee4 = new Employee("Bob", "Hope", "E004", "Milwaukee");
+            Employee employee5 = new Employee("Jane", "Hope", "E005", "Brookfield");
 
             listEmployee.Add(employee1);
             listEmployee.Add(employee2);
@@ -369,10 +353,10 @@ namespace VendingManagement
 
         public void generateInitialVehicles()
         {
-            Vehicle vehicle1 = new Vehicle();
-            Vehicle vehicle2 = new Vehicle();
-            Vehicle vehicle3 = new Vehicle();
-            Vehicle vehicle4 = new Vehicle();
+            Vehicle vehicle1 = new Vehicle("Truck1", "Milwaukee", 1);
+            Vehicle vehicle2 = new Vehicle("Truck2", "Waukesha", 1);
+            Vehicle vehicle3 = new Vehicle("Truck3", "Brookfield", 1);
+            Vehicle vehicle4 = new Vehicle("Truck4", "Milwaukee", 1);
 
             listVehicle.Add(vehicle1);
             listVehicle.Add(vehicle2);

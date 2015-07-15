@@ -12,8 +12,8 @@ namespace Database_Unit_Test
         public void Append_SelectAll_Product()
         {
             Database database = new Database();
-            Product product1 = new Product("This is Not a Product");
-            Product product2 = new Product("This is Not a Product2");
+            Product product1 = new Product("This is Not a Product", .25f);
+            Product product2 = new Product("This is Not a Product2", .25f);
             database.Append(product1);
             database.Append(product2);
             List<Product> productList = database.SelectAllProduct();
