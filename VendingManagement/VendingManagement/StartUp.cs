@@ -199,9 +199,7 @@ namespace VendingManagement
         {
             if (CityTabs.SelectedTab == CityList)
             {
-                List<Machine> data;
-                data = this.database.SelectAllMachine();
-                CityMachinesDataGrid.DataSource = data;
+                this.LoadCityMachinesDataGrid();
             }
             else if (CityTabs.SelectedTab == RevenueByCity)
             {
@@ -416,5 +414,6 @@ namespace VendingManagement
             AddMachineProductType addMachineProductType = new AddMachineProductType(database, this);
             addMachineProductType.Show();
         }
+
     }
 }

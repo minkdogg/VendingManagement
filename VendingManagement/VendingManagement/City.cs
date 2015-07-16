@@ -9,7 +9,7 @@ namespace VendingManagement
     public class City
     {
         string name;
-        string location;
+        string state;
 
         public string Name
         {
@@ -17,16 +17,16 @@ namespace VendingManagement
             set { name = value; }
         }
 
-        public string Location
+        public string State
         {
-            get { return location; }
-            set { location = value; }
+            get { return state; }
+            set { state = value; }
         }
-        
-        public City(string name, string location)
+
+        public City(string name, string state)
         {
             this.name = name;
-            this.location = location;
+            this.state = state;
         }
 
     }

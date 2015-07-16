@@ -27,5 +27,33 @@ namespace VendingManagement
         {
             this.Close();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string city = textBox8.Text;
+                string state = textBox7.Text;
+                if (city != "" & city != null &
+                    state != "" & state != null)
+                {
+                    // Create Record
+                    Controller controller = new Controller(database);
+                    controller.AddCity(city, state);
+                    this.parent.LoadCityMachinesDataGrid();
+                    this.Close();
+                }
+                else
+                {
+                    MessageBox.Show("Please enter a City and State.");
+                }
+
+            }
+            catch
+            {
+                MessageBox.Show("Invalid Entries - Please enter a City and State.");
+            }
+
+        }
     }
 }
