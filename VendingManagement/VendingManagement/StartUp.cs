@@ -289,7 +289,7 @@ namespace VendingManagement
 
         private void button2_Click(object sender, EventArgs e)
         {
-            AddProduct addProduct = new AddProduct(database);
+            AddProduct addProduct = new AddProduct(database, this);
             addProduct.Show();
         }
 
