@@ -66,6 +66,9 @@
     <Compile Include="StartUp.Designer.cs">
       <DependentUpon>StartUp.cs</DependentUpon>
     </Compile>
+    <Compile Include="StartUp`2.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Transactions.cs" />
     <Compile Include="TransferManager.cs" />
     <Compile Include="Vehicle.cs" />
