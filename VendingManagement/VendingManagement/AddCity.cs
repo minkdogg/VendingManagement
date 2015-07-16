@@ -12,7 +12,6 @@ namespace VendingManagement
 {
     public partial class AddCity : Form
     {
-        List<City> data;
         Database database;
         StartUp parent;
 

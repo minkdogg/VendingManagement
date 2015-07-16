@@ -12,7 +12,6 @@ namespace VendingManagement
 {
     public partial class AddMachine : Form
     {
-        List<Machine> data;
         Database database;
         StartUp parent;
 
