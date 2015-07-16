@@ -132,12 +132,12 @@
             this.MachineProductItemsDataGrid = new System.Windows.Forms.DataGridView();
             this.MainTab4 = new System.Windows.Forms.TabPage();
             this.ReportTabs = new System.Windows.Forms.TabControl();
-            this.ReportsTotalProfit = new System.Windows.Forms.TabPage();
-            this.dataGridView8 = new System.Windows.Forms.DataGridView();
-            this.ReportsTopSellingItems = new System.Windows.Forms.TabPage();
-            this.dataGridView9 = new System.Windows.Forms.DataGridView();
-            this.ReportsProfitMarginByItem = new System.Windows.Forms.TabPage();
-            this.dataGridView10 = new System.Windows.Forms.DataGridView();
+            this.ReportsSalesItems = new System.Windows.Forms.TabPage();
+            this.SalesItems = new System.Windows.Forms.DataGridView();
+            this.ReportsInventoryItems = new System.Windows.Forms.TabPage();
+            this.InventoryItems = new System.Windows.Forms.DataGridView();
+            this.ReportsMachineSales = new System.Windows.Forms.TabPage();
+            this.MachineSales = new System.Windows.Forms.DataGridView();
             this.ReportsSalesByCity = new System.Windows.Forms.TabPage();
             this.dataGridView11 = new System.Windows.Forms.DataGridView();
             this.QuickLinks.SuspendLayout();
@@ -182,12 +182,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.MachineProductItemsDataGrid)).BeginInit();
             this.MainTab4.SuspendLayout();
             this.ReportTabs.SuspendLayout();
-            this.ReportsTotalProfit.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView8)).BeginInit();
-            this.ReportsTopSellingItems.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView9)).BeginInit();
-            this.ReportsProfitMarginByItem.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView10)).BeginInit();
+            this.ReportsSalesItems.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.SalesItems)).BeginInit();
+            this.ReportsInventoryItems.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.InventoryItems)).BeginInit();
+            this.ReportsMachineSales.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.MachineSales)).BeginInit();
             this.ReportsSalesByCity.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView11)).BeginInit();
             this.SuspendLayout();
@@ -1047,76 +1047,75 @@
             // 
             // ReportTabs
             // 
-            this.ReportTabs.Controls.Add(this.ReportsTotalProfit);
-            this.ReportTabs.Controls.Add(this.ReportsTopSellingItems);
-            this.ReportTabs.Controls.Add(this.ReportsProfitMarginByItem);
+            this.ReportTabs.Controls.Add(this.ReportsSalesItems);
+            this.ReportTabs.Controls.Add(this.ReportsInventoryItems);
+            this.ReportTabs.Controls.Add(this.ReportsMachineSales);
             this.ReportTabs.Controls.Add(this.ReportsSalesByCity);
-            this.ReportTabs.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ReportTabs.Location = new System.Drawing.Point(3, 3);
             this.ReportTabs.Name = "ReportTabs";
             this.ReportTabs.SelectedIndex = 0;
             this.ReportTabs.Size = new System.Drawing.Size(729, 399);
             this.ReportTabs.TabIndex = 0;
             // 
-            // ReportsTotalProfit
+            // ReportsSalesItems
             // 
-            this.ReportsTotalProfit.Controls.Add(this.dataGridView8);
-            this.ReportsTotalProfit.Location = new System.Drawing.Point(4, 22);
-            this.ReportsTotalProfit.Name = "ReportsTotalProfit";
-            this.ReportsTotalProfit.Padding = new System.Windows.Forms.Padding(3);
-            this.ReportsTotalProfit.Size = new System.Drawing.Size(721, 373);
-            this.ReportsTotalProfit.TabIndex = 0;
-            this.ReportsTotalProfit.Text = "Total Profit";
-            this.ReportsTotalProfit.UseVisualStyleBackColor = true;
+            this.ReportsSalesItems.Controls.Add(this.SalesItems);
+            this.ReportsSalesItems.Location = new System.Drawing.Point(4, 22);
+            this.ReportsSalesItems.Name = "ReportsSalesItems";
+            this.ReportsSalesItems.Padding = new System.Windows.Forms.Padding(3);
+            this.ReportsSalesItems.Size = new System.Drawing.Size(721, 373);
+            this.ReportsSalesItems.TabIndex = 0;
+            this.ReportsSalesItems.Text = "Total Profit";
+            this.ReportsSalesItems.UseVisualStyleBackColor = true;
             // 
-            // dataGridView8
+            // SalesItems
             // 
-            this.dataGridView8.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView8.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView8.Location = new System.Drawing.Point(3, 3);
-            this.dataGridView8.Name = "dataGridView8";
-            this.dataGridView8.Size = new System.Drawing.Size(715, 367);
-            this.dataGridView8.TabIndex = 0;
+            this.SalesItems.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.SalesItems.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.SalesItems.Location = new System.Drawing.Point(3, 3);
+            this.SalesItems.Name = "SalesItems";
+            this.SalesItems.Size = new System.Drawing.Size(715, 367);
+            this.SalesItems.TabIndex = 0;
             // 
-            // ReportsTopSellingItems
+            // ReportsInventoryItems
             // 
-            this.ReportsTopSellingItems.Controls.Add(this.dataGridView9);
-            this.ReportsTopSellingItems.Location = new System.Drawing.Point(4, 22);
-            this.ReportsTopSellingItems.Name = "ReportsTopSellingItems";
-            this.ReportsTopSellingItems.Padding = new System.Windows.Forms.Padding(3);
-            this.ReportsTopSellingItems.Size = new System.Drawing.Size(721, 373);
-            this.ReportsTopSellingItems.TabIndex = 1;
-            this.ReportsTopSellingItems.Text = "Top Selling Items";
-            this.ReportsTopSellingItems.UseVisualStyleBackColor = true;
+            this.ReportsInventoryItems.Controls.Add(this.InventoryItems);
+            this.ReportsInventoryItems.Location = new System.Drawing.Point(4, 22);
+            this.ReportsInventoryItems.Name = "ReportsInventoryItems";
+            this.ReportsInventoryItems.Padding = new System.Windows.Forms.Padding(3);
+            this.ReportsInventoryItems.Size = new System.Drawing.Size(721, 373);
+            this.ReportsInventoryItems.TabIndex = 1;
+            this.ReportsInventoryItems.Text = "Top Selling Items";
+            this.ReportsInventoryItems.UseVisualStyleBackColor = true;
             // 
-            // dataGridView9
+            // InventoryItems
             // 
-            this.dataGridView9.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView9.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView9.Location = new System.Drawing.Point(3, 3);
-            this.dataGridView9.Name = "dataGridView9";
-            this.dataGridView9.Size = new System.Drawing.Size(715, 367);
-            this.dataGridView9.TabIndex = 0;
+            this.InventoryItems.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.InventoryItems.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.InventoryItems.Location = new System.Drawing.Point(3, 3);
+            this.InventoryItems.Name = "InventoryItems";
+            this.InventoryItems.Size = new System.Drawing.Size(715, 367);
+            this.InventoryItems.TabIndex = 0;
             // 
-            // ReportsProfitMarginByItem
+            // ReportsMachineSales
             // 
-            this.ReportsProfitMarginByItem.Controls.Add(this.dataGridView10);
-            this.ReportsProfitMarginByItem.Location = new System.Drawing.Point(4, 22);
-            this.ReportsProfitMarginByItem.Name = "ReportsProfitMarginByItem";
-            this.ReportsProfitMarginByItem.Padding = new System.Windows.Forms.Padding(3);
-            this.ReportsProfitMarginByItem.Size = new System.Drawing.Size(721, 373);
-            this.ReportsProfitMarginByItem.TabIndex = 2;
-            this.ReportsProfitMarginByItem.Text = "Profit Margin by Item";
-            this.ReportsProfitMarginByItem.UseVisualStyleBackColor = true;
+            this.ReportsMachineSales.Controls.Add(this.MachineSales);
+            this.ReportsMachineSales.Location = new System.Drawing.Point(4, 22);
+            this.ReportsMachineSales.Name = "ReportsMachineSales";
+            this.ReportsMachineSales.Padding = new System.Windows.Forms.Padding(3);
+            this.ReportsMachineSales.Size = new System.Drawing.Size(721, 373);
+            this.ReportsMachineSales.TabIndex = 2;
+            this.ReportsMachineSales.Text = "Profit Margin by Item";
+            this.ReportsMachineSales.UseVisualStyleBackColor = true;
             // 
-            // dataGridView10
+            // MachineSales
             // 
-            this.dataGridView10.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView10.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView10.Location = new System.Drawing.Point(3, 3);
-            this.dataGridView10.Name = "dataGridView10";
-            this.dataGridView10.Size = new System.Drawing.Size(715, 367);
-            this.dataGridView10.TabIndex = 0;
+            this.MachineSales.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.MachineSales.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.MachineSales.Location = new System.Drawing.Point(3, 3);
+            this.MachineSales.Name = "MachineSales";
+            this.MachineSales.Size = new System.Drawing.Size(715, 367);
+            this.MachineSales.TabIndex = 0;
             // 
             // ReportsSalesByCity
             // 
@@ -1197,12 +1196,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.MachineProductItemsDataGrid)).EndInit();
             this.MainTab4.ResumeLayout(false);
             this.ReportTabs.ResumeLayout(false);
-            this.ReportsTotalProfit.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView8)).EndInit();
-            this.ReportsTopSellingItems.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView9)).EndInit();
-            this.ReportsProfitMarginByItem.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView10)).EndInit();
+            this.ReportsSalesItems.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.SalesItems)).EndInit();
+            this.ReportsInventoryItems.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.InventoryItems)).EndInit();
+            this.ReportsMachineSales.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.MachineSales)).EndInit();
             this.ReportsSalesByCity.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView11)).EndInit();
             this.ResumeLayout(false);
@@ -1243,9 +1242,9 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TabPage MainTab4;
         private System.Windows.Forms.TabControl ReportTabs;
-        private System.Windows.Forms.TabPage ReportsTotalProfit;
-        private System.Windows.Forms.TabPage ReportsTopSellingItems;
-        private System.Windows.Forms.TabPage ReportsProfitMarginByItem;
+        private System.Windows.Forms.TabPage ReportsSalesItems;
+        private System.Windows.Forms.TabPage ReportsInventoryItems;
+        private System.Windows.Forms.TabPage ReportsMachineSales;
         private System.Windows.Forms.TabPage ReportsSalesByCity;
         private System.Windows.Forms.DataGridView EmployeesDataGrid;
         private System.Windows.Forms.DataGridView VehiclesDataGrid;
@@ -1254,9 +1253,9 @@
         private System.Windows.Forms.DataGridView MachineListAllDataGrid;
         private System.Windows.Forms.DataGridView MachineTypeDataGrid;
         private System.Windows.Forms.DataGridView MachineProductItemsDataGrid;
-        private System.Windows.Forms.DataGridView dataGridView8;
-        private System.Windows.Forms.DataGridView dataGridView9;
-        private System.Windows.Forms.DataGridView dataGridView10;
+        private System.Windows.Forms.DataGridView SalesItems;
+        private System.Windows.Forms.DataGridView InventoryItems;
+        private System.Windows.Forms.DataGridView MachineSales;
         private System.Windows.Forms.DataGridView dataGridView11;
         private System.Windows.Forms.TabPage MainTab1;
         private System.Windows.Forms.TabPage BusinessEmployees;
