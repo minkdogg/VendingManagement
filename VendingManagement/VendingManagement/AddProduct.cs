@@ -10,11 +10,11 @@ using System.Windows.Forms;
 
 namespace VendingManagement
 {
-    public partial class Form1 : Form
+    public partial class AddProduct : Form
     {
         List<Product> data;
 
-        public Form1()
+        public AddProduct()
         {
             InitializeComponent();
         }
@@ -26,11 +26,11 @@ namespace VendingManagement
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Database database = new Database();
-            database.generateInitialData();
-            this.data = database.SelectAllProduct();
+            //Database database = new Database();
+            //database.generateInitialData();
+            //this.data = database.SelectAllProduct();
 
-            dataGridView2.DataSource = data;
+            //dataGridView2.DataSource = data;
         }
 
         private void viewToolStripMenuItem_Click(object sender, EventArgs e)
@@ -45,11 +45,12 @@ namespace VendingManagement
 
         private void button2_Click(object sender, EventArgs e)
         {
-            if (this.data != null)
-            {
-                data.Remove(data[0]);
-                dataGridView2.Refresh();
-            }
+            this.Close();
+        }
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+
         }
     }
 }
