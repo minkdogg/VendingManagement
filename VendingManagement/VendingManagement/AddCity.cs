@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace VendingManagement
 {
-    public partial class AddEmployee : Form
+    public partial class AddCity : Form
     {
-        public AddEmployee()
+        public AddCity()
         {
             InitializeComponent();
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            this.Close();
         }
     }
 }
