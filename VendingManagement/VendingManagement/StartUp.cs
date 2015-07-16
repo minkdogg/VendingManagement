@@ -15,8 +15,7 @@ namespace VendingManagement
         Database database = new Database();
 
         protected bool businessVisited = false;
-        protected bool cityVisited = false;
-        protected bool machineVisited = false;
+
         
         public StartUp()
         {
@@ -315,7 +314,15 @@ namespace VendingManagement
 
         private void StartUp_Load(object sender, EventArgs e)
         {
+            List<Product> data;
+            data = this.database.SelectAllProduct();
+            ProductWarehouseDataGrid.DataSource = data;
 
+            this.LoadCityMachinesDataGrid();
+
+            List<Machine> data2;
+            data2 = this.database.SelectAllMachine();
+            MachineListAllDataGrid.DataSource = data2;
         }
 
         private void button5_Click(object sender, EventArgs e)
