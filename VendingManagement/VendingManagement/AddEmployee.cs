@@ -12,7 +12,6 @@ namespace VendingManagement
 {
     public partial class AddEmployee : Form
     {
-        List<Employee> data;
         Database database;
         StartUp parent;
 

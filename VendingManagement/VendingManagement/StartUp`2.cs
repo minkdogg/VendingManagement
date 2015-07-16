@@ -147,7 +147,7 @@ namespace VendingManagement
 
 
         //
-        // Remove Button Interfaces
+        // Remove Button Control Methods
         //
 
         // Product Remove Button
@@ -289,18 +289,49 @@ namespace VendingManagement
         }
 
 
+        // Remove Machine Button
+        private void button15_Click(object sender, EventArgs e)
+        {
+            List<string> MachineIdToRemove = new List<string>();
+            if (MachineListAllDataGrid.SelectedRows.Count > 0)
+            {
+                foreach (DataGridViewRow row in MachineListAllDataGrid.SelectedRows)
+                {
+                    if (!MachineIdToRemove.Contains(row.Cells["MachineID"].Value.ToString()))
+                    {
+                        MachineIdToRemove.Add(row.Cells["MachineID"].Value.ToString());
+                    }
+                }
 
+            }
+            else if (MachineListAllDataGrid.SelectedCells.Count > 0)
+            {
+                foreach (DataGridViewCell cell in MachineListAllDataGrid.SelectedCells)
+                {
+                    DataGridViewRow row = MachineListAllDataGrid.Rows[cell.RowIndex];
+                    if (!MachineIdToRemove.Contains(row.Cells["MachineID"].Value.ToString()))
+                    {
+                        MachineIdToRemove.Add(row.Cells["MachineID"].Value.ToString());
+                    }
+                }
+            }
 
+            foreach (string ID in MachineIdToRemove)
+            {
+                DialogResult confirm = MessageBox.Show("Are you sure you want to Delete Machine ID# " + ID,
+                    "Confirm Delete",
+                    MessageBoxButtons.YesNo,
+                    MessageBoxIcon.Exclamation,
+                    MessageBoxDefaultButton.Button2);
 
-
-
-            
-
-
-
-
-
-
-
+                if (confirm == DialogResult.Yes)
+                {
+                    Controller controller = new Controller(database);
+                    controller.RemoveMachine(ID);
+                    this.LoadMachineListAllDataGrid();
+                }
+            }
+        }
+  
     }
 }

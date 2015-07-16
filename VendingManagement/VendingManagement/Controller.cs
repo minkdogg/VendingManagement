@@ -190,6 +190,29 @@ namespace VendingManagement
             }
         }
 
+        // Remove Machine
+        public bool RemoveMachine(string ID)
+        {
+            if (ID != "" & ID != null)
+            {
+                List<Machine> machine = database.SelectMachine(ID);
+                if (machine.Count == 1)
+                {
+                    database.Remove(machine[0]);
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+
+            }
+            else
+            {
+                return false;
+            }
+        }
+
       
     }
 }
