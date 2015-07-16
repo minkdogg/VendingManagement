@@ -91,6 +91,7 @@
     <Compile Include="AddProduct.Designer.cs">
       <DependentUpon>AddProduct.cs</DependentUpon>
     </Compile>
+    <Compile Include="Export.cs" />
     <Compile Include="Machine.cs" />
     <Compile Include="Product.cs" />
     <Compile Include="Program.cs" />
