@@ -196,11 +196,7 @@ namespace VendingManagement
         {
             if (BusinessTabs.SelectedTab == BusinessProductWarehouse)
             {
-                List<Product> data;
-                ReportManager report = new ReportManager();
-                data = this.database.SelectAllProduct();
-                DataTable source = report.reportProductWarehouse(data);
-                ProductWarehouseDataGrid.DataSource = source;
+                this.LoadProductWarehouseDataGrid();
             }
             else if (BusinessTabs.SelectedTab == BusinessTransactions)
             {
