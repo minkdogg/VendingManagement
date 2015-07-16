@@ -450,10 +450,16 @@ namespace VendingManagement
             addMachineProductType.Show();
         }
 
-        private void button10_Click(object sender, EventArgs e)
+        private void Export_Click(object sender, EventArgs e)
         {
-            
-        }
+            List<Product> data;    
+            data = this.database.SelectAllProduct();
 
+            ReportManager report = new ReportManager();
+            DataTable table = report.reportInventoryCostItem(data);
+
+            Export export = new Export();
+            export.ExportToPDFCollection(table);
+        }
     }
 }
