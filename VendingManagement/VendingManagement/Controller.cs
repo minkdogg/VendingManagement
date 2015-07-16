@@ -117,6 +117,8 @@ namespace VendingManagement
                 return false;
             }
         }
+
+        // Remove Employee from Database
         public bool RemoveEmployee(string ID)
         {
             if (ID != "" & ID != null)
@@ -139,6 +141,7 @@ namespace VendingManagement
             }
         }
 
+        // Remove Vehicle from database
         public bool RemoveVehicle(string ID)
         {
             if (ID != "" & ID != null)
@@ -161,7 +164,28 @@ namespace VendingManagement
             }
         }
 
+        // Remove City from database
+        public bool RemoveCity(string ID)
+        {
+            if (ID != "" & ID != null)
+            {
+                List<City> city = database.SelectCity(ID);
+                if (city.Count == 1)
+                {
+                    database.Remove(city[0]);
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
 
+            }
+            else
+            {
+                return false;
+            }
+        }
 
       
     }

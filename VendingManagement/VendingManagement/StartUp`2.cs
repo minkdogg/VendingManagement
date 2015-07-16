@@ -73,8 +73,8 @@ namespace VendingManagement
             CityMachinesDataGrid.Update();
             CityMachinesDataGrid.Refresh();
 
-            List<Machine> data;
-            data = this.database.SelectAllMachine();
+            List<City> data;
+            data = this.database.SelectAllCity();
             CityMachinesDataGrid.DataSource = data;
             CityMachinesDataGrid.Update();
             CityMachinesDataGrid.Refresh();
@@ -195,9 +195,9 @@ namespace VendingManagement
                     controller.RemoveProduct(ID);
                     this.LoadProductWarehouseDataGrid();
                 }
-
             }
         }
+
 
         // Remove Vehicle Button
         private void button7_Click(object sender, EventArgs e)
@@ -238,13 +238,53 @@ namespace VendingManagement
                 {
                     Controller controller = new Controller(database);
                     controller.RemoveVehicle(ID);
+                    this.LoadVehiclesDataGrid();
+                }
+            }
+        }
 
-                    LoadVehiclesDataGrid();
 
-
-
+        // Remove City Button
+        private void button9_Click(object sender, EventArgs e)
+        {
+            List<string> CityIdToRemove = new List<string>();
+            if (CityMachinesDataGrid.SelectedRows.Count > 0)
+            {
+                foreach (DataGridViewRow row in CityMachinesDataGrid.SelectedRows)
+                {
+                    if (!CityIdToRemove.Contains(row.Cells["Name"].Value.ToString()))
+                    {
+                        CityIdToRemove.Add(row.Cells["Name"].Value.ToString());
+                    }
                 }
 
+            }
+            else if (CityMachinesDataGrid.SelectedCells.Count > 0)
+            {
+                foreach (DataGridViewCell cell in CityMachinesDataGrid.SelectedCells)
+                {
+                    DataGridViewRow row = CityMachinesDataGrid.Rows[cell.RowIndex];
+                    if (!CityIdToRemove.Contains(row.Cells["Name"].Value.ToString()))
+                    {
+                        CityIdToRemove.Add(row.Cells["Name"].Value.ToString());
+                    }
+                }
+            }
+
+            foreach (string ID in CityIdToRemove)
+            {
+                DialogResult confirm = MessageBox.Show("Are you sure you want to Delete City ID# " + ID,
+                    "Confirm Delete",
+                    MessageBoxButtons.YesNo,
+                    MessageBoxIcon.Exclamation,
+                    MessageBoxDefaultButton.Button2);
+
+                if (confirm == DialogResult.Yes)
+                {
+                    Controller controller = new Controller(database);
+                    controller.RemoveCity(ID);
+                    this.LoadCityMachinesDataGrid();
+                }
             }
         }
 
