@@ -48,8 +48,7 @@ namespace VendingManagement
         public DataTable reportInventoryCostItem(List<Product> data)
         {
 
-            //List<List<string>> newData = new List<List<string>>();
-            //List<string> productNames = new List<string>();
+           
             DataTable table = new DataTable();
             DataColumn newColumn = new DataColumn("Product Type", typeof(String));
             table.Columns.Add(newColumn);
@@ -75,7 +74,6 @@ namespace VendingManagement
             }
 
             return table;
-
         }
 
         public DataTable reportSalesByMachine(List<Transactions> data)
@@ -83,9 +81,6 @@ namespace VendingManagement
 
             DataTable table = new DataTable();
             DataColumn newColumn = new DataColumn("Machine ID", typeof(String));
-            table.Columns.Add(newColumn);
-
-            newColumn = new DataColumn("Location", typeof(String));
             table.Columns.Add(newColumn);
 
             newColumn = new DataColumn("Total Sales", typeof(String));
@@ -97,19 +92,126 @@ namespace VendingManagement
             List<Transactions> sortedList = data.OrderBy(d => d.Account).ToList();
             var subtotals = from x in sortedList
                             group x by x.Account into g
-                            select new { Type = g.Key, SubTotal = g.Sum(x => x.Amount), SalesTotal = g.Where(x => x.Amount > 0).Select(x => x.Amount).Sum(), SalesCount = g.Where(x => x.Amount > 0).Count() };
+                            select new { Type = g.Key, SalesTotal = g.Where(x => x.Amount > 0).Select(x => x.Amount).Sum(), SalesCount = g.Where(x => x.Amount > 0).Count() };
 
             foreach (var total in subtotals)
             {
-                if (total.Type != "")
+                if (total.Type != "Checking")
                 {
-                    table.Rows.Add(total.Type, total.SubTotal, total.SalesTotal, total.SalesCount);
+                    table.Rows.Add(total.Type, total.SalesTotal, total.SalesCount);
                 }
+            }
+            return table;
+        }
+
+        public DataTable reportSalesByProductPerMachine(List<Transactions> data, List<Machine> machines)
+        {
+
+            DataTable table = new DataTable();
+            DataColumn newColumn = new DataColumn("Machine ID", typeof(String));
+            table.Columns.Add(newColumn);
+
+            newColumn = new DataColumn("Product Type", typeof(String));
+            table.Columns.Add(newColumn);
+
+            newColumn = new DataColumn("Sales Total", typeof(String));
+            table.Columns.Add(newColumn);
+
+            newColumn = new DataColumn("Sales Count", typeof(String));
+            table.Columns.Add(newColumn);
+
+
+            foreach(Machine machine in machines)
+            {
+                table.Rows.Add(machine.MachineID, "", "");
+                List<Transactions> sortedList = data.OrderBy(d => d.ProductID).ToList();
+                var subtotals = from x in sortedList
+                                group x by x.ProductID into g
+                                select new { Type = g.Key, SalesTotal = g.Where(x => x.Amount > 0 && x.Account == machine.MachineID).Select(x => x.Amount).Sum(), SalesCount = g.Where(x => x.Amount > 0 && x.Account == machine.MachineID).Count() };
+                float salesTotalAmount = 0;
+                int salesTotalCount = 0;
+                foreach (var total in subtotals)
+                {
+                    if (total.Type != "")
+                    {
+                        table.Rows.Add("",total.Type, total.SalesTotal, total.SalesCount);
+                    }
+                    salesTotalAmount += total.SalesTotal;
+                    salesTotalCount += total.SalesCount;
+                }
+                table.Rows.Add("Total", "", salesTotalAmount, salesTotalCount);
+                table.Rows.Add("", "", "","");
             }
 
             return table;
-
         }
+
+        public DataTable reportSalesByCity(List<Transactions> data, List<Machine> machines, List<City> cities)
+        {
+
+            DataTable table = new DataTable();
+            DataColumn newColumn = new DataColumn("City", typeof(String));
+            table.Columns.Add(newColumn);
+
+            newColumn = new DataColumn("Machine ID", typeof(String));
+            table.Columns.Add(newColumn);
+
+            newColumn = new DataColumn("Sales Total", typeof(String));
+            table.Columns.Add(newColumn);
+
+            newColumn = new DataColumn("Sales Count", typeof(String));
+            table.Columns.Add(newColumn);
+
+
+            foreach (City city in cities)
+            {
+                table.Rows.Add(city.Name);
+                List<string> cityMachineList = new List<string> {};
+                foreach(Machine machine in machines)
+                {
+                    if (machine.City == city.Name)
+                    {
+                        cityMachineList.Add(machine.MachineID);
+                        
+                    }
+                }
+
+                float salesTotalAmount = 0;
+                int salesTotalCount = 0;
+                foreach (string machine in cityMachineList)
+                {
+                    
+                    List<Transactions> sortedList = data.OrderBy(d => d.ProductID).ToList();
+                    var filteredItems = sortedList.Where(p => p.Account == machine);
+                    
+                    if(filteredItems.Count() == 0)
+                    {
+                        table.Rows.Add("", machine, 0, 0);
+                    }
+
+                    var subtotals = from x in filteredItems
+                                    group x by x.Account into g
+                                    select new { Type = g.Key, SalesTotal = g.Where(x => x.Amount >= 0 && x.Account == machine).Select(x => x.Amount).Sum(), SalesCount = g.Where(x => x.Amount >= 0 && x.Account == machine).Count() };
+                    
+                    foreach (var total in subtotals)
+                    {
+                        if (total.Type != "Checking")
+                        {
+                            table.Rows.Add("", total.Type, total.SalesTotal, total.SalesCount);
+                        }
+                        salesTotalAmount += total.SalesTotal;
+                        salesTotalCount += total.SalesCount;
+                    }
+                    
+                }
+                table.Rows.Add("Total", "", salesTotalAmount, salesTotalCount);
+                table.Rows.Add("", "", "", "");
+
+            }
+
+            return table;
+        }
+
 
 
 
