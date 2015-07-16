@@ -37,16 +37,16 @@
             treeNode2,
             treeNode3,
             treeNode4});
-            System.Windows.Forms.TreeNode treeNode6 = new System.Windows.Forms.TreeNode("Machines");
-            System.Windows.Forms.TreeNode treeNode7 = new System.Windows.Forms.TreeNode("Total Revenue");
-            System.Windows.Forms.TreeNode treeNode8 = new System.Windows.Forms.TreeNode("Sales by Item");
+            System.Windows.Forms.TreeNode treeNode6 = new System.Windows.Forms.TreeNode("City List");
+            System.Windows.Forms.TreeNode treeNode7 = new System.Windows.Forms.TreeNode("Revenue by City");
+            System.Windows.Forms.TreeNode treeNode8 = new System.Windows.Forms.TreeNode("Item Sales by City");
             System.Windows.Forms.TreeNode treeNode9 = new System.Windows.Forms.TreeNode("City", new System.Windows.Forms.TreeNode[] {
             treeNode6,
             treeNode7,
             treeNode8});
-            System.Windows.Forms.TreeNode treeNode10 = new System.Windows.Forms.TreeNode("List All");
-            System.Windows.Forms.TreeNode treeNode11 = new System.Windows.Forms.TreeNode("Type");
-            System.Windows.Forms.TreeNode treeNode12 = new System.Windows.Forms.TreeNode("Product Items");
+            System.Windows.Forms.TreeNode treeNode10 = new System.Windows.Forms.TreeNode("All Machines");
+            System.Windows.Forms.TreeNode treeNode11 = new System.Windows.Forms.TreeNode("Product Type");
+            System.Windows.Forms.TreeNode treeNode12 = new System.Windows.Forms.TreeNode("Items by Machine");
             System.Windows.Forms.TreeNode treeNode13 = new System.Windows.Forms.TreeNode("Machine", new System.Windows.Forms.TreeNode[] {
             treeNode10,
             treeNode11,
@@ -287,20 +287,20 @@
             treeNode4.Text = "Vehicles";
             treeNode5.Name = "Business";
             treeNode5.Text = "Business";
-            treeNode6.Name = "Machines";
-            treeNode6.Text = "Machines";
-            treeNode7.Name = "Total Revenue";
-            treeNode7.Text = "Total Revenue";
-            treeNode8.Name = "Sales by Item";
-            treeNode8.Text = "Sales by Item";
+            treeNode6.Name = "City List";
+            treeNode6.Text = "City List";
+            treeNode7.Name = "Revenue by City";
+            treeNode7.Text = "Revenue by City";
+            treeNode8.Name = "Item Sales by City";
+            treeNode8.Text = "Item Sales by City";
             treeNode9.Name = "City";
             treeNode9.Text = "City";
-            treeNode10.Name = "List All";
-            treeNode10.Text = "List All";
-            treeNode11.Name = "Type";
-            treeNode11.Text = "Type";
-            treeNode12.Name = "Product Items";
-            treeNode12.Text = "Product Items";
+            treeNode10.Name = "All Machines";
+            treeNode10.Text = "All Machines";
+            treeNode11.Name = "Product Type";
+            treeNode11.Text = "Product Type";
+            treeNode12.Name = "Items by Machine";
+            treeNode12.Text = "Items by Machine";
             treeNode13.Name = "Machine";
             treeNode13.Text = "Machine";
             this.treeView1.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {

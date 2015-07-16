@@ -129,15 +129,15 @@ namespace VendingManagement
                 case "City":
                     MainField.SelectTab(MainTab2);
                     break;
-                case "Machines":
+                case "City List":
                     MainField.SelectTab(MainTab2);
                     CityTabs.SelectTab(CityList);
                     break;
-                case "Total Revenue":
+                case "Revenue by City":
                     MainField.SelectTab(MainTab2);
                     CityTabs.SelectTab(RevenueByCity);
                     break;
-                case "Sales by Item":
+                case "Item Sales by City":
                     MainField.SelectTab(MainTab2);
                     CityTabs.SelectTab(ItemSalesByCity);
                     break;
@@ -146,15 +146,15 @@ namespace VendingManagement
                 case "Machine":
                     MainField.SelectTab(MainTab3);
                     break;
-                case "List All":
+                case "All Machines":
                     MainField.SelectTab(MainTab3);
                     MachineTabs.SelectTab(AllMachines);
                     break;
-                case "Type":
+                case "Product Type":
                     MainField.SelectTab(MainTab3);
                     MachineTabs.SelectTab(ProductType);
                     break;
-                case "Product Items":
+                case "Items by Machine":
                     MainField.SelectTab(MainTab3);
                     MachineTabs.SelectTab(ItemsByMachine);
                     break;
