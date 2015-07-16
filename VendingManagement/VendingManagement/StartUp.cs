@@ -446,6 +446,8 @@ namespace VendingManagement
             addMachineProductType.Show();
         }
 
+
+        // Export button
         private void Export_Click(object sender, EventArgs e)
         {
             List<Product> data;    
@@ -457,5 +459,7 @@ namespace VendingManagement
             Export export = new Export();
             export.ExportToPDFCollection(table);
         }
+
+
     }
 }

@@ -332,6 +332,40 @@ namespace VendingManagement
                 }
             }
         }
+
+
+
+        // Update Machine Button
+        private void button10_Click(object sender, EventArgs e)
+        {
+        //    List<string> MachineToModify = new List<string>();
+        //    if (MachineListAllDataGrid.SelectedRows.Count > 0)
+        //    {
+        //        foreach (DataGridViewRow row in MachineListAllDataGrid.SelectedRows)
+        //        {
+        //            if (!MachineIdToRemove.Contains(row.Cells["MachineID"].Value.ToString()))
+        //            {
+        //                MachineIdToRemove.Add(row.Cells["MachineID"].Value.ToString());
+        //            }
+        //        }
+
+        //    }
+        //    else if (MachineListAllDataGrid.SelectedCells.Count > 0)
+        //    {
+        //        foreach (DataGridViewCell cell in MachineListAllDataGrid.SelectedCells)
+        //        {
+        //            DataGridViewRow row = MachineListAllDataGrid.Rows[cell.RowIndex];
+        //            if (!MachineIdToRemove.Contains(row.Cells["MachineID"].Value.ToString()))
+        //            {
+        //                MachineIdToRemove.Add(row.Cells["MachineID"].Value.ToString());
+        //            }
+        //        }
+        //    }
+
+        //    MachineStockAdjust machineStockAdjust = new MachineStockAdjust(database, this);
+        //    machineStockAdjust.Show();
+        }
+
   
     }
 }
