@@ -324,9 +324,9 @@ namespace VendingManagement
 
         public void generateInitialCities()
         {
-            City city1 = new City("Milwaukee", "");
-            City city2 = new City("Brookfield", "");
-            City city3 = new City("Waukesha", "");
+            City city1 = new City("Milwaukee", "Wisconsin");
+            City city2 = new City("Brookfield", "Wisconsin");
+            City city3 = new City("Waukesha", "Wisconsin");
 
             listCity.Add(city1);
             listCity.Add(city2);
