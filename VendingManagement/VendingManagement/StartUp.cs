@@ -323,6 +323,12 @@ namespace VendingManagement
             List<Machine> data2;
             data2 = this.database.SelectAllMachine();
             MachineListAllDataGrid.DataSource = data2;
+
+            List<Transactions> data3;
+            ReportManager report = new ReportManager();
+            data3 = this.database.SelectAllTransactions();
+            DataTable subtotals = report.reportSalesByItem(data3);
+            SalesProductGrid.DataSource = subtotals;
         }
 
         private void button5_Click(object sender, EventArgs e)
