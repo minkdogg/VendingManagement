@@ -56,11 +56,23 @@
     <Compile Include="AddEmployee.Designer.cs">
       <DependentUpon>AddEmployee.cs</DependentUpon>
     </Compile>
+    <Compile Include="AddItemByMachine.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddItemByMachine.Designer.cs">
+      <DependentUpon>AddItemByMachine.cs</DependentUpon>
+    </Compile>
     <Compile Include="AddMachine.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="AddMachine.Designer.cs">
       <DependentUpon>AddMachine.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddMachineProductType.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddMachineProductType.Designer.cs">
+      <DependentUpon>AddMachineProductType.cs</DependentUpon>
     </Compile>
     <Compile Include="AddVehicle.cs">
       <SubType>Form</SubType>
@@ -102,8 +114,14 @@
     <EmbeddedResource Include="AddEmployee.resx">
       <DependentUpon>AddEmployee.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AddItemByMachine.resx">
+      <DependentUpon>AddItemByMachine.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AddMachine.resx">
       <DependentUpon>AddMachine.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddMachineProductType.resx">
+      <DependentUpon>AddMachineProductType.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AddProduct.resx">
       <DependentUpon>AddProduct.cs</DependentUpon>

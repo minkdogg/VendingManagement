@@ -10,13 +10,13 @@ using System.Windows.Forms;
 
 namespace VendingManagement
 {
-    public partial class AddMachine : Form
+    public partial class AddItemByMachine : Form
     {
         List<Machine> data;
         Database database;
         StartUp parent;
 
-        public AddMachine(Database database, StartUp parent)
+        public AddItemByMachine(Database database, StartUp parent)
         {
             InitializeComponent();
             this.database = database;
