@@ -27,6 +27,28 @@ namespace VendingManagement
             ReportTabs.SelectedIndexChanged += new EventHandler(ReportTabs_SelectedIndexChanged);
         }
 
+        private void StartUp_Load(object sender, EventArgs e)
+        {
+            List<Product> data;
+            data = this.database.SelectAllProduct();
+            ProductWarehouseDataGrid.DataSource = data;
+
+            this.LoadCityMachinesDataGrid();
+
+            List<Machine> data2;
+            data2 = this.database.SelectAllMachine();
+            MachineListAllDataGrid.DataSource = data2;
+
+            List<Transactions> data3;
+            ReportManager report = new ReportManager();
+            data3 = this.database.SelectAllTransactions();
+            DataTable subtotals = report.reportSalesByItem(data3);
+            SalesProductGrid.DataSource = subtotals;
+
+            treeView1.ExpandAll();
+            treeView2.ExpandAll();
+        }
+
         private void treeView1_AfterSelect(object sender, TreeViewEventArgs e)
         {
             MainField.SelectTab(MainTab1);
@@ -314,25 +336,6 @@ namespace VendingManagement
         {
             AddProduct addProduct = new AddProduct(database, this);
             addProduct.Show();
-        }
-
-        private void StartUp_Load(object sender, EventArgs e)
-        {
-            List<Product> data;
-            data = this.database.SelectAllProduct();
-            ProductWarehouseDataGrid.DataSource = data;
-
-            this.LoadCityMachinesDataGrid();
-
-            List<Machine> data2;
-            data2 = this.database.SelectAllMachine();
-            MachineListAllDataGrid.DataSource = data2;
-
-            List<Transactions> data3;
-            ReportManager report = new ReportManager();
-            data3 = this.database.SelectAllTransactions();
-            DataTable subtotals = report.reportSalesByItem(data3);
-            SalesProductGrid.DataSource = subtotals;
         }
 
         private void button5_Click(object sender, EventArgs e)
