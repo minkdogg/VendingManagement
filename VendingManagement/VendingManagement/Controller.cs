@@ -99,6 +99,27 @@ namespace VendingManagement
         //
         // Remove Object from Form
         //
+        public bool RemoveProduct(string ID)
+        {
+            if (ID != "" & ID != null)
+            {
+                List<Employee> employee = database.SelectEmployee(ID);
+                if (employee.Count == 1)
+                {
+                    database.Remove(employee[0]);
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+
+            }
+            else
+            {
+                return false;
+            }
+        }
         public bool RemoveEmployee(string ID)
         {
             if (ID != "" & ID != null)
@@ -125,60 +146,6 @@ namespace VendingManagement
 
 
 
-        //private void button5_Click(object sender, EventArgs e)
-        //{
-        //    List<string> employeeIdToRemove = new List<string>();
-        //    if (EmployeesDataGrid.SelectedRows.Count > 0)
-        //    {
-        //        foreach (DataGridViewRow row in EmployeesDataGrid.SelectedRows)
-        //        {
-        //            //MessageBox.Show( row.Cells["EmployeeID"].Value.ToString());
-        //            if (!employeeIdToRemove.Contains(row.Cells["EmployeeID"].Value.ToString()))
-        //            {
-        //                employeeIdToRemove.Add(row.Cells["EmployeeID"].Value.ToString());
-        //            }
-        //        }
-
-        //    }
-        //    else if (EmployeesDataGrid.SelectedCells.Count > 0)
-        //    {
-        //        foreach (DataGridViewCell cell in EmployeesDataGrid.SelectedCells)
-        //        {
-        //            DataGridViewRow row = EmployeesDataGrid.Rows[cell.RowIndex];
-        //            //MessageBox.Show(row.Cells["EmployeeID"].Value.ToString());
-        //            if (!employeeIdToRemove.Contains(row.Cells["EmployeeID"].Value.ToString()))
-        //            {
-        //                employeeIdToRemove.Add(row.Cells["EmployeeID"].Value.ToString());
-        //            }
-        //        }
-        //    }
-
-        //    foreach (string ID in employeeIdToRemove)
-        //    {
-        //        DialogResult confirm = MessageBox.Show("Are you sure you want to Delete employee ID# " + ID,
-        //            "Confirm Delete",
-        //            MessageBoxButtons.YesNo,
-        //            MessageBoxIcon.Exclamation,
-        //            MessageBoxDefaultButton.Button2);
-
-        //        if (confirm == DialogResult.Yes)
-        //        {
-        //            Controller controller = new Controller(database);
-        //            controller.RemoveEmployee(ID);
-
-        //            EmployeesDataGrid.DataSource = null;
-        //            EmployeesDataGrid.Update();
-        //            EmployeesDataGrid.Refresh();
-
-        //            List<Employee> data;
-        //            data = this.database.SelectAllEmployee();
-        //            EmployeesDataGrid.DataSource = data;
-        //            EmployeesDataGrid.Update();
-        //            EmployeesDataGrid.Refresh();
-
-        //        }
-
-        //    }
-        //}
+      
     }
 }

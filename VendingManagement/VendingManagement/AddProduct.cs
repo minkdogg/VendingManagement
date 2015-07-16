@@ -13,10 +13,12 @@ namespace VendingManagement
     public partial class AddProduct : Form
     {
         List<Product> data;
+        Database database;
 
-        public AddProduct()
+        public AddProduct(Database database)
         {
             InitializeComponent();
+            this.database = database;
         }
 
         private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -24,14 +26,6 @@ namespace VendingManagement
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            //Database database = new Database();
-            //database.generateInitialData();
-            //this.data = database.SelectAllProduct();
-
-            //dataGridView2.DataSource = data;
-        }
 
         private void viewToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -46,6 +40,35 @@ namespace VendingManagement
         private void button2_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            try
+            {
+                string name = textBox8.Text;
+                string wholeSalePriceString = textBox7.Text;
+                if (name != "" & name != null &
+                    wholeSalePriceString != "" & wholeSalePriceString != null)
+                {
+                    float wholeSalePrice = float.Parse(wholeSalePriceString);
+
+                    // Create Record
+                    Controller controller = new Controller(database);
+                    controller.AddProduct(name, wholeSalePrice);
+                    this.Close();
+                }
+                else
+                {
+                    MessageBox.Show("Please enter a product name and purchase price.");
+                }
+
+            }
+            catch
+            {
+                MessageBox.Show("Invalid Entries - Please enter a product name and purchase price.");
+            }
+
         }
     }
 }
