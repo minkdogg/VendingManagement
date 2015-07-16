@@ -10,15 +10,16 @@ namespace VendingManagement
     {
         public List<Product> products = new List<Product> { };
         public List<List<string>> productTypes = new List<List<string>>();
-        
-        protected int maxCapacity;
-        protected float salePrice;
-        protected int defaultMinStock = 5;
+
+        protected string machineID;
         protected string city;
         protected string location;
+        protected float salePrice;
+        protected int defaultMinStock = 5;        
         protected bool needService;
         protected bool needRestock;
-        protected string machineID;
+        protected int maxCapacity;
+        
 
         public Machine(string city, string location, string machineID)
         {
@@ -28,6 +29,46 @@ namespace VendingManagement
             this.maxCapacity = 25;
         }
 
+
+        //Getter and Setter Section
+        public string MachineID
+        {
+            get { return machineID; }
+            set { machineID = value; }
+        }
+        public string City
+        {
+            get { return city; }
+            set { city = value; }
+        }
+        public string Location
+        {
+            get { return location; }
+            set { location = value; }
+        }
+        public bool NeedService
+        {
+            get { return needService; }
+            set { needService = value; }
+        }
+
+        public bool NeedRestock
+        {
+            get { return needRestock; }
+            set { needRestock = value; }
+        }
+
+        public int DefaultMinStock
+        {
+            get { return defaultMinStock; }
+            set { defaultMinStock = value; }
+        }
+        public int MaxCapacity
+        {
+            get { return maxCapacity; }
+            set { maxCapacity = value; }
+        }
+        //End of Setter/Getter Section
 
 
         // adds product to products list and if necessary adds type to productTypes
@@ -79,7 +120,7 @@ namespace VendingManagement
         }
 
 
-
+        // Return a list of all objects matching the ID
         public List<Product> selectAllProductByType(string id)
         {
             List<Product> multipleProductReturn = new List<Product>();
@@ -113,12 +154,7 @@ namespace VendingManagement
                 {
                     this.removeProduct(product);
                 }
-       }
-            
-        
-
-
-
+        }
 
         // removes productType based on type entered.
         public void removeProductType(string type)
@@ -176,13 +212,6 @@ namespace VendingManagement
             return groupCount;
         }
 
-
-
-        
-
-       
-
-
         // returns list of items needed for restock
         public List<string> getItemsRestock()
         {
@@ -236,52 +265,6 @@ namespace VendingManagement
         }
 
         
-        //Getter and Setter Section
-        public int MaxCapacity
-        {
-            get { return maxCapacity; }
-            set { maxCapacity = value; }
-        }
-
-
-        public string City
-        {
-            get { return city; }
-            set { city = value; }
-        }
-
-        public string Location
-        {
-            get { return location; }
-            set { location = value; }
-        }
-
-        public bool NeedService
-        {
-            get { return needService; }
-            set { needService = value; }
-        }
-
-        public bool NeedRestock
-        {
-            get { return needRestock; }
-            set { needRestock = value; }
-        }
-
-        public int DefaultMinStock
-        {
-            get { return defaultMinStock; }
-            set { defaultMinStock = value; }
-        }
-
-        public string MachineID
-        {
-            get { return machineID; }
-            set { machineID = value; }
-        }
-        
-        //End of Setter/Getter Section
-
         //Start of Helper functions for class
 
         // returns list of all product names in product list

@@ -22,10 +22,10 @@ namespace VendingManagement
             ProductWarehouseDataGrid.Refresh();
 
             List<Product> data;
+            ReportManager report = new ReportManager();
             data = this.database.SelectAllProduct();
-            ProductWarehouseDataGrid.DataSource = data;
-            ProductWarehouseDataGrid.Update();
-            ProductWarehouseDataGrid.Refresh();
+            DataTable source = report.reportProductWarehouse(data);
+            ProductWarehouseDataGrid.DataSource = source;
         }
                 
         public void LoadTransactionsDataGrid()
@@ -161,7 +161,7 @@ namespace VendingManagement
                 {
                     if (!rowsProcessedAlready.Contains(row.Index))
                     {
-                        ProductIdToRemove.Add(row.Cells["Name"].Value.ToString());
+                        ProductIdToRemove.Add(row.Cells["Product Type"].Value.ToString());
                         rowsProcessedAlready.Add(row.Index);
                     }
                 }
@@ -174,7 +174,7 @@ namespace VendingManagement
                     DataGridViewRow row = ProductWarehouseDataGrid.Rows[cell.RowIndex];
                     if (!rowsProcessedAlready.Contains(row.Index))
                     {
-                        ProductIdToRemove.Add(row.Cells["Name"].Value.ToString());
+                        ProductIdToRemove.Add(row.Cells["Product Type"].Value.ToString());
                         rowsProcessedAlready.Add(row.Index);
                     }
                 }

@@ -50,16 +50,36 @@ namespace VendingManagement
             {
                 string name = textBox8.Text;
                 string wholeSalePriceString = textBox7.Text;
+                string quantityString = textBox1.Text;
+
                 if (name != "" & name != null &
-                    wholeSalePriceString != "" & wholeSalePriceString != null)
+                    wholeSalePriceString != "" & wholeSalePriceString != null &
+                    quantityString != "" & quantityString != null )
                 {
                     float wholeSalePrice = float.Parse(wholeSalePriceString);
+                    int quantity = int.Parse(quantityString);
 
-                    // Create Record
-                    Controller controller = new Controller(database);
-                    controller.AddProduct(name, wholeSalePrice);
-                    this.parent.LoadProductWarehouseDataGrid();
-                    this.Close();
+                    if (quantity > 0)
+                    {
+                        DialogResult confirm = MessageBox.Show("You are about to purchase " + quantityString + " " + name + " for a total of $" + Convert.ToString(quantity * wholeSalePrice) + ".\nPlease confirm this is accurate.",
+                        "Confirm Delete",
+                        MessageBoxButtons.YesNo,
+                        MessageBoxIcon.Exclamation,
+                        MessageBoxDefaultButton.Button2);
+
+                        if (confirm == DialogResult.Yes)
+                        {
+                            // Create Record
+                            Controller controller = new Controller(database);
+                            controller.AddProduct(name, wholeSalePrice, quantity);
+                            this.parent.LoadProductWarehouseDataGrid();
+                            this.Close();
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("Please enter quantity larger than 0.");
+                    }
                 }
                 else
                 {

@@ -20,25 +20,27 @@ namespace VendingManagement
         //
         // Add Objects from Form
         //
-        public bool AddProduct(string name, float wholeSalePrice)
+        public bool AddProduct(string name, float wholeSalePrice, int quantity)
         {
             if (name != "" & name != null)
             {
-                Product product = new Product(name, wholeSalePrice);
-                this.database.Append(product);
+                TransferManager transferManager = new TransferManager(database);
+                transferManager.buyStock(name, quantity, wholeSalePrice);
                 return true;
             }
             else
             { return false; }
         }
 
-        public bool AddMachine(string ID, string city, string location)
+        public bool AddMachine(string ID, string city, string location, int maxCapacity, int minimumStock, string productType)
         {
             if (ID != "" & ID != null & 
                 city != "" & city != null &
                 location != "" & location != null)
             {
                 Machine machine = new Machine(city, location, ID);
+                machine.MaxCapacity = maxCapacity;
+                machine.DefaultMinStock = minimumStock;
                 this.database.Append(machine);
                 return true;
             }
