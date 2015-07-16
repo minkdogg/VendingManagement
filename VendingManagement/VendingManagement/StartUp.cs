@@ -24,6 +24,7 @@ namespace VendingManagement
             BusinessTabs.SelectedIndexChanged += new EventHandler(BusinessTabs_SelectedIndexChanged);
             CityTabs.SelectedIndexChanged += new EventHandler(CityTabs_SelectedIndexChanged);
             MachineTabs.SelectedIndexChanged += new EventHandler(MachineTabs_SelectedIndexChanged);
+            ReportTabs.SelectedIndexChanged += new EventHandler(ReportTabs_SelectedIndexChanged);
         }
 
         private void treeView1_AfterSelect(object sender, TreeViewEventArgs e)
@@ -81,15 +82,15 @@ namespace VendingManagement
                     break;
                 case "Total Profit":
                     MainField.SelectTab(MainTab4);
-                    ReportTabs.SelectTab(ReportsTotalProfit);
+                    ReportTabs.SelectTab(ReportsSalesItems);
                     break;
                 case "Top Selling Items":
                     MainField.SelectTab(MainTab4);
-                    ReportTabs.SelectTab(ReportsTopSellingItems);
+                    ReportTabs.SelectTab(ReportsInventoryItems);
                     break;
                 case "Profit Margin by Item":
                     MainField.SelectTab(MainTab4);
-                    ReportTabs.SelectTab(ReportsProfitMarginByItem);
+                    ReportTabs.SelectTab(ReportsMachineSales);
                     break;
                 case "Sales by City":
                     MainField.SelectTab(MainTab4);
@@ -239,6 +240,47 @@ namespace VendingManagement
             }
         }
 
+        //Report TABS ==> load data on tab change
+        private void ReportTabs_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (ReportTabs.SelectedTab == ReportsSalesItems)
+            {
+                List<Transactions> data;
+                ReportManager report = new ReportManager();
+                data = this.database.SelectAllTransactions();
+
+                DataTable subtotals = report.reportSalesByItem(data);
+
+                SalesItems.DataSource = subtotals;
+            }
+            else if (ReportTabs.SelectedTab == ReportsInventoryItems)
+            {
+                List<Product> data;
+                ReportManager report = new ReportManager();
+                data = this.database.SelectAllProduct();
+
+                DataTable subtotals = report.reportInventoryCostItem(data);
+
+                InventoryItems.DataSource = subtotals;
+            }
+            else if (ReportTabs.SelectedTab == ReportsMachineSales)
+            {
+                List<Transactions> data;
+                ReportManager report = new ReportManager();
+                data = this.database.SelectAllTransactions();
+
+                DataTable subtotals = report.reportSalesByMachine(data);
+
+                MachineSales.DataSource = subtotals;
+            }
+            else if (ReportTabs.SelectedTab == ReportsSalesByCity)
+            {
+                
+            }
+        }
+
+
+
         private void MainField_SelectedIndexChanged(object sender, EventArgs e)
         {
 
@@ -309,6 +351,12 @@ namespace VendingManagement
                 }
 
             }
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            AddEmployee addEmployee = new AddEmployee();
+            addEmployee.Show();
         }
     }
 }
