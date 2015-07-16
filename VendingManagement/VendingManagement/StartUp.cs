@@ -310,5 +310,11 @@ namespace VendingManagement
 
             }
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            AddEmployee addEmployee = new AddEmployee();
+            addEmployee.Show();
+        }
     }
 }
