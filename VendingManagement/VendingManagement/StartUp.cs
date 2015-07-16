@@ -376,5 +376,23 @@ namespace VendingManagement
         {
 
         }
+
+        private void button18_Click(object sender, EventArgs e)
+        {
+            AddItemByMachine addItemByMachine = new AddItemByMachine(database, this);
+            addItemByMachine.Show();
+        }
+
+        private void button14_Click(object sender, EventArgs e)
+        {
+            AddMachine addMachine = new AddMachine(database, this);
+            addMachine.Show();
+        }
+
+        private void button16_Click(object sender, EventArgs e)
+        {
+            AddMachineProductType addMachineProductType = new AddMachineProductType(database, this);
+            addMachineProductType.Show();
+        }
     }
 }
