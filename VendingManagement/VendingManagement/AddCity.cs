@@ -32,26 +32,41 @@ namespace VendingManagement
         {
             try
             {
-                string city = textBox8.Text;
-                string state = textBox7.Text;
-                if (city != "" & city != null &
-                    state != "" & state != null)
+                List<string> existingIDList = new List<string>();
+                foreach (City city in database.SelectAllCity())
                 {
-                    // Create Record
-                    Controller controller = new Controller(database);
-                    controller.AddCity(city, state);
-                    this.parent.LoadCityMachinesDataGrid();
-                    this.Close();
+                    existingIDList.Add(city.ID);
+                }
+
+                string cityName = textBox8.Text;
+                string state = textBox7.Text;
+                string ID = textBox1.Text;
+                if (!existingIDList.Contains(ID))
+                {
+                    if (cityName != "" & cityName != null &
+                        state != "" & state != null &
+                        ID != "" & ID != null)
+                    {
+                        // Create Record
+                        Controller controller = new Controller(database);
+                        controller.AddCity(cityName, state, ID);
+                        this.parent.LoadCityMachinesDataGrid();
+                        this.Close();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Please enter a City, State, and a uniquie ID.");
+                    }
                 }
                 else
                 {
-                    MessageBox.Show("Please enter a City and State.");
+                    MessageBox.Show("ID already exists. Please enter a uniqueID.");
                 }
 
             }
             catch
             {
-                MessageBox.Show("Invalid Entries - Please enter a City and State.");
+                MessageBox.Show("Invalid Entries - Please enter a City, State, and a uniquie ID.");
             }
 
         }

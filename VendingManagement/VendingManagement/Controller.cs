@@ -46,11 +46,11 @@ namespace VendingManagement
             { return false; }
         }
 
-        public bool AddCity(string name, string location)
+        public bool AddCity(string name, string location, string ID)
         {
-            if (name != "" & name != null & location != "" & location != null)
+            if (name != "" & name != null & location != "" & location != null & ID != "" & ID != null)
             {
-                City city = new City(name, location);
+                City city = new City(name, location, ID);
                 this.database.Append(city);
                 return true;
             }
@@ -118,7 +118,7 @@ namespace VendingManagement
             }
         }
 
-        // Remove Employee from Database
+        // Remove Employee from Form
         public bool RemoveEmployee(string ID)
         {
             if (ID != "" & ID != null)
@@ -141,7 +141,7 @@ namespace VendingManagement
             }
         }
 
-        // Remove Vehicle from database
+        // Remove Vehicle from Form
         public bool RemoveVehicle(string ID)
         {
             if (ID != "" & ID != null)
@@ -164,7 +164,7 @@ namespace VendingManagement
             }
         }
 
-        // Remove City from database
+        // Remove City from Form
         public bool RemoveCity(string ID)
         {
             if (ID != "" & ID != null)

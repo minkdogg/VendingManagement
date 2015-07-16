@@ -23,11 +23,14 @@ namespace VendingManagement
             set { state = value; }
         }
 
-        public City(string name, string state)
+        public City(string name, string state, string ID)
         {
             this.name = name;
             this.state = state;
+            this.ID = ID;
         }
 
+        public string ID
+        { get; set;}
     }
 }
