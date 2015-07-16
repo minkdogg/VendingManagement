@@ -146,6 +146,110 @@ namespace VendingManagement
         }
 
 
+        //
+        // Remove Button Interfaces
+        //
+
+        // Product Remove Button
+        private void button3_Click_1(object sender, EventArgs e)
+        {
+            List<string> ProductIdToRemove = new List<string>();
+            List<int> rowsProcessedAlready = new List<int>();
+            if (ProductWarehouseDataGrid.SelectedRows.Count > 0)
+            {
+                foreach (DataGridViewRow row in ProductWarehouseDataGrid.SelectedRows)
+                {
+                    if (!rowsProcessedAlready.Contains(row.Index))
+                    {
+                        ProductIdToRemove.Add(row.Cells["Name"].Value.ToString());
+                        rowsProcessedAlready.Add(row.Index);
+                    }
+                }
+
+            }
+            else if (ProductWarehouseDataGrid.SelectedCells.Count > 0)
+            {
+                foreach (DataGridViewCell cell in ProductWarehouseDataGrid.SelectedCells)
+                {
+                    DataGridViewRow row = ProductWarehouseDataGrid.Rows[cell.RowIndex];
+                    if (!rowsProcessedAlready.Contains(row.Index))
+                    {
+                        ProductIdToRemove.Add(row.Cells["Name"].Value.ToString());
+                        rowsProcessedAlready.Add(row.Index);
+                    }
+                }
+            }
+
+            foreach (string ID in ProductIdToRemove)
+            {
+                //DialogResult confirm = MessageBox.Show("Are you sure you want to Delete product ID " + ID,
+                //    "Confirm Delete",
+                //    MessageBoxButtons.YesNo,
+                //    MessageBoxIcon.Exclamation,
+                //    MessageBoxDefaultButton.Button2);
+
+                //if (confirm == DialogResult.Yes)
+                if (true)
+                {
+                    Controller controller = new Controller(database);
+                    controller.RemoveProduct(ID);
+                    this.LoadProductWarehouseDataGrid();
+                }
+
+            }
+        }
+
+        // Remove Vehicle Button
+        private void button7_Click(object sender, EventArgs e)
+        {
+            List<string> VehicleIdToRemove = new List<string>();
+            if (VehiclesDataGrid.SelectedRows.Count > 0)
+            {
+                foreach (DataGridViewRow row in VehiclesDataGrid.SelectedRows)
+                {
+                    if (!VehicleIdToRemove.Contains(row.Cells["VehicleID"].Value.ToString()))
+                    {
+                        VehicleIdToRemove.Add(row.Cells["VehicleID"].Value.ToString());
+                    }
+                }
+
+            }
+            else if (VehiclesDataGrid.SelectedCells.Count > 0)
+            {
+                foreach (DataGridViewCell cell in VehiclesDataGrid.SelectedCells)
+                {
+                    DataGridViewRow row = VehiclesDataGrid.Rows[cell.RowIndex];
+                    if (!VehicleIdToRemove.Contains(row.Cells["VehicleID"].Value.ToString()))
+                    {
+                        VehicleIdToRemove.Add(row.Cells["VehicleID"].Value.ToString());
+                    }
+                }
+            }
+
+            foreach (string ID in VehicleIdToRemove)
+            {
+                DialogResult confirm = MessageBox.Show("Are you sure you want to Delete vehicle ID# " + ID,
+                    "Confirm Delete",
+                    MessageBoxButtons.YesNo,
+                    MessageBoxIcon.Exclamation,
+                    MessageBoxDefaultButton.Button2);
+
+                if (confirm == DialogResult.Yes)
+                {
+                    Controller controller = new Controller(database);
+                    controller.RemoveVehicle(ID);
+
+                    LoadVehiclesDataGrid();
+
+
+
+                }
+
+            }
+        }
+
+
+
 
 
 

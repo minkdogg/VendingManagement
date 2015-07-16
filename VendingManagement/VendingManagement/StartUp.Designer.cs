@@ -501,6 +501,7 @@
             this.button3.TabIndex = 1;
             this.button3.Text = "Remove";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click_1);
             // 
             // ProductWarehouseDataGrid
             // 
@@ -636,6 +637,7 @@
             this.button7.TabIndex = 1;
             this.button7.Text = "Remove";
             this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // VehiclesDataGrid
             // 

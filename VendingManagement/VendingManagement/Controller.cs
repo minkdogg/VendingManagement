@@ -103,16 +103,13 @@ namespace VendingManagement
         {
             if (ID != "" & ID != null)
             {
-                List<Employee> employee = database.SelectEmployee(ID);
-                if (employee.Count == 1)
+                List<Product> product = database.SelectProduct(ID);
+                if (product.Count > 0)
                 {
-                    database.Remove(employee[0]);
+                    database.Remove(product[0]);
                     return true;
                 }
-                else
-                {
-                    return false;
-                }
+                else{return false;}
 
             }
             else
@@ -142,7 +139,27 @@ namespace VendingManagement
             }
         }
 
+        public bool RemoveVehicle(string ID)
+        {
+            if (ID != "" & ID != null)
+            {
+                List<Vehicle> vehicle = database.SelectVehicle(ID);
+                if (vehicle.Count == 1)
+                {
+                    database.Remove(vehicle[0]);
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
 
+            }
+            else
+            {
+                return false;
+            }
+        }
 
 
 
