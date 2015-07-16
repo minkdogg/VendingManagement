@@ -9,6 +9,8 @@ Project("{F088123C-0E9E-452A-89E6-6BA2F21D5CAC}") = "VendingManagement_Database_
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Database Unit Test", "Database Unit Test\Database Unit Test.csproj", "{BC423069-7495-4A0F-827F-722187CBE8BC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExportUnitTest", "UnitTestProject1\ExportUnitTest.csproj", "{1109DB48-0CD1-4FDF-8502-3E4CE65516EC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{BC423069-7495-4A0F-827F-722187CBE8BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BC423069-7495-4A0F-827F-722187CBE8BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BC423069-7495-4A0F-827F-722187CBE8BC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1109DB48-0CD1-4FDF-8502-3E4CE65516EC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1109DB48-0CD1-4FDF-8502-3E4CE65516EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1109DB48-0CD1-4FDF-8502-3E4CE65516EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1109DB48-0CD1-4FDF-8502-3E4CE65516EC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
