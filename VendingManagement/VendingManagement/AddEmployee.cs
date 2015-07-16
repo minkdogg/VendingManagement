@@ -12,9 +12,15 @@ namespace VendingManagement
 {
     public partial class AddEmployee : Form
     {
-        public AddEmployee()
+        List<Employee> data;
+        Database database;
+        StartUp parent;
+
+        public AddEmployee(Database database, StartUp parent)
         {
             InitializeComponent();
+            this.database = database;
+            this.parent = parent;
         }
 
         private void button2_Click(object sender, EventArgs e)

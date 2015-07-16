@@ -12,9 +12,15 @@ namespace VendingManagement
 {
     public partial class AddVehicle : Form
     {
-        public AddVehicle()
+        List<Vehicle> data;
+        Database database;
+        StartUp parent;
+
+        public AddVehicle(Database database, StartUp parent)
         {
             InitializeComponent();
+            this.database = database;
+            this.parent = parent;
         }
 
         private void button2_Click(object sender, EventArgs e)

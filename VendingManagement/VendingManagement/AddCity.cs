@@ -12,9 +12,15 @@ namespace VendingManagement
 {
     public partial class AddCity : Form
     {
-        public AddCity()
+        List<City> data;
+        Database database;
+        StartUp parent;
+
+        public AddCity(Database database, StartUp parent)
         {
             InitializeComponent();
+            this.database = database;
+            this.parent = parent;
         }
 
         private void button2_Click(object sender, EventArgs e)

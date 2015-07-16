@@ -13,6 +13,7 @@ namespace VendingManagement
     public partial class StartUp : Form
     {
         Database database = new Database();
+
         protected bool businessVisited = false;
         protected bool cityVisited = false;
         protected bool machineVisited = false;
@@ -355,20 +356,25 @@ namespace VendingManagement
 
         private void button4_Click(object sender, EventArgs e)
         {
-            AddEmployee addEmployee = new AddEmployee();
+            AddEmployee addEmployee = new AddEmployee(database, this);
             addEmployee.Show();
         }
 
         private void button6_Click(object sender, EventArgs e)
         {
-            AddVehicle addVehicle = new AddVehicle();
+            AddVehicle addVehicle = new AddVehicle(database, this);
             addVehicle.Show();
         }
 
         private void button8_Click(object sender, EventArgs e)
         {
-            AddCity addCity = new AddCity();
+            AddCity addCity = new AddCity(database, this);
             addCity.Show();
+        }
+
+        private void button15_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

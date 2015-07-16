@@ -14,11 +14,13 @@ namespace VendingManagement
     {
         List<Product> data;
         Database database;
+        StartUp parent;
 
-        public AddProduct(Database database)
+        public AddProduct(Database database, StartUp parent)
         {
             InitializeComponent();
             this.database = database;
+            this.parent = parent;
         }
 
         private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
