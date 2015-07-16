@@ -30,8 +30,10 @@ namespace VendingManagement
         private void StartUp_Load(object sender, EventArgs e)
         {
             List<Product> data;
+            ReportManager report = new ReportManager();
             data = this.database.SelectAllProduct();
-            ProductWarehouseDataGrid.DataSource = data;
+            DataTable source = report.reportProductWarehouse(data);
+            ProductWarehouseDataGrid.DataSource = source;
 
             this.LoadCityMachinesDataGrid();
 
@@ -40,9 +42,9 @@ namespace VendingManagement
             MachineListAllDataGrid.DataSource = data2;
 
             List<Transactions> data3;
-            ReportManager report = new ReportManager();
+            ReportManager report2 = new ReportManager();
             data3 = this.database.SelectAllTransactions();
-            DataTable subtotals = report.reportSalesByItem(data3);
+            DataTable subtotals = report2.reportSalesByItem(data3);
             SalesProductGrid.DataSource = subtotals;
 
             treeView1.ExpandAll();
@@ -195,8 +197,10 @@ namespace VendingManagement
             if (BusinessTabs.SelectedTab == BusinessProductWarehouse)
             {
                 List<Product> data;
+                ReportManager report = new ReportManager();
                 data = this.database.SelectAllProduct();
-                ProductWarehouseDataGrid.DataSource = data;
+                DataTable source = report.reportProductWarehouse(data);
+                ProductWarehouseDataGrid.DataSource = source;
             }
             else if (BusinessTabs.SelectedTab == BusinessTransactions)
             {
@@ -229,14 +233,26 @@ namespace VendingManagement
             else if (CityTabs.SelectedTab == RevenueByCity)
             {
                 List<Transactions> data;
+                List<Machine> machineList;
+                List<City> cityList;
+                ReportManager report = new ReportManager();
                 data = this.database.SelectAllTransactions();
-                CityTotalRevenueDataGrid.DataSource = data;
+                machineList = this.database.SelectAllMachine();
+                cityList = this.database.SelectAllCity();
+                DataTable subtotals = report.reportRevenueByCity(data, machineList, cityList);
+                CityTotalRevenueDataGrid.DataSource = subtotals;
             }
             else if (CityTabs.SelectedTab == ItemSalesByCity)
             {
                 List<Transactions> data;
+                List<City> cities;
+                List<Machine> machines;
+                ReportManager report = new ReportManager();
                 data = this.database.SelectAllTransactions();
-                CitySalesByItemDataGrid.DataSource = data;
+                cities = this.database.SelectAllCity();
+                machines = this.database.SelectAllMachine();
+                DataTable source = report.reportSalesByCityAndItem(data, cities, machines);
+                CitySalesByItemDataGrid.DataSource = source;
             }
         }
 
@@ -260,7 +276,9 @@ namespace VendingManagement
             {
                 List<Machine> data;
                 data = this.database.SelectAllMachine();
-                MachineProductItemsDataGrid.DataSource = data;
+                ReportManager report = new ReportManager();
+                DataTable source = report.reportProductByMachine(data);
+                MachineProductItemsDataGrid.DataSource = source;
             }
         }
 

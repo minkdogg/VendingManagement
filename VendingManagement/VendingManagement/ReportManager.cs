@@ -344,6 +344,65 @@ namespace VendingManagement
             return table;
         }
 
+       public DataTable reportSalesByCityAndItem(List<Transactions> data, List<City> cities, List<Machine> machines)
+        {
+
+            DataTable table = new DataTable();
+            DataColumn newColumn = new DataColumn("City", typeof(String));
+            table.Columns.Add(newColumn);
+
+            newColumn = new DataColumn("Sales Item", typeof(String));
+            table.Columns.Add(newColumn);
+
+            newColumn = new DataColumn("Sales Total", typeof(String));
+            table.Columns.Add(newColumn);
+
+            newColumn = new DataColumn("Sales Count", typeof(String));
+            table.Columns.Add(newColumn);
+
+
+            foreach (City city in cities)
+            {
+                
+                table.Rows.Add(city.Name);
+                List<string> cityMachineList = new List<string> { };
+                foreach (Machine machine in machines)
+                {
+                    if (machine.City == city.Name)
+                    {
+                        cityMachineList.Add(machine.MachineID);
+
+                    }
+                }
+                float salesTotalAmount = 0;
+                int salesTotalCount = 0;
+                foreach (string machine in cityMachineList)
+                {
+                    List<Transactions> sortedList = data.OrderBy(d => d.ProductID).ToList();
+                    var filteredItems = sortedList.Where(p => p.Account == machine);
+                    var subtotals = from x in filteredItems
+                                    group x by x.ProductID into g
+                                    select new { Type = g.Key, SalesTotal = g.Where(x => x.Amount >= 0).Select(x => x.Amount).Sum(), SalesCount = g.Where(x => x.Amount >= 0).Count() };
+
+                    foreach (var total in subtotals)
+                    {
+                        if (total.Type != "" && total.SalesTotal != 0)
+                        {
+                            table.Rows.Add("", total.Type, total.SalesTotal, total.SalesCount);
+                            salesTotalAmount += total.SalesTotal;
+                            salesTotalCount += total.SalesCount;
+                        }
+
+                    }
+                }
+                    table.Rows.Add("Total", "", salesTotalAmount, salesTotalCount);
+                    table.Rows.Add("", "", "", "");
+            }
+            
+
+            return table;
+        }
+
 
 
     }
