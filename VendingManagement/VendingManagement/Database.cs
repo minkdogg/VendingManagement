@@ -45,14 +45,14 @@ namespace VendingManagement
         {
             listCity.Add(entry);
         }
-        //public void Append(Employee entry)
-        //{
-        //    listEmployee.Add(entry);
-        //}
-        //public void Append(Vehicle entry)
-        //{
-        //    listVehicle.Add(entry);
-        //}
+        public void Append(Employee entry)
+        {
+            listEmployee.Add(entry);
+        }
+        public void Append(Vehicle entry)
+        {
+            listVehicle.Add(entry);
+        }
         public void Append(Transactions entry)
         {
             listTransactions.Add(entry);
@@ -73,14 +73,14 @@ namespace VendingManagement
         {
             listCity.Remove(entry);
         }
-        //public void Remove(Employee entry)
-        //{
-        //    listEmployee.Remove(entry);
-        //}
-        //public void Remove(Vehicle entry)
-        //{
-        //    listVehicle.Remove(entry);
-        //}
+        public void Remove(Employee entry)
+        {
+            listEmployee.Remove(entry);
+        }
+        public void Remove(Vehicle entry)
+        {
+            listVehicle.Remove(entry);
+        }
         public void Remove(Transactions entry)
         {
             listTransactions.Remove(entry);
@@ -431,13 +431,5 @@ namespace VendingManagement
             listTransactions.Add(transaction29);
             listTransactions.Add(transaction30);
         }
-
-
-        public void Transfer(Machine machine, Product product, Database database)
-        {
-
-        }
-        
-
     }
 }

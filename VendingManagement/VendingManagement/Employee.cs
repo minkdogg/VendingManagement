@@ -37,6 +37,7 @@ namespace VendingManagement
         public DateTime DateStarted
         {
             get { return dateStarted; }
+            set { dateStarted = value; }
         }
 
         public string FName
