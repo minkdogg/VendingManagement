@@ -80,11 +80,14 @@ namespace VendingManagement
         
         }
 
-        public bool AddVehicle(string ID, string location, int costPerMile)
+        public bool AddVehicle(string ID, int year, string make, string model, string location, int costPerMile)
         {
             if (ID != "" & ID != null & location != "" & location != null)
             {
                 Vehicle vehicle = new Vehicle(ID, location, costPerMile);
+                vehicle.Year = year;
+                vehicle.Make = make;
+                vehicle.Model = model;
                 this.database.Append(vehicle);
                 return true;
             }
