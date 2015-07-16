@@ -89,19 +89,19 @@
             this.VehiclesDataGrid = new System.Windows.Forms.DataGridView();
             this.MainTab2 = new System.Windows.Forms.TabPage();
             this.CityTabs = new System.Windows.Forms.TabControl();
-            this.CityMachines = new System.Windows.Forms.TabPage();
+            this.CityList = new System.Windows.Forms.TabPage();
             this.CityMachinesDataGrid = new System.Windows.Forms.DataGridView();
-            this.CityTotalRevenue = new System.Windows.Forms.TabPage();
+            this.RevenueByCity = new System.Windows.Forms.TabPage();
             this.CityTotalRevenueDataGrid = new System.Windows.Forms.DataGridView();
-            this.CitySalesByItem = new System.Windows.Forms.TabPage();
+            this.ItemSalesByCity = new System.Windows.Forms.TabPage();
             this.CitySalesByItemDataGrid = new System.Windows.Forms.DataGridView();
             this.MainTab3 = new System.Windows.Forms.TabPage();
             this.MachineTabs = new System.Windows.Forms.TabControl();
-            this.MachineListAll = new System.Windows.Forms.TabPage();
+            this.AllMachines = new System.Windows.Forms.TabPage();
             this.MachineListAllDataGrid = new System.Windows.Forms.DataGridView();
-            this.MachineType = new System.Windows.Forms.TabPage();
+            this.ProductType = new System.Windows.Forms.TabPage();
             this.MachineTypeDataGrid = new System.Windows.Forms.DataGridView();
-            this.MachineProductItems = new System.Windows.Forms.TabPage();
+            this.ItemsByMachine = new System.Windows.Forms.TabPage();
             this.MachineProductItemsDataGrid = new System.Windows.Forms.DataGridView();
             this.MainTab4 = new System.Windows.Forms.TabPage();
             this.ReportTabs = new System.Windows.Forms.TabControl();
@@ -113,6 +113,33 @@
             this.dataGridView10 = new System.Windows.Forms.DataGridView();
             this.ReportsSalesByCity = new System.Windows.Forms.TabPage();
             this.dataGridView11 = new System.Windows.Forms.DataGridView();
+            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
+            this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
+            this.button6 = new System.Windows.Forms.Button();
+            this.button7 = new System.Windows.Forms.Button();
+            this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
+            this.button8 = new System.Windows.Forms.Button();
+            this.button9 = new System.Windows.Forms.Button();
+            this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
+            this.button10 = new System.Windows.Forms.Button();
+            this.button11 = new System.Windows.Forms.Button();
+            this.tableLayoutPanel7 = new System.Windows.Forms.TableLayoutPanel();
+            this.button12 = new System.Windows.Forms.Button();
+            this.button13 = new System.Windows.Forms.Button();
+            this.tableLayoutPanel8 = new System.Windows.Forms.TableLayoutPanel();
+            this.button14 = new System.Windows.Forms.Button();
+            this.button15 = new System.Windows.Forms.Button();
+            this.tableLayoutPanel9 = new System.Windows.Forms.TableLayoutPanel();
+            this.button16 = new System.Windows.Forms.Button();
+            this.button17 = new System.Windows.Forms.Button();
+            this.tableLayoutPanel10 = new System.Windows.Forms.TableLayoutPanel();
+            this.button18 = new System.Windows.Forms.Button();
+            this.button19 = new System.Windows.Forms.Button();
             this.QuickLinks.SuspendLayout();
             this.Navigation.SuspendLayout();
             this.Reports.SuspendLayout();
@@ -130,19 +157,19 @@
             ((System.ComponentModel.ISupportInitialize)(this.VehiclesDataGrid)).BeginInit();
             this.MainTab2.SuspendLayout();
             this.CityTabs.SuspendLayout();
-            this.CityMachines.SuspendLayout();
+            this.CityList.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.CityMachinesDataGrid)).BeginInit();
-            this.CityTotalRevenue.SuspendLayout();
+            this.RevenueByCity.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.CityTotalRevenueDataGrid)).BeginInit();
-            this.CitySalesByItem.SuspendLayout();
+            this.ItemSalesByCity.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.CitySalesByItemDataGrid)).BeginInit();
             this.MainTab3.SuspendLayout();
             this.MachineTabs.SuspendLayout();
-            this.MachineListAll.SuspendLayout();
+            this.AllMachines.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.MachineListAllDataGrid)).BeginInit();
-            this.MachineType.SuspendLayout();
+            this.ProductType.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.MachineTypeDataGrid)).BeginInit();
-            this.MachineProductItems.SuspendLayout();
+            this.ItemsByMachine.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.MachineProductItemsDataGrid)).BeginInit();
             this.MainTab4.SuspendLayout();
             this.ReportTabs.SuspendLayout();
@@ -154,6 +181,15 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView10)).BeginInit();
             this.ReportsSalesByCity.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView11)).BeginInit();
+            this.tableLayoutPanel2.SuspendLayout();
+            this.tableLayoutPanel3.SuspendLayout();
+            this.tableLayoutPanel4.SuspendLayout();
+            this.tableLayoutPanel5.SuspendLayout();
+            this.tableLayoutPanel6.SuspendLayout();
+            this.tableLayoutPanel7.SuspendLayout();
+            this.tableLayoutPanel8.SuspendLayout();
+            this.tableLayoutPanel9.SuspendLayout();
+            this.tableLayoutPanel10.SuspendLayout();
             this.SuspendLayout();
             // 
             // Header
@@ -219,10 +255,10 @@
             this.QuickLinks.Controls.Add(this.Navigation);
             this.QuickLinks.Controls.Add(this.Reports);
             this.QuickLinks.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.QuickLinks.Location = new System.Drawing.Point(23, 164);
+            this.QuickLinks.Location = new System.Drawing.Point(23, 161);
             this.QuickLinks.Name = "QuickLinks";
             this.QuickLinks.SelectedIndex = 0;
-            this.QuickLinks.Size = new System.Drawing.Size(181, 403);
+            this.QuickLinks.Size = new System.Drawing.Size(181, 402);
             this.QuickLinks.TabIndex = 6;
             // 
             // Navigation
@@ -231,7 +267,7 @@
             this.Navigation.Location = new System.Drawing.Point(4, 22);
             this.Navigation.Name = "Navigation";
             this.Navigation.Padding = new System.Windows.Forms.Padding(3);
-            this.Navigation.Size = new System.Drawing.Size(173, 377);
+            this.Navigation.Size = new System.Drawing.Size(173, 376);
             this.Navigation.TabIndex = 0;
             this.Navigation.Text = "Navigation";
             this.Navigation.UseVisualStyleBackColor = true;
@@ -271,7 +307,7 @@
             treeNode5,
             treeNode9,
             treeNode13});
-            this.treeView1.Size = new System.Drawing.Size(167, 371);
+            this.treeView1.Size = new System.Drawing.Size(167, 370);
             this.treeView1.TabIndex = 0;
             this.treeView1.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.treeView1_AfterSelect_1);
             // 
@@ -399,6 +435,7 @@
             this.MainField.SelectedIndex = 0;
             this.MainField.Size = new System.Drawing.Size(743, 434);
             this.MainField.TabIndex = 12;
+            this.MainField.SelectedIndexChanged += new System.EventHandler(this.MainField_SelectedIndexChanged);
             // 
             // MainTab1
             // 
@@ -426,6 +463,7 @@
             // 
             // BusinessProductWarehouse
             // 
+            this.BusinessProductWarehouse.Controls.Add(this.tableLayoutPanel2);
             this.BusinessProductWarehouse.Controls.Add(this.ProductWarehouseDataGrid);
             this.BusinessProductWarehouse.Location = new System.Drawing.Point(4, 22);
             this.BusinessProductWarehouse.Name = "BusinessProductWarehouse";
@@ -438,10 +476,9 @@
             // ProductWarehouseDataGrid
             // 
             this.ProductWarehouseDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.ProductWarehouseDataGrid.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ProductWarehouseDataGrid.Location = new System.Drawing.Point(3, 3);
+            this.ProductWarehouseDataGrid.Location = new System.Drawing.Point(3, 39);
             this.ProductWarehouseDataGrid.Name = "ProductWarehouseDataGrid";
-            this.ProductWarehouseDataGrid.Size = new System.Drawing.Size(715, 367);
+            this.ProductWarehouseDataGrid.Size = new System.Drawing.Size(715, 331);
             this.ProductWarehouseDataGrid.TabIndex = 0;
             // 
             // BusinessTransactions
@@ -466,6 +503,7 @@
             // 
             // BusinessEmployees
             // 
+            this.BusinessEmployees.Controls.Add(this.tableLayoutPanel3);
             this.BusinessEmployees.Controls.Add(this.EmployeesDataGrid);
             this.BusinessEmployees.Location = new System.Drawing.Point(4, 22);
             this.BusinessEmployees.Name = "BusinessEmployees";
@@ -478,14 +516,14 @@
             // EmployeesDataGrid
             // 
             this.EmployeesDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.EmployeesDataGrid.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.EmployeesDataGrid.Location = new System.Drawing.Point(3, 3);
+            this.EmployeesDataGrid.Location = new System.Drawing.Point(3, 39);
             this.EmployeesDataGrid.Name = "EmployeesDataGrid";
-            this.EmployeesDataGrid.Size = new System.Drawing.Size(715, 367);
+            this.EmployeesDataGrid.Size = new System.Drawing.Size(715, 331);
             this.EmployeesDataGrid.TabIndex = 0;
             // 
             // BusinessVehicles
             // 
+            this.BusinessVehicles.Controls.Add(this.tableLayoutPanel4);
             this.BusinessVehicles.Controls.Add(this.VehiclesDataGrid);
             this.BusinessVehicles.Location = new System.Drawing.Point(4, 22);
             this.BusinessVehicles.Name = "BusinessVehicles";
@@ -498,10 +536,9 @@
             // VehiclesDataGrid
             // 
             this.VehiclesDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.VehiclesDataGrid.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.VehiclesDataGrid.Location = new System.Drawing.Point(3, 3);
+            this.VehiclesDataGrid.Location = new System.Drawing.Point(3, 39);
             this.VehiclesDataGrid.Name = "VehiclesDataGrid";
-            this.VehiclesDataGrid.Size = new System.Drawing.Size(715, 367);
+            this.VehiclesDataGrid.Size = new System.Drawing.Size(715, 331);
             this.VehiclesDataGrid.TabIndex = 0;
             // 
             // MainTab2
@@ -517,9 +554,9 @@
             // 
             // CityTabs
             // 
-            this.CityTabs.Controls.Add(this.CityMachines);
-            this.CityTabs.Controls.Add(this.CityTotalRevenue);
-            this.CityTabs.Controls.Add(this.CitySalesByItem);
+            this.CityTabs.Controls.Add(this.CityList);
+            this.CityTabs.Controls.Add(this.RevenueByCity);
+            this.CityTabs.Controls.Add(this.ItemSalesByCity);
             this.CityTabs.Dock = System.Windows.Forms.DockStyle.Fill;
             this.CityTabs.Location = new System.Drawing.Point(3, 3);
             this.CityTabs.Name = "CityTabs";
@@ -527,64 +564,64 @@
             this.CityTabs.Size = new System.Drawing.Size(729, 399);
             this.CityTabs.TabIndex = 0;
             // 
-            // CityMachines
+            // CityList
             // 
-            this.CityMachines.Controls.Add(this.CityMachinesDataGrid);
-            this.CityMachines.Location = new System.Drawing.Point(4, 22);
-            this.CityMachines.Name = "CityMachines";
-            this.CityMachines.Padding = new System.Windows.Forms.Padding(3);
-            this.CityMachines.Size = new System.Drawing.Size(721, 373);
-            this.CityMachines.TabIndex = 0;
-            this.CityMachines.Text = "Machines";
-            this.CityMachines.UseVisualStyleBackColor = true;
+            this.CityList.Controls.Add(this.tableLayoutPanel5);
+            this.CityList.Controls.Add(this.CityMachinesDataGrid);
+            this.CityList.Location = new System.Drawing.Point(4, 22);
+            this.CityList.Name = "CityList";
+            this.CityList.Padding = new System.Windows.Forms.Padding(3);
+            this.CityList.Size = new System.Drawing.Size(721, 373);
+            this.CityList.TabIndex = 0;
+            this.CityList.Text = "City List";
+            this.CityList.UseVisualStyleBackColor = true;
             // 
             // CityMachinesDataGrid
             // 
             this.CityMachinesDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.CityMachinesDataGrid.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.CityMachinesDataGrid.Location = new System.Drawing.Point(3, 3);
+            this.CityMachinesDataGrid.Location = new System.Drawing.Point(3, 39);
             this.CityMachinesDataGrid.Name = "CityMachinesDataGrid";
-            this.CityMachinesDataGrid.Size = new System.Drawing.Size(715, 367);
+            this.CityMachinesDataGrid.Size = new System.Drawing.Size(715, 331);
             this.CityMachinesDataGrid.TabIndex = 0;
             // 
-            // CityTotalRevenue
+            // RevenueByCity
             // 
-            this.CityTotalRevenue.Controls.Add(this.CityTotalRevenueDataGrid);
-            this.CityTotalRevenue.Location = new System.Drawing.Point(4, 22);
-            this.CityTotalRevenue.Name = "CityTotalRevenue";
-            this.CityTotalRevenue.Padding = new System.Windows.Forms.Padding(3);
-            this.CityTotalRevenue.Size = new System.Drawing.Size(721, 373);
-            this.CityTotalRevenue.TabIndex = 1;
-            this.CityTotalRevenue.Text = "Total Revenue";
-            this.CityTotalRevenue.UseVisualStyleBackColor = true;
+            this.RevenueByCity.Controls.Add(this.tableLayoutPanel6);
+            this.RevenueByCity.Controls.Add(this.CityTotalRevenueDataGrid);
+            this.RevenueByCity.Location = new System.Drawing.Point(4, 22);
+            this.RevenueByCity.Name = "RevenueByCity";
+            this.RevenueByCity.Padding = new System.Windows.Forms.Padding(3);
+            this.RevenueByCity.Size = new System.Drawing.Size(721, 373);
+            this.RevenueByCity.TabIndex = 1;
+            this.RevenueByCity.Text = "Revenue by City";
+            this.RevenueByCity.UseVisualStyleBackColor = true;
             // 
             // CityTotalRevenueDataGrid
             // 
             this.CityTotalRevenueDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.CityTotalRevenueDataGrid.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.CityTotalRevenueDataGrid.Location = new System.Drawing.Point(3, 3);
+            this.CityTotalRevenueDataGrid.Location = new System.Drawing.Point(3, 39);
             this.CityTotalRevenueDataGrid.Name = "CityTotalRevenueDataGrid";
-            this.CityTotalRevenueDataGrid.Size = new System.Drawing.Size(715, 367);
+            this.CityTotalRevenueDataGrid.Size = new System.Drawing.Size(715, 331);
             this.CityTotalRevenueDataGrid.TabIndex = 0;
             // 
-            // CitySalesByItem
+            // ItemSalesByCity
             // 
-            this.CitySalesByItem.Controls.Add(this.CitySalesByItemDataGrid);
-            this.CitySalesByItem.Location = new System.Drawing.Point(4, 22);
-            this.CitySalesByItem.Name = "CitySalesByItem";
-            this.CitySalesByItem.Padding = new System.Windows.Forms.Padding(3);
-            this.CitySalesByItem.Size = new System.Drawing.Size(721, 373);
-            this.CitySalesByItem.TabIndex = 2;
-            this.CitySalesByItem.Text = "Sales by Item";
-            this.CitySalesByItem.UseVisualStyleBackColor = true;
+            this.ItemSalesByCity.Controls.Add(this.tableLayoutPanel7);
+            this.ItemSalesByCity.Controls.Add(this.CitySalesByItemDataGrid);
+            this.ItemSalesByCity.Location = new System.Drawing.Point(4, 22);
+            this.ItemSalesByCity.Name = "ItemSalesByCity";
+            this.ItemSalesByCity.Padding = new System.Windows.Forms.Padding(3);
+            this.ItemSalesByCity.Size = new System.Drawing.Size(721, 373);
+            this.ItemSalesByCity.TabIndex = 2;
+            this.ItemSalesByCity.Text = "Item Sales by City";
+            this.ItemSalesByCity.UseVisualStyleBackColor = true;
             // 
             // CitySalesByItemDataGrid
             // 
             this.CitySalesByItemDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.CitySalesByItemDataGrid.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.CitySalesByItemDataGrid.Location = new System.Drawing.Point(3, 3);
+            this.CitySalesByItemDataGrid.Location = new System.Drawing.Point(3, 39);
             this.CitySalesByItemDataGrid.Name = "CitySalesByItemDataGrid";
-            this.CitySalesByItemDataGrid.Size = new System.Drawing.Size(715, 367);
+            this.CitySalesByItemDataGrid.Size = new System.Drawing.Size(715, 331);
             this.CitySalesByItemDataGrid.TabIndex = 0;
             // 
             // MainTab3
@@ -600,9 +637,9 @@
             // 
             // MachineTabs
             // 
-            this.MachineTabs.Controls.Add(this.MachineListAll);
-            this.MachineTabs.Controls.Add(this.MachineType);
-            this.MachineTabs.Controls.Add(this.MachineProductItems);
+            this.MachineTabs.Controls.Add(this.AllMachines);
+            this.MachineTabs.Controls.Add(this.ProductType);
+            this.MachineTabs.Controls.Add(this.ItemsByMachine);
             this.MachineTabs.Dock = System.Windows.Forms.DockStyle.Fill;
             this.MachineTabs.Location = new System.Drawing.Point(3, 3);
             this.MachineTabs.Name = "MachineTabs";
@@ -610,64 +647,64 @@
             this.MachineTabs.Size = new System.Drawing.Size(729, 399);
             this.MachineTabs.TabIndex = 0;
             // 
-            // MachineListAll
+            // AllMachines
             // 
-            this.MachineListAll.Controls.Add(this.MachineListAllDataGrid);
-            this.MachineListAll.Location = new System.Drawing.Point(4, 22);
-            this.MachineListAll.Name = "MachineListAll";
-            this.MachineListAll.Padding = new System.Windows.Forms.Padding(3);
-            this.MachineListAll.Size = new System.Drawing.Size(721, 373);
-            this.MachineListAll.TabIndex = 0;
-            this.MachineListAll.Text = "List All";
-            this.MachineListAll.UseVisualStyleBackColor = true;
+            this.AllMachines.Controls.Add(this.tableLayoutPanel8);
+            this.AllMachines.Controls.Add(this.MachineListAllDataGrid);
+            this.AllMachines.Location = new System.Drawing.Point(4, 22);
+            this.AllMachines.Name = "AllMachines";
+            this.AllMachines.Padding = new System.Windows.Forms.Padding(3);
+            this.AllMachines.Size = new System.Drawing.Size(721, 373);
+            this.AllMachines.TabIndex = 0;
+            this.AllMachines.Text = "All Machines";
+            this.AllMachines.UseVisualStyleBackColor = true;
             // 
             // MachineListAllDataGrid
             // 
             this.MachineListAllDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.MachineListAllDataGrid.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.MachineListAllDataGrid.Location = new System.Drawing.Point(3, 3);
+            this.MachineListAllDataGrid.Location = new System.Drawing.Point(3, 39);
             this.MachineListAllDataGrid.Name = "MachineListAllDataGrid";
-            this.MachineListAllDataGrid.Size = new System.Drawing.Size(715, 367);
+            this.MachineListAllDataGrid.Size = new System.Drawing.Size(715, 331);
             this.MachineListAllDataGrid.TabIndex = 0;
             // 
-            // MachineType
+            // ProductType
             // 
-            this.MachineType.Controls.Add(this.MachineTypeDataGrid);
-            this.MachineType.Location = new System.Drawing.Point(4, 22);
-            this.MachineType.Name = "MachineType";
-            this.MachineType.Padding = new System.Windows.Forms.Padding(3);
-            this.MachineType.Size = new System.Drawing.Size(721, 373);
-            this.MachineType.TabIndex = 1;
-            this.MachineType.Text = "Type";
-            this.MachineType.UseVisualStyleBackColor = true;
+            this.ProductType.Controls.Add(this.tableLayoutPanel9);
+            this.ProductType.Controls.Add(this.MachineTypeDataGrid);
+            this.ProductType.Location = new System.Drawing.Point(4, 22);
+            this.ProductType.Name = "ProductType";
+            this.ProductType.Padding = new System.Windows.Forms.Padding(3);
+            this.ProductType.Size = new System.Drawing.Size(721, 373);
+            this.ProductType.TabIndex = 1;
+            this.ProductType.Text = "Product Type";
+            this.ProductType.UseVisualStyleBackColor = true;
             // 
             // MachineTypeDataGrid
             // 
             this.MachineTypeDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.MachineTypeDataGrid.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.MachineTypeDataGrid.Location = new System.Drawing.Point(3, 3);
+            this.MachineTypeDataGrid.Location = new System.Drawing.Point(3, 39);
             this.MachineTypeDataGrid.Name = "MachineTypeDataGrid";
-            this.MachineTypeDataGrid.Size = new System.Drawing.Size(715, 367);
+            this.MachineTypeDataGrid.Size = new System.Drawing.Size(715, 331);
             this.MachineTypeDataGrid.TabIndex = 0;
             // 
-            // MachineProductItems
+            // ItemsByMachine
             // 
-            this.MachineProductItems.Controls.Add(this.MachineProductItemsDataGrid);
-            this.MachineProductItems.Location = new System.Drawing.Point(4, 22);
-            this.MachineProductItems.Name = "MachineProductItems";
-            this.MachineProductItems.Padding = new System.Windows.Forms.Padding(3);
-            this.MachineProductItems.Size = new System.Drawing.Size(721, 373);
-            this.MachineProductItems.TabIndex = 2;
-            this.MachineProductItems.Text = "Product Items";
-            this.MachineProductItems.UseVisualStyleBackColor = true;
+            this.ItemsByMachine.Controls.Add(this.tableLayoutPanel10);
+            this.ItemsByMachine.Controls.Add(this.MachineProductItemsDataGrid);
+            this.ItemsByMachine.Location = new System.Drawing.Point(4, 22);
+            this.ItemsByMachine.Name = "ItemsByMachine";
+            this.ItemsByMachine.Padding = new System.Windows.Forms.Padding(3);
+            this.ItemsByMachine.Size = new System.Drawing.Size(721, 373);
+            this.ItemsByMachine.TabIndex = 2;
+            this.ItemsByMachine.Text = "Items by Machine";
+            this.ItemsByMachine.UseVisualStyleBackColor = true;
             // 
             // MachineProductItemsDataGrid
             // 
             this.MachineProductItemsDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.MachineProductItemsDataGrid.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.MachineProductItemsDataGrid.Location = new System.Drawing.Point(3, 3);
+            this.MachineProductItemsDataGrid.Location = new System.Drawing.Point(3, 39);
             this.MachineProductItemsDataGrid.Name = "MachineProductItemsDataGrid";
-            this.MachineProductItemsDataGrid.Size = new System.Drawing.Size(715, 367);
+            this.MachineProductItemsDataGrid.Size = new System.Drawing.Size(715, 331);
             this.MachineProductItemsDataGrid.TabIndex = 0;
             // 
             // MainTab4
@@ -774,6 +811,330 @@
             this.dataGridView11.Size = new System.Drawing.Size(715, 367);
             this.dataGridView11.TabIndex = 0;
             // 
+            // tableLayoutPanel2
+            // 
+            this.tableLayoutPanel2.ColumnCount = 3;
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 70F));
+            this.tableLayoutPanel2.Controls.Add(this.button2, 0, 0);
+            this.tableLayoutPanel2.Controls.Add(this.button3, 1, 0);
+            this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 3);
+            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
+            this.tableLayoutPanel2.RowCount = 1;
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 80F));
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(715, 34);
+            this.tableLayoutPanel2.TabIndex = 1;
+            // 
+            // button2
+            // 
+            this.button2.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.button2.Location = new System.Drawing.Point(3, 3);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(101, 27);
+            this.button2.TabIndex = 0;
+            this.button2.Text = "Add New";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // button3
+            // 
+            this.button3.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.button3.Location = new System.Drawing.Point(110, 3);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(97, 27);
+            this.button3.TabIndex = 1;
+            this.button3.Text = "Remove";
+            this.button3.UseVisualStyleBackColor = true;
+            // 
+            // tableLayoutPanel3
+            // 
+            this.tableLayoutPanel3.ColumnCount = 3;
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 70F));
+            this.tableLayoutPanel3.Controls.Add(this.button4, 0, 0);
+            this.tableLayoutPanel3.Controls.Add(this.button5, 1, 0);
+            this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(3, 3);
+            this.tableLayoutPanel3.Name = "tableLayoutPanel3";
+            this.tableLayoutPanel3.RowCount = 1;
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 80F));
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(715, 34);
+            this.tableLayoutPanel3.TabIndex = 2;
+            // 
+            // button4
+            // 
+            this.button4.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.button4.Location = new System.Drawing.Point(3, 3);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(101, 27);
+            this.button4.TabIndex = 0;
+            this.button4.Text = "Add New";
+            this.button4.UseVisualStyleBackColor = true;
+            // 
+            // button5
+            // 
+            this.button5.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.button5.Location = new System.Drawing.Point(110, 3);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(97, 27);
+            this.button5.TabIndex = 1;
+            this.button5.Text = "Remove";
+            this.button5.UseVisualStyleBackColor = true;
+            // 
+            // tableLayoutPanel4
+            // 
+            this.tableLayoutPanel4.ColumnCount = 3;
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 70F));
+            this.tableLayoutPanel4.Controls.Add(this.button6, 0, 0);
+            this.tableLayoutPanel4.Controls.Add(this.button7, 1, 0);
+            this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Top;
+            this.tableLayoutPanel4.Location = new System.Drawing.Point(3, 3);
+            this.tableLayoutPanel4.Name = "tableLayoutPanel4";
+            this.tableLayoutPanel4.RowCount = 1;
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 80F));
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(715, 34);
+            this.tableLayoutPanel4.TabIndex = 2;
+            // 
+            // button6
+            // 
+            this.button6.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.button6.Location = new System.Drawing.Point(3, 3);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(101, 27);
+            this.button6.TabIndex = 0;
+            this.button6.Text = "Add New";
+            this.button6.UseVisualStyleBackColor = true;
+            // 
+            // button7
+            // 
+            this.button7.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.button7.Location = new System.Drawing.Point(110, 3);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(97, 27);
+            this.button7.TabIndex = 1;
+            this.button7.Text = "Remove";
+            this.button7.UseVisualStyleBackColor = true;
+            // 
+            // tableLayoutPanel5
+            // 
+            this.tableLayoutPanel5.ColumnCount = 3;
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15F));
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15F));
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 70F));
+            this.tableLayoutPanel5.Controls.Add(this.button8, 0, 0);
+            this.tableLayoutPanel5.Controls.Add(this.button9, 1, 0);
+            this.tableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Top;
+            this.tableLayoutPanel5.Location = new System.Drawing.Point(3, 3);
+            this.tableLayoutPanel5.Name = "tableLayoutPanel5";
+            this.tableLayoutPanel5.RowCount = 1;
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 80F));
+            this.tableLayoutPanel5.Size = new System.Drawing.Size(715, 34);
+            this.tableLayoutPanel5.TabIndex = 2;
+            // 
+            // button8
+            // 
+            this.button8.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.button8.Location = new System.Drawing.Point(3, 3);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(101, 27);
+            this.button8.TabIndex = 0;
+            this.button8.Text = "Add New";
+            this.button8.UseVisualStyleBackColor = true;
+            // 
+            // button9
+            // 
+            this.button9.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.button9.Location = new System.Drawing.Point(110, 3);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(97, 27);
+            this.button9.TabIndex = 1;
+            this.button9.Text = "Remove";
+            this.button9.UseVisualStyleBackColor = true;
+            // 
+            // tableLayoutPanel6
+            // 
+            this.tableLayoutPanel6.ColumnCount = 3;
+            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15F));
+            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15F));
+            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 70F));
+            this.tableLayoutPanel6.Controls.Add(this.button10, 0, 0);
+            this.tableLayoutPanel6.Controls.Add(this.button11, 1, 0);
+            this.tableLayoutPanel6.Dock = System.Windows.Forms.DockStyle.Top;
+            this.tableLayoutPanel6.Location = new System.Drawing.Point(3, 3);
+            this.tableLayoutPanel6.Name = "tableLayoutPanel6";
+            this.tableLayoutPanel6.RowCount = 1;
+            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 80F));
+            this.tableLayoutPanel6.Size = new System.Drawing.Size(715, 34);
+            this.tableLayoutPanel6.TabIndex = 3;
+            // 
+            // button10
+            // 
+            this.button10.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.button10.Location = new System.Drawing.Point(3, 3);
+            this.button10.Name = "button10";
+            this.button10.Size = new System.Drawing.Size(101, 27);
+            this.button10.TabIndex = 0;
+            this.button10.Text = "Add New";
+            this.button10.UseVisualStyleBackColor = true;
+            // 
+            // button11
+            // 
+            this.button11.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.button11.Location = new System.Drawing.Point(110, 3);
+            this.button11.Name = "button11";
+            this.button11.Size = new System.Drawing.Size(97, 27);
+            this.button11.TabIndex = 1;
+            this.button11.Text = "Remove";
+            this.button11.UseVisualStyleBackColor = true;
+            // 
+            // tableLayoutPanel7
+            // 
+            this.tableLayoutPanel7.ColumnCount = 3;
+            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15F));
+            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15F));
+            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 70F));
+            this.tableLayoutPanel7.Controls.Add(this.button12, 0, 0);
+            this.tableLayoutPanel7.Controls.Add(this.button13, 1, 0);
+            this.tableLayoutPanel7.Dock = System.Windows.Forms.DockStyle.Top;
+            this.tableLayoutPanel7.Location = new System.Drawing.Point(3, 3);
+            this.tableLayoutPanel7.Name = "tableLayoutPanel7";
+            this.tableLayoutPanel7.RowCount = 1;
+            this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 80F));
+            this.tableLayoutPanel7.Size = new System.Drawing.Size(715, 34);
+            this.tableLayoutPanel7.TabIndex = 3;
+            // 
+            // button12
+            // 
+            this.button12.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.button12.Location = new System.Drawing.Point(3, 3);
+            this.button12.Name = "button12";
+            this.button12.Size = new System.Drawing.Size(101, 27);
+            this.button12.TabIndex = 0;
+            this.button12.Text = "Add New";
+            this.button12.UseVisualStyleBackColor = true;
+            // 
+            // button13
+            // 
+            this.button13.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.button13.Location = new System.Drawing.Point(110, 3);
+            this.button13.Name = "button13";
+            this.button13.Size = new System.Drawing.Size(97, 27);
+            this.button13.TabIndex = 1;
+            this.button13.Text = "Remove";
+            this.button13.UseVisualStyleBackColor = true;
+            // 
+            // tableLayoutPanel8
+            // 
+            this.tableLayoutPanel8.ColumnCount = 3;
+            this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15F));
+            this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15F));
+            this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 70F));
+            this.tableLayoutPanel8.Controls.Add(this.button14, 0, 0);
+            this.tableLayoutPanel8.Controls.Add(this.button15, 1, 0);
+            this.tableLayoutPanel8.Dock = System.Windows.Forms.DockStyle.Top;
+            this.tableLayoutPanel8.Location = new System.Drawing.Point(3, 3);
+            this.tableLayoutPanel8.Name = "tableLayoutPanel8";
+            this.tableLayoutPanel8.RowCount = 1;
+            this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 80F));
+            this.tableLayoutPanel8.Size = new System.Drawing.Size(715, 34);
+            this.tableLayoutPanel8.TabIndex = 3;
+            // 
+            // button14
+            // 
+            this.button14.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.button14.Location = new System.Drawing.Point(3, 3);
+            this.button14.Name = "button14";
+            this.button14.Size = new System.Drawing.Size(101, 27);
+            this.button14.TabIndex = 0;
+            this.button14.Text = "Add New";
+            this.button14.UseVisualStyleBackColor = true;
+            // 
+            // button15
+            // 
+            this.button15.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.button15.Location = new System.Drawing.Point(110, 3);
+            this.button15.Name = "button15";
+            this.button15.Size = new System.Drawing.Size(97, 27);
+            this.button15.TabIndex = 1;
+            this.button15.Text = "Remove";
+            this.button15.UseVisualStyleBackColor = true;
+            // 
+            // tableLayoutPanel9
+            // 
+            this.tableLayoutPanel9.ColumnCount = 3;
+            this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15F));
+            this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15F));
+            this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 70F));
+            this.tableLayoutPanel9.Controls.Add(this.button16, 0, 0);
+            this.tableLayoutPanel9.Controls.Add(this.button17, 1, 0);
+            this.tableLayoutPanel9.Dock = System.Windows.Forms.DockStyle.Top;
+            this.tableLayoutPanel9.Location = new System.Drawing.Point(3, 3);
+            this.tableLayoutPanel9.Name = "tableLayoutPanel9";
+            this.tableLayoutPanel9.RowCount = 1;
+            this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 80F));
+            this.tableLayoutPanel9.Size = new System.Drawing.Size(715, 34);
+            this.tableLayoutPanel9.TabIndex = 3;
+            // 
+            // button16
+            // 
+            this.button16.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.button16.Location = new System.Drawing.Point(3, 3);
+            this.button16.Name = "button16";
+            this.button16.Size = new System.Drawing.Size(101, 27);
+            this.button16.TabIndex = 0;
+            this.button16.Text = "Add New";
+            this.button16.UseVisualStyleBackColor = true;
+            // 
+            // button17
+            // 
+            this.button17.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.button17.Location = new System.Drawing.Point(110, 3);
+            this.button17.Name = "button17";
+            this.button17.Size = new System.Drawing.Size(97, 27);
+            this.button17.TabIndex = 1;
+            this.button17.Text = "Remove";
+            this.button17.UseVisualStyleBackColor = true;
+            // 
+            // tableLayoutPanel10
+            // 
+            this.tableLayoutPanel10.ColumnCount = 3;
+            this.tableLayoutPanel10.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15F));
+            this.tableLayoutPanel10.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15F));
+            this.tableLayoutPanel10.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 70F));
+            this.tableLayoutPanel10.Controls.Add(this.button18, 0, 0);
+            this.tableLayoutPanel10.Controls.Add(this.button19, 1, 0);
+            this.tableLayoutPanel10.Dock = System.Windows.Forms.DockStyle.Top;
+            this.tableLayoutPanel10.Location = new System.Drawing.Point(3, 3);
+            this.tableLayoutPanel10.Name = "tableLayoutPanel10";
+            this.tableLayoutPanel10.RowCount = 1;
+            this.tableLayoutPanel10.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 80F));
+            this.tableLayoutPanel10.Size = new System.Drawing.Size(715, 34);
+            this.tableLayoutPanel10.TabIndex = 4;
+            // 
+            // button18
+            // 
+            this.button18.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.button18.Location = new System.Drawing.Point(3, 3);
+            this.button18.Name = "button18";
+            this.button18.Size = new System.Drawing.Size(101, 27);
+            this.button18.TabIndex = 0;
+            this.button18.Text = "Add New";
+            this.button18.UseVisualStyleBackColor = true;
+            // 
+            // button19
+            // 
+            this.button19.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.button19.Location = new System.Drawing.Point(110, 3);
+            this.button19.Name = "button19";
+            this.button19.Size = new System.Drawing.Size(97, 27);
+            this.button19.TabIndex = 1;
+            this.button19.Text = "Remove";
+            this.button19.UseVisualStyleBackColor = true;
+            // 
             // StartUp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -806,19 +1167,19 @@
             ((System.ComponentModel.ISupportInitialize)(this.VehiclesDataGrid)).EndInit();
             this.MainTab2.ResumeLayout(false);
             this.CityTabs.ResumeLayout(false);
-            this.CityMachines.ResumeLayout(false);
+            this.CityList.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.CityMachinesDataGrid)).EndInit();
-            this.CityTotalRevenue.ResumeLayout(false);
+            this.RevenueByCity.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.CityTotalRevenueDataGrid)).EndInit();
-            this.CitySalesByItem.ResumeLayout(false);
+            this.ItemSalesByCity.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.CitySalesByItemDataGrid)).EndInit();
             this.MainTab3.ResumeLayout(false);
             this.MachineTabs.ResumeLayout(false);
-            this.MachineListAll.ResumeLayout(false);
+            this.AllMachines.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.MachineListAllDataGrid)).EndInit();
-            this.MachineType.ResumeLayout(false);
+            this.ProductType.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.MachineTypeDataGrid)).EndInit();
-            this.MachineProductItems.ResumeLayout(false);
+            this.ItemsByMachine.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.MachineProductItemsDataGrid)).EndInit();
             this.MainTab4.ResumeLayout(false);
             this.ReportTabs.ResumeLayout(false);
@@ -830,6 +1191,15 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView10)).EndInit();
             this.ReportsSalesByCity.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView11)).EndInit();
+            this.tableLayoutPanel2.ResumeLayout(false);
+            this.tableLayoutPanel3.ResumeLayout(false);
+            this.tableLayoutPanel4.ResumeLayout(false);
+            this.tableLayoutPanel5.ResumeLayout(false);
+            this.tableLayoutPanel6.ResumeLayout(false);
+            this.tableLayoutPanel7.ResumeLayout(false);
+            this.tableLayoutPanel8.ResumeLayout(false);
+            this.tableLayoutPanel9.ResumeLayout(false);
+            this.tableLayoutPanel10.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -858,13 +1228,13 @@
         private System.Windows.Forms.TabPage BusinessTransactions;
         private System.Windows.Forms.TabPage Navigation;
         private System.Windows.Forms.TabControl CityTabs;
-        private System.Windows.Forms.TabPage CityMachines;
-        private System.Windows.Forms.TabPage CityTotalRevenue;
-        private System.Windows.Forms.TabPage CitySalesByItem;
+        private System.Windows.Forms.TabPage CityList;
+        private System.Windows.Forms.TabPage RevenueByCity;
+        private System.Windows.Forms.TabPage ItemSalesByCity;
         private System.Windows.Forms.TabControl MachineTabs;
-        private System.Windows.Forms.TabPage MachineListAll;
-        private System.Windows.Forms.TabPage MachineType;
-        private System.Windows.Forms.TabPage MachineProductItems;
+        private System.Windows.Forms.TabPage AllMachines;
+        private System.Windows.Forms.TabPage ProductType;
+        private System.Windows.Forms.TabPage ItemsByMachine;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TabPage MainTab4;
         private System.Windows.Forms.TabControl ReportTabs;
@@ -890,6 +1260,33 @@
         private System.Windows.Forms.DataGridView CityTotalRevenueDataGrid;
         private System.Windows.Forms.TabPage BusinessProductWarehouse;
         private System.Windows.Forms.DataGridView ProductWarehouseDataGrid;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
+        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel5;
+        private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.Button button9;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel6;
+        private System.Windows.Forms.Button button10;
+        private System.Windows.Forms.Button button11;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel7;
+        private System.Windows.Forms.Button button12;
+        private System.Windows.Forms.Button button13;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel8;
+        private System.Windows.Forms.Button button14;
+        private System.Windows.Forms.Button button15;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel9;
+        private System.Windows.Forms.Button button16;
+        private System.Windows.Forms.Button button17;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel10;
+        private System.Windows.Forms.Button button18;
+        private System.Windows.Forms.Button button19;
 
     }
 }

@@ -131,15 +131,15 @@ namespace VendingManagement
                     break;
                 case "Machines":
                     MainField.SelectTab(MainTab2);
-                    CityTabs.SelectTab(CityMachines);
+                    CityTabs.SelectTab(CityList);
                     break;
                 case "Total Revenue":
                     MainField.SelectTab(MainTab2);
-                    CityTabs.SelectTab(CityTotalRevenue);
+                    CityTabs.SelectTab(RevenueByCity);
                     break;
                 case "Sales by Item":
                     MainField.SelectTab(MainTab2);
-                    CityTabs.SelectTab(CitySalesByItem);
+                    CityTabs.SelectTab(ItemSalesByCity);
                     break;
                 
                 //Machine
@@ -148,15 +148,15 @@ namespace VendingManagement
                     break;
                 case "List All":
                     MainField.SelectTab(MainTab3);
-                    MachineTabs.SelectTab(MachineListAll);
+                    MachineTabs.SelectTab(AllMachines);
                     break;
                 case "Type":
                     MainField.SelectTab(MainTab3);
-                    MachineTabs.SelectTab(MachineType);
+                    MachineTabs.SelectTab(ProductType);
                     break;
                 case "Product Items":
                     MainField.SelectTab(MainTab3);
-                    MachineTabs.SelectTab(MachineProductItems);
+                    MachineTabs.SelectTab(ItemsByMachine);
                     break;
             }
         }
@@ -195,19 +195,19 @@ namespace VendingManagement
         //CITY TABS ==> load data on tab change
         private void CityTabs_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (CityTabs.SelectedTab == CityMachines)
+            if (CityTabs.SelectedTab == CityList)
             {
                 List<Machine> data;
                 data = this.database.SelectAllMachine();
                 CityMachinesDataGrid.DataSource = data;
             }
-            else if (CityTabs.SelectedTab == CityTotalRevenue)
+            else if (CityTabs.SelectedTab == RevenueByCity)
             {
                 List<Transactions> data;
                 data = this.database.SelectAllTransactions();
                 CityTotalRevenueDataGrid.DataSource = data;
             }
-            else if (CityTabs.SelectedTab == CitySalesByItem)
+            else if (CityTabs.SelectedTab == ItemSalesByCity)
             {
                 List<Transactions> data;
                 data = this.database.SelectAllTransactions();
@@ -219,24 +219,29 @@ namespace VendingManagement
         //MACHINE TABS ==> load data on tab change
         private void MachineTabs_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (MachineTabs.SelectedTab == MachineListAll)
+            if (MachineTabs.SelectedTab == AllMachines)
             {
                 List<Machine> data;
                 data = this.database.SelectAllMachine();
                 MachineListAllDataGrid.DataSource = data;
             }
-            else if (MachineTabs.SelectedTab == MachineType)
+            else if (MachineTabs.SelectedTab == ProductType)
             {
                 List<Machine> data;
                 data = this.database.SelectAllMachine();
                 MachineTypeDataGrid.DataSource = data;
             }
-            else if (MachineTabs.SelectedTab == MachineProductItems)
+            else if (MachineTabs.SelectedTab == ItemsByMachine)
             {
                 List<Machine> data;
                 data = this.database.SelectAllMachine();
                 MachineProductItemsDataGrid.DataSource = data;
             }
+        }
+
+        private void MainField_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
