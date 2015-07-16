@@ -51,15 +51,17 @@
             treeNode10,
             treeNode11,
             treeNode12});
-            System.Windows.Forms.TreeNode treeNode14 = new System.Windows.Forms.TreeNode("Total Profit");
-            System.Windows.Forms.TreeNode treeNode15 = new System.Windows.Forms.TreeNode("Top Selling Items");
-            System.Windows.Forms.TreeNode treeNode16 = new System.Windows.Forms.TreeNode("Profit Margin by Item");
-            System.Windows.Forms.TreeNode treeNode17 = new System.Windows.Forms.TreeNode("Sales by City");
-            System.Windows.Forms.TreeNode treeNode18 = new System.Windows.Forms.TreeNode("Reports", new System.Windows.Forms.TreeNode[] {
+            System.Windows.Forms.TreeNode treeNode14 = new System.Windows.Forms.TreeNode("Sales by Product");
+            System.Windows.Forms.TreeNode treeNode15 = new System.Windows.Forms.TreeNode("Inventory (Product)");
+            System.Windows.Forms.TreeNode treeNode16 = new System.Windows.Forms.TreeNode("Sales by Machine");
+            System.Windows.Forms.TreeNode treeNode17 = new System.Windows.Forms.TreeNode("Sales by Machine (Product)");
+            System.Windows.Forms.TreeNode treeNode18 = new System.Windows.Forms.TreeNode("Sales by City");
+            System.Windows.Forms.TreeNode treeNode19 = new System.Windows.Forms.TreeNode("Reports", new System.Windows.Forms.TreeNode[] {
             treeNode14,
             treeNode15,
             treeNode16,
-            treeNode17});
+            treeNode17,
+            treeNode18});
             this.Header = new System.Windows.Forms.Label();
             this.Business = new System.Windows.Forms.Button();
             this.City = new System.Windows.Forms.Button();
@@ -254,7 +256,7 @@
             this.QuickLinks.Location = new System.Drawing.Point(23, 161);
             this.QuickLinks.Name = "QuickLinks";
             this.QuickLinks.SelectedIndex = 0;
-            this.QuickLinks.Size = new System.Drawing.Size(181, 402);
+            this.QuickLinks.Size = new System.Drawing.Size(197, 402);
             this.QuickLinks.TabIndex = 6;
             // 
             // Navigation
@@ -263,7 +265,7 @@
             this.Navigation.Location = new System.Drawing.Point(4, 22);
             this.Navigation.Name = "Navigation";
             this.Navigation.Padding = new System.Windows.Forms.Padding(3);
-            this.Navigation.Size = new System.Drawing.Size(173, 376);
+            this.Navigation.Size = new System.Drawing.Size(189, 376);
             this.Navigation.TabIndex = 0;
             this.Navigation.Text = "Navigation";
             this.Navigation.UseVisualStyleBackColor = true;
@@ -303,7 +305,7 @@
             treeNode5,
             treeNode9,
             treeNode13});
-            this.treeView1.Size = new System.Drawing.Size(167, 370);
+            this.treeView1.Size = new System.Drawing.Size(183, 370);
             this.treeView1.TabIndex = 0;
             this.treeView1.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.treeView1_AfterSelect_1);
             // 
@@ -313,7 +315,7 @@
             this.Reports.Location = new System.Drawing.Point(4, 22);
             this.Reports.Name = "Reports";
             this.Reports.Padding = new System.Windows.Forms.Padding(3);
-            this.Reports.Size = new System.Drawing.Size(173, 376);
+            this.Reports.Size = new System.Drawing.Size(189, 376);
             this.Reports.TabIndex = 1;
             this.Reports.Text = "Reports";
             this.Reports.UseVisualStyleBackColor = true;
@@ -323,20 +325,22 @@
             this.treeView2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.treeView2.Location = new System.Drawing.Point(3, 3);
             this.treeView2.Name = "treeView2";
-            treeNode14.Name = "Total Profit";
-            treeNode14.Text = "Total Profit";
-            treeNode15.Name = "Top Selling Items";
-            treeNode15.Text = "Top Selling Items";
-            treeNode16.Name = "Profit Margin by Item";
-            treeNode16.Text = "Profit Margin by Item";
-            treeNode17.Name = "Sales by City";
-            treeNode17.Text = "Sales by City";
-            treeNode18.Name = "Reports";
-            treeNode18.Text = "Reports";
+            treeNode14.Name = "Sales by Product";
+            treeNode14.Text = "Sales by Product";
+            treeNode15.Name = "Inventory (Product)";
+            treeNode15.Text = "Inventory (Product)";
+            treeNode16.Name = "Sales by Machine";
+            treeNode16.Text = "Sales by Machine";
+            treeNode17.Name = "Sales by Machine (Product)";
+            treeNode17.Text = "Sales by Machine (Product)";
+            treeNode18.Name = "Sales by City";
+            treeNode18.Text = "Sales by City";
+            treeNode19.Name = "Reports";
+            treeNode19.Text = "Reports";
             this.treeView2.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
-            treeNode18});
+            treeNode19});
             this.treeView2.ShowNodeToolTips = true;
-            this.treeView2.Size = new System.Drawing.Size(167, 370);
+            this.treeView2.Size = new System.Drawing.Size(183, 370);
             this.treeView2.TabIndex = 7;
             this.treeView2.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.treeView2_AfterSelect);
             // 

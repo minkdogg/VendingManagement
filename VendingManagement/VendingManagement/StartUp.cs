@@ -80,21 +80,25 @@ namespace VendingManagement
                 case "Reports":
                     MainField.SelectTab(MainTab4);
                     break;
-                case "Total Profit":
+                case "Sales by Product":
                     MainField.SelectTab(MainTab4);
                     ReportTabs.SelectTab(SalesProduct);
                     break;
-                case "Top Selling Items":
+                case "Inventory (Product)":
                     MainField.SelectTab(MainTab4);
                     ReportTabs.SelectTab(InventoryProduct);
                     break;
-                case "Profit Margin by Item":
+                case "Sales by Machine":
                     MainField.SelectTab(MainTab4);
                     ReportTabs.SelectTab(SalesMachine);
                     break;
-                case "Sales by City":
+                case "Sales by Machine (Product)":
                     MainField.SelectTab(MainTab4);
                     ReportTabs.SelectTab(ReportsMachineProduct);
+                    break;
+                case "Sales by City":
+                    MainField.SelectTab(MainTab4);
+                    ReportTabs.SelectTab(SalesCityMachine);
                     break;
             }
         }
