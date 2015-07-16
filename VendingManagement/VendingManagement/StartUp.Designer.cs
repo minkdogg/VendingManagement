@@ -138,6 +138,7 @@
             this.SalesMachineProductGrid = new System.Windows.Forms.DataGridView();
             this.SalesCityMachine = new System.Windows.Forms.TabPage();
             this.SalesCityMachineGrid = new System.Windows.Forms.DataGridView();
+            this.Export = new System.Windows.Forms.Button();
             this.QuickLinks.SuspendLayout();
             this.Navigation.SuspendLayout();
             this.Reports.SuspendLayout();
@@ -1095,11 +1096,22 @@
             this.SalesCityMachineGrid.Size = new System.Drawing.Size(715, 367);
             this.SalesCityMachineGrid.TabIndex = 0;
             // 
+            // Export
+            // 
+            this.Export.Location = new System.Drawing.Point(924, 120);
+            this.Export.Name = "Export";
+            this.Export.Size = new System.Drawing.Size(75, 23);
+            this.Export.TabIndex = 1;
+            this.Export.Text = "Export";
+            this.Export.UseVisualStyleBackColor = true;
+            this.Export.Click += new System.EventHandler(this.Export_Click);
+            // 
             // StartUp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1062, 590);
+            this.Controls.Add(this.Export);
             this.Controls.Add(this.MainField);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.label4);
@@ -1245,6 +1257,7 @@
         private System.Windows.Forms.Button button19;
         private System.Windows.Forms.TabPage SalesCityMachine;
         private System.Windows.Forms.DataGridView SalesCityMachineGrid;
+        private System.Windows.Forms.Button Export;
 
     }
 }
