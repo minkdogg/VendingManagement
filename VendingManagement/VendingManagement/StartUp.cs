@@ -83,19 +83,19 @@ namespace VendingManagement
                     break;
                 case "Total Profit":
                     MainField.SelectTab(MainTab4);
-                    ReportTabs.SelectTab(ReportsSalesItems);
+                    ReportTabs.SelectTab(SalesProduct);
                     break;
                 case "Top Selling Items":
                     MainField.SelectTab(MainTab4);
-                    ReportTabs.SelectTab(ReportsInventoryItems);
+                    ReportTabs.SelectTab(InventoryProduct);
                     break;
                 case "Profit Margin by Item":
                     MainField.SelectTab(MainTab4);
-                    ReportTabs.SelectTab(ReportsMachineSales);
+                    ReportTabs.SelectTab(SalesMachine);
                     break;
                 case "Sales by City":
                     MainField.SelectTab(MainTab4);
-                    ReportTabs.SelectTab(ReportsSalesByCity);
+                    ReportTabs.SelectTab(ReportsMachineProduct);
                     break;
             }
         }
@@ -244,7 +244,7 @@ namespace VendingManagement
         //Report TABS ==> load data on tab change
         private void ReportTabs_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (ReportTabs.SelectedTab == ReportsSalesItems)
+            if (ReportTabs.SelectedTab == SalesProduct)
             {
                 List<Transactions> data;
                 ReportManager report = new ReportManager();
@@ -252,9 +252,9 @@ namespace VendingManagement
 
                 DataTable subtotals = report.reportSalesByItem(data);
 
-                SalesItems.DataSource = subtotals;
+                SalesProductGrid.DataSource = subtotals;
             }
-            else if (ReportTabs.SelectedTab == ReportsInventoryItems)
+            else if (ReportTabs.SelectedTab == InventoryProduct)
             {
                 List<Product> data;
                 ReportManager report = new ReportManager();
@@ -262,9 +262,9 @@ namespace VendingManagement
 
                 DataTable subtotals = report.reportInventoryCostItem(data);
 
-                InventoryItems.DataSource = subtotals;
+                InventoryProductGrid.DataSource = subtotals;
             }
-            else if (ReportTabs.SelectedTab == ReportsMachineSales)
+            else if (ReportTabs.SelectedTab == SalesMachine)
             {
                 List<Transactions> data;
                 ReportManager report = new ReportManager();
@@ -272,12 +272,34 @@ namespace VendingManagement
 
                 DataTable subtotals = report.reportSalesByMachine(data);
 
-                MachineSales.DataSource = subtotals;
+                SalesMachineGrid.DataSource = subtotals;
             }
-            else if (ReportTabs.SelectedTab == ReportsSalesByCity)
+            else if (ReportTabs.SelectedTab == ReportsMachineProduct)
             {
-                
+                List<Transactions> data;
+                List<Machine> machineList;
+                ReportManager report = new ReportManager();
+                data = this.database.SelectAllTransactions();
+                machineList = this.database.SelectAllMachine();
+                DataTable subtotals = report.reportSalesByProductPerMachine(data, machineList);
+                SalesMachineProductGrid.CellBorderStyle = DataGridViewCellBorderStyle.None;
+                SalesMachineProductGrid.DataSource = subtotals;
             }
+            else if (ReportTabs.SelectedTab == SalesCityMachine)
+            {
+                List<Transactions> data;
+                List<Machine> machineList;
+                List<City> cityList;
+                ReportManager report = new ReportManager();
+                data = this.database.SelectAllTransactions();
+                machineList = this.database.SelectAllMachine();
+                cityList = this.database.SelectAllCity();
+                DataTable subtotals = report.reportSalesByCity(data, machineList, cityList);
+
+                SalesCityMachineGrid.DataSource = subtotals;
+            }
+
+
         }
 
 
