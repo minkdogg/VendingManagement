@@ -58,6 +58,7 @@ namespace VendingManagement
                     // Create Record
                     Controller controller = new Controller(database);
                     controller.AddProduct(name, wholeSalePrice);
+                    this.parent.LoadProductWarehouseDataGrid();
                     this.Close();
                 }
                 else
