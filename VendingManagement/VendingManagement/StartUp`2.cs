@@ -338,32 +338,42 @@ namespace VendingManagement
         // Update Machine Button
         private void button10_Click(object sender, EventArgs e)
         {
-        //    List<string> MachineToModify = new List<string>();
-        //    if (MachineListAllDataGrid.SelectedRows.Count > 0)
-        //    {
-        //        foreach (DataGridViewRow row in MachineListAllDataGrid.SelectedRows)
-        //        {
-        //            if (!MachineIdToRemove.Contains(row.Cells["MachineID"].Value.ToString()))
-        //            {
-        //                MachineIdToRemove.Add(row.Cells["MachineID"].Value.ToString());
-        //            }
-        //        }
+            List<string> MachineToModify = new List<string>();
+            if (MachineListAllDataGrid.SelectedRows.Count > 0)
+            {
+                foreach (DataGridViewRow row in MachineListAllDataGrid.SelectedRows)
+                {
+                    if (!MachineToModify.Contains(row.Cells["MachineID"].Value.ToString()))
+                    {
+                        MachineToModify.Add(row.Cells["MachineID"].Value.ToString());
+                    }
+                }
 
-        //    }
-        //    else if (MachineListAllDataGrid.SelectedCells.Count > 0)
-        //    {
-        //        foreach (DataGridViewCell cell in MachineListAllDataGrid.SelectedCells)
-        //        {
-        //            DataGridViewRow row = MachineListAllDataGrid.Rows[cell.RowIndex];
-        //            if (!MachineIdToRemove.Contains(row.Cells["MachineID"].Value.ToString()))
-        //            {
-        //                MachineIdToRemove.Add(row.Cells["MachineID"].Value.ToString());
-        //            }
-        //        }
-        //    }
+            }
+            else if (MachineListAllDataGrid.SelectedCells.Count > 0)
+            {
+                foreach (DataGridViewCell cell in MachineListAllDataGrid.SelectedCells)
+                {
+                    DataGridViewRow row = MachineListAllDataGrid.Rows[cell.RowIndex];
+                    if (!MachineToModify.Contains(row.Cells["MachineID"].Value.ToString()))
+                    {
+                        MachineToModify.Add(row.Cells["MachineID"].Value.ToString());
+                    }
+                }
+            }
 
-        //    MachineStockAdjust machineStockAdjust = new MachineStockAdjust(database, this);
-        //    machineStockAdjust.Show();
+            if (MachineToModify.Count == 1)
+            {
+                string machineID = MachineToModify[0];
+                List<Machine> machineList = this.database.SelectMachine(machineID);
+                MachineStockAdjust machineStockAdjust = new MachineStockAdjust(database, this, machineList[0]);
+                machineStockAdjust.Show();
+            }
+            else
+            {
+                MessageBox.Show("Please select a single machine.");
+            }
+            
         }
 
   
