@@ -358,5 +358,17 @@ namespace VendingManagement
             AddEmployee addEmployee = new AddEmployee();
             addEmployee.Show();
         }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            AddVehicle addVehicle = new AddVehicle();
+            addVehicle.Show();
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            AddCity addCity = new AddCity();
+            addCity.Show();
+        }
     }
 }
