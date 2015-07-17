@@ -20,10 +20,6 @@ namespace VendingManagement
         {
             //Create iTextSharp Table with columnCount
             PdfPTable pdfTable = new PdfPTable(dataGridView.ColumnCount);
-            pdfTable.DefaultCell.Padding = 3;
-            pdfTable.WidthPercentage = 30;
-            pdfTable.HorizontalAlignment = Element.ALIGN_LEFT;
-            pdfTable.DefaultCell.BorderWidth = 1;
 
             //Adding Header row
             foreach (DataGridViewColumn column in dataGridView.Columns)

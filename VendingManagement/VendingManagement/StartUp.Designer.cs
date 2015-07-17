@@ -125,21 +125,41 @@
             this.MainTab4 = new System.Windows.Forms.TabPage();
             this.ReportTabs = new System.Windows.Forms.TabControl();
             this.SalesProduct = new System.Windows.Forms.TabPage();
-            this.SalesProductGrid = new System.Windows.Forms.DataGridView();
-            this.InventoryProduct = new System.Windows.Forms.TabPage();
-            this.InventoryProductGrid = new System.Windows.Forms.DataGridView();
-            this.SalesMachine = new System.Windows.Forms.TabPage();
-            this.SalesMachineGrid = new System.Windows.Forms.DataGridView();
-            this.ReportsMachineProduct = new System.Windows.Forms.TabPage();
-            this.SalesMachineProductGrid = new System.Windows.Forms.DataGridView();
-            this.SalesCityMachine = new System.Windows.Forms.TabPage();
-            this.SalesCityMachineGrid = new System.Windows.Forms.DataGridView();
-            this.RestockMachine = new System.Windows.Forms.TabPage();
-            this.RestockMachineGrid = new System.Windows.Forms.DataGridView();
-            this.PDFSalesByProduct = new System.Windows.Forms.Button();
             this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel7 = new System.Windows.Forms.TableLayoutPanel();
             this.CSVSalesByProduct = new System.Windows.Forms.Button();
+            this.PDFSalesByProduct = new System.Windows.Forms.Button();
+            this.SalesProductGrid = new System.Windows.Forms.DataGridView();
+            this.InventoryProduct = new System.Windows.Forms.TabPage();
+            this.tableLayoutPanel9 = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanel11 = new System.Windows.Forms.TableLayoutPanel();
+            this.button11 = new System.Windows.Forms.Button();
+            this.button12 = new System.Windows.Forms.Button();
+            this.InventoryProductGrid = new System.Windows.Forms.DataGridView();
+            this.SalesMachine = new System.Windows.Forms.TabPage();
+            this.tableLayoutPanel12 = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanel13 = new System.Windows.Forms.TableLayoutPanel();
+            this.button13 = new System.Windows.Forms.Button();
+            this.button16 = new System.Windows.Forms.Button();
+            this.SalesMachineGrid = new System.Windows.Forms.DataGridView();
+            this.ReportsMachineProduct = new System.Windows.Forms.TabPage();
+            this.tableLayoutPanel14 = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanel15 = new System.Windows.Forms.TableLayoutPanel();
+            this.button17 = new System.Windows.Forms.Button();
+            this.button20 = new System.Windows.Forms.Button();
+            this.SalesMachineProductGrid = new System.Windows.Forms.DataGridView();
+            this.SalesCityMachine = new System.Windows.Forms.TabPage();
+            this.tableLayoutPanel16 = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanel17 = new System.Windows.Forms.TableLayoutPanel();
+            this.button21 = new System.Windows.Forms.Button();
+            this.button22 = new System.Windows.Forms.Button();
+            this.SalesCityMachineGrid = new System.Windows.Forms.DataGridView();
+            this.RestockMachine = new System.Windows.Forms.TabPage();
+            this.tableLayoutPanel18 = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanel19 = new System.Windows.Forms.TableLayoutPanel();
+            this.button23 = new System.Windows.Forms.Button();
+            this.button24 = new System.Windows.Forms.Button();
+            this.RestockMachineGrid = new System.Windows.Forms.DataGridView();
             this.QuickLinks.SuspendLayout();
             this.Navigation.SuspendLayout();
             this.Reports.SuspendLayout();
@@ -178,19 +198,29 @@
             this.MainTab4.SuspendLayout();
             this.ReportTabs.SuspendLayout();
             this.SalesProduct.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.SalesProductGrid)).BeginInit();
-            this.InventoryProduct.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.InventoryProductGrid)).BeginInit();
-            this.SalesMachine.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.SalesMachineGrid)).BeginInit();
-            this.ReportsMachineProduct.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.SalesMachineProductGrid)).BeginInit();
-            this.SalesCityMachine.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.SalesCityMachineGrid)).BeginInit();
-            this.RestockMachine.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.RestockMachineGrid)).BeginInit();
             this.tableLayoutPanel6.SuspendLayout();
             this.tableLayoutPanel7.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.SalesProductGrid)).BeginInit();
+            this.InventoryProduct.SuspendLayout();
+            this.tableLayoutPanel9.SuspendLayout();
+            this.tableLayoutPanel11.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.InventoryProductGrid)).BeginInit();
+            this.SalesMachine.SuspendLayout();
+            this.tableLayoutPanel12.SuspendLayout();
+            this.tableLayoutPanel13.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.SalesMachineGrid)).BeginInit();
+            this.ReportsMachineProduct.SuspendLayout();
+            this.tableLayoutPanel14.SuspendLayout();
+            this.tableLayoutPanel15.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.SalesMachineProductGrid)).BeginInit();
+            this.SalesCityMachine.SuspendLayout();
+            this.tableLayoutPanel16.SuspendLayout();
+            this.tableLayoutPanel17.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.SalesCityMachineGrid)).BeginInit();
+            this.RestockMachine.SuspendLayout();
+            this.tableLayoutPanel18.SuspendLayout();
+            this.tableLayoutPanel19.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.RestockMachineGrid)).BeginInit();
             this.SuspendLayout();
             // 
             // Header
@@ -965,132 +995,12 @@
             this.SalesProduct.Text = "Sales by Product";
             this.SalesProduct.UseVisualStyleBackColor = true;
             // 
-            // SalesProductGrid
-            // 
-            this.SalesProductGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.SalesProductGrid.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.SalesProductGrid.Location = new System.Drawing.Point(3, 39);
-            this.SalesProductGrid.Name = "SalesProductGrid";
-            this.SalesProductGrid.Size = new System.Drawing.Size(709, 325);
-            this.SalesProductGrid.TabIndex = 0;
-            // 
-            // InventoryProduct
-            // 
-            this.InventoryProduct.Controls.Add(this.InventoryProductGrid);
-            this.InventoryProduct.Location = new System.Drawing.Point(4, 22);
-            this.InventoryProduct.Name = "InventoryProduct";
-            this.InventoryProduct.Padding = new System.Windows.Forms.Padding(3);
-            this.InventoryProduct.Size = new System.Drawing.Size(721, 373);
-            this.InventoryProduct.TabIndex = 1;
-            this.InventoryProduct.Text = "Inventory - Product";
-            this.InventoryProduct.UseVisualStyleBackColor = true;
-            // 
-            // InventoryProductGrid
-            // 
-            this.InventoryProductGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.InventoryProductGrid.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.InventoryProductGrid.Location = new System.Drawing.Point(3, 3);
-            this.InventoryProductGrid.Name = "InventoryProductGrid";
-            this.InventoryProductGrid.Size = new System.Drawing.Size(715, 367);
-            this.InventoryProductGrid.TabIndex = 0;
-            // 
-            // SalesMachine
-            // 
-            this.SalesMachine.Controls.Add(this.SalesMachineGrid);
-            this.SalesMachine.Location = new System.Drawing.Point(4, 22);
-            this.SalesMachine.Name = "SalesMachine";
-            this.SalesMachine.Padding = new System.Windows.Forms.Padding(3);
-            this.SalesMachine.Size = new System.Drawing.Size(721, 373);
-            this.SalesMachine.TabIndex = 2;
-            this.SalesMachine.Text = "Sales by Machine";
-            this.SalesMachine.UseVisualStyleBackColor = true;
-            // 
-            // SalesMachineGrid
-            // 
-            this.SalesMachineGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.SalesMachineGrid.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.SalesMachineGrid.Location = new System.Drawing.Point(3, 3);
-            this.SalesMachineGrid.Name = "SalesMachineGrid";
-            this.SalesMachineGrid.Size = new System.Drawing.Size(715, 367);
-            this.SalesMachineGrid.TabIndex = 0;
-            // 
-            // ReportsMachineProduct
-            // 
-            this.ReportsMachineProduct.Controls.Add(this.SalesMachineProductGrid);
-            this.ReportsMachineProduct.Location = new System.Drawing.Point(4, 22);
-            this.ReportsMachineProduct.Name = "ReportsMachineProduct";
-            this.ReportsMachineProduct.Padding = new System.Windows.Forms.Padding(3);
-            this.ReportsMachineProduct.Size = new System.Drawing.Size(721, 373);
-            this.ReportsMachineProduct.TabIndex = 3;
-            this.ReportsMachineProduct.Text = "Sales by Machine - Product";
-            this.ReportsMachineProduct.UseVisualStyleBackColor = true;
-            // 
-            // SalesMachineProductGrid
-            // 
-            this.SalesMachineProductGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.SalesMachineProductGrid.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.SalesMachineProductGrid.Location = new System.Drawing.Point(3, 3);
-            this.SalesMachineProductGrid.Name = "SalesMachineProductGrid";
-            this.SalesMachineProductGrid.Size = new System.Drawing.Size(715, 367);
-            this.SalesMachineProductGrid.TabIndex = 0;
-            // 
-            // SalesCityMachine
-            // 
-            this.SalesCityMachine.Controls.Add(this.SalesCityMachineGrid);
-            this.SalesCityMachine.Location = new System.Drawing.Point(4, 22);
-            this.SalesCityMachine.Name = "SalesCityMachine";
-            this.SalesCityMachine.Padding = new System.Windows.Forms.Padding(3);
-            this.SalesCityMachine.Size = new System.Drawing.Size(721, 373);
-            this.SalesCityMachine.TabIndex = 4;
-            this.SalesCityMachine.Text = "Sales by City ";
-            this.SalesCityMachine.UseVisualStyleBackColor = true;
-            // 
-            // SalesCityMachineGrid
-            // 
-            this.SalesCityMachineGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.SalesCityMachineGrid.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.SalesCityMachineGrid.Location = new System.Drawing.Point(3, 3);
-            this.SalesCityMachineGrid.Name = "SalesCityMachineGrid";
-            this.SalesCityMachineGrid.Size = new System.Drawing.Size(715, 367);
-            this.SalesCityMachineGrid.TabIndex = 0;
-            // 
-            // RestockMachine
-            // 
-            this.RestockMachine.Controls.Add(this.RestockMachineGrid);
-            this.RestockMachine.Location = new System.Drawing.Point(4, 22);
-            this.RestockMachine.Name = "RestockMachine";
-            this.RestockMachine.Padding = new System.Windows.Forms.Padding(3);
-            this.RestockMachine.Size = new System.Drawing.Size(721, 373);
-            this.RestockMachine.TabIndex = 5;
-            this.RestockMachine.Text = "Restock by Machine";
-            this.RestockMachine.UseVisualStyleBackColor = true;
-            // 
-            // RestockMachineGrid
-            // 
-            this.RestockMachineGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.RestockMachineGrid.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.RestockMachineGrid.Location = new System.Drawing.Point(3, 3);
-            this.RestockMachineGrid.Name = "RestockMachineGrid";
-            this.RestockMachineGrid.Size = new System.Drawing.Size(715, 367);
-            this.RestockMachineGrid.TabIndex = 0;
-            // 
-            // PDFSalesByProduct
-            // 
-            this.PDFSalesByProduct.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.PDFSalesByProduct.Location = new System.Drawing.Point(3, 3);
-            this.PDFSalesByProduct.Name = "PDFSalesByProduct";
-            this.PDFSalesByProduct.Size = new System.Drawing.Size(92, 23);
-            this.PDFSalesByProduct.TabIndex = 1;
-            this.PDFSalesByProduct.Text = "Create PDF";
-            this.PDFSalesByProduct.UseVisualStyleBackColor = true;
-            this.PDFSalesByProduct.Click += new System.EventHandler(this.Export_Click);
-            // 
             // tableLayoutPanel6
             // 
             this.tableLayoutPanel6.ColumnCount = 1;
             this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel6.Controls.Add(this.SalesProductGrid, 0, 1);
             this.tableLayoutPanel6.Controls.Add(this.tableLayoutPanel7, 0, 0);
+            this.tableLayoutPanel6.Controls.Add(this.SalesProductGrid, 0, 1);
             this.tableLayoutPanel6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel6.Location = new System.Drawing.Point(3, 3);
             this.tableLayoutPanel6.Name = "tableLayoutPanel6";
@@ -1125,6 +1035,386 @@
             this.CSVSalesByProduct.TabIndex = 2;
             this.CSVSalesByProduct.Text = "Create CSV";
             this.CSVSalesByProduct.UseVisualStyleBackColor = true;
+            // 
+            // PDFSalesByProduct
+            // 
+            this.PDFSalesByProduct.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.PDFSalesByProduct.Location = new System.Drawing.Point(3, 3);
+            this.PDFSalesByProduct.Name = "PDFSalesByProduct";
+            this.PDFSalesByProduct.Size = new System.Drawing.Size(92, 23);
+            this.PDFSalesByProduct.TabIndex = 1;
+            this.PDFSalesByProduct.Text = "Create PDF";
+            this.PDFSalesByProduct.UseVisualStyleBackColor = true;
+            this.PDFSalesByProduct.Click += new System.EventHandler(this.Export_Click);
+            // 
+            // SalesProductGrid
+            // 
+            this.SalesProductGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.SalesProductGrid.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.SalesProductGrid.Location = new System.Drawing.Point(3, 39);
+            this.SalesProductGrid.Name = "SalesProductGrid";
+            this.SalesProductGrid.Size = new System.Drawing.Size(709, 325);
+            this.SalesProductGrid.TabIndex = 0;
+            // 
+            // InventoryProduct
+            // 
+            this.InventoryProduct.Controls.Add(this.tableLayoutPanel9);
+            this.InventoryProduct.Location = new System.Drawing.Point(4, 22);
+            this.InventoryProduct.Name = "InventoryProduct";
+            this.InventoryProduct.Padding = new System.Windows.Forms.Padding(3);
+            this.InventoryProduct.Size = new System.Drawing.Size(721, 373);
+            this.InventoryProduct.TabIndex = 1;
+            this.InventoryProduct.Text = "Inventory - Product";
+            this.InventoryProduct.UseVisualStyleBackColor = true;
+            // 
+            // tableLayoutPanel9
+            // 
+            this.tableLayoutPanel9.ColumnCount = 1;
+            this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel9.Controls.Add(this.tableLayoutPanel11, 0, 0);
+            this.tableLayoutPanel9.Controls.Add(this.InventoryProductGrid, 0, 1);
+            this.tableLayoutPanel9.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel9.Location = new System.Drawing.Point(3, 3);
+            this.tableLayoutPanel9.Name = "tableLayoutPanel9";
+            this.tableLayoutPanel9.RowCount = 2;
+            this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 90F));
+            this.tableLayoutPanel9.Size = new System.Drawing.Size(715, 367);
+            this.tableLayoutPanel9.TabIndex = 2;
+            // 
+            // tableLayoutPanel11
+            // 
+            this.tableLayoutPanel11.ColumnCount = 3;
+            this.tableLayoutPanel11.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15F));
+            this.tableLayoutPanel11.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15F));
+            this.tableLayoutPanel11.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 70F));
+            this.tableLayoutPanel11.Controls.Add(this.button11, 1, 0);
+            this.tableLayoutPanel11.Controls.Add(this.button12, 0, 0);
+            this.tableLayoutPanel11.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel11.Location = new System.Drawing.Point(3, 3);
+            this.tableLayoutPanel11.Name = "tableLayoutPanel11";
+            this.tableLayoutPanel11.RowCount = 1;
+            this.tableLayoutPanel11.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel11.Size = new System.Drawing.Size(709, 30);
+            this.tableLayoutPanel11.TabIndex = 1;
+            // 
+            // button11
+            // 
+            this.button11.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.button11.Location = new System.Drawing.Point(109, 3);
+            this.button11.Name = "button11";
+            this.button11.Size = new System.Drawing.Size(92, 23);
+            this.button11.TabIndex = 2;
+            this.button11.Text = "Create CSV";
+            this.button11.UseVisualStyleBackColor = true;
+            // 
+            // button12
+            // 
+            this.button12.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.button12.Location = new System.Drawing.Point(3, 3);
+            this.button12.Name = "button12";
+            this.button12.Size = new System.Drawing.Size(92, 23);
+            this.button12.TabIndex = 1;
+            this.button12.Text = "Create PDF";
+            this.button12.UseVisualStyleBackColor = true;
+            this.button12.Click += new System.EventHandler(this.button12_Click);
+            // 
+            // InventoryProductGrid
+            // 
+            this.InventoryProductGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.InventoryProductGrid.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.InventoryProductGrid.Location = new System.Drawing.Point(3, 39);
+            this.InventoryProductGrid.Name = "InventoryProductGrid";
+            this.InventoryProductGrid.Size = new System.Drawing.Size(709, 325);
+            this.InventoryProductGrid.TabIndex = 0;
+            // 
+            // SalesMachine
+            // 
+            this.SalesMachine.Controls.Add(this.tableLayoutPanel12);
+            this.SalesMachine.Location = new System.Drawing.Point(4, 22);
+            this.SalesMachine.Name = "SalesMachine";
+            this.SalesMachine.Padding = new System.Windows.Forms.Padding(3);
+            this.SalesMachine.Size = new System.Drawing.Size(721, 373);
+            this.SalesMachine.TabIndex = 2;
+            this.SalesMachine.Text = "Sales by Machine";
+            this.SalesMachine.UseVisualStyleBackColor = true;
+            // 
+            // tableLayoutPanel12
+            // 
+            this.tableLayoutPanel12.ColumnCount = 1;
+            this.tableLayoutPanel12.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel12.Controls.Add(this.tableLayoutPanel13, 0, 0);
+            this.tableLayoutPanel12.Controls.Add(this.SalesMachineGrid, 0, 1);
+            this.tableLayoutPanel12.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel12.Location = new System.Drawing.Point(3, 3);
+            this.tableLayoutPanel12.Name = "tableLayoutPanel12";
+            this.tableLayoutPanel12.RowCount = 2;
+            this.tableLayoutPanel12.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tableLayoutPanel12.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 90F));
+            this.tableLayoutPanel12.Size = new System.Drawing.Size(715, 367);
+            this.tableLayoutPanel12.TabIndex = 2;
+            // 
+            // tableLayoutPanel13
+            // 
+            this.tableLayoutPanel13.ColumnCount = 3;
+            this.tableLayoutPanel13.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15F));
+            this.tableLayoutPanel13.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15F));
+            this.tableLayoutPanel13.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 70F));
+            this.tableLayoutPanel13.Controls.Add(this.button13, 1, 0);
+            this.tableLayoutPanel13.Controls.Add(this.button16, 0, 0);
+            this.tableLayoutPanel13.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel13.Location = new System.Drawing.Point(3, 3);
+            this.tableLayoutPanel13.Name = "tableLayoutPanel13";
+            this.tableLayoutPanel13.RowCount = 1;
+            this.tableLayoutPanel13.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel13.Size = new System.Drawing.Size(709, 30);
+            this.tableLayoutPanel13.TabIndex = 1;
+            // 
+            // button13
+            // 
+            this.button13.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.button13.Location = new System.Drawing.Point(109, 3);
+            this.button13.Name = "button13";
+            this.button13.Size = new System.Drawing.Size(92, 23);
+            this.button13.TabIndex = 2;
+            this.button13.Text = "Create CSV";
+            this.button13.UseVisualStyleBackColor = true;
+            // 
+            // button16
+            // 
+            this.button16.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.button16.Location = new System.Drawing.Point(3, 3);
+            this.button16.Name = "button16";
+            this.button16.Size = new System.Drawing.Size(92, 23);
+            this.button16.TabIndex = 1;
+            this.button16.Text = "Create PDF";
+            this.button16.UseVisualStyleBackColor = true;
+            this.button16.Click += new System.EventHandler(this.button16_Click_1);
+            // 
+            // SalesMachineGrid
+            // 
+            this.SalesMachineGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.SalesMachineGrid.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.SalesMachineGrid.Location = new System.Drawing.Point(3, 39);
+            this.SalesMachineGrid.Name = "SalesMachineGrid";
+            this.SalesMachineGrid.Size = new System.Drawing.Size(709, 325);
+            this.SalesMachineGrid.TabIndex = 0;
+            // 
+            // ReportsMachineProduct
+            // 
+            this.ReportsMachineProduct.Controls.Add(this.tableLayoutPanel14);
+            this.ReportsMachineProduct.Location = new System.Drawing.Point(4, 22);
+            this.ReportsMachineProduct.Name = "ReportsMachineProduct";
+            this.ReportsMachineProduct.Padding = new System.Windows.Forms.Padding(3);
+            this.ReportsMachineProduct.Size = new System.Drawing.Size(721, 373);
+            this.ReportsMachineProduct.TabIndex = 3;
+            this.ReportsMachineProduct.Text = "Sales by Machine - Product";
+            this.ReportsMachineProduct.UseVisualStyleBackColor = true;
+            // 
+            // tableLayoutPanel14
+            // 
+            this.tableLayoutPanel14.ColumnCount = 1;
+            this.tableLayoutPanel14.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel14.Controls.Add(this.tableLayoutPanel15, 0, 0);
+            this.tableLayoutPanel14.Controls.Add(this.SalesMachineProductGrid, 0, 1);
+            this.tableLayoutPanel14.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel14.Location = new System.Drawing.Point(3, 3);
+            this.tableLayoutPanel14.Name = "tableLayoutPanel14";
+            this.tableLayoutPanel14.RowCount = 2;
+            this.tableLayoutPanel14.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tableLayoutPanel14.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 90F));
+            this.tableLayoutPanel14.Size = new System.Drawing.Size(715, 367);
+            this.tableLayoutPanel14.TabIndex = 2;
+            // 
+            // tableLayoutPanel15
+            // 
+            this.tableLayoutPanel15.ColumnCount = 3;
+            this.tableLayoutPanel15.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15F));
+            this.tableLayoutPanel15.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15F));
+            this.tableLayoutPanel15.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 70F));
+            this.tableLayoutPanel15.Controls.Add(this.button17, 1, 0);
+            this.tableLayoutPanel15.Controls.Add(this.button20, 0, 0);
+            this.tableLayoutPanel15.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel15.Location = new System.Drawing.Point(3, 3);
+            this.tableLayoutPanel15.Name = "tableLayoutPanel15";
+            this.tableLayoutPanel15.RowCount = 1;
+            this.tableLayoutPanel15.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel15.Size = new System.Drawing.Size(709, 30);
+            this.tableLayoutPanel15.TabIndex = 1;
+            // 
+            // button17
+            // 
+            this.button17.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.button17.Location = new System.Drawing.Point(109, 3);
+            this.button17.Name = "button17";
+            this.button17.Size = new System.Drawing.Size(92, 23);
+            this.button17.TabIndex = 2;
+            this.button17.Text = "Create CSV";
+            this.button17.UseVisualStyleBackColor = true;
+            // 
+            // button20
+            // 
+            this.button20.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.button20.Location = new System.Drawing.Point(3, 3);
+            this.button20.Name = "button20";
+            this.button20.Size = new System.Drawing.Size(92, 23);
+            this.button20.TabIndex = 1;
+            this.button20.Text = "Create PDF";
+            this.button20.UseVisualStyleBackColor = true;
+            this.button20.Click += new System.EventHandler(this.button20_Click);
+            // 
+            // SalesMachineProductGrid
+            // 
+            this.SalesMachineProductGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.SalesMachineProductGrid.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.SalesMachineProductGrid.Location = new System.Drawing.Point(3, 39);
+            this.SalesMachineProductGrid.Name = "SalesMachineProductGrid";
+            this.SalesMachineProductGrid.Size = new System.Drawing.Size(709, 325);
+            this.SalesMachineProductGrid.TabIndex = 0;
+            // 
+            // SalesCityMachine
+            // 
+            this.SalesCityMachine.Controls.Add(this.tableLayoutPanel16);
+            this.SalesCityMachine.Location = new System.Drawing.Point(4, 22);
+            this.SalesCityMachine.Name = "SalesCityMachine";
+            this.SalesCityMachine.Padding = new System.Windows.Forms.Padding(3);
+            this.SalesCityMachine.Size = new System.Drawing.Size(721, 373);
+            this.SalesCityMachine.TabIndex = 4;
+            this.SalesCityMachine.Text = "Sales by City ";
+            this.SalesCityMachine.UseVisualStyleBackColor = true;
+            // 
+            // tableLayoutPanel16
+            // 
+            this.tableLayoutPanel16.ColumnCount = 1;
+            this.tableLayoutPanel16.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel16.Controls.Add(this.tableLayoutPanel17, 0, 0);
+            this.tableLayoutPanel16.Controls.Add(this.SalesCityMachineGrid, 0, 1);
+            this.tableLayoutPanel16.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel16.Location = new System.Drawing.Point(3, 3);
+            this.tableLayoutPanel16.Name = "tableLayoutPanel16";
+            this.tableLayoutPanel16.RowCount = 2;
+            this.tableLayoutPanel16.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tableLayoutPanel16.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 90F));
+            this.tableLayoutPanel16.Size = new System.Drawing.Size(715, 367);
+            this.tableLayoutPanel16.TabIndex = 2;
+            // 
+            // tableLayoutPanel17
+            // 
+            this.tableLayoutPanel17.ColumnCount = 3;
+            this.tableLayoutPanel17.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15F));
+            this.tableLayoutPanel17.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15F));
+            this.tableLayoutPanel17.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 70F));
+            this.tableLayoutPanel17.Controls.Add(this.button21, 1, 0);
+            this.tableLayoutPanel17.Controls.Add(this.button22, 0, 0);
+            this.tableLayoutPanel17.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel17.Location = new System.Drawing.Point(3, 3);
+            this.tableLayoutPanel17.Name = "tableLayoutPanel17";
+            this.tableLayoutPanel17.RowCount = 1;
+            this.tableLayoutPanel17.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel17.Size = new System.Drawing.Size(709, 30);
+            this.tableLayoutPanel17.TabIndex = 1;
+            // 
+            // button21
+            // 
+            this.button21.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.button21.Location = new System.Drawing.Point(109, 3);
+            this.button21.Name = "button21";
+            this.button21.Size = new System.Drawing.Size(92, 23);
+            this.button21.TabIndex = 2;
+            this.button21.Text = "Create CSV";
+            this.button21.UseVisualStyleBackColor = true;
+            // 
+            // button22
+            // 
+            this.button22.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.button22.Location = new System.Drawing.Point(3, 3);
+            this.button22.Name = "button22";
+            this.button22.Size = new System.Drawing.Size(92, 23);
+            this.button22.TabIndex = 1;
+            this.button22.Text = "Create PDF";
+            this.button22.UseVisualStyleBackColor = true;
+            this.button22.Click += new System.EventHandler(this.button22_Click);
+            // 
+            // SalesCityMachineGrid
+            // 
+            this.SalesCityMachineGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.SalesCityMachineGrid.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.SalesCityMachineGrid.Location = new System.Drawing.Point(3, 39);
+            this.SalesCityMachineGrid.Name = "SalesCityMachineGrid";
+            this.SalesCityMachineGrid.Size = new System.Drawing.Size(709, 325);
+            this.SalesCityMachineGrid.TabIndex = 0;
+            // 
+            // RestockMachine
+            // 
+            this.RestockMachine.Controls.Add(this.tableLayoutPanel18);
+            this.RestockMachine.Location = new System.Drawing.Point(4, 22);
+            this.RestockMachine.Name = "RestockMachine";
+            this.RestockMachine.Padding = new System.Windows.Forms.Padding(3);
+            this.RestockMachine.Size = new System.Drawing.Size(721, 373);
+            this.RestockMachine.TabIndex = 5;
+            this.RestockMachine.Text = "Restock by Machine";
+            this.RestockMachine.UseVisualStyleBackColor = true;
+            // 
+            // tableLayoutPanel18
+            // 
+            this.tableLayoutPanel18.ColumnCount = 1;
+            this.tableLayoutPanel18.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel18.Controls.Add(this.tableLayoutPanel19, 0, 0);
+            this.tableLayoutPanel18.Controls.Add(this.RestockMachineGrid, 0, 1);
+            this.tableLayoutPanel18.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel18.Location = new System.Drawing.Point(3, 3);
+            this.tableLayoutPanel18.Name = "tableLayoutPanel18";
+            this.tableLayoutPanel18.RowCount = 2;
+            this.tableLayoutPanel18.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tableLayoutPanel18.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 90F));
+            this.tableLayoutPanel18.Size = new System.Drawing.Size(715, 367);
+            this.tableLayoutPanel18.TabIndex = 2;
+            // 
+            // tableLayoutPanel19
+            // 
+            this.tableLayoutPanel19.ColumnCount = 3;
+            this.tableLayoutPanel19.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15F));
+            this.tableLayoutPanel19.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15F));
+            this.tableLayoutPanel19.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 70F));
+            this.tableLayoutPanel19.Controls.Add(this.button23, 1, 0);
+            this.tableLayoutPanel19.Controls.Add(this.button24, 0, 0);
+            this.tableLayoutPanel19.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel19.Location = new System.Drawing.Point(3, 3);
+            this.tableLayoutPanel19.Name = "tableLayoutPanel19";
+            this.tableLayoutPanel19.RowCount = 1;
+            this.tableLayoutPanel19.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel19.Size = new System.Drawing.Size(709, 30);
+            this.tableLayoutPanel19.TabIndex = 1;
+            // 
+            // button23
+            // 
+            this.button23.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.button23.Location = new System.Drawing.Point(109, 3);
+            this.button23.Name = "button23";
+            this.button23.Size = new System.Drawing.Size(92, 23);
+            this.button23.TabIndex = 2;
+            this.button23.Text = "Create CSV";
+            this.button23.UseVisualStyleBackColor = true;
+            // 
+            // button24
+            // 
+            this.button24.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.button24.Location = new System.Drawing.Point(3, 3);
+            this.button24.Name = "button24";
+            this.button24.Size = new System.Drawing.Size(92, 23);
+            this.button24.TabIndex = 1;
+            this.button24.Text = "Create PDF";
+            this.button24.UseVisualStyleBackColor = true;
+            this.button24.Click += new System.EventHandler(this.button24_Click);
+            // 
+            // RestockMachineGrid
+            // 
+            this.RestockMachineGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.RestockMachineGrid.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.RestockMachineGrid.Location = new System.Drawing.Point(3, 39);
+            this.RestockMachineGrid.Name = "RestockMachineGrid";
+            this.RestockMachineGrid.Size = new System.Drawing.Size(709, 325);
+            this.RestockMachineGrid.TabIndex = 0;
             // 
             // StartUp
             // 
@@ -1181,19 +1471,29 @@
             this.MainTab4.ResumeLayout(false);
             this.ReportTabs.ResumeLayout(false);
             this.SalesProduct.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.SalesProductGrid)).EndInit();
-            this.InventoryProduct.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.InventoryProductGrid)).EndInit();
-            this.SalesMachine.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.SalesMachineGrid)).EndInit();
-            this.ReportsMachineProduct.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.SalesMachineProductGrid)).EndInit();
-            this.SalesCityMachine.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.SalesCityMachineGrid)).EndInit();
-            this.RestockMachine.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.RestockMachineGrid)).EndInit();
             this.tableLayoutPanel6.ResumeLayout(false);
             this.tableLayoutPanel7.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.SalesProductGrid)).EndInit();
+            this.InventoryProduct.ResumeLayout(false);
+            this.tableLayoutPanel9.ResumeLayout(false);
+            this.tableLayoutPanel11.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.InventoryProductGrid)).EndInit();
+            this.SalesMachine.ResumeLayout(false);
+            this.tableLayoutPanel12.ResumeLayout(false);
+            this.tableLayoutPanel13.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.SalesMachineGrid)).EndInit();
+            this.ReportsMachineProduct.ResumeLayout(false);
+            this.tableLayoutPanel14.ResumeLayout(false);
+            this.tableLayoutPanel15.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.SalesMachineProductGrid)).EndInit();
+            this.SalesCityMachine.ResumeLayout(false);
+            this.tableLayoutPanel16.ResumeLayout(false);
+            this.tableLayoutPanel17.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.SalesCityMachineGrid)).EndInit();
+            this.RestockMachine.ResumeLayout(false);
+            this.tableLayoutPanel18.ResumeLayout(false);
+            this.tableLayoutPanel19.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.RestockMachineGrid)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1242,9 +1542,6 @@
         private System.Windows.Forms.DataGridView MachineListAllDataGrid;
         private System.Windows.Forms.DataGridView MachineProductItemsDataGrid;
         private System.Windows.Forms.DataGridView SalesProductGrid;
-        private System.Windows.Forms.DataGridView InventoryProductGrid;
-        private System.Windows.Forms.DataGridView SalesMachineGrid;
-        private System.Windows.Forms.DataGridView SalesMachineProductGrid;
         private System.Windows.Forms.TabPage MainTab1;
         private System.Windows.Forms.TabPage BusinessEmployees;
         private System.Windows.Forms.TreeView treeView1;
@@ -1271,14 +1568,37 @@
         private System.Windows.Forms.Button button18;
         private System.Windows.Forms.Button button19;
         private System.Windows.Forms.TabPage SalesCityMachine;
-        private System.Windows.Forms.DataGridView SalesCityMachineGrid;
         private System.Windows.Forms.Button PDFSalesByProduct;
         private System.Windows.Forms.Button button10;
         private System.Windows.Forms.TabPage RestockMachine;
-        private System.Windows.Forms.DataGridView RestockMachineGrid;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel6;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel7;
         private System.Windows.Forms.Button CSVSalesByProduct;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel9;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel11;
+        private System.Windows.Forms.Button button11;
+        private System.Windows.Forms.Button button12;
+        private System.Windows.Forms.DataGridView InventoryProductGrid;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel12;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel13;
+        private System.Windows.Forms.Button button13;
+        private System.Windows.Forms.Button button16;
+        private System.Windows.Forms.DataGridView SalesMachineGrid;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel14;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel15;
+        private System.Windows.Forms.Button button17;
+        private System.Windows.Forms.Button button20;
+        private System.Windows.Forms.DataGridView SalesMachineProductGrid;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel16;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel17;
+        private System.Windows.Forms.Button button21;
+        private System.Windows.Forms.Button button22;
+        private System.Windows.Forms.DataGridView SalesCityMachineGrid;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel18;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel19;
+        private System.Windows.Forms.Button button23;
+        private System.Windows.Forms.Button button24;
+        private System.Windows.Forms.DataGridView RestockMachineGrid;
 
     }
 }
