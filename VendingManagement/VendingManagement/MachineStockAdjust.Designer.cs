@@ -48,12 +48,12 @@
             this.label1 = new System.Windows.Forms.Label();
             this.TransferControlPanel = new System.Windows.Forms.SplitContainer();
             this.label12 = new System.Windows.Forms.Label();
-            this.tbProductTrasnferToWarehouse = new System.Windows.Forms.TextBox();
+            this.tbProductTransferToWarehouse = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.tbQuantityTransferToWarehouse = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label13 = new System.Windows.Forms.Label();
-            this.tbProductTrasnferToMachine = new System.Windows.Forms.TextBox();
+            this.tbProductTransferToMachine = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.tbQuantityTransferToMachine = new System.Windows.Forms.TextBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
@@ -275,7 +275,7 @@
             this.TransferControlPanel.Panel1.Controls.Add(this.btnPriceUpdate);
             this.TransferControlPanel.Panel1.Controls.Add(this.tbPriceUpdate);
             this.TransferControlPanel.Panel1.Controls.Add(this.label12);
-            this.TransferControlPanel.Panel1.Controls.Add(this.tbProductTrasnferToWarehouse);
+            this.TransferControlPanel.Panel1.Controls.Add(this.tbProductTransferToWarehouse);
             this.TransferControlPanel.Panel1.Controls.Add(this.label10);
             this.TransferControlPanel.Panel1.Controls.Add(this.tbQuantityTransferToWarehouse);
             this.TransferControlPanel.Panel1.Controls.Add(this.pictureBox1);
@@ -283,7 +283,7 @@
             // TransferControlPanel.Panel2
             // 
             this.TransferControlPanel.Panel2.Controls.Add(this.label13);
-            this.TransferControlPanel.Panel2.Controls.Add(this.tbProductTrasnferToMachine);
+            this.TransferControlPanel.Panel2.Controls.Add(this.tbProductTransferToMachine);
             this.TransferControlPanel.Panel2.Controls.Add(this.label11);
             this.TransferControlPanel.Panel2.Controls.Add(this.tbQuantityTransferToMachine);
             this.TransferControlPanel.Panel2.Controls.Add(this.pictureBox2);
@@ -300,13 +300,13 @@
             this.label12.TabIndex = 5;
             this.label12.Text = "Product";
             // 
-            // tbProductTrasnferToWarehouse
+            // tbProductTransferToWarehouse
             // 
-            this.tbProductTrasnferToWarehouse.Location = new System.Drawing.Point(299, 33);
-            this.tbProductTrasnferToWarehouse.Name = "tbProductTrasnferToWarehouse";
-            this.tbProductTrasnferToWarehouse.ReadOnly = true;
-            this.tbProductTrasnferToWarehouse.Size = new System.Drawing.Size(100, 20);
-            this.tbProductTrasnferToWarehouse.TabIndex = 4;
+            this.tbProductTransferToWarehouse.Location = new System.Drawing.Point(299, 33);
+            this.tbProductTransferToWarehouse.Name = "tbProductTransferToWarehouse";
+            this.tbProductTransferToWarehouse.ReadOnly = true;
+            this.tbProductTransferToWarehouse.Size = new System.Drawing.Size(100, 20);
+            this.tbProductTransferToWarehouse.TabIndex = 4;
             // 
             // label10
             // 
@@ -346,13 +346,13 @@
             this.label13.TabIndex = 6;
             this.label13.Text = "Product";
             // 
-            // tbProductTrasnferToMachine
+            // tbProductTransferToMachine
             // 
-            this.tbProductTrasnferToMachine.Location = new System.Drawing.Point(146, 36);
-            this.tbProductTrasnferToMachine.Name = "tbProductTrasnferToMachine";
-            this.tbProductTrasnferToMachine.ReadOnly = true;
-            this.tbProductTrasnferToMachine.Size = new System.Drawing.Size(100, 20);
-            this.tbProductTrasnferToMachine.TabIndex = 5;
+            this.tbProductTransferToMachine.Location = new System.Drawing.Point(146, 36);
+            this.tbProductTransferToMachine.Name = "tbProductTransferToMachine";
+            this.tbProductTransferToMachine.ReadOnly = true;
+            this.tbProductTransferToMachine.Size = new System.Drawing.Size(100, 20);
+            this.tbProductTransferToMachine.TabIndex = 5;
             // 
             // label11
             // 
@@ -506,13 +506,13 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.SplitContainer TransferControlPanel;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.TextBox tbProductTrasnferToWarehouse;
+        private System.Windows.Forms.TextBox tbProductTransferToWarehouse;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TextBox tbQuantityTransferToWarehouse;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.TextBox tbProductTrasnferToMachine;
+        private System.Windows.Forms.TextBox tbProductTransferToMachine;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.TextBox tbQuantityTransferToMachine;
         private System.Windows.Forms.Label label9;

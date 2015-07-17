@@ -30,9 +30,7 @@ namespace VendingManagement
 
         private void MachineStockAdjust_Load(object sender, EventArgs e)
         {
-            LoadMachineDataHeader();
-            LoadWarehouseTransferGridView();
-            LoadMachineTransferGridView();            
+            refreshPage();         
         }
 
 
@@ -108,7 +106,7 @@ namespace VendingManagement
 
             if (ProductId.Count == 1)
             {
-                tbProductTrasnferToMachine.Text = ProductId[0];
+                tbProductTransferToMachine.Text = ProductId[0];
             }
         }
 
@@ -145,7 +143,7 @@ namespace VendingManagement
 
             if (ProductId.Count == 1)
             {
-                tbProductTrasnferToWarehouse.Text = ProductId[0];
+                tbProductTransferToWarehouse.Text = ProductId[0];
             }
         }
 
@@ -164,7 +162,7 @@ namespace VendingManagement
         private void pictureBox2_Click(object sender, EventArgs e)
         {
             string quantityString = tbQuantityTransferToMachine.Text;
-            string product = tbProductTrasnferToMachine.Text;
+            string product = tbProductTransferToMachine.Text;
             try
             {
                 if (quantityString != "" & quantityString != null &
@@ -183,11 +181,7 @@ namespace VendingManagement
                             if (quantity <= maxTransferCapacity)
                             {
                                 this.controller.TransferWarehouseToMachine(product, quantity, machine);
-
-                                LoadMachineDataHeader();
-                                LoadWarehouseTransferGridView();
-                                LoadMachineTransferGridView();
-                                this.parent.LoadMachineListAllDataGrid();
+                                refreshPage();
                             }
                             else
                             {
@@ -223,7 +217,7 @@ namespace VendingManagement
         {
             {
                 string quantityString = tbQuantityTransferToWarehouse.Text;
-                string product = tbProductTrasnferToWarehouse.Text;
+                string product = tbProductTransferToWarehouse.Text;
                 try
                 {
                     if (quantityString != "" & quantityString != null &
@@ -237,11 +231,7 @@ namespace VendingManagement
                             if (quantity <= stockQuantity)
                             {
                                 this.controller.TransferMachineToWarehouse(product, quantity, machine);
-
-                                LoadMachineDataHeader();
-                                LoadWarehouseTransferGridView();
-                                LoadMachineTransferGridView();
-                                this.parent.LoadMachineListAllDataGrid();
+                                refreshPage();
                             }
                             else
                             {
@@ -269,17 +259,13 @@ namespace VendingManagement
 
         private void btnBuyOne_Click(object sender, EventArgs e)
         {
-            string product = tbProductTrasnferToWarehouse.Text;
+            string product = tbProductTransferToWarehouse.Text;
             try
             {
                 if (product != "" & product != null)
                 {
                     this.controller.machineSale(this.machine, product);
-                    LoadMachineDataHeader();
-                    LoadWarehouseTransferGridView();
-                    LoadMachineTransferGridView();
-                    tbProductTrasnferToWarehouse.Text = "";
-                    this.parent.LoadMachineListAllDataGrid();
+                    refreshPage();
                 }
                 else
                 {
@@ -294,7 +280,7 @@ namespace VendingManagement
 
         private void btnPriceUpdate_Click(object sender, EventArgs e)
         {
-            string product = tbProductTrasnferToWarehouse.Text;
+            string product = tbProductTransferToWarehouse.Text;
             string retailPriceString = tbPriceUpdate.Text;
             try
             {
@@ -321,7 +307,10 @@ namespace VendingManagement
             LoadMachineDataHeader();
             LoadWarehouseTransferGridView();
             LoadMachineTransferGridView();
-            tbProductTrasnferToWarehouse.Text = "";
+            tbQuantityTransferToMachine.Text = "";
+            tbQuantityTransferToWarehouse.Text = "";
+            tbProductTransferToMachine.Text = "";
+            tbProductTransferToWarehouse.Text = "";
             tbPriceUpdate.Text = "";
             this.parent.LoadMachineListAllDataGrid();
         }

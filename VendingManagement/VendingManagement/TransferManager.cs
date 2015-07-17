@@ -32,6 +32,19 @@ namespace VendingManagement
                 machine.addProduct(productList[i]);
                 this.database.Remove(productList[i]);
             }
+
+            // Update Pricing of new items
+            float highestRetailPrice = 0;
+            List<Product> searchForHighestPrice = machine.selectAllProductByType(productName);
+            foreach (Product product in searchForHighestPrice)
+            {
+                if (product.RetailPrice > highestRetailPrice)
+                {
+                    highestRetailPrice =product.RetailPrice;
+                }
+            }
+            machine.updateRetailPrice(productName, highestRetailPrice);           
+            
             this.database.Append(new Transactions(transactionID, DateTime.Now, "Checking", productName, totalCost));
             this.database.Append(new Transactions((transactionID + 1), DateTime.Now, machine.MachineID, productName, -totalCost));
             
