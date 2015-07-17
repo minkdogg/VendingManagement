@@ -26,8 +26,11 @@ namespace VendingManagement
 
             //Create iTextSharp Table with columnCount
             PdfPTable pdfTable = new PdfPTable(dataGridView.ColumnCount);
-            PdfPCell headerCell = new PdfPCell(new Phrase(fileName));
+
+            iTextSharp.text.Font headerFont = new iTextSharp.text.Font(iTextSharp.text.Font.FontFamily.HELVETICA, 20);
+            PdfPCell headerCell = new PdfPCell(new Phrase(fileName, headerFont));
             headerCell.Colspan = columnCount;
+            headerCell.HorizontalAlignment = Element.ALIGN_CENTER;
             pdfTable.AddCell(headerCell);
 
             //Adding Header row
@@ -69,6 +72,23 @@ namespace VendingManagement
                 pdfDoc.Close();
                 stream.Close();
             }
+        }
+
+        public void ExportToCSV(DataTable dataTable, string fileName)
+        {
+            StringBuilder stringBuilder = new StringBuilder();
+
+            IEnumerable<string> columnNames = dataTable.Columns.Cast<DataColumn>().
+                                              Select(column => column.ColumnName);
+            stringBuilder.AppendLine(string.Join(",", columnNames));
+
+            foreach (DataRow row in dataTable.Rows)
+            {
+                IEnumerable<string> fields = row.ItemArray.Select(field => field.ToString());
+                stringBuilder.AppendLine(string.Join(",", fields));
+            }
+
+            File.WriteAllText(fileName, stringBuilder.ToString());
         }
     }
 }

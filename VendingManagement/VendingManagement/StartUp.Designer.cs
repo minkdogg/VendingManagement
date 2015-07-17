@@ -28,40 +28,40 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.TreeNode treeNode1 = new System.Windows.Forms.TreeNode("Product Warehouse");
-            System.Windows.Forms.TreeNode treeNode2 = new System.Windows.Forms.TreeNode("Transactions");
-            System.Windows.Forms.TreeNode treeNode3 = new System.Windows.Forms.TreeNode("Employees");
-            System.Windows.Forms.TreeNode treeNode4 = new System.Windows.Forms.TreeNode("Vehicles");
-            System.Windows.Forms.TreeNode treeNode5 = new System.Windows.Forms.TreeNode("Business", new System.Windows.Forms.TreeNode[] {
-            treeNode1,
-            treeNode2,
-            treeNode3,
-            treeNode4});
-            System.Windows.Forms.TreeNode treeNode6 = new System.Windows.Forms.TreeNode("City List");
-            System.Windows.Forms.TreeNode treeNode7 = new System.Windows.Forms.TreeNode("Revenue by City");
-            System.Windows.Forms.TreeNode treeNode8 = new System.Windows.Forms.TreeNode("Item Sales by City");
-            System.Windows.Forms.TreeNode treeNode9 = new System.Windows.Forms.TreeNode("City", new System.Windows.Forms.TreeNode[] {
-            treeNode6,
-            treeNode7,
-            treeNode8});
-            System.Windows.Forms.TreeNode treeNode10 = new System.Windows.Forms.TreeNode("All Machines");
-            System.Windows.Forms.TreeNode treeNode11 = new System.Windows.Forms.TreeNode("Items by Machine");
-            System.Windows.Forms.TreeNode treeNode12 = new System.Windows.Forms.TreeNode("Machine", new System.Windows.Forms.TreeNode[] {
-            treeNode10,
-            treeNode11});
-            System.Windows.Forms.TreeNode treeNode13 = new System.Windows.Forms.TreeNode("Sales by Product");
-            System.Windows.Forms.TreeNode treeNode14 = new System.Windows.Forms.TreeNode("Inventory (Product)");
-            System.Windows.Forms.TreeNode treeNode15 = new System.Windows.Forms.TreeNode("Sales by Machine");
-            System.Windows.Forms.TreeNode treeNode16 = new System.Windows.Forms.TreeNode("Sales by Machine (Product)");
-            System.Windows.Forms.TreeNode treeNode17 = new System.Windows.Forms.TreeNode("Sales by City");
-            System.Windows.Forms.TreeNode treeNode18 = new System.Windows.Forms.TreeNode("Restock by Machine");
-            System.Windows.Forms.TreeNode treeNode19 = new System.Windows.Forms.TreeNode("Reports", new System.Windows.Forms.TreeNode[] {
-            treeNode13,
-            treeNode14,
-            treeNode15,
-            treeNode16,
-            treeNode17,
-            treeNode18});
+            System.Windows.Forms.TreeNode treeNode20 = new System.Windows.Forms.TreeNode("Product Warehouse");
+            System.Windows.Forms.TreeNode treeNode21 = new System.Windows.Forms.TreeNode("Transactions");
+            System.Windows.Forms.TreeNode treeNode22 = new System.Windows.Forms.TreeNode("Employees");
+            System.Windows.Forms.TreeNode treeNode23 = new System.Windows.Forms.TreeNode("Vehicles");
+            System.Windows.Forms.TreeNode treeNode24 = new System.Windows.Forms.TreeNode("Business", new System.Windows.Forms.TreeNode[] {
+            treeNode20,
+            treeNode21,
+            treeNode22,
+            treeNode23});
+            System.Windows.Forms.TreeNode treeNode25 = new System.Windows.Forms.TreeNode("City List");
+            System.Windows.Forms.TreeNode treeNode26 = new System.Windows.Forms.TreeNode("Revenue by City");
+            System.Windows.Forms.TreeNode treeNode27 = new System.Windows.Forms.TreeNode("Item Sales by City");
+            System.Windows.Forms.TreeNode treeNode28 = new System.Windows.Forms.TreeNode("City", new System.Windows.Forms.TreeNode[] {
+            treeNode25,
+            treeNode26,
+            treeNode27});
+            System.Windows.Forms.TreeNode treeNode29 = new System.Windows.Forms.TreeNode("All Machines");
+            System.Windows.Forms.TreeNode treeNode30 = new System.Windows.Forms.TreeNode("Items by Machine");
+            System.Windows.Forms.TreeNode treeNode31 = new System.Windows.Forms.TreeNode("Machine", new System.Windows.Forms.TreeNode[] {
+            treeNode29,
+            treeNode30});
+            System.Windows.Forms.TreeNode treeNode32 = new System.Windows.Forms.TreeNode("Sales by Product");
+            System.Windows.Forms.TreeNode treeNode33 = new System.Windows.Forms.TreeNode("Inventory (Product)");
+            System.Windows.Forms.TreeNode treeNode34 = new System.Windows.Forms.TreeNode("Sales by Machine");
+            System.Windows.Forms.TreeNode treeNode35 = new System.Windows.Forms.TreeNode("Sales by Machine (Product)");
+            System.Windows.Forms.TreeNode treeNode36 = new System.Windows.Forms.TreeNode("Sales by City");
+            System.Windows.Forms.TreeNode treeNode37 = new System.Windows.Forms.TreeNode("Restock by Machine");
+            System.Windows.Forms.TreeNode treeNode38 = new System.Windows.Forms.TreeNode("Reports", new System.Windows.Forms.TreeNode[] {
+            treeNode32,
+            treeNode33,
+            treeNode34,
+            treeNode35,
+            treeNode36,
+            treeNode37});
             this.Header = new System.Windows.Forms.Label();
             this.Business = new System.Windows.Forms.Button();
             this.City = new System.Windows.Forms.Button();
@@ -116,6 +116,7 @@
             this.button10 = new System.Windows.Forms.Button();
             this.button14 = new System.Windows.Forms.Button();
             this.button15 = new System.Windows.Forms.Button();
+            this.createServiceRequest = new System.Windows.Forms.Button();
             this.MachineListAllDataGrid = new System.Windows.Forms.DataGridView();
             this.ItemsByMachine = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel10 = new System.Windows.Forms.TableLayoutPanel();
@@ -145,22 +146,21 @@
             this.ReportsMachineProduct = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel14 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel15 = new System.Windows.Forms.TableLayoutPanel();
-            this.button17 = new System.Windows.Forms.Button();
+            this.SalesByMachineProduct = new System.Windows.Forms.Button();
             this.button20 = new System.Windows.Forms.Button();
             this.SalesMachineProductGrid = new System.Windows.Forms.DataGridView();
             this.SalesCityMachine = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel16 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel17 = new System.Windows.Forms.TableLayoutPanel();
-            this.button21 = new System.Windows.Forms.Button();
+            this.SalesByCityCSV = new System.Windows.Forms.Button();
             this.button22 = new System.Windows.Forms.Button();
             this.SalesCityMachineGrid = new System.Windows.Forms.DataGridView();
             this.RestockMachine = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel18 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel19 = new System.Windows.Forms.TableLayoutPanel();
-            this.button23 = new System.Windows.Forms.Button();
+            this.RestockByMachineCSV = new System.Windows.Forms.Button();
             this.button24 = new System.Windows.Forms.Button();
             this.RestockMachineGrid = new System.Windows.Forms.DataGridView();
-            this.createServiceRequest = new System.Windows.Forms.Button();
             this.QuickLinks.SuspendLayout();
             this.Navigation.SuspendLayout();
             this.Reports.SuspendLayout();
@@ -309,34 +309,34 @@
             this.treeView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.treeView1.Location = new System.Drawing.Point(3, 3);
             this.treeView1.Name = "treeView1";
-            treeNode1.Name = "Product Warehouse";
-            treeNode1.Text = "Product Warehouse";
-            treeNode2.Name = "Transactions";
-            treeNode2.Text = "Transactions";
-            treeNode3.Name = "Employees";
-            treeNode3.Text = "Employees";
-            treeNode4.Name = "Vehicles";
-            treeNode4.Text = "Vehicles";
-            treeNode5.Name = "Business";
-            treeNode5.Text = "Business";
-            treeNode6.Name = "City List";
-            treeNode6.Text = "City List";
-            treeNode7.Name = "Revenue by City";
-            treeNode7.Text = "Revenue by City";
-            treeNode8.Name = "Item Sales by City";
-            treeNode8.Text = "Item Sales by City";
-            treeNode9.Name = "City";
-            treeNode9.Text = "City";
-            treeNode10.Name = "All Machines";
-            treeNode10.Text = "All Machines";
-            treeNode11.Name = "Items by Machine";
-            treeNode11.Text = "Items by Machine";
-            treeNode12.Name = "Machine";
-            treeNode12.Text = "Machine";
+            treeNode20.Name = "Product Warehouse";
+            treeNode20.Text = "Product Warehouse";
+            treeNode21.Name = "Transactions";
+            treeNode21.Text = "Transactions";
+            treeNode22.Name = "Employees";
+            treeNode22.Text = "Employees";
+            treeNode23.Name = "Vehicles";
+            treeNode23.Text = "Vehicles";
+            treeNode24.Name = "Business";
+            treeNode24.Text = "Business";
+            treeNode25.Name = "City List";
+            treeNode25.Text = "City List";
+            treeNode26.Name = "Revenue by City";
+            treeNode26.Text = "Revenue by City";
+            treeNode27.Name = "Item Sales by City";
+            treeNode27.Text = "Item Sales by City";
+            treeNode28.Name = "City";
+            treeNode28.Text = "City";
+            treeNode29.Name = "All Machines";
+            treeNode29.Text = "All Machines";
+            treeNode30.Name = "Items by Machine";
+            treeNode30.Text = "Items by Machine";
+            treeNode31.Name = "Machine";
+            treeNode31.Text = "Machine";
             this.treeView1.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
-            treeNode5,
-            treeNode9,
-            treeNode12});
+            treeNode24,
+            treeNode28,
+            treeNode31});
             this.treeView1.Size = new System.Drawing.Size(183, 370);
             this.treeView1.TabIndex = 0;
             this.treeView1.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.treeView1_AfterSelect_1);
@@ -357,22 +357,22 @@
             this.treeView2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.treeView2.Location = new System.Drawing.Point(3, 3);
             this.treeView2.Name = "treeView2";
-            treeNode13.Name = "Sales by Product";
-            treeNode13.Text = "Sales by Product";
-            treeNode14.Name = "Inventory (Product)";
-            treeNode14.Text = "Inventory (Product)";
-            treeNode15.Name = "Sales by Machine";
-            treeNode15.Text = "Sales by Machine";
-            treeNode16.Name = "Sales by Machine (Product)";
-            treeNode16.Text = "Sales by Machine (Product)";
-            treeNode17.Name = "Sales by City";
-            treeNode17.Text = "Sales by City";
-            treeNode18.Name = "Restock by Machine";
-            treeNode18.Text = "Restock by Machine";
-            treeNode19.Name = "Reports";
-            treeNode19.Text = "Reports";
+            treeNode32.Name = "Sales by Product";
+            treeNode32.Text = "Sales by Product";
+            treeNode33.Name = "Inventory (Product)";
+            treeNode33.Text = "Inventory (Product)";
+            treeNode34.Name = "Sales by Machine";
+            treeNode34.Text = "Sales by Machine";
+            treeNode35.Name = "Sales by Machine (Product)";
+            treeNode35.Text = "Sales by Machine (Product)";
+            treeNode36.Name = "Sales by City";
+            treeNode36.Text = "Sales by City";
+            treeNode37.Name = "Restock by Machine";
+            treeNode37.Text = "Restock by Machine";
+            treeNode38.Name = "Reports";
+            treeNode38.Text = "Reports";
             this.treeView2.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
-            treeNode19});
+            treeNode38});
             this.treeView2.ShowNodeToolTips = true;
             this.treeView2.Size = new System.Drawing.Size(183, 370);
             this.treeView2.TabIndex = 7;
@@ -896,6 +896,16 @@
             this.button15.UseVisualStyleBackColor = true;
             this.button15.Click += new System.EventHandler(this.button15_Click);
             // 
+            // createServiceRequest
+            // 
+            this.createServiceRequest.Location = new System.Drawing.Point(339, 3);
+            this.createServiceRequest.Name = "createServiceRequest";
+            this.createServiceRequest.Size = new System.Drawing.Size(139, 28);
+            this.createServiceRequest.TabIndex = 3;
+            this.createServiceRequest.Text = "Create Service Request";
+            this.createServiceRequest.UseVisualStyleBackColor = true;
+            this.createServiceRequest.Click += new System.EventHandler(this.createServiceRequest_Click);
+            // 
             // MachineListAllDataGrid
             // 
             this.MachineListAllDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -1037,6 +1047,7 @@
             this.CSVSalesByProduct.TabIndex = 2;
             this.CSVSalesByProduct.Text = "Create CSV";
             this.CSVSalesByProduct.UseVisualStyleBackColor = true;
+            this.CSVSalesByProduct.Click += new System.EventHandler(this.CSVSalesByProduct_Click);
             // 
             // PDFSalesByProduct
             // 
@@ -1109,6 +1120,7 @@
             this.button11.TabIndex = 2;
             this.button11.Text = "Create CSV";
             this.button11.UseVisualStyleBackColor = true;
+            this.button11.Click += new System.EventHandler(this.button11_Click);
             // 
             // button12
             // 
@@ -1181,6 +1193,7 @@
             this.button13.TabIndex = 2;
             this.button13.Text = "Create CSV";
             this.button13.UseVisualStyleBackColor = true;
+            this.button13.Click += new System.EventHandler(this.button13_Click);
             // 
             // button16
             // 
@@ -1234,7 +1247,7 @@
             this.tableLayoutPanel15.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15F));
             this.tableLayoutPanel15.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15F));
             this.tableLayoutPanel15.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 70F));
-            this.tableLayoutPanel15.Controls.Add(this.button17, 1, 0);
+            this.tableLayoutPanel15.Controls.Add(this.SalesByMachineProduct, 1, 0);
             this.tableLayoutPanel15.Controls.Add(this.button20, 0, 0);
             this.tableLayoutPanel15.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel15.Location = new System.Drawing.Point(3, 3);
@@ -1244,15 +1257,16 @@
             this.tableLayoutPanel15.Size = new System.Drawing.Size(709, 30);
             this.tableLayoutPanel15.TabIndex = 1;
             // 
-            // button17
+            // SalesByMachineProduct
             // 
-            this.button17.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.button17.Location = new System.Drawing.Point(109, 3);
-            this.button17.Name = "button17";
-            this.button17.Size = new System.Drawing.Size(92, 23);
-            this.button17.TabIndex = 2;
-            this.button17.Text = "Create CSV";
-            this.button17.UseVisualStyleBackColor = true;
+            this.SalesByMachineProduct.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.SalesByMachineProduct.Location = new System.Drawing.Point(109, 3);
+            this.SalesByMachineProduct.Name = "SalesByMachineProduct";
+            this.SalesByMachineProduct.Size = new System.Drawing.Size(92, 23);
+            this.SalesByMachineProduct.TabIndex = 2;
+            this.SalesByMachineProduct.Text = "Create CSV";
+            this.SalesByMachineProduct.UseVisualStyleBackColor = true;
+            this.SalesByMachineProduct.Click += new System.EventHandler(this.SalesByMachineProduct_Click);
             // 
             // button20
             // 
@@ -1306,7 +1320,7 @@
             this.tableLayoutPanel17.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15F));
             this.tableLayoutPanel17.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15F));
             this.tableLayoutPanel17.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 70F));
-            this.tableLayoutPanel17.Controls.Add(this.button21, 1, 0);
+            this.tableLayoutPanel17.Controls.Add(this.SalesByCityCSV, 1, 0);
             this.tableLayoutPanel17.Controls.Add(this.button22, 0, 0);
             this.tableLayoutPanel17.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel17.Location = new System.Drawing.Point(3, 3);
@@ -1316,15 +1330,16 @@
             this.tableLayoutPanel17.Size = new System.Drawing.Size(709, 30);
             this.tableLayoutPanel17.TabIndex = 1;
             // 
-            // button21
+            // SalesByCityCSV
             // 
-            this.button21.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.button21.Location = new System.Drawing.Point(109, 3);
-            this.button21.Name = "button21";
-            this.button21.Size = new System.Drawing.Size(92, 23);
-            this.button21.TabIndex = 2;
-            this.button21.Text = "Create CSV";
-            this.button21.UseVisualStyleBackColor = true;
+            this.SalesByCityCSV.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.SalesByCityCSV.Location = new System.Drawing.Point(109, 3);
+            this.SalesByCityCSV.Name = "SalesByCityCSV";
+            this.SalesByCityCSV.Size = new System.Drawing.Size(92, 23);
+            this.SalesByCityCSV.TabIndex = 2;
+            this.SalesByCityCSV.Text = "Create CSV";
+            this.SalesByCityCSV.UseVisualStyleBackColor = true;
+            this.SalesByCityCSV.Click += new System.EventHandler(this.SalesByCityCSV_Click);
             // 
             // button22
             // 
@@ -1378,7 +1393,7 @@
             this.tableLayoutPanel19.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15F));
             this.tableLayoutPanel19.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15F));
             this.tableLayoutPanel19.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 70F));
-            this.tableLayoutPanel19.Controls.Add(this.button23, 1, 0);
+            this.tableLayoutPanel19.Controls.Add(this.RestockByMachineCSV, 1, 0);
             this.tableLayoutPanel19.Controls.Add(this.button24, 0, 0);
             this.tableLayoutPanel19.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel19.Location = new System.Drawing.Point(3, 3);
@@ -1388,15 +1403,16 @@
             this.tableLayoutPanel19.Size = new System.Drawing.Size(709, 30);
             this.tableLayoutPanel19.TabIndex = 1;
             // 
-            // button23
+            // RestockByMachineCSV
             // 
-            this.button23.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.button23.Location = new System.Drawing.Point(109, 3);
-            this.button23.Name = "button23";
-            this.button23.Size = new System.Drawing.Size(92, 23);
-            this.button23.TabIndex = 2;
-            this.button23.Text = "Create CSV";
-            this.button23.UseVisualStyleBackColor = true;
+            this.RestockByMachineCSV.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.RestockByMachineCSV.Location = new System.Drawing.Point(109, 3);
+            this.RestockByMachineCSV.Name = "RestockByMachineCSV";
+            this.RestockByMachineCSV.Size = new System.Drawing.Size(92, 23);
+            this.RestockByMachineCSV.TabIndex = 2;
+            this.RestockByMachineCSV.Text = "Create CSV";
+            this.RestockByMachineCSV.UseVisualStyleBackColor = true;
+            this.RestockByMachineCSV.Click += new System.EventHandler(this.RestockByMachineCSV_Click);
             // 
             // button24
             // 
@@ -1417,16 +1433,6 @@
             this.RestockMachineGrid.Name = "RestockMachineGrid";
             this.RestockMachineGrid.Size = new System.Drawing.Size(709, 325);
             this.RestockMachineGrid.TabIndex = 0;
-            // 
-            // createServiceRequest
-            // 
-            this.createServiceRequest.Location = new System.Drawing.Point(339, 3);
-            this.createServiceRequest.Name = "createServiceRequest";
-            this.createServiceRequest.Size = new System.Drawing.Size(139, 28);
-            this.createServiceRequest.TabIndex = 3;
-            this.createServiceRequest.Text = "Create Service Request";
-            this.createServiceRequest.UseVisualStyleBackColor = true;
-            this.createServiceRequest.Click += new System.EventHandler(this.createServiceRequest_Click);
             // 
             // StartUp
             // 
@@ -1598,17 +1604,17 @@
         private System.Windows.Forms.DataGridView SalesMachineGrid;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel14;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel15;
-        private System.Windows.Forms.Button button17;
+        private System.Windows.Forms.Button SalesByMachineProduct;
         private System.Windows.Forms.Button button20;
         private System.Windows.Forms.DataGridView SalesMachineProductGrid;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel16;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel17;
-        private System.Windows.Forms.Button button21;
+        private System.Windows.Forms.Button SalesByCityCSV;
         private System.Windows.Forms.Button button22;
         private System.Windows.Forms.DataGridView SalesCityMachineGrid;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel18;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel19;
-        private System.Windows.Forms.Button button23;
+        private System.Windows.Forms.Button RestockByMachineCSV;
         private System.Windows.Forms.Button button24;
         private System.Windows.Forms.DataGridView RestockMachineGrid;
         private System.Windows.Forms.Button createServiceRequest;

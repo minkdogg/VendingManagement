@@ -462,7 +462,8 @@ namespace VendingManagement
         }
 
 
-        // Export buttons
+        //EXPORT BUTTONS
+        //** Sales by Product
         private void Export_Click(object sender, EventArgs e)
         {
             Export export = new Export();
@@ -472,6 +473,23 @@ namespace VendingManagement
             pdfOK.Show();
         }
 
+        private void CSVSalesByProduct_Click(object sender, EventArgs e)
+        {
+            List<Transactions> data;
+            ReportManager report = new ReportManager();
+            data = this.database.SelectAllTransactions();
+
+            DataTable subtotals = report.reportSalesByItem(data);
+
+            Export export = new Export();
+            export.ExportToCSV(subtotals, "SalesProductGrid.csv");
+
+            //PDFCreatedDialog pdfOK = new PDFCreatedDialog();
+            //pdfOK.Show();
+        }
+
+
+        //** Inventory by Product
         private void button12_Click(object sender, EventArgs e)
         {
             Export export = new Export();
@@ -481,6 +499,23 @@ namespace VendingManagement
             pdfOK.Show();
         }
 
+        private void button11_Click(object sender, EventArgs e)
+        {
+            List<Product> data;
+            ReportManager report = new ReportManager();
+            data = this.database.SelectAllProduct();
+
+            DataTable subtotals = report.reportInventoryCostItem(data);
+
+            Export export = new Export();
+            export.ExportToCSV(subtotals, "InventoryProductGrid.csv");
+
+            //
+            //
+        }
+
+
+        //** Sales by Machine
         private void button16_Click_1(object sender, EventArgs e)
         {
             Export export = new Export();
@@ -490,6 +525,20 @@ namespace VendingManagement
             pdfOK.Show();
         }
 
+        private void button13_Click(object sender, EventArgs e)
+        {
+            List<Transactions> data;
+            ReportManager report = new ReportManager();
+            data = this.database.SelectAllTransactions();
+
+            DataTable subtotals = report.reportSalesByMachine(data);
+
+            Export export = new Export();
+            export.ExportToCSV(subtotals, "SalesMachineGrid.csv");
+        }
+
+
+        //** Sales by Machine (Product)
         private void button20_Click(object sender, EventArgs e)
         {
             Export export = new Export();
@@ -499,6 +548,21 @@ namespace VendingManagement
             pdfOK.Show();
         }
 
+        private void SalesByMachineProduct_Click(object sender, EventArgs e)
+        {
+            List<Transactions> data;
+            List<Machine> machineList;
+            ReportManager report = new ReportManager();
+            data = this.database.SelectAllTransactions();
+            machineList = this.database.SelectAllMachine();
+            DataTable subtotals = report.reportSalesByProductPerMachine(data, machineList);
+
+            Export export = new Export();
+            export.ExportToCSV(subtotals, "SalesMachineProductGrid.csv");
+        }
+
+
+        //** Sales by City
         private void button22_Click(object sender, EventArgs e)
         {
             Export export = new Export();
@@ -508,6 +572,23 @@ namespace VendingManagement
             pdfOK.Show();
         }
 
+        private void SalesByCityCSV_Click(object sender, EventArgs e)
+        {
+            List<Transactions> data;
+            List<Machine> machineList;
+            List<City> cityList;
+            ReportManager report = new ReportManager();
+            data = this.database.SelectAllTransactions();
+            machineList = this.database.SelectAllMachine();
+            cityList = this.database.SelectAllCity();
+            DataTable subtotals = report.reportSalesByCity(data, machineList, cityList);
+
+            Export export = new Export();
+            export.ExportToCSV(subtotals, "SalesCityMachineGrid.csv");
+        }
+
+
+        //** Restock by Machine
         private void button24_Click(object sender, EventArgs e)
         {
             Export export = new Export();
@@ -517,6 +598,19 @@ namespace VendingManagement
             pdfOK.Show();
         }
 
+        private void RestockByMachineCSV_Click(object sender, EventArgs e)
+        {
+            List<Machine> machineList;
+            ReportManager report = new ReportManager();
+            machineList = this.database.SelectAllMachine();
+            DataTable subtotals = report.reportRestockByMachine(machineList);
+
+            Export export = new Export();
+            export.ExportToCSV(subtotals, "RestockMachineGrid.csv");
+        }
+
+
+        //SERVICE REQUEST
         private void createServiceRequest_Click(object sender, EventArgs e)
         {
             AddServiceRequest request = new AddServiceRequest();
