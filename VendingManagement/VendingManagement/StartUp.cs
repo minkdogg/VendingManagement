@@ -484,8 +484,8 @@ namespace VendingManagement
             Export export = new Export();
             export.ExportToCSV(subtotals, "SalesProductGrid.csv");
 
-            //PDFCreatedDialog pdfOK = new PDFCreatedDialog();
-            //pdfOK.Show();
+            CSVCreatedDialog csvOK = new CSVCreatedDialog();
+            csvOK.Show();
         }
 
 
@@ -510,8 +510,8 @@ namespace VendingManagement
             Export export = new Export();
             export.ExportToCSV(subtotals, "InventoryProductGrid.csv");
 
-            //
-            //
+            CSVCreatedDialog csvOK = new CSVCreatedDialog();
+            csvOK.Show();
         }
 
 
@@ -535,6 +535,9 @@ namespace VendingManagement
 
             Export export = new Export();
             export.ExportToCSV(subtotals, "SalesMachineGrid.csv");
+
+            CSVCreatedDialog csvOK = new CSVCreatedDialog();
+            csvOK.Show();
         }
 
 
@@ -559,6 +562,9 @@ namespace VendingManagement
 
             Export export = new Export();
             export.ExportToCSV(subtotals, "SalesMachineProductGrid.csv");
+
+            CSVCreatedDialog csvOK = new CSVCreatedDialog();
+            csvOK.Show();
         }
 
 
@@ -585,6 +591,9 @@ namespace VendingManagement
 
             Export export = new Export();
             export.ExportToCSV(subtotals, "SalesCityMachineGrid.csv");
+
+            CSVCreatedDialog csvOK = new CSVCreatedDialog();
+            csvOK.Show();
         }
 
 
@@ -607,6 +616,9 @@ namespace VendingManagement
 
             Export export = new Export();
             export.ExportToCSV(subtotals, "RestockMachineGrid.csv");
+
+            CSVCreatedDialog csvOK = new CSVCreatedDialog();
+            csvOK.Show();
         }
 
 

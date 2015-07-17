@@ -16,5 +16,10 @@ namespace VendingManagement
         {
             InitializeComponent();
         }
+
+        private void PdfCreateOK_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

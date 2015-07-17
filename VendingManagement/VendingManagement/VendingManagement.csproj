@@ -160,6 +160,9 @@
     <EmbeddedResource Include="AddVehicle.resx">
       <DependentUpon>AddVehicle.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="CSVCreatedDialog.resx">
+      <DependentUpon>CSVCreatedDialog.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MachineStockAdjust.resx">
       <DependentUpon>MachineStockAdjust.cs</DependentUpon>
     </EmbeddedResource>
