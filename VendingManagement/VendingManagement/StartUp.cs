@@ -467,6 +467,54 @@ namespace VendingManagement
         {
             Export export = new Export();
             export.ExportToPDFCollection(SalesProductGrid, "SalesProductGrid.pdf");
+
+            PDFCreatedDialog pdfOK = new PDFCreatedDialog();
+            pdfOK.Show();
+        }
+
+        private void button12_Click(object sender, EventArgs e)
+        {
+            Export export = new Export();
+            export.ExportToPDFCollection(InventoryProductGrid, "InventoryProductGrid.pdf");
+
+            PDFCreatedDialog pdfOK = new PDFCreatedDialog();
+            pdfOK.Show();
+        }
+
+        private void button16_Click_1(object sender, EventArgs e)
+        {
+            Export export = new Export();
+            export.ExportToPDFCollection(SalesMachineGrid, "SalesMachineGrid.pdf");
+
+            PDFCreatedDialog pdfOK = new PDFCreatedDialog();
+            pdfOK.Show();
+        }
+
+        private void button20_Click(object sender, EventArgs e)
+        {
+            Export export = new Export();
+            export.ExportToPDFCollection(SalesMachineProductGrid, "SalesMachineProductGrid.pdf");
+
+            PDFCreatedDialog pdfOK = new PDFCreatedDialog();
+            pdfOK.Show();
+        }
+
+        private void button22_Click(object sender, EventArgs e)
+        {
+            Export export = new Export();
+            export.ExportToPDFCollection(SalesCityMachineGrid, "SalesCityMachineGrid.pdf");
+
+            PDFCreatedDialog pdfOK = new PDFCreatedDialog();
+            pdfOK.Show();
+        }
+
+        private void button24_Click(object sender, EventArgs e)
+        {
+            Export export = new Export();
+            export.ExportToPDFCollection(RestockMachineGrid, "RestockMachineGrid.pdf");
+
+            PDFCreatedDialog pdfOK = new PDFCreatedDialog();
+            pdfOK.Show();
         }
     }
 }

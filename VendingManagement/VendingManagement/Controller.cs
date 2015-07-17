@@ -9,10 +9,12 @@ namespace VendingManagement
     class Controller
     {
         Database database;
+        TransferManager transferManager;
 
         public Controller(Database database)
         {
             this.database = database;
+            this.transferManager = new TransferManager(database);
         }
 
 
@@ -24,8 +26,7 @@ namespace VendingManagement
         {
             if (name != "" & name != null)
             {
-                TransferManager transferManager = new TransferManager(database);
-                transferManager.buyStock(name, quantity, wholeSalePrice);
+                this.transferManager.buyStock(name, quantity, wholeSalePrice);
                 return true;
             }
             else
@@ -213,6 +214,35 @@ namespace VendingManagement
             {
                 return false;
             }
+        }
+
+        //
+        // Transfer 
+        // 
+        public bool TransferWarehouseToMachine(string ID, int quantity, Machine machine)
+        {
+            if (ID != "" & ID != null & machine != null)
+            {
+                List<Product> product = database.SelectProduct(ID);
+                if (quantity <= product.Count)
+                {
+                    List<Product> transferList = new List<Product>();
+                    for (int i = 0; i < quantity; ++i)
+                    {
+                        transferList.Add(product[i]);
+                    }
+                    this.transferManager.TransferToMachine(machine, transferList);
+                    return true;
+                }
+                else { return false; }
+                
+
+            }
+            else
+            {
+                return false;
+            }
+
         }
 
       

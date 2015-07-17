@@ -36,11 +36,13 @@
             this.cbService = new System.Windows.Forms.CheckBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
+            this.tbLocation = new System.Windows.Forms.TextBox();
             this.tbCity = new System.Windows.Forms.TextBox();
             this.tbMaximumStock = new System.Windows.Forms.TextBox();
             this.tbMinimimStock = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.tbMachineID = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -49,16 +51,15 @@
             this.tbProductTrasnferToWarehouse = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.tbQuantityTransferToWarehouse = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label13 = new System.Windows.Forms.Label();
             this.tbProductTrasnferToMachine = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.tbQuantityTransferToMachine = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.tbLocation = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.TransferPanel)).BeginInit();
             this.TransferPanel.Panel1.SuspendLayout();
             this.TransferPanel.Panel2.SuspendLayout();
@@ -101,6 +102,7 @@
             this.MachineTransferGridView.ReadOnly = true;
             this.MachineTransferGridView.Size = new System.Drawing.Size(339, 350);
             this.MachineTransferGridView.TabIndex = 0;
+            this.MachineTransferGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.MachineTransferGridView_CellClick);
             // 
             // WarehouseTransferGridView
             // 
@@ -110,6 +112,7 @@
             this.WarehouseTransferGridView.Name = "WarehouseTransferGridView";
             this.WarehouseTransferGridView.Size = new System.Drawing.Size(357, 350);
             this.WarehouseTransferGridView.TabIndex = 0;
+            this.WarehouseTransferGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.WarehouseTransferGridView_CellClick);
             // 
             // groupBox1
             // 
@@ -172,6 +175,14 @@
             this.label6.TabIndex = 10;
             this.label6.Text = "Service Required";
             // 
+            // tbLocation
+            // 
+            this.tbLocation.Location = new System.Drawing.Point(332, 46);
+            this.tbLocation.Name = "tbLocation";
+            this.tbLocation.ReadOnly = true;
+            this.tbLocation.Size = new System.Drawing.Size(100, 20);
+            this.tbLocation.TabIndex = 9;
+            // 
             // tbCity
             // 
             this.tbCity.Location = new System.Drawing.Point(332, 19);
@@ -213,6 +224,15 @@
             this.label4.Size = new System.Drawing.Size(108, 13);
             this.label4.TabIndex = 4;
             this.label4.Text = "Minimum Stock Level";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(278, 53);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(48, 13);
+            this.label3.TabIndex = 3;
+            this.label3.Text = "Location";
             // 
             // label2
             // 
@@ -297,15 +317,6 @@
             this.tbQuantityTransferToWarehouse.Size = new System.Drawing.Size(100, 20);
             this.tbQuantityTransferToWarehouse.TabIndex = 2;
             // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(51, 130);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(249, 13);
-            this.label8.TabIndex = 1;
-            this.label8.Text = "Trasnfer Stock from Machine back into Warehouse";
-            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::VendingManagement.Properties.Resources.arrow_3D_green_right;
@@ -315,6 +326,7 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // label13
             // 
@@ -349,15 +361,6 @@
             this.tbQuantityTransferToMachine.Size = new System.Drawing.Size(100, 20);
             this.tbQuantityTransferToMachine.TabIndex = 2;
             // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(429, 130);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(214, 13);
-            this.label9.TabIndex = 1;
-            this.label9.Text = "Transfer Stock from Warehouse to Machine";
-            // 
             // pictureBox2
             // 
             this.pictureBox2.Image = global::VendingManagement.Properties.Resources.arrow_3D_green_left;
@@ -367,29 +370,43 @@
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 0;
             this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
-            // label3
+            // label8
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(278, 53);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(48, 13);
-            this.label3.TabIndex = 3;
-            this.label3.Text = "Location";
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(51, 130);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(249, 13);
+            this.label8.TabIndex = 1;
+            this.label8.Text = "Trasnfer Stock from Machine back into Warehouse";
             // 
-            // tbLocation
+            // label9
             // 
-            this.tbLocation.Location = new System.Drawing.Point(332, 46);
-            this.tbLocation.Name = "tbLocation";
-            this.tbLocation.ReadOnly = true;
-            this.tbLocation.Size = new System.Drawing.Size(100, 20);
-            this.tbLocation.TabIndex = 9;
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(429, 130);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(214, 13);
+            this.label9.TabIndex = 1;
+            this.label9.Text = "Transfer Stock from Warehouse to Machine";
+            // 
+            // button1
+            // 
+            this.button1.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.button1.Location = new System.Drawing.Point(637, 594);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 2;
+            this.button1.Text = "Close";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // MachineStockAdjust
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(726, 583);
+            this.ClientSize = new System.Drawing.Size(726, 629);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.TransferControlPanel);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.TransferPanel);
@@ -452,5 +469,6 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.TextBox tbLocation;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button button1;
     }
 }

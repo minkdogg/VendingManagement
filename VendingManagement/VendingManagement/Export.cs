@@ -18,12 +18,17 @@ namespace VendingManagement
     {         
         public void ExportToPDFCollection(DataGridView dataGridView, string fileName)
         {
+            int columnCount = 0;
+            foreach (DataGridViewColumn column in dataGridView.Columns)
+            {
+                columnCount++;
+            }
+
             //Create iTextSharp Table with columnCount
             PdfPTable pdfTable = new PdfPTable(dataGridView.ColumnCount);
-            pdfTable.DefaultCell.Padding = 3;
-            pdfTable.WidthPercentage = 30;
-            pdfTable.HorizontalAlignment = Element.ALIGN_LEFT;
-            pdfTable.DefaultCell.BorderWidth = 1;
+            PdfPCell headerCell = new PdfPCell(new Phrase(fileName));
+            headerCell.Colspan = columnCount;
+            pdfTable.AddCell(headerCell);
 
             //Adding Header row
             foreach (DataGridViewColumn column in dataGridView.Columns)
@@ -31,6 +36,8 @@ namespace VendingManagement
                 PdfPCell cell = new PdfPCell(new Phrase(column.HeaderText));
                 cell.BackgroundColor = new iTextSharp.text.BaseColor(240, 240, 240);
                 pdfTable.AddCell(cell);
+                
+                headerCell.Colspan++;
             }
 
             //Adding DataRow
