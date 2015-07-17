@@ -17,7 +17,7 @@ namespace VendingManagement
         protected float salePrice;
         protected int defaultMinStock = 5;        
         protected bool needService;
-        protected bool needRestock;
+        protected bool needRestock = true;
         protected int maxCapacity;
         
 
@@ -82,6 +82,15 @@ namespace VendingManagement
                 if (productNames.Contains(productName))
                 {
                     products.Add(product);
+                    List<string> checkRestockItems = getItemsRestock();
+                    if (checkRestockItems.Count() > 0)
+                    {
+                        needRestock = true;
+                    }
+                    else
+                    {
+                        needRestock = false;
+                    }
                     return true;
                 }
                 else
@@ -93,8 +102,17 @@ namespace VendingManagement
                     productTypes.Add(newProductType);
 
                     products.Add(product);
+                    List<string> checkRestockItems = getItemsRestock();
+                    if (checkRestockItems.Count() > 0)
+                    {
+                        needRestock = true;
+                    }
+                    else
+                    {
+                        needRestock = false;
+                    }
                     return true;
-                }  
+                }
             }
             else
             {
@@ -107,9 +125,19 @@ namespace VendingManagement
             int newProductCount = products.Count() + multipleProduct.Count();
             if (newProductCount < maxCapacity)
             {
-                foreach(Product product in multipleProduct)
+                foreach (Product product in multipleProduct)
                 {
                     addProduct(product);
+                    List<string> checkRestockItems = getItemsRestock();
+                    if (checkRestockItems.Count() > 0)
+                    {
+                        needRestock = true;
+                    }
+                    else
+                    {
+                        needRestock = false;
+                    }
+
                 }
                 return true;
             }
@@ -144,16 +172,18 @@ namespace VendingManagement
             if (getProductQuantity == 1)
             {
                 removeProductType(product.Name);
-            } 
+            }
             products.Remove(product);
+            needRestock = checkSingleItemRestock(product.Name);
         }
 
         public void removeMultipleProduct(List<Product> multipleProduct)
-        {    
+        {
             foreach (Product product in multipleProduct)
-                {
-                    this.removeProduct(product);
-                }
+            {
+                this.removeProduct(product);
+                needRestock = checkSingleItemRestock(product.Name);
+            }
         }
 
         // removes productType based on type entered.
@@ -215,9 +245,9 @@ namespace VendingManagement
         // returns list of items needed for restock
         public List<string> getItemsRestock()
         {
-            
-            List<string> restockItems = new List<string> {};
-            List<int> restockMin = new List<int>{};
+
+            List<string> restockItems = new List<string> { };
+            List<int> restockMin = new List<int> { };
             List<string> productNames = getProductNames();
             List<string> uniqueProductNames = productNames.Distinct().ToList();
 
@@ -228,7 +258,7 @@ namespace VendingManagement
                 if (uniqueProductNames.Contains(list[0]))
                 {
                     int typeCount = getSingleQuantity(list[0]);
-                    if(Convert.ToInt32(list[1]) <= typeCount)
+                    if (Convert.ToInt32(list[1]) > typeCount)
                     {
                         restockItems.Add(list[0]);
                     }
@@ -243,7 +273,7 @@ namespace VendingManagement
         {
             int restockMin = getSingleTypeMinStock(type);
             int typeCount = getSingleQuantity(type);
-            if (typeCount <= restockMin)
+            if (typeCount < restockMin)
             {
                 return true;
             }

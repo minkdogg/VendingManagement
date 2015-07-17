@@ -19,6 +19,7 @@ namespace VendingManagement
             DataColumn newColumn = new DataColumn("Product Type", typeof(String));
             table.Columns.Add(newColumn);
 
+
             newColumn = new DataColumn("Number of Items", typeof(String));
             table.Columns.Add(newColumn);
 
@@ -33,9 +34,11 @@ namespace VendingManagement
             foreach (var total in subtotals)
             {
                 DataRow newRow = table.NewRow();
+                decimal newTotal = Convert.ToDecimal(total.Price);
+                string stringTotal = String.Format("{0:C}", newTotal);
                 newRow["Product Type"] = total.Type;
                 newRow["Number of Items"] = total.Count;
-                newRow["Wholesale Cost"] = total.Price;
+                newRow["Wholesale Cost"] = stringTotal; 
                 table.Rows.Add(newRow);
             }
 
@@ -98,8 +101,10 @@ namespace VendingManagement
             foreach (var total in subtotals)
             {
                 DataRow newRow = table.NewRow();
+                decimal newTotal = Convert.ToDecimal(total.SubTotal);
+                string stringTotal = String.Format("{0:C}", newTotal);
                 newRow["Product Type"] = total.Type;
-                newRow["Cost In Inventory"] = total.SubTotal;
+                newRow["Cost In Inventory"] = stringTotal;
                 newRow["Number of Items"] = total.Count;
                 table.Rows.Add(newRow);
             }
@@ -402,6 +407,42 @@ namespace VendingManagement
 
             return table;
         }
+
+       public DataTable reportRestockByMachine(List<Machine> machines)
+       {
+
+           DataTable table = new DataTable();
+           DataColumn newColumn = new DataColumn("Machine ID", typeof(String));
+           table.Columns.Add(newColumn);
+
+           newColumn = new DataColumn("Restock Product Type", typeof(String));
+           table.Columns.Add(newColumn);
+
+           newColumn = new DataColumn("Current Quantity", typeof(String));
+           table.Columns.Add(newColumn);
+
+           newColumn = new DataColumn("Restock Min", typeof(String));
+           table.Columns.Add(newColumn);
+
+
+
+
+           foreach (Machine machine in machines)
+           {
+               table.Rows.Add(machine.MachineID, "", "");
+               List<string> machineProducts = machine.getItemsRestock();
+
+               foreach (string item in machineProducts)
+               {
+                   int productCount = machine.getSingleQuantity(item);
+                   table.Rows.Add("", item, productCount, machine.DefaultMinStock);
+               }
+
+               table.Rows.Add("", "", "");
+           }
+
+           return table;
+       }
 
 
 
