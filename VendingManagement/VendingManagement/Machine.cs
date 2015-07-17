@@ -191,15 +191,15 @@ namespace VendingManagement
             foreach (Product product in multipleProduct)
             {
                 this.removeProduct(product);
-                List<string> checkRestockItems = getItemsRestock();
-                if (checkRestockItems.Count() > 0)
-                {
-                    needRestock = true;
-                }
-                else
-                {
-                    needRestock = false;
-                }
+                 List<string> checkRestockItems = getItemsRestock();
+                    if (checkRestockItems.Count() > 0)
+                    {
+                        needRestock = true;
+                    }
+                    else
+                    {
+                        needRestock = false;
+                    }
             }
         }
 
