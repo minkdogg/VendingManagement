@@ -72,7 +72,7 @@ namespace VendingManagement
             List<Machine> data = new List<Machine>();
             data.Add(machine);
             ReportManager report = new ReportManager();
-            DataTable source = report.reportProductByMachine(data);
+            DataTable source = report.reportProductPriceByMachine(data);
             MachineTransferGridView.DataSource = source;
         }
 
@@ -212,9 +212,9 @@ namespace VendingManagement
                     MessageBox.Show("Please select a product and enter a quantity.");
                 }
             }
-            catch
+            catch (Exception exception)
             {
-                MessageBox.Show("Invalid Entry - Please select a product and enter a quantity.");
+                MessageBox.Show("Invalid Entry - Please select a product and enter a quantity.\n" + exception.Message);
             }
         }
 
@@ -259,12 +259,72 @@ namespace VendingManagement
                         MessageBox.Show("Please select a product and enter a quantity.");
                     }
                 }
-                catch
+                catch (Exception exception)
                 {
-                    MessageBox.Show("Invalid Entry - Please select a product and enter a quantity.");
+                    MessageBox.Show("Invalid Entry - Please select a product and enter a quantity.\n" + exception.Message);
                 }
             }
 
         }
+
+        private void btnBuyOne_Click(object sender, EventArgs e)
+        {
+            string product = tbProductTrasnferToWarehouse.Text;
+            try
+            {
+                if (product != "" & product != null)
+                {
+                    this.controller.machineSale(this.machine, product);
+                    LoadMachineDataHeader();
+                    LoadWarehouseTransferGridView();
+                    LoadMachineTransferGridView();
+                    tbProductTrasnferToWarehouse.Text = "";
+                    this.parent.LoadMachineListAllDataGrid();
+                }
+                else
+                {
+                    MessageBox.Show("Please select a product first.");
+                }
+            }
+            catch
+            {
+                MessageBox.Show("Sorry, unknown ErrorCould Not Process Transaction.");
+            }
+        }
+
+        private void btnPriceUpdate_Click(object sender, EventArgs e)
+        {
+            string product = tbProductTrasnferToWarehouse.Text;
+            string retailPriceString = tbPriceUpdate.Text;
+            try
+            {
+                if (product != "" & product != null &
+                    retailPriceString != "" & retailPriceString != null)
+                {
+                    float retailPrice = float.Parse(retailPriceString);
+                    machine.updateRetailPrice(product, retailPrice);
+                    refreshPage();
+                }
+                else
+                {
+                    MessageBox.Show("Please select a product first.");
+                }
+            }
+            catch
+            {
+                MessageBox.Show("Invalid Entry - Please select a product and enter a price first.");
+            }
+        }
+
+        private void refreshPage()
+        {
+            LoadMachineDataHeader();
+            LoadWarehouseTransferGridView();
+            LoadMachineTransferGridView();
+            tbProductTrasnferToWarehouse.Text = "";
+            tbPriceUpdate.Text = "";
+            this.parent.LoadMachineListAllDataGrid();
+        }
+
     }
 }

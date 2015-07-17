@@ -60,6 +60,10 @@
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
+            this.btnBuyOne = new System.Windows.Forms.Button();
+            this.label14 = new System.Windows.Forms.Label();
+            this.tbPriceUpdate = new System.Windows.Forms.TextBox();
+            this.btnPriceUpdate = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.TransferPanel)).BeginInit();
             this.TransferPanel.Panel1.SuspendLayout();
             this.TransferPanel.Panel2.SuspendLayout();
@@ -87,8 +91,8 @@
             // TransferPanel.Panel2
             // 
             this.TransferPanel.Panel2.Controls.Add(this.WarehouseTransferGridView);
-            this.TransferPanel.Size = new System.Drawing.Size(700, 350);
-            this.TransferPanel.SplitterDistance = 339;
+            this.TransferPanel.Size = new System.Drawing.Size(1081, 303);
+            this.TransferPanel.SplitterDistance = 523;
             this.TransferPanel.TabIndex = 0;
             // 
             // MachineTransferGridView
@@ -100,7 +104,7 @@
             this.MachineTransferGridView.Location = new System.Drawing.Point(0, 0);
             this.MachineTransferGridView.Name = "MachineTransferGridView";
             this.MachineTransferGridView.ReadOnly = true;
-            this.MachineTransferGridView.Size = new System.Drawing.Size(339, 350);
+            this.MachineTransferGridView.Size = new System.Drawing.Size(523, 303);
             this.MachineTransferGridView.TabIndex = 0;
             this.MachineTransferGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.MachineTransferGridView_CellClick);
             // 
@@ -110,7 +114,7 @@
             this.WarehouseTransferGridView.Dock = System.Windows.Forms.DockStyle.Fill;
             this.WarehouseTransferGridView.Location = new System.Drawing.Point(0, 0);
             this.WarehouseTransferGridView.Name = "WarehouseTransferGridView";
-            this.WarehouseTransferGridView.Size = new System.Drawing.Size(357, 350);
+            this.WarehouseTransferGridView.Size = new System.Drawing.Size(554, 303);
             this.WarehouseTransferGridView.TabIndex = 0;
             this.WarehouseTransferGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.WarehouseTransferGridView_CellClick);
             // 
@@ -118,6 +122,7 @@
             // 
             this.groupBox1.Controls.Add(this.cbRestock);
             this.groupBox1.Controls.Add(this.cbService);
+            this.groupBox1.Controls.Add(this.button1);
             this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.tbLocation);
@@ -132,7 +137,7 @@
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(701, 78);
+            this.groupBox1.Size = new System.Drawing.Size(1081, 78);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Machine Data";
@@ -177,7 +182,7 @@
             // 
             // tbLocation
             // 
-            this.tbLocation.Location = new System.Drawing.Point(332, 46);
+            this.tbLocation.Location = new System.Drawing.Point(367, 46);
             this.tbLocation.Name = "tbLocation";
             this.tbLocation.ReadOnly = true;
             this.tbLocation.Size = new System.Drawing.Size(100, 20);
@@ -185,7 +190,7 @@
             // 
             // tbCity
             // 
-            this.tbCity.Location = new System.Drawing.Point(332, 19);
+            this.tbCity.Location = new System.Drawing.Point(367, 19);
             this.tbCity.Name = "tbCity";
             this.tbCity.ReadOnly = true;
             this.tbCity.Size = new System.Drawing.Size(100, 20);
@@ -193,7 +198,7 @@
             // 
             // tbMaximumStock
             // 
-            this.tbMaximumStock.Location = new System.Drawing.Point(563, 49);
+            this.tbMaximumStock.Location = new System.Drawing.Point(673, 49);
             this.tbMaximumStock.Name = "tbMaximumStock";
             this.tbMaximumStock.ReadOnly = true;
             this.tbMaximumStock.Size = new System.Drawing.Size(100, 20);
@@ -201,7 +206,7 @@
             // 
             // tbMinimimStock
             // 
-            this.tbMinimimStock.Location = new System.Drawing.Point(563, 19);
+            this.tbMinimimStock.Location = new System.Drawing.Point(673, 19);
             this.tbMinimimStock.Name = "tbMinimimStock";
             this.tbMinimimStock.ReadOnly = true;
             this.tbMinimimStock.Size = new System.Drawing.Size(100, 20);
@@ -210,7 +215,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(448, 53);
+            this.label5.Location = new System.Drawing.Point(558, 53);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(111, 13);
             this.label5.TabIndex = 5;
@@ -219,7 +224,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(448, 27);
+            this.label4.Location = new System.Drawing.Point(558, 27);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(108, 13);
             this.label4.TabIndex = 4;
@@ -228,7 +233,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(278, 53);
+            this.label3.Location = new System.Drawing.Point(313, 53);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(48, 13);
             this.label3.TabIndex = 3;
@@ -237,7 +242,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(302, 27);
+            this.label2.Location = new System.Drawing.Point(337, 27);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(24, 13);
             this.label2.TabIndex = 2;
@@ -262,11 +267,13 @@
             // 
             // TransferControlPanel
             // 
-            this.TransferControlPanel.Location = new System.Drawing.Point(12, 502);
+            this.TransferControlPanel.Location = new System.Drawing.Point(12, 455);
             this.TransferControlPanel.Name = "TransferControlPanel";
             // 
             // TransferControlPanel.Panel1
             // 
+            this.TransferControlPanel.Panel1.Controls.Add(this.btnPriceUpdate);
+            this.TransferControlPanel.Panel1.Controls.Add(this.tbPriceUpdate);
             this.TransferControlPanel.Panel1.Controls.Add(this.label12);
             this.TransferControlPanel.Panel1.Controls.Add(this.tbProductTrasnferToWarehouse);
             this.TransferControlPanel.Panel1.Controls.Add(this.label10);
@@ -280,14 +287,14 @@
             this.TransferControlPanel.Panel2.Controls.Add(this.label11);
             this.TransferControlPanel.Panel2.Controls.Add(this.tbQuantityTransferToMachine);
             this.TransferControlPanel.Panel2.Controls.Add(this.pictureBox2);
-            this.TransferControlPanel.Size = new System.Drawing.Size(700, 69);
-            this.TransferControlPanel.SplitterDistance = 339;
+            this.TransferControlPanel.Size = new System.Drawing.Size(1081, 86);
+            this.TransferControlPanel.SplitterDistance = 523;
             this.TransferControlPanel.TabIndex = 1;
             // 
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(41, 37);
+            this.label12.Location = new System.Drawing.Point(248, 36);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(44, 13);
             this.label12.TabIndex = 5;
@@ -295,7 +302,7 @@
             // 
             // tbProductTrasnferToWarehouse
             // 
-            this.tbProductTrasnferToWarehouse.Location = new System.Drawing.Point(92, 34);
+            this.tbProductTrasnferToWarehouse.Location = new System.Drawing.Point(299, 33);
             this.tbProductTrasnferToWarehouse.Name = "tbProductTrasnferToWarehouse";
             this.tbProductTrasnferToWarehouse.ReadOnly = true;
             this.tbProductTrasnferToWarehouse.Size = new System.Drawing.Size(100, 20);
@@ -304,7 +311,7 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(39, 13);
+            this.label10.Location = new System.Drawing.Point(246, 12);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(46, 13);
             this.label10.TabIndex = 3;
@@ -312,15 +319,17 @@
             // 
             // tbQuantityTransferToWarehouse
             // 
-            this.tbQuantityTransferToWarehouse.Location = new System.Drawing.Point(91, 7);
+            this.tbQuantityTransferToWarehouse.Location = new System.Drawing.Point(298, 6);
             this.tbQuantityTransferToWarehouse.Name = "tbQuantityTransferToWarehouse";
             this.tbQuantityTransferToWarehouse.Size = new System.Drawing.Size(100, 20);
             this.tbQuantityTransferToWarehouse.TabIndex = 2;
             // 
             // pictureBox1
             // 
+            this.pictureBox1.BackColor = System.Drawing.SystemColors.Control;
+            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox1.Image = global::VendingManagement.Properties.Resources.arrow_3D_green_right;
-            this.pictureBox1.Location = new System.Drawing.Point(210, 7);
+            this.pictureBox1.Location = new System.Drawing.Point(417, 6);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(50, 50);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -363,6 +372,7 @@
             // 
             // pictureBox2
             // 
+            this.pictureBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox2.Image = global::VendingManagement.Properties.Resources.arrow_3D_green_left;
             this.pictureBox2.Location = new System.Drawing.Point(77, 11);
             this.pictureBox2.Name = "pictureBox2";
@@ -384,7 +394,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(429, 130);
+            this.label9.Location = new System.Drawing.Point(721, 130);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(214, 13);
             this.label9.TabIndex = 1;
@@ -393,20 +403,60 @@
             // button1
             // 
             this.button1.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.button1.Location = new System.Drawing.Point(637, 594);
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(939, 19);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.Size = new System.Drawing.Size(111, 39);
             this.button1.TabIndex = 2;
             this.button1.Text = "Close";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // btnBuyOne
+            // 
+            this.btnBuyOne.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBuyOne.Location = new System.Drawing.Point(191, 569);
+            this.btnBuyOne.Name = "btnBuyOne";
+            this.btnBuyOne.Size = new System.Drawing.Size(253, 23);
+            this.btnBuyOne.TabIndex = 3;
+            this.btnBuyOne.Text = "SIMULATE - BUY ONE CANDYBAR";
+            this.btnBuyOne.UseVisualStyleBackColor = true;
+            this.btnBuyOne.Click += new System.EventHandler(this.btnBuyOne_Click);
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(153, 599);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(426, 13);
+            this.label14.TabIndex = 4;
+            this.label14.Text = "NOTE: This button will simulate the customer buying a single candybar from this m" +
+    "achine.";
+            // 
+            // tbPriceUpdate
+            // 
+            this.tbPriceUpdate.Location = new System.Drawing.Point(299, 60);
+            this.tbPriceUpdate.Name = "tbPriceUpdate";
+            this.tbPriceUpdate.Size = new System.Drawing.Size(100, 20);
+            this.tbPriceUpdate.TabIndex = 6;
+            // 
+            // btnPriceUpdate
+            // 
+            this.btnPriceUpdate.Location = new System.Drawing.Point(174, 58);
+            this.btnPriceUpdate.Name = "btnPriceUpdate";
+            this.btnPriceUpdate.Size = new System.Drawing.Size(119, 23);
+            this.btnPriceUpdate.TabIndex = 7;
+            this.btnPriceUpdate.Text = "Update Retail Price";
+            this.btnPriceUpdate.UseVisualStyleBackColor = true;
+            this.btnPriceUpdate.Click += new System.EventHandler(this.btnPriceUpdate_Click);
+            // 
             // MachineStockAdjust
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(726, 629);
-            this.Controls.Add(this.button1);
+            this.ClientSize = new System.Drawing.Size(1105, 629);
+            this.Controls.Add(this.label14);
+            this.Controls.Add(this.btnBuyOne);
             this.Controls.Add(this.TransferControlPanel);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.TransferPanel);
@@ -470,5 +520,9 @@
         private System.Windows.Forms.TextBox tbLocation;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnBuyOne;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Button btnPriceUpdate;
+        private System.Windows.Forms.TextBox tbPriceUpdate;
     }
 }

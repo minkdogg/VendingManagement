@@ -93,6 +93,9 @@ namespace VendingManagement
             return transactionID;
         }
 
+        //
+        // Buy Bulk Stock
+        //
         public void buyStock(string name, int quantity, float price)
         {
             for (int i = 0; i < quantity; ++i)
@@ -101,6 +104,17 @@ namespace VendingManagement
             }
             int transactionID = this.newTransactionID();
             this.database.Append(new Transactions(transactionID, DateTime.Now, "Checking", name, -(price*quantity)));
+        }
+
+        //
+        // Single Machine Sale
+        //
+        public void machineSale(Machine machine, Product product)
+        {
+            int transactionID = this.newTransactionID();
+            this.database.Append(new Transactions(transactionID, DateTime.Now, "Checking", product.Name, product.RetailPrice));
+            this.database.Append(new Transactions(transactionID, DateTime.Now, machine.MachineID, product.Name, product.WholeSalePrice));
+            machine.removeProduct(product);
         }
     }
 }

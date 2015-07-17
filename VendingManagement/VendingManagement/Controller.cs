@@ -103,7 +103,7 @@ namespace VendingManagement
 
 
         //
-        // Remove Object from Form
+        // Remove Product from Form
         //
         public bool RemoveProduct(string ID)
         {
@@ -115,13 +115,11 @@ namespace VendingManagement
                     database.Remove(product[0]);
                     return true;
                 }
-                else{return false;}
-
+                else
+                { return false; }
             }
             else
-            {
-                return false;
-            }
+            { return false; }
         }
 
         // Remove Employee from Form
@@ -136,15 +134,10 @@ namespace VendingManagement
                     return true;
                 }
                 else
-                {
-                    return false;
-                }
-
+                { return false; }
             }
             else
-            {
-                return false;
-            }
+            { return false; }
         }
 
         // Remove Vehicle from Form
@@ -159,15 +152,10 @@ namespace VendingManagement
                     return true;
                 }
                 else
-                {
-                    return false;
-                }
-
+                { return false; }
             }
             else
-            {
-                return false;
-            }
+            { return false; }
         }
 
         // Remove City from Form
@@ -182,15 +170,10 @@ namespace VendingManagement
                     return true;
                 }
                 else
-                {
-                    return false;
-                }
-
+                { return false; }
             }
             else
-            {
-                return false;
-            }
+            { return false; }
         }
 
         // Remove Machine
@@ -205,20 +188,19 @@ namespace VendingManagement
                     return true;
                 }
                 else
-                {
-                    return false;
-                }
-
+                { return false; }
             }
             else
-            {
-                return false;
-            }
+            { return false; }
         }
 
+
+
         //
-        // Transfer 
+        // Transfer Methods
         // 
+
+        // Transfer into Machine
         public bool TransferWarehouseToMachine(string ID, int quantity, Machine machine)
         {
             if (ID != "" & ID != null & machine != null)
@@ -234,15 +216,14 @@ namespace VendingManagement
                     this.transferManager.TransferToMachine(machine, transferList);
                     return true;
                 }
-                else { return false; }
+                else
+                { return false; }
             }
             else
-            {
-                return false;
-            }
-
+            { return false; }
         }
 
+        // Trasfer out of Machine
         public bool TransferMachineToWarehouse(string ID, int quantity, Machine machine)
         {
             if (ID != "" & ID != null & machine != null)
@@ -258,15 +239,30 @@ namespace VendingManagement
                     this.transferManager.TransferFromMachine(machine, transferList);
                     return true;
                 }
-                else { return false; }
+                else
+                { return false; }
             }
             else
-            {
-                return false;
-            }
-
+            { return false; }
         }
 
-      
+
+        // Machine Sale
+        public bool machineSale(Machine machine, string ID)
+        {
+            if (machine != null & ID != "" & ID != null)
+            {
+                List<Product> product = machine.selectAllProductByType(ID);
+                if (product.Count > 0)
+                {
+                    this.transferManager.machineSale(machine, product[0]);
+                    return true;
+                }
+                else
+                { return false; }
+            }
+            else 
+            { return false; }            
+        }      
     }
 }
