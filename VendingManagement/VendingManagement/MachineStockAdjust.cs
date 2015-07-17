@@ -177,9 +177,23 @@ namespace VendingManagement
                         int stockQuantity = stockList.Count;
                         if (quantity <= stockQuantity)
                         {
-                            this.controller.TransferWarehouseToMachine(product, quantity, machine);
-                            LoadWarehouseTransferGridView();
-                            LoadMachineTransferGridView();  
+                            int machineMaxStock = machine.MaxCapacity;
+                            int machineCurrentStock = machine.products.Count;
+                            int maxTransferCapacity = machineMaxStock - machineCurrentStock;
+                            if (quantity <= maxTransferCapacity)
+                            {
+                                this.controller.TransferWarehouseToMachine(product, quantity, machine);
+
+                                LoadMachineDataHeader();
+                                LoadWarehouseTransferGridView();
+                                LoadMachineTransferGridView();
+                                this.parent.LoadMachineListAllDataGrid();
+                            }
+                            else
+                            {
+                                MessageBox.Show("There is only enough room for " + Convert.ToString(maxTransferCapacity) + " in the machine. Adjusting Quantity.");
+                                tbQuantityTransferToMachine.Text = Convert.ToString(maxTransferCapacity);
+                            }
 
                         }
                         else
@@ -204,8 +218,52 @@ namespace VendingManagement
             }
         }
 
+        // Transfer from Machine to Warehouse
         private void pictureBox1_Click(object sender, EventArgs e)
         {
+            {
+                string quantityString = tbQuantityTransferToWarehouse.Text;
+                string product = tbProductTrasnferToWarehouse.Text;
+                try
+                {
+                    if (quantityString != "" & quantityString != null &
+                        product != "" & product != null)
+                    {
+                        int quantity = int.Parse(quantityString);
+                        if (quantity > 0)
+                        {
+                            List<Product> stockList = machine.selectAllProductByType(product);
+                            int stockQuantity = stockList.Count;
+                            if (quantity <= stockQuantity)
+                            {
+                                this.controller.TransferMachineToWarehouse(product, quantity, machine);
+
+                                LoadMachineDataHeader();
+                                LoadWarehouseTransferGridView();
+                                LoadMachineTransferGridView();
+                                this.parent.LoadMachineListAllDataGrid();
+                            }
+                            else
+                            {
+                                MessageBox.Show("There are only " + Convert.ToString(stockQuantity) + " in stock. Adjusting Quantity.");
+                                tbQuantityTransferToMachine.Text = Convert.ToString(stockQuantity);
+                            }
+                        }
+                        else
+                        {
+                            MessageBox.Show("Please enter a quantity greater than 0.");
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("Please select a product and enter a quantity.");
+                    }
+                }
+                catch
+                {
+                    MessageBox.Show("Invalid Entry - Please select a product and enter a quantity.");
+                }
+            }
 
         }
     }

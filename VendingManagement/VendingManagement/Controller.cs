@@ -235,8 +235,30 @@ namespace VendingManagement
                     return true;
                 }
                 else { return false; }
-                
+            }
+            else
+            {
+                return false;
+            }
 
+        }
+
+        public bool TransferMachineToWarehouse(string ID, int quantity, Machine machine)
+        {
+            if (ID != "" & ID != null & machine != null)
+            {
+                List<Product> product = machine.selectAllProductByType(ID);
+                if (quantity <= product.Count)
+                {
+                    List<Product> transferList = new List<Product>();
+                    for (int i = 0; i < quantity; ++i)
+                    {
+                        transferList.Add(product[i]);
+                    }
+                    this.transferManager.TransferFromMachine(machine, transferList);
+                    return true;
+                }
+                else { return false; }
             }
             else
             {
