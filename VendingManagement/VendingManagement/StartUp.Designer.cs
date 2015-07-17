@@ -28,40 +28,40 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.TreeNode treeNode20 = new System.Windows.Forms.TreeNode("Product Warehouse");
-            System.Windows.Forms.TreeNode treeNode21 = new System.Windows.Forms.TreeNode("Transactions");
-            System.Windows.Forms.TreeNode treeNode22 = new System.Windows.Forms.TreeNode("Employees");
-            System.Windows.Forms.TreeNode treeNode23 = new System.Windows.Forms.TreeNode("Vehicles");
-            System.Windows.Forms.TreeNode treeNode24 = new System.Windows.Forms.TreeNode("Business", new System.Windows.Forms.TreeNode[] {
-            treeNode20,
-            treeNode21,
-            treeNode22,
-            treeNode23});
-            System.Windows.Forms.TreeNode treeNode25 = new System.Windows.Forms.TreeNode("City List");
-            System.Windows.Forms.TreeNode treeNode26 = new System.Windows.Forms.TreeNode("Revenue by City");
-            System.Windows.Forms.TreeNode treeNode27 = new System.Windows.Forms.TreeNode("Item Sales by City");
-            System.Windows.Forms.TreeNode treeNode28 = new System.Windows.Forms.TreeNode("City", new System.Windows.Forms.TreeNode[] {
-            treeNode25,
-            treeNode26,
-            treeNode27});
-            System.Windows.Forms.TreeNode treeNode29 = new System.Windows.Forms.TreeNode("All Machines");
-            System.Windows.Forms.TreeNode treeNode30 = new System.Windows.Forms.TreeNode("Product Type");
-            System.Windows.Forms.TreeNode treeNode31 = new System.Windows.Forms.TreeNode("Items by Machine");
-            System.Windows.Forms.TreeNode treeNode32 = new System.Windows.Forms.TreeNode("Machine", new System.Windows.Forms.TreeNode[] {
-            treeNode29,
-            treeNode30,
-            treeNode31});
-            System.Windows.Forms.TreeNode treeNode33 = new System.Windows.Forms.TreeNode("Sales by Product");
-            System.Windows.Forms.TreeNode treeNode34 = new System.Windows.Forms.TreeNode("Inventory (Product)");
-            System.Windows.Forms.TreeNode treeNode35 = new System.Windows.Forms.TreeNode("Sales by Machine");
-            System.Windows.Forms.TreeNode treeNode36 = new System.Windows.Forms.TreeNode("Sales by Machine (Product)");
-            System.Windows.Forms.TreeNode treeNode37 = new System.Windows.Forms.TreeNode("Sales by City");
-            System.Windows.Forms.TreeNode treeNode38 = new System.Windows.Forms.TreeNode("Reports", new System.Windows.Forms.TreeNode[] {
-            treeNode33,
-            treeNode34,
-            treeNode35,
-            treeNode36,
-            treeNode37});
+            System.Windows.Forms.TreeNode treeNode1 = new System.Windows.Forms.TreeNode("Product Warehouse");
+            System.Windows.Forms.TreeNode treeNode2 = new System.Windows.Forms.TreeNode("Transactions");
+            System.Windows.Forms.TreeNode treeNode3 = new System.Windows.Forms.TreeNode("Employees");
+            System.Windows.Forms.TreeNode treeNode4 = new System.Windows.Forms.TreeNode("Vehicles");
+            System.Windows.Forms.TreeNode treeNode5 = new System.Windows.Forms.TreeNode("Business", new System.Windows.Forms.TreeNode[] {
+            treeNode1,
+            treeNode2,
+            treeNode3,
+            treeNode4});
+            System.Windows.Forms.TreeNode treeNode6 = new System.Windows.Forms.TreeNode("City List");
+            System.Windows.Forms.TreeNode treeNode7 = new System.Windows.Forms.TreeNode("Revenue by City");
+            System.Windows.Forms.TreeNode treeNode8 = new System.Windows.Forms.TreeNode("Item Sales by City");
+            System.Windows.Forms.TreeNode treeNode9 = new System.Windows.Forms.TreeNode("City", new System.Windows.Forms.TreeNode[] {
+            treeNode6,
+            treeNode7,
+            treeNode8});
+            System.Windows.Forms.TreeNode treeNode10 = new System.Windows.Forms.TreeNode("All Machines");
+            System.Windows.Forms.TreeNode treeNode11 = new System.Windows.Forms.TreeNode("Items by Machine");
+            System.Windows.Forms.TreeNode treeNode12 = new System.Windows.Forms.TreeNode("Machine", new System.Windows.Forms.TreeNode[] {
+            treeNode10,
+            treeNode11});
+            System.Windows.Forms.TreeNode treeNode13 = new System.Windows.Forms.TreeNode("Sales by Product");
+            System.Windows.Forms.TreeNode treeNode14 = new System.Windows.Forms.TreeNode("Inventory (Product)");
+            System.Windows.Forms.TreeNode treeNode15 = new System.Windows.Forms.TreeNode("Sales by Machine");
+            System.Windows.Forms.TreeNode treeNode16 = new System.Windows.Forms.TreeNode("Sales by Machine (Product)");
+            System.Windows.Forms.TreeNode treeNode17 = new System.Windows.Forms.TreeNode("Sales by City");
+            System.Windows.Forms.TreeNode treeNode18 = new System.Windows.Forms.TreeNode("Restock by Machine");
+            System.Windows.Forms.TreeNode treeNode19 = new System.Windows.Forms.TreeNode("Reports", new System.Windows.Forms.TreeNode[] {
+            treeNode13,
+            treeNode14,
+            treeNode15,
+            treeNode16,
+            treeNode17,
+            treeNode18});
             this.Header = new System.Windows.Forms.Label();
             this.Business = new System.Windows.Forms.Button();
             this.City = new System.Windows.Forms.Button();
@@ -113,14 +113,10 @@
             this.MachineTabs = new System.Windows.Forms.TabControl();
             this.AllMachines = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel8 = new System.Windows.Forms.TableLayoutPanel();
+            this.button10 = new System.Windows.Forms.Button();
             this.button14 = new System.Windows.Forms.Button();
             this.button15 = new System.Windows.Forms.Button();
             this.MachineListAllDataGrid = new System.Windows.Forms.DataGridView();
-            this.ProductType = new System.Windows.Forms.TabPage();
-            this.tableLayoutPanel9 = new System.Windows.Forms.TableLayoutPanel();
-            this.button16 = new System.Windows.Forms.Button();
-            this.button17 = new System.Windows.Forms.Button();
-            this.MachineTypeDataGrid = new System.Windows.Forms.DataGridView();
             this.ItemsByMachine = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel10 = new System.Windows.Forms.TableLayoutPanel();
             this.button18 = new System.Windows.Forms.Button();
@@ -138,8 +134,9 @@
             this.SalesMachineProductGrid = new System.Windows.Forms.DataGridView();
             this.SalesCityMachine = new System.Windows.Forms.TabPage();
             this.SalesCityMachineGrid = new System.Windows.Forms.DataGridView();
+            this.RestockMachine = new System.Windows.Forms.TabPage();
+            this.RestockMachineGrid = new System.Windows.Forms.DataGridView();
             this.Export = new System.Windows.Forms.Button();
-            this.button10 = new System.Windows.Forms.Button();
             this.QuickLinks.SuspendLayout();
             this.Navigation.SuspendLayout();
             this.Reports.SuspendLayout();
@@ -172,9 +169,6 @@
             this.AllMachines.SuspendLayout();
             this.tableLayoutPanel8.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.MachineListAllDataGrid)).BeginInit();
-            this.ProductType.SuspendLayout();
-            this.tableLayoutPanel9.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.MachineTypeDataGrid)).BeginInit();
             this.ItemsByMachine.SuspendLayout();
             this.tableLayoutPanel10.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.MachineProductItemsDataGrid)).BeginInit();
@@ -190,6 +184,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.SalesMachineProductGrid)).BeginInit();
             this.SalesCityMachine.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.SalesCityMachineGrid)).BeginInit();
+            this.RestockMachine.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.RestockMachineGrid)).BeginInit();
             this.SuspendLayout();
             // 
             // Header
@@ -277,36 +273,34 @@
             this.treeView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.treeView1.Location = new System.Drawing.Point(3, 3);
             this.treeView1.Name = "treeView1";
-            treeNode20.Name = "Product Warehouse";
-            treeNode20.Text = "Product Warehouse";
-            treeNode21.Name = "Transactions";
-            treeNode21.Text = "Transactions";
-            treeNode22.Name = "Employees";
-            treeNode22.Text = "Employees";
-            treeNode23.Name = "Vehicles";
-            treeNode23.Text = "Vehicles";
-            treeNode24.Name = "Business";
-            treeNode24.Text = "Business";
-            treeNode25.Name = "City List";
-            treeNode25.Text = "City List";
-            treeNode26.Name = "Revenue by City";
-            treeNode26.Text = "Revenue by City";
-            treeNode27.Name = "Item Sales by City";
-            treeNode27.Text = "Item Sales by City";
-            treeNode28.Name = "City";
-            treeNode28.Text = "City";
-            treeNode29.Name = "All Machines";
-            treeNode29.Text = "All Machines";
-            treeNode30.Name = "Product Type";
-            treeNode30.Text = "Product Type";
-            treeNode31.Name = "Items by Machine";
-            treeNode31.Text = "Items by Machine";
-            treeNode32.Name = "Machine";
-            treeNode32.Text = "Machine";
+            treeNode1.Name = "Product Warehouse";
+            treeNode1.Text = "Product Warehouse";
+            treeNode2.Name = "Transactions";
+            treeNode2.Text = "Transactions";
+            treeNode3.Name = "Employees";
+            treeNode3.Text = "Employees";
+            treeNode4.Name = "Vehicles";
+            treeNode4.Text = "Vehicles";
+            treeNode5.Name = "Business";
+            treeNode5.Text = "Business";
+            treeNode6.Name = "City List";
+            treeNode6.Text = "City List";
+            treeNode7.Name = "Revenue by City";
+            treeNode7.Text = "Revenue by City";
+            treeNode8.Name = "Item Sales by City";
+            treeNode8.Text = "Item Sales by City";
+            treeNode9.Name = "City";
+            treeNode9.Text = "City";
+            treeNode10.Name = "All Machines";
+            treeNode10.Text = "All Machines";
+            treeNode11.Name = "Items by Machine";
+            treeNode11.Text = "Items by Machine";
+            treeNode12.Name = "Machine";
+            treeNode12.Text = "Machine";
             this.treeView1.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
-            treeNode24,
-            treeNode28,
-            treeNode32});
+            treeNode5,
+            treeNode9,
+            treeNode12});
             this.treeView1.Size = new System.Drawing.Size(183, 370);
             this.treeView1.TabIndex = 0;
             this.treeView1.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.treeView1_AfterSelect_1);
@@ -327,20 +321,22 @@
             this.treeView2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.treeView2.Location = new System.Drawing.Point(3, 3);
             this.treeView2.Name = "treeView2";
-            treeNode33.Name = "Sales by Product";
-            treeNode33.Text = "Sales by Product";
-            treeNode34.Name = "Inventory (Product)";
-            treeNode34.Text = "Inventory (Product)";
-            treeNode35.Name = "Sales by Machine";
-            treeNode35.Text = "Sales by Machine";
-            treeNode36.Name = "Sales by Machine (Product)";
-            treeNode36.Text = "Sales by Machine (Product)";
-            treeNode37.Name = "Sales by City";
-            treeNode37.Text = "Sales by City";
-            treeNode38.Name = "Reports";
-            treeNode38.Text = "Reports";
+            treeNode13.Name = "Sales by Product";
+            treeNode13.Text = "Sales by Product";
+            treeNode14.Name = "Inventory (Product)";
+            treeNode14.Text = "Inventory (Product)";
+            treeNode15.Name = "Sales by Machine";
+            treeNode15.Text = "Sales by Machine";
+            treeNode16.Name = "Sales by Machine (Product)";
+            treeNode16.Text = "Sales by Machine (Product)";
+            treeNode17.Name = "Sales by City";
+            treeNode17.Text = "Sales by City";
+            treeNode18.Name = "Restock by Machine";
+            treeNode18.Text = "Restock by Machine";
+            treeNode19.Name = "Reports";
+            treeNode19.Text = "Reports";
             this.treeView2.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
-            treeNode38});
+            treeNode19});
             this.treeView2.ShowNodeToolTips = true;
             this.treeView2.Size = new System.Drawing.Size(183, 370);
             this.treeView2.TabIndex = 7;
@@ -792,7 +788,6 @@
             // MachineTabs
             // 
             this.MachineTabs.Controls.Add(this.AllMachines);
-            this.MachineTabs.Controls.Add(this.ProductType);
             this.MachineTabs.Controls.Add(this.ItemsByMachine);
             this.MachineTabs.Dock = System.Windows.Forms.DockStyle.Fill;
             this.MachineTabs.Location = new System.Drawing.Point(3, 3);
@@ -831,6 +826,17 @@
             this.tableLayoutPanel8.Size = new System.Drawing.Size(715, 34);
             this.tableLayoutPanel8.TabIndex = 3;
             // 
+            // button10
+            // 
+            this.button10.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.button10.Location = new System.Drawing.Point(227, 3);
+            this.button10.Name = "button10";
+            this.button10.Size = new System.Drawing.Size(97, 27);
+            this.button10.TabIndex = 2;
+            this.button10.Text = "Adjust Inventory";
+            this.button10.UseVisualStyleBackColor = true;
+            this.button10.Click += new System.EventHandler(this.button10_Click);
+            // 
             // button14
             // 
             this.button14.Anchor = System.Windows.Forms.AnchorStyles.Left;
@@ -860,63 +866,6 @@
             this.MachineListAllDataGrid.Name = "MachineListAllDataGrid";
             this.MachineListAllDataGrid.Size = new System.Drawing.Size(715, 331);
             this.MachineListAllDataGrid.TabIndex = 0;
-            // 
-            // ProductType
-            // 
-            this.ProductType.Controls.Add(this.tableLayoutPanel9);
-            this.ProductType.Controls.Add(this.MachineTypeDataGrid);
-            this.ProductType.Location = new System.Drawing.Point(4, 22);
-            this.ProductType.Name = "ProductType";
-            this.ProductType.Padding = new System.Windows.Forms.Padding(3);
-            this.ProductType.Size = new System.Drawing.Size(721, 373);
-            this.ProductType.TabIndex = 1;
-            this.ProductType.Text = "Product Type";
-            this.ProductType.UseVisualStyleBackColor = true;
-            // 
-            // tableLayoutPanel9
-            // 
-            this.tableLayoutPanel9.ColumnCount = 3;
-            this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15F));
-            this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15F));
-            this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 70F));
-            this.tableLayoutPanel9.Controls.Add(this.button16, 0, 0);
-            this.tableLayoutPanel9.Controls.Add(this.button17, 1, 0);
-            this.tableLayoutPanel9.Dock = System.Windows.Forms.DockStyle.Top;
-            this.tableLayoutPanel9.Location = new System.Drawing.Point(3, 3);
-            this.tableLayoutPanel9.Name = "tableLayoutPanel9";
-            this.tableLayoutPanel9.RowCount = 1;
-            this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 80F));
-            this.tableLayoutPanel9.Size = new System.Drawing.Size(715, 34);
-            this.tableLayoutPanel9.TabIndex = 3;
-            // 
-            // button16
-            // 
-            this.button16.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.button16.Location = new System.Drawing.Point(3, 3);
-            this.button16.Name = "button16";
-            this.button16.Size = new System.Drawing.Size(101, 27);
-            this.button16.TabIndex = 0;
-            this.button16.Text = "Add New";
-            this.button16.UseVisualStyleBackColor = true;
-            this.button16.Click += new System.EventHandler(this.button16_Click);
-            // 
-            // button17
-            // 
-            this.button17.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.button17.Location = new System.Drawing.Point(110, 3);
-            this.button17.Name = "button17";
-            this.button17.Size = new System.Drawing.Size(97, 27);
-            this.button17.TabIndex = 1;
-            this.button17.Text = "Remove";
-            this.button17.UseVisualStyleBackColor = true;
-            // 
-            // MachineTypeDataGrid
-            // 
-            this.MachineTypeDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.MachineTypeDataGrid.Location = new System.Drawing.Point(3, 39);
-            this.MachineTypeDataGrid.Name = "MachineTypeDataGrid";
-            this.MachineTypeDataGrid.Size = new System.Drawing.Size(715, 331);
-            this.MachineTypeDataGrid.TabIndex = 0;
             // 
             // ItemsByMachine
             // 
@@ -993,6 +942,7 @@
             this.ReportTabs.Controls.Add(this.SalesMachine);
             this.ReportTabs.Controls.Add(this.ReportsMachineProduct);
             this.ReportTabs.Controls.Add(this.SalesCityMachine);
+            this.ReportTabs.Controls.Add(this.RestockMachine);
             this.ReportTabs.Location = new System.Drawing.Point(3, 3);
             this.ReportTabs.Name = "ReportTabs";
             this.ReportTabs.SelectedIndex = 0;
@@ -1099,6 +1049,26 @@
             this.SalesCityMachineGrid.Size = new System.Drawing.Size(715, 367);
             this.SalesCityMachineGrid.TabIndex = 0;
             // 
+            // RestockMachine
+            // 
+            this.RestockMachine.Controls.Add(this.RestockMachineGrid);
+            this.RestockMachine.Location = new System.Drawing.Point(4, 22);
+            this.RestockMachine.Name = "RestockMachine";
+            this.RestockMachine.Padding = new System.Windows.Forms.Padding(3);
+            this.RestockMachine.Size = new System.Drawing.Size(721, 373);
+            this.RestockMachine.TabIndex = 5;
+            this.RestockMachine.Text = "Restock by Machine";
+            this.RestockMachine.UseVisualStyleBackColor = true;
+            // 
+            // RestockMachineGrid
+            // 
+            this.RestockMachineGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.RestockMachineGrid.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.RestockMachineGrid.Location = new System.Drawing.Point(3, 3);
+            this.RestockMachineGrid.Name = "RestockMachineGrid";
+            this.RestockMachineGrid.Size = new System.Drawing.Size(715, 367);
+            this.RestockMachineGrid.TabIndex = 0;
+            // 
             // Export
             // 
             this.Export.Location = new System.Drawing.Point(924, 120);
@@ -1108,17 +1078,6 @@
             this.Export.Text = "Export";
             this.Export.UseVisualStyleBackColor = true;
             this.Export.Click += new System.EventHandler(this.Export_Click);
-            // 
-            // button10
-            // 
-            this.button10.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.button10.Location = new System.Drawing.Point(227, 3);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(97, 27);
-            this.button10.TabIndex = 2;
-            this.button10.Text = "Adjust Inventory";
-            this.button10.UseVisualStyleBackColor = true;
-            this.button10.Click += new System.EventHandler(this.button10_Click);
             // 
             // StartUp
             // 
@@ -1170,9 +1129,6 @@
             this.AllMachines.ResumeLayout(false);
             this.tableLayoutPanel8.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.MachineListAllDataGrid)).EndInit();
-            this.ProductType.ResumeLayout(false);
-            this.tableLayoutPanel9.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.MachineTypeDataGrid)).EndInit();
             this.ItemsByMachine.ResumeLayout(false);
             this.tableLayoutPanel10.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.MachineProductItemsDataGrid)).EndInit();
@@ -1188,6 +1144,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.SalesMachineProductGrid)).EndInit();
             this.SalesCityMachine.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.SalesCityMachineGrid)).EndInit();
+            this.RestockMachine.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.RestockMachineGrid)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1221,7 +1179,6 @@
         private System.Windows.Forms.TabPage ItemSalesByCity;
         private System.Windows.Forms.TabControl MachineTabs;
         private System.Windows.Forms.TabPage AllMachines;
-        private System.Windows.Forms.TabPage ProductType;
         private System.Windows.Forms.TabPage ItemsByMachine;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TabPage MainTab4;
@@ -1235,7 +1192,6 @@
         private System.Windows.Forms.DataGridView TransactionsDataGrid;
         private System.Windows.Forms.DataGridView CitySalesByItemDataGrid;
         private System.Windows.Forms.DataGridView MachineListAllDataGrid;
-        private System.Windows.Forms.DataGridView MachineTypeDataGrid;
         private System.Windows.Forms.DataGridView MachineProductItemsDataGrid;
         private System.Windows.Forms.DataGridView SalesProductGrid;
         private System.Windows.Forms.DataGridView InventoryProductGrid;
@@ -1263,9 +1219,6 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel8;
         private System.Windows.Forms.Button button14;
         private System.Windows.Forms.Button button15;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel9;
-        private System.Windows.Forms.Button button16;
-        private System.Windows.Forms.Button button17;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel10;
         private System.Windows.Forms.Button button18;
         private System.Windows.Forms.Button button19;
@@ -1273,6 +1226,8 @@
         private System.Windows.Forms.DataGridView SalesCityMachineGrid;
         private System.Windows.Forms.Button Export;
         private System.Windows.Forms.Button button10;
+        private System.Windows.Forms.TabPage RestockMachine;
+        private System.Windows.Forms.DataGridView RestockMachineGrid;
 
     }
 }

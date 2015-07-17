@@ -124,6 +124,10 @@ namespace VendingManagement
                     MainField.SelectTab(MainTab4);
                     ReportTabs.SelectTab(SalesCityMachine);
                     break;
+                case "Restock by Machine":
+                    MainField.SelectTab(MainTab4);
+                    ReportTabs.SelectTab(RestockMachine);
+                    break;
             }
         }
 
@@ -178,10 +182,6 @@ namespace VendingManagement
                 case "All Machines":
                     MainField.SelectTab(MainTab3);
                     MachineTabs.SelectTab(AllMachines);
-                    break;
-                case "Product Type":
-                    MainField.SelectTab(MainTab3);
-                    MachineTabs.SelectTab(ProductType);
                     break;
                 case "Items by Machine":
                     MainField.SelectTab(MainTab3);
@@ -262,12 +262,6 @@ namespace VendingManagement
                 data = this.database.SelectAllMachine();
                 MachineListAllDataGrid.DataSource = data;
             }
-            else if (MachineTabs.SelectedTab == ProductType)
-            {
-                List<Machine> data;
-                data = this.database.SelectAllMachine();
-                MachineTypeDataGrid.DataSource = data;
-            }
             else if (MachineTabs.SelectedTab == ItemsByMachine)
             {
                 List<Machine> data;
@@ -334,6 +328,16 @@ namespace VendingManagement
                 DataTable subtotals = report.reportSalesByCity(data, machineList, cityList);
 
                 SalesCityMachineGrid.DataSource = subtotals;
+            }
+            else if (ReportTabs.SelectedTab == RestockMachine)
+            {
+                
+                List<Machine> machineList; 
+                ReportManager report = new ReportManager();
+                machineList = this.database.SelectAllMachine();
+                DataTable subtotals = report.reportRestockByMachine(machineList);
+
+                RestockMachineGrid.DataSource = subtotals;
             }
 
 

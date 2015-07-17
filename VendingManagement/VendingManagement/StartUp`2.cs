@@ -119,18 +119,18 @@ namespace VendingManagement
             MachineListAllDataGrid.Refresh();
         }
 
-        public void LoadMachineTypeDataGrid()
-        {
-            MachineTypeDataGrid.DataSource = null;
-            MachineTypeDataGrid.Update();
-            MachineTypeDataGrid.Refresh();
+        //public void LoadMachineTypeDataGrid()
+        //{
+        //    MachineTypeDataGrid.DataSource = null;
+        //    MachineTypeDataGrid.Update();
+        //    MachineTypeDataGrid.Refresh();
 
-            List<Machine> data;
-            data = this.database.SelectAllMachine();
-            MachineTypeDataGrid.DataSource = data;
-            MachineTypeDataGrid.Update();
-            MachineTypeDataGrid.Refresh();
-        }
+        //    List<Machine> data;
+        //    data = this.database.SelectAllMachine();
+        //    MachineTypeDataGrid.DataSource = data;
+        //    MachineTypeDataGrid.Update();
+        //    MachineTypeDataGrid.Refresh();
+        //}
 
         public void LoadMachineProductItemsDataGrid()
         {
