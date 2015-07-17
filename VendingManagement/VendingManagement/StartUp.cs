@@ -466,7 +466,7 @@ namespace VendingManagement
         private void Export_Click(object sender, EventArgs e)
         {
             Export export = new Export();
-            export.ExportToPDFCollection(SalesProductGrid);
+            export.ExportToPDFCollection(SalesProductGrid, "SalesProductGrid.pdf");
         }
     }
 }
