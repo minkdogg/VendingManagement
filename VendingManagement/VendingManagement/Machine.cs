@@ -366,18 +366,18 @@ namespace VendingManagement
         }
 
 
-        
-        
-        //public void updateRetailPrice(string name, float price)
-        //{
-        //    foreach (Product product in products)
-        //    {
-        //        if (name == product.name)
-        //        {
-        //            product.retailPrice = price;
-        //        }
-        //    }
-        //}
+
+
+        public void updateRetailPrice(string name, float price)
+        {
+            foreach (Product product in products)
+            {
+                if (name == product.name)
+                {
+                    product.retailPrice = price;
+                }
+            }
+        }
 
 
 
