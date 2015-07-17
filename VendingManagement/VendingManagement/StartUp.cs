@@ -516,5 +516,11 @@ namespace VendingManagement
             PDFCreatedDialog pdfOK = new PDFCreatedDialog();
             pdfOK.Show();
         }
+
+        private void createServiceRequest_Click(object sender, EventArgs e)
+        {
+            AddServiceRequest request = new AddServiceRequest();
+            request.Show();
+        }
     }
 }

@@ -43,9 +43,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.printButtonService = new System.Windows.Forms.Button();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.saveButtonService = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
             this.Cancel = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.tableLayoutPanel3.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.SuspendLayout();
@@ -202,7 +201,7 @@
             this.printButtonService.Name = "printButtonService";
             this.printButtonService.Size = new System.Drawing.Size(134, 23);
             this.printButtonService.TabIndex = 0;
-            this.printButtonService.Text = "Print";
+            this.printButtonService.Text = "Print/Save";
             this.printButtonService.UseVisualStyleBackColor = true;
             this.printButtonService.Click += new System.EventHandler(this.printButtonService_Click);
             // 
@@ -212,9 +211,8 @@
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33334F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33334F));
+            this.tableLayoutPanel2.Controls.Add(this.Cancel, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.printButtonService, 2, 0);
-            this.tableLayoutPanel2.Controls.Add(this.saveButtonService, 0, 0);
-            this.tableLayoutPanel2.Controls.Add(this.Cancel, 1, 0);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.tableLayoutPanel2.Location = new System.Drawing.Point(0, 538);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
@@ -223,16 +221,17 @@
             this.tableLayoutPanel2.Size = new System.Drawing.Size(416, 35);
             this.tableLayoutPanel2.TabIndex = 10;
             // 
-            // saveButtonService
+            // Cancel
             // 
-            this.saveButtonService.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.saveButtonService.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.saveButtonService.Location = new System.Drawing.Point(3, 6);
-            this.saveButtonService.Name = "saveButtonService";
-            this.saveButtonService.Size = new System.Drawing.Size(132, 23);
-            this.saveButtonService.TabIndex = 1;
-            this.saveButtonService.Text = "Save";
-            this.saveButtonService.UseVisualStyleBackColor = true;
+            this.Cancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.Cancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.Cancel.Location = new System.Drawing.Point(3, 6);
+            this.Cancel.Name = "Cancel";
+            this.Cancel.Size = new System.Drawing.Size(132, 23);
+            this.Cancel.TabIndex = 2;
+            this.Cancel.Text = "Cancel";
+            this.Cancel.UseVisualStyleBackColor = true;
+            this.Cancel.Click += new System.EventHandler(this.Cancel_Click);
             // 
             // label1
             // 
@@ -244,18 +243,6 @@
             this.label1.Size = new System.Drawing.Size(180, 19);
             this.label1.TabIndex = 12;
             this.label1.Text = "Add Service Request";
-            // 
-            // Cancel
-            // 
-            this.Cancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.Cancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.Cancel.Location = new System.Drawing.Point(141, 6);
-            this.Cancel.Name = "Cancel";
-            this.Cancel.Size = new System.Drawing.Size(132, 23);
-            this.Cancel.TabIndex = 2;
-            this.Cancel.Text = "Cancel";
-            this.Cancel.UseVisualStyleBackColor = true;
-            this.Cancel.Click += new System.EventHandler(this.Cancel_Click);
             // 
             // AddServiceRequest
             // 
@@ -293,7 +280,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button saveButtonService;
         private System.Windows.Forms.TextBox textBox6;
         private System.Windows.Forms.Button Cancel;
     }

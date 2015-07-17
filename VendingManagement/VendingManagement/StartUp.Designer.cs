@@ -160,6 +160,7 @@
             this.button23 = new System.Windows.Forms.Button();
             this.button24 = new System.Windows.Forms.Button();
             this.RestockMachineGrid = new System.Windows.Forms.DataGridView();
+            this.createServiceRequest = new System.Windows.Forms.Button();
             this.QuickLinks.SuspendLayout();
             this.Navigation.SuspendLayout();
             this.Reports.SuspendLayout();
@@ -853,6 +854,7 @@
             this.tableLayoutPanel8.Controls.Add(this.button10, 2, 0);
             this.tableLayoutPanel8.Controls.Add(this.button14, 0, 0);
             this.tableLayoutPanel8.Controls.Add(this.button15, 1, 0);
+            this.tableLayoutPanel8.Controls.Add(this.createServiceRequest, 3, 0);
             this.tableLayoutPanel8.Dock = System.Windows.Forms.DockStyle.Top;
             this.tableLayoutPanel8.Location = new System.Drawing.Point(3, 3);
             this.tableLayoutPanel8.Name = "tableLayoutPanel8";
@@ -1416,6 +1418,16 @@
             this.RestockMachineGrid.Size = new System.Drawing.Size(709, 325);
             this.RestockMachineGrid.TabIndex = 0;
             // 
+            // createServiceRequest
+            // 
+            this.createServiceRequest.Location = new System.Drawing.Point(339, 3);
+            this.createServiceRequest.Name = "createServiceRequest";
+            this.createServiceRequest.Size = new System.Drawing.Size(139, 28);
+            this.createServiceRequest.TabIndex = 3;
+            this.createServiceRequest.Text = "Create Service Request";
+            this.createServiceRequest.UseVisualStyleBackColor = true;
+            this.createServiceRequest.Click += new System.EventHandler(this.createServiceRequest_Click);
+            // 
             // StartUp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1599,6 +1611,7 @@
         private System.Windows.Forms.Button button23;
         private System.Windows.Forms.Button button24;
         private System.Windows.Forms.DataGridView RestockMachineGrid;
+        private System.Windows.Forms.Button createServiceRequest;
 
     }
 }
