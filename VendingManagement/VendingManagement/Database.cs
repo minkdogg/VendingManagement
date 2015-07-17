@@ -270,7 +270,7 @@ namespace VendingManagement
             // Create Machines and transfer product into machine
             machine1.MaxCapacity = 10;
             //machine1.NeedRestock = false;
-            machine1.NeedService = true;
+            //machine1.NeedService = true;
             machine1.DefaultMinStock = 1;
 
             transferManager.TransferToMachine(machine1, transferList[++index]);
@@ -287,14 +287,14 @@ namespace VendingManagement
 
             machine3.MaxCapacity = 5;
             //machine3.NeedRestock = true;
-            machine3.NeedService = true;
+            //machine3.NeedService = true;
             machine3.DefaultMinStock = 1;
             transferManager.TransferToMachine(machine3, transferList[++index]);
             transferManager.TransferToMachine(machine3, transferList[++index]);
 
             machine4.MaxCapacity = 10;
             //machine4.NeedRestock = false;
-            machine4.NeedService = false;
+            //machine4.NeedService = false;
             machine4.DefaultMinStock = 2;
             transferManager.TransferToMachine(machine4, transferList[++index]);
             transferManager.TransferToMachine(machine4, transferList[++index]);
@@ -307,7 +307,7 @@ namespace VendingManagement
 
             machine5.MaxCapacity = 20;
             //machine5.NeedRestock = true;
-            machine5.NeedService = true;
+            //machine5.NeedService = true;
             machine5.DefaultMinStock = 2;
             transferManager.TransferToMachine(machine5, transferList[++index]);
             transferManager.TransferToMachine(machine5, transferList[++index]);
