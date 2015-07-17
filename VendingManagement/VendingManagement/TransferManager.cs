@@ -24,13 +24,13 @@ namespace VendingManagement
             int transactionID = this.newTransactionID();
             float totalCost = 0;
             string productName = productList[0].Name;
-            
-            int repeat = productList.Count();
-            for (int i = 0; i < repeat; ++i)
+
+            int repeat = productList.Count() - 1;
+            for (int i = repeat; i >= 0; --i)
             {
-                totalCost += productList[0].WholeSalePrice;
-                machine.addProduct(productList[0]);
-                this.database.Remove(productList[0]);
+                totalCost += productList[i].WholeSalePrice;
+                machine.addProduct(productList[i]);
+                this.database.Remove(productList[i]);
             }
             this.database.Append(new Transactions(transactionID, DateTime.Now, "Checking", productName, totalCost));
             this.database.Append(new Transactions((transactionID + 1), DateTime.Now, machine.MachineID, productName, -totalCost));

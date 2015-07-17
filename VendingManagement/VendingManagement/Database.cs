@@ -246,15 +246,20 @@ namespace VendingManagement
 
         public void generateInitialMachines()
         {
-            Machine machine1 = new Machine("Milwaukee", "", "M101");
+            Machine machine1 = new Machine("Milwaukee", "Mayfair Mall", "M101");
+            machine1.MaxCapacity = 100;
             business.Accounts.Add("M101");
-            Machine machine2 = new Machine("Waukesha", "", "M102");
+            Machine machine2 = new Machine("Waukesha", "Downtown", "M102");
+            machine2.MaxCapacity = 100;
             business.Accounts.Add("M102");
-            Machine machine3 = new Machine("Brookfield", "", "M103");
+            Machine machine3 = new Machine("Brookfield", "Brookfield Square", "M103");
+            machine3.MaxCapacity = 100;
             business.Accounts.Add("M103");
-            Machine machine4 = new Machine("Milwaukee", "", "M104");
+            Machine machine4 = new Machine("Milwaukee", "Downtown", "M104");
+            machine4.MaxCapacity = 100;
             business.Accounts.Add("M104");
-            Machine machine5 = new Machine("Brookfield", "", "M105");
+            Machine machine5 = new Machine("Brookfield", "Brookfield Square", "M105");
+            machine5.MaxCapacity = 100;
             business.Accounts.Add("M105");
 
             // Pull inventory of warehouse

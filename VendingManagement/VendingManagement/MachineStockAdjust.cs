@@ -15,7 +15,7 @@ namespace VendingManagement
         Database database;
         StartUp parent;
         Machine machine;
-        TransferManager transferManager;
+        Controller controller;
 
 
         public MachineStockAdjust(Database database, StartUp parent, Machine machine)
@@ -24,7 +24,7 @@ namespace VendingManagement
             this.database = database;
             this.parent = parent;
             this.machine = machine;
-            this.transferManager = new TransferManager(database);
+            this.controller = new Controller(database);
 
         }
 
@@ -76,9 +76,137 @@ namespace VendingManagement
             MachineTransferGridView.DataSource = source;
         }
 
+        // On Warehouse gridview select, choose which object is being selected.
+        private void WarehouseTransferGridView_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            List<string> ProductId = new List<string>();
+            List<int> rowsProcessedAlready = new List<int>();
+            if (WarehouseTransferGridView.SelectedRows.Count > 0)
+            {
+                foreach (DataGridViewRow row in WarehouseTransferGridView.SelectedRows)
+                {
+                    if (!rowsProcessedAlready.Contains(row.Index))
+                    {
+                        ProductId.Add(row.Cells["Product Type"].Value.ToString());
+                        rowsProcessedAlready.Add(row.Index);
+                    }
+                }
+
+            }
+            else if (WarehouseTransferGridView.SelectedCells.Count > 0)
+            {
+                foreach (DataGridViewCell cell in WarehouseTransferGridView.SelectedCells)
+                {
+                    DataGridViewRow row = WarehouseTransferGridView.Rows[cell.RowIndex];
+                    if (!rowsProcessedAlready.Contains(row.Index))
+                    {
+                        ProductId.Add(row.Cells["Product Type"].Value.ToString());
+                        rowsProcessedAlready.Add(row.Index);
+                    }
+                }
+            }
+
+            if (ProductId.Count == 1)
+            {
+                tbProductTrasnferToMachine.Text = ProductId[0];
+            }
+        }
 
 
+        // On Machine gridview select, choose which object is being selected.
+        private void MachineTransferGridView_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            List<string> ProductId = new List<string>();
+            List<int> rowsProcessedAlready = new List<int>();
+            if (MachineTransferGridView.SelectedRows.Count > 0)
+            {
+                foreach (DataGridViewRow row in MachineTransferGridView.SelectedRows)
+                {
+                    if (!rowsProcessedAlready.Contains(row.Index))
+                    {
+                        ProductId.Add(row.Cells["Product Type"].Value.ToString());
+                        rowsProcessedAlready.Add(row.Index);
+                    }
+                }
+
+            }
+            else if (MachineTransferGridView.SelectedCells.Count > 0)
+            {
+                foreach (DataGridViewCell cell in MachineTransferGridView.SelectedCells)
+                {
+                    DataGridViewRow row = MachineTransferGridView.Rows[cell.RowIndex];
+                    if (!rowsProcessedAlready.Contains(row.Index))
+                    {
+                        ProductId.Add(row.Cells["Product Type"].Value.ToString());
+                        rowsProcessedAlready.Add(row.Index);
+                    }
+                }
+            }
+
+            if (ProductId.Count == 1)
+            {
+                tbProductTrasnferToWarehouse.Text = ProductId[0];
+            }
+        }
+
+        // Close Button
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
 
 
+        //
+        // Transfer Between Grids
+        //
+
+        // Transfer from Warehouse to Machine
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            string quantityString = tbQuantityTransferToMachine.Text;
+            string product = tbProductTrasnferToMachine.Text;
+            try
+            {
+                if (quantityString != "" & quantityString != null &
+                    product != "" & product != null)
+                {
+                    int quantity = int.Parse(quantityString);
+                    if (quantity > 0)
+                    {
+                        List<Product> stockList =  database.SelectProduct(product);
+                        int stockQuantity = stockList.Count;
+                        if (quantity <= stockQuantity)
+                        {
+                            this.controller.TransferWarehouseToMachine(product, quantity, machine);
+                            LoadWarehouseTransferGridView();
+                            LoadMachineTransferGridView();  
+
+                        }
+                        else
+                        {
+                            MessageBox.Show("There are only " + Convert.ToString(stockQuantity) + " in stock. Adjusting Quantity.");
+                            tbQuantityTransferToMachine.Text = Convert.ToString(stockQuantity);
+                        }
+                    }
+                    else 
+                    {
+                        MessageBox.Show("Please enter a quantity greater than 0.");
+                    }                    
+                }
+                else
+                {
+                    MessageBox.Show("Please select a product and enter a quantity.");
+                }
+            }
+            catch
+            {
+                MessageBox.Show("Invalid Entry - Please select a product and enter a quantity.");
+            }
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
