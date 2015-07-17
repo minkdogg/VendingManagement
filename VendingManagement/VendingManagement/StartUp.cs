@@ -206,19 +206,26 @@ namespace VendingManagement
             {
                 List<Transactions> data;
                 data = this.database.SelectAllTransactions();
+                
+
                 TransactionsDataGrid.DataSource = data;
+                this.TransactionsDataGrid.Columns["Amount"].DefaultCellStyle.Format = "c";
+
+               
             }
             else if (BusinessTabs.SelectedTab == BusinessEmployees)
             {
                 List<Employee> data;
                 data = this.database.SelectAllEmployee();
                 EmployeesDataGrid.DataSource = data;
+                this.EmployeesDataGrid.Columns["Payrate"].DefaultCellStyle.Format = "c";
             }
             else if (BusinessTabs.SelectedTab == BusinessVehicles)
             {
                 List<Vehicle> data;
                 data = this.database.SelectAllVehicle();
                 VehiclesDataGrid.DataSource = data;
+                this.VehiclesDataGrid.Columns["MileageCost"].DefaultCellStyle.Format = "c";
             }
         }
 
