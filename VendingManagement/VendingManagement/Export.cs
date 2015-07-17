@@ -46,12 +46,14 @@ namespace VendingManagement
             }
 
             //Exporting to PDF
-            string folderPath = @"C:\Users\mrunkle_he\Desktop\";
+            /*
+            string folderPath = @"C:\";
             if (!Directory.Exists(folderPath))
             {
                 Directory.CreateDirectory(folderPath);
             }
-            using (FileStream stream = new FileStream(folderPath + fileName, FileMode.Create))
+            */
+            using (FileStream stream = new FileStream(fileName, FileMode.Create))
             {
                 Document pdfDoc = new Document(PageSize.LETTER, 10, 10, 10, 10);
                 PdfWriter.GetInstance(pdfDoc, stream);

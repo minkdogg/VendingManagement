@@ -108,6 +108,12 @@
     <Compile Include="MachineStockAdjust.Designer.cs">
       <DependentUpon>MachineStockAdjust.cs</DependentUpon>
     </Compile>
+    <Compile Include="PDFCreatedDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PDFCreatedDialog.Designer.cs">
+      <DependentUpon>PDFCreatedDialog.cs</DependentUpon>
+    </Compile>
     <Compile Include="Product.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
