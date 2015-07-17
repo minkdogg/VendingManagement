@@ -174,7 +174,16 @@ namespace VendingManagement
                 removeProductType(product.Name);
             }
             products.Remove(product);
-            needRestock = checkSingleItemRestock(product.Name);
+            List<string> checkRestockItems = getItemsRestock();
+            if (checkRestockItems.Count() > 0)
+            {
+                needRestock = true;
+            }
+            else
+            {
+                needRestock = false;
+            }
+            
         }
 
         public void removeMultipleProduct(List<Product> multipleProduct)
@@ -182,7 +191,15 @@ namespace VendingManagement
             foreach (Product product in multipleProduct)
             {
                 this.removeProduct(product);
-                needRestock = checkSingleItemRestock(product.Name);
+                List<string> checkRestockItems = getItemsRestock();
+                if (checkRestockItems.Count() > 0)
+                {
+                    needRestock = true;
+                }
+                else
+                {
+                    needRestock = false;
+                }
             }
         }
 
