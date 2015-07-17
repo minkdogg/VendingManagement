@@ -467,6 +467,9 @@ namespace VendingManagement
         {
             Export export = new Export();
             export.ExportToPDFCollection(SalesProductGrid, "SalesProductGrid.pdf");
+
+            PDFCreatedDialog pdfOK = new PDFCreatedDialog();
+            pdfOK.Show();
         }
     }
 }
