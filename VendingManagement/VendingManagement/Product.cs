@@ -12,12 +12,12 @@ namespace VendingManagement
         public string name;
         protected float wholeSalePrice;
         protected List<string> productTypes = new List<string> { "Snickers", "Coke", "Milky Way", "Almond Joy", "Sprite", "Dr. Pepper", "Doritos", "Fritos", "Lays" };
+        protected float retailPrice;
 
         public Product(string name, float wholeSalePrice)
         {
             this.name = name;
             this.wholeSalePrice = wholeSalePrice;
-
         }
 
 
@@ -38,6 +38,10 @@ namespace VendingManagement
             productTypes.Add(type);
         }
 
-
+        public float RetailPrice
+        {
+            get { return retailPrice; }
+            set { retailPrice = value; }
+        }
     }
 }
