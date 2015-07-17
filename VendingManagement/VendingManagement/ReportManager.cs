@@ -488,6 +488,43 @@ namespace VendingManagement
            return table;
        }
 
+       public DataTable reportProductPriceByMachine(List<Machine> machines)
+       {
+
+           DataTable table = new DataTable();
+           DataColumn newColumn = new DataColumn("Machine ID", typeof(String));
+           table.Columns.Add(newColumn);
+
+           newColumn = new DataColumn("Product Type", typeof(String));
+           table.Columns.Add(newColumn);
+
+           newColumn = new DataColumn("Retail Price", typeof(String));
+           table.Columns.Add(newColumn);
+
+           newColumn = new DataColumn("Product Count", typeof(String));
+           table.Columns.Add(newColumn);
+
+
+           foreach (Machine machine in machines)
+           {
+               table.Rows.Add(machine.MachineID, "", "", "");
+               List<Product> machineProducts = machine.products;
+               List<Product> sortedList = machineProducts.OrderBy(d => d.Name).ToList();
+               var subtotals = from x in sortedList
+                               group x by x.Name into g
+                               select new { Type = g.Key, Price = g.Sum(x => x.RetailPrice), SalesCount = g.Count() };
+               foreach (var total in subtotals)
+               {
+
+                   table.Rows.Add("", total.Type, total.Price, total.SalesCount);
+               }
+
+               table.Rows.Add("", "", "");
+           }
+
+           return table;
+       }
+
 
 
     }
