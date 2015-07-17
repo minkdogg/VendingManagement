@@ -25,6 +25,7 @@ namespace VendingManagement
             this.lName = lName;
             this.employeeID = employeeID;
             this.location = location;
+            this.dateStarted = DateTime.Today;
             
         }
 
