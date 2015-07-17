@@ -518,11 +518,14 @@ namespace VendingManagement
                }
                var subtotals = from x in sortedList
                                group x by x.Name into g
-                               select new { Type = g.Key, SalesCount = g.Count() };
+                               select new { Type = g.Key, Price = g.Sum(x => x.RetailPrice), SalesCount= g.Count() };
                int count = 0;
                foreach (var total in subtotals)
                {
-                   table.Rows.Add("", total.Type, retailPriceList[count], total.SalesCount);
+                   float retailPrice = total.Price / total.SalesCount;
+                   decimal newRetailPrice = Convert.ToDecimal(retailPrice);
+                   string stringRetailPrice = String.Format("{0:C}", newRetailPrice);
+                   table.Rows.Add("", total.Type, stringRetailPrice, total.SalesCount);
                    count += 1;
                }
 
