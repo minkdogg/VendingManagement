@@ -7,6 +7,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using iTextSharp.text;
+using iTextSharp.text.pdf;
+using iTextSharp.text.pdf.collection;
+using System.IO;
 
 namespace VendingManagement
 {
@@ -461,16 +465,8 @@ namespace VendingManagement
         // Export button
         private void Export_Click(object sender, EventArgs e)
         {
-            List<Product> data;    
-            data = this.database.SelectAllProduct();
-
-            ReportManager report = new ReportManager();
-            DataTable table = report.reportInventoryCostItem(data);
-
             Export export = new Export();
-            export.ExportToPDFCollection(table);
+            export.ExportToPDFCollection(SalesProductGrid);
         }
-
-
     }
 }
