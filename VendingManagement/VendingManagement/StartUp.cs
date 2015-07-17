@@ -462,7 +462,7 @@ namespace VendingManagement
         }
 
 
-        // Export buttons
+        // Export button
         private void Export_Click(object sender, EventArgs e)
         {
             Export export = new Export();
