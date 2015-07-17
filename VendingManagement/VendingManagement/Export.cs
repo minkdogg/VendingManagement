@@ -51,7 +51,7 @@ namespace VendingManagement
             {
                 Directory.CreateDirectory(folderPath);
             }
-            using (FileStream stream = new FileStream(folderPath + "DataGridViewExport.pdf", FileMode.Create))
+            using (FileStream stream = new FileStream(folderPath + dataGridView + ".pdf", FileMode.Create))
             {
                 Document pdfDoc = new Document(PageSize.LETTER, 10, 10, 10, 10);
                 PdfWriter.GetInstance(pdfDoc, stream);
