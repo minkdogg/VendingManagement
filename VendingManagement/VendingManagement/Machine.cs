@@ -191,15 +191,15 @@ namespace VendingManagement
             foreach (Product product in multipleProduct)
             {
                 this.removeProduct(product);
-                List<string> checkRestockItems = getItemsRestock();
-                if (checkRestockItems.Count() > 0)
-                {
-                    needRestock = true;
-                }
-                else
-                {
-                    needRestock = false;
-                }
+                 List<string> checkRestockItems = getItemsRestock();
+                    if (checkRestockItems.Count() > 0)
+                    {
+                        needRestock = true;
+                    }
+                    else
+                    {
+                        needRestock = false;
+                    }
             }
         }
 
@@ -366,18 +366,18 @@ namespace VendingManagement
         }
 
 
-        
-        
-        //public void updateRetailPrice(string name, float price)
-        //{
-        //    foreach (Product product in products)
-        //    {
-        //        if (name == product.name)
-        //        {
-        //            product.retailPrice = price;
-        //        }
-        //    }
-        //}
+
+
+        public void updateRetailPrice(string name, float price)
+        {
+            foreach (Product product in products)
+            {
+                if (name == product.name)
+                {
+                    product.retailPrice = price;
+                }
+            }
+        }
 
 
 
