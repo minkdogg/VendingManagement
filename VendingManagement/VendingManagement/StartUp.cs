@@ -11,6 +11,7 @@ using iTextSharp.text;
 using iTextSharp.text.pdf;
 using iTextSharp.text.pdf.collection;
 using System.IO;
+using System.Windows.Forms.DataVisualization.Charting;
 
 namespace VendingManagement
 {
@@ -627,6 +628,14 @@ namespace VendingManagement
         {
             AddServiceRequest request = new AddServiceRequest();
             request.Show();
+        }
+
+
+        //CHARTING FUNCTIONS
+        private void GraphSalesByProduct_Click(object sender, EventArgs e)
+        {
+            ChartSalesByProduct chartSales = new ChartSalesByProduct();
+            chartSales.Show();
         }
     }
 }
