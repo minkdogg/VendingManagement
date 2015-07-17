@@ -71,7 +71,13 @@ namespace VendingManagement
             {
                 if (total.Type != "")
                 {
-                    table.Rows.Add(total.Type,total.SubTotal, total.SalesTotal, total.SalesCount);  
+                    decimal newSubTotal = Convert.ToDecimal(total.SubTotal);
+                    string stringSubTotal = String.Format("{0:C}", newSubTotal);
+
+                    decimal newSalesTotal = Convert.ToDecimal(total.SalesTotal);
+                    string stringSalesTotal = String.Format("{0:C}", newSalesTotal);
+
+                    table.Rows.Add(total.Type, stringSubTotal, stringSalesTotal, total.SalesCount);  
                 } 
             }
 
@@ -134,7 +140,9 @@ namespace VendingManagement
             {
                 if (total.Type != "Checking")
                 {
-                    table.Rows.Add(total.Type, total.SalesTotal, total.SalesCount);
+                    decimal newSalesTotal = Convert.ToDecimal(total.SalesTotal);
+                    string stringSalesTotal = String.Format("{0:C}", newSalesTotal);
+                    table.Rows.Add(total.Type, stringSalesTotal, total.SalesCount);
                 }
             }
             return table;
@@ -170,12 +178,18 @@ namespace VendingManagement
                 {
                     if (total.Type != "")
                     {
-                        table.Rows.Add("",total.Type, total.SalesTotal, total.SalesCount);
+                        decimal newSalesTotal = Convert.ToDecimal(total.SalesTotal);
+                        string stringSalesTotal = String.Format("{0:C}", newSalesTotal);
+                        table.Rows.Add("",total.Type, stringSalesTotal, total.SalesCount);
                     }
                     salesTotalAmount += total.SalesTotal;
                     salesTotalCount += total.SalesCount;
                 }
-                table.Rows.Add("Total", "", salesTotalAmount, salesTotalCount);
+                decimal newTotalAmount = Convert.ToDecimal(salesTotalAmount);
+                string stringTotalAmount = String.Format("{0:C}", newTotalAmount);
+
+
+                table.Rows.Add("Total", "", stringTotalAmount, salesTotalCount);
                 table.Rows.Add("", "", "","");
             }
 
@@ -233,14 +247,20 @@ namespace VendingManagement
                     {
                         if (total.Type != "Checking")
                         {
-                            table.Rows.Add("", total.Type, total.SalesTotal, total.SalesCount);
+                            decimal newSalesTotal = Convert.ToDecimal(total.SalesTotal);
+                            string stringSalesTotal = String.Format("{0:C}", newSalesTotal);
+                            table.Rows.Add("", total.Type, stringSalesTotal, total.SalesCount);
                         }
                         salesTotalAmount += total.SalesTotal;
                         salesTotalCount += total.SalesCount;
                     }
                     
                 }
-                table.Rows.Add("Total", "", salesTotalAmount, salesTotalCount);
+
+                decimal newTotalAmount = Convert.ToDecimal(salesTotalAmount);
+                string stringTotalAmount = String.Format("{0:C}", newTotalAmount);
+
+                table.Rows.Add("Total", "", stringTotalAmount, salesTotalCount);
                 table.Rows.Add("", "", "", "");
 
             }
@@ -291,6 +311,9 @@ namespace VendingManagement
             DataColumn newColumn = new DataColumn("City", typeof(String));
             table.Columns.Add(newColumn);
 
+            newColumn = new DataColumn("Machine ID", typeof(String));
+            table.Columns.Add(newColumn);
+
             newColumn = new DataColumn("Sales Profit", typeof(String));
             table.Columns.Add(newColumn);
 
@@ -333,7 +356,14 @@ namespace VendingManagement
                     {
                         if (total.Type != "Checking")
                         {
-                            table.Rows.Add("", total.SalesProfit, total.SalesTotal, total.SalesCount);
+                            decimal newSalesProfit = Convert.ToDecimal(total.SalesProfit);
+                            string stringSalesProfit = String.Format("{0:C}", newSalesProfit);
+
+                            decimal newSalesTotal = Convert.ToDecimal(total.SalesTotal);
+                            string stringSalesTotal= String.Format("{0:C}", newSalesTotal);
+
+
+                            table.Rows.Add("", machine ,stringSalesProfit, stringSalesTotal, total.SalesCount);
                         }
                         salesTotalProfit += total.SalesProfit;
                         salesTotalAmount += total.SalesTotal;
@@ -341,8 +371,15 @@ namespace VendingManagement
                     }
 
                 }
-                table.Rows.Add("Total", salesTotalProfit, salesTotalAmount, salesTotalCount);
-                table.Rows.Add("", "", "", "");
+
+                decimal newTotalAmount = Convert.ToDecimal(salesTotalAmount);
+                string stringTotalAmount = String.Format("{0:C}", newTotalAmount);
+
+                decimal newTotalProfitAmount = Convert.ToDecimal(salesTotalProfit);
+                string stringTotalProfitAmount = String.Format("{0:C}", newTotalProfitAmount);
+
+                table.Rows.Add("Total", "", stringTotalProfitAmount, stringTotalAmount, salesTotalCount);
+                table.Rows.Add("", "", "", "", "");
 
             }
 
@@ -393,15 +430,22 @@ namespace VendingManagement
                     {
                         if (total.Type != "" && total.SalesTotal != 0)
                         {
-                            table.Rows.Add("", total.Type, total.SalesTotal, total.SalesCount);
+                            decimal newSalesAmount = Convert.ToDecimal(total.SalesTotal);
+                            string stringSalesAmount = String.Format("{0:C}", newSalesAmount);
+                            
+                            table.Rows.Add("", total.Type, stringSalesAmount, total.SalesCount);
                             salesTotalAmount += total.SalesTotal;
                             salesTotalCount += total.SalesCount;
                         }
 
                     }
                 }
-                    table.Rows.Add("Total", "", salesTotalAmount, salesTotalCount);
-                    table.Rows.Add("", "", "", "");
+
+                decimal newTotalAmount = Convert.ToDecimal(salesTotalAmount);
+                string stringTotalAmount = String.Format("{0:C}", newTotalAmount);
+                
+                table.Rows.Add("Total", "", stringTotalAmount, salesTotalCount);
+                table.Rows.Add("", "", "", "");
             }
             
 
