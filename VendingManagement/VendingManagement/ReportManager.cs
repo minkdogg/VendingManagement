@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace VendingManagement
 {
-    class ReportManager
+    public class ReportManager
     {
 
         public DataTable reportProductWarehouse(List<Product>data)
