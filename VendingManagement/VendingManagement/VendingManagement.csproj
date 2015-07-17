@@ -148,6 +148,9 @@
     <EmbeddedResource Include="AddProduct.resx">
       <DependentUpon>AddProduct.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AddServiceRequest.resx">
+      <DependentUpon>AddServiceRequest.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AddVehicle.resx">
       <DependentUpon>AddVehicle.cs</DependentUpon>
     </EmbeddedResource>
