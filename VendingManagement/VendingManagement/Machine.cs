@@ -374,7 +374,7 @@ namespace VendingManagement
             {
                 if (name == product.name)
                 {
-                    product.retailPrice = price;
+                    product.RetailPrice = price;
                 }
             }
         }
