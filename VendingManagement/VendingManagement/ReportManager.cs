@@ -510,16 +510,23 @@ namespace VendingManagement
                table.Rows.Add(machine.MachineID, "", "", "");
                List<Product> machineProducts = machine.products;
                List<Product> sortedList = machineProducts.OrderBy(d => d.Name).ToList();
+
+               List<float> retailPriceList = new List<float> { };
+               foreach (Product product in machineProducts)
+               {
+                   retailPriceList.Add(product.RetailPrice);
+               }
                var subtotals = from x in sortedList
                                group x by x.Name into g
-                               select new { Type = g.Key, Price = g.Sum(x => x.RetailPrice), SalesCount = g.Count() };
+                               select new { Type = g.Key, SalesCount = g.Count() };
+               int count = 0;
                foreach (var total in subtotals)
                {
-
-                   table.Rows.Add("", total.Type, total.Price, total.SalesCount);
+                   table.Rows.Add("", total.Type, retailPriceList[count], total.SalesCount);
+                   count += 1;
                }
 
-               table.Rows.Add("", "", "");
+               table.Rows.Add("", "", "","");
            }
 
            return table;
