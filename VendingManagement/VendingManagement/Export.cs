@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -7,28 +8,58 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Windows.Forms;
-using iTextSharp;
+using iTextSharp.text;
+using iTextSharp.text.pdf;
+using iTextSharp.text.pdf.collection;
 
 namespace VendingManagement
 {
     class Export
     {         
-        public void ExportToPDFCollection(DataTable table)
+        public void ExportToPDFCollection(DataGridView dataGridView)
         {
-            int rowCount = 0;
-            foreach (DataRow row in table.Rows)
+            //Create iTextSharp Table with columnCount
+            PdfPTable pdfTable = new PdfPTable(dataGridView.ColumnCount);
+            pdfTable.DefaultCell.Padding = 3;
+            pdfTable.WidthPercentage = 30;
+            pdfTable.HorizontalAlignment = Element.ALIGN_LEFT;
+            pdfTable.DefaultCell.BorderWidth = 1;
+
+            //Adding Header row
+            foreach (DataGridViewColumn column in dataGridView.Columns)
             {
-                rowCount++;
+                PdfPCell cell = new PdfPCell(new Phrase(column.HeaderText));
+                cell.BackgroundColor = new iTextSharp.text.BaseColor(240, 240, 240);
+                pdfTable.AddCell(cell);
             }
 
-            int columnCount = 1;
-            foreach (DataColumn column in table.Columns)
+            //Adding DataRow
+            foreach (DataGridViewRow row in dataGridView.Rows)
             {
-                columnCount++;
+                foreach (DataGridViewCell cell in row.Cells)
+                {
+                    if (cell.Value != null)
+                    {
+                        pdfTable.AddCell(cell.Value.ToString());
+                    }
+                }
             }
 
-            //PdfPTable pdfTable = new PdfPTable();
-            //iTextSharp.text.Table textSharpTable = new iTextSharp.text.Table(columnCount, rowCount);
+            //Exporting to PDF
+            string folderPath = @"C:\Users\mrunkle_he\Desktop\PDF";
+            if (!Directory.Exists(folderPath))
+            {
+                Directory.CreateDirectory(folderPath);
+            }
+            using (FileStream stream = new FileStream(folderPath + "DataGridViewExport.pdf", FileMode.Create))
+            {
+                Document pdfDoc = new Document(PageSize.LETTER, 10, 10, 10, 10);
+                PdfWriter.GetInstance(pdfDoc, stream);
+                pdfDoc.Open();
+                pdfDoc.Add(pdfTable);
+                pdfDoc.Close();
+                stream.Close();
+            }
         }
     }
 }
