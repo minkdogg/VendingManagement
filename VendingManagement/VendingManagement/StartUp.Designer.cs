@@ -136,7 +136,10 @@
             this.SalesCityMachineGrid = new System.Windows.Forms.DataGridView();
             this.RestockMachine = new System.Windows.Forms.TabPage();
             this.RestockMachineGrid = new System.Windows.Forms.DataGridView();
-            this.Export = new System.Windows.Forms.Button();
+            this.PDFSalesByProduct = new System.Windows.Forms.Button();
+            this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanel7 = new System.Windows.Forms.TableLayoutPanel();
+            this.CSVSalesByProduct = new System.Windows.Forms.Button();
             this.QuickLinks.SuspendLayout();
             this.Navigation.SuspendLayout();
             this.Reports.SuspendLayout();
@@ -186,6 +189,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.SalesCityMachineGrid)).BeginInit();
             this.RestockMachine.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.RestockMachineGrid)).BeginInit();
+            this.tableLayoutPanel6.SuspendLayout();
+            this.tableLayoutPanel7.SuspendLayout();
             this.SuspendLayout();
             // 
             // Header
@@ -951,7 +956,7 @@
             // 
             // SalesProduct
             // 
-            this.SalesProduct.Controls.Add(this.SalesProductGrid);
+            this.SalesProduct.Controls.Add(this.tableLayoutPanel6);
             this.SalesProduct.Location = new System.Drawing.Point(4, 22);
             this.SalesProduct.Name = "SalesProduct";
             this.SalesProduct.Padding = new System.Windows.Forms.Padding(3);
@@ -964,9 +969,9 @@
             // 
             this.SalesProductGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.SalesProductGrid.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.SalesProductGrid.Location = new System.Drawing.Point(3, 3);
+            this.SalesProductGrid.Location = new System.Drawing.Point(3, 39);
             this.SalesProductGrid.Name = "SalesProductGrid";
-            this.SalesProductGrid.Size = new System.Drawing.Size(715, 367);
+            this.SalesProductGrid.Size = new System.Drawing.Size(709, 325);
             this.SalesProductGrid.TabIndex = 0;
             // 
             // InventoryProduct
@@ -1069,22 +1074,63 @@
             this.RestockMachineGrid.Size = new System.Drawing.Size(715, 367);
             this.RestockMachineGrid.TabIndex = 0;
             // 
-            // Export
+            // PDFSalesByProduct
             // 
-            this.Export.Location = new System.Drawing.Point(924, 120);
-            this.Export.Name = "Export";
-            this.Export.Size = new System.Drawing.Size(75, 23);
-            this.Export.TabIndex = 1;
-            this.Export.Text = "Export";
-            this.Export.UseVisualStyleBackColor = true;
-            this.Export.Click += new System.EventHandler(this.Export_Click);
+            this.PDFSalesByProduct.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.PDFSalesByProduct.Location = new System.Drawing.Point(3, 3);
+            this.PDFSalesByProduct.Name = "PDFSalesByProduct";
+            this.PDFSalesByProduct.Size = new System.Drawing.Size(92, 23);
+            this.PDFSalesByProduct.TabIndex = 1;
+            this.PDFSalesByProduct.Text = "Create PDF";
+            this.PDFSalesByProduct.UseVisualStyleBackColor = true;
+            this.PDFSalesByProduct.Click += new System.EventHandler(this.Export_Click);
+            // 
+            // tableLayoutPanel6
+            // 
+            this.tableLayoutPanel6.ColumnCount = 1;
+            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel6.Controls.Add(this.SalesProductGrid, 0, 1);
+            this.tableLayoutPanel6.Controls.Add(this.tableLayoutPanel7, 0, 0);
+            this.tableLayoutPanel6.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel6.Location = new System.Drawing.Point(3, 3);
+            this.tableLayoutPanel6.Name = "tableLayoutPanel6";
+            this.tableLayoutPanel6.RowCount = 2;
+            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 90F));
+            this.tableLayoutPanel6.Size = new System.Drawing.Size(715, 367);
+            this.tableLayoutPanel6.TabIndex = 1;
+            // 
+            // tableLayoutPanel7
+            // 
+            this.tableLayoutPanel7.ColumnCount = 3;
+            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15F));
+            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15F));
+            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 70F));
+            this.tableLayoutPanel7.Controls.Add(this.CSVSalesByProduct, 1, 0);
+            this.tableLayoutPanel7.Controls.Add(this.PDFSalesByProduct, 0, 0);
+            this.tableLayoutPanel7.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel7.Location = new System.Drawing.Point(3, 3);
+            this.tableLayoutPanel7.Name = "tableLayoutPanel7";
+            this.tableLayoutPanel7.RowCount = 1;
+            this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel7.Size = new System.Drawing.Size(709, 30);
+            this.tableLayoutPanel7.TabIndex = 1;
+            // 
+            // CSVSalesByProduct
+            // 
+            this.CSVSalesByProduct.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.CSVSalesByProduct.Location = new System.Drawing.Point(109, 3);
+            this.CSVSalesByProduct.Name = "CSVSalesByProduct";
+            this.CSVSalesByProduct.Size = new System.Drawing.Size(92, 23);
+            this.CSVSalesByProduct.TabIndex = 2;
+            this.CSVSalesByProduct.Text = "Create CSV";
+            this.CSVSalesByProduct.UseVisualStyleBackColor = true;
             // 
             // StartUp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1062, 590);
-            this.Controls.Add(this.Export);
             this.Controls.Add(this.MainField);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.label4);
@@ -1146,6 +1192,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.SalesCityMachineGrid)).EndInit();
             this.RestockMachine.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.RestockMachineGrid)).EndInit();
+            this.tableLayoutPanel6.ResumeLayout(false);
+            this.tableLayoutPanel7.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1224,10 +1272,13 @@
         private System.Windows.Forms.Button button19;
         private System.Windows.Forms.TabPage SalesCityMachine;
         private System.Windows.Forms.DataGridView SalesCityMachineGrid;
-        private System.Windows.Forms.Button Export;
+        private System.Windows.Forms.Button PDFSalesByProduct;
         private System.Windows.Forms.Button button10;
         private System.Windows.Forms.TabPage RestockMachine;
         private System.Windows.Forms.DataGridView RestockMachineGrid;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel6;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel7;
+        private System.Windows.Forms.Button CSVSalesByProduct;
 
     }
 }

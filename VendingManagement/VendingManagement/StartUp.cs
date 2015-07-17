@@ -20,7 +20,7 @@ namespace VendingManagement
 
         protected bool businessVisited = false;
 
-        
+
         public StartUp()
         {
             InitializeComponent();
@@ -178,7 +178,7 @@ namespace VendingManagement
                     MainField.SelectTab(MainTab2);
                     CityTabs.SelectTab(ItemSalesByCity);
                     break;
-                
+
                 //Machine
                 case "Machine":
                     MainField.SelectTab(MainTab3);
@@ -206,12 +206,12 @@ namespace VendingManagement
             {
                 List<Transactions> data;
                 data = this.database.SelectAllTransactions();
-                
+
 
                 TransactionsDataGrid.DataSource = data;
                 this.TransactionsDataGrid.Columns["Amount"].DefaultCellStyle.Format = "c";
 
-               
+
             }
             else if (BusinessTabs.SelectedTab == BusinessEmployees)
             {
@@ -342,8 +342,8 @@ namespace VendingManagement
             }
             else if (ReportTabs.SelectedTab == RestockMachine)
             {
-                
-                List<Machine> machineList; 
+
+                List<Machine> machineList;
                 ReportManager report = new ReportManager();
                 machineList = this.database.SelectAllMachine();
                 DataTable subtotals = report.reportRestockByMachine(machineList);
@@ -462,7 +462,7 @@ namespace VendingManagement
         }
 
 
-        // Export button
+        // Export buttons
         private void Export_Click(object sender, EventArgs e)
         {
             Export export = new Export();
