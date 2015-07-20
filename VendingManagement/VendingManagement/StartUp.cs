@@ -634,7 +634,7 @@ namespace VendingManagement
         //CHARTING FUNCTIONS
         private void GraphSalesByProduct_Click(object sender, EventArgs e)
         {
-            ChartSalesByProduct chartSales = new ChartSalesByProduct();
+            ChartSalesByProduct chartSales = new ChartSalesByProduct(this.database);
             chartSales.Show();
         }
     }

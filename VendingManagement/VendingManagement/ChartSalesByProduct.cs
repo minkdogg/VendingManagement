@@ -13,11 +13,12 @@ namespace VendingManagement
 {
     public partial class ChartSalesByProduct : Form
     {
-        Database database = new Database();
+        Database database;
 
-        public ChartSalesByProduct()
+        public ChartSalesByProduct(Database database)
         {
             InitializeComponent();
+            this.database = database;
         }
 
         private void chart1_Click(object sender, EventArgs e)
@@ -27,34 +28,27 @@ namespace VendingManagement
 
         private void ChartSalesByProduct_Load(object sender, EventArgs e)
         {
-            List<Product> data;
+            List<Transactions> data;
             ReportManager report = new ReportManager();
-            data = this.database.SelectAllProduct();
+            data = this.database.SelectAllTransactions();
+            DataTable subtotals = report.reportSalesByItem(data);
 
-            DataTable subtotals = report.reportInventoryCostItem(data);
+            SalesByProduct.DataSource = subtotals;
 
-            this.SalesByProduct.Titles.Add("Net Profit by Product");
+            SalesByProduct.Titles.Add("Net Profit by Product");
 
             string productName = subtotals.Columns[0].ToString();
             SalesByProduct.Series["Series 1"].XValueMember = productName;
 
-            //string netProfit = subtotals.Columns[1].ToString();
-            //SalesByProduct.Series["Series 1"].YValueMember = netProfit;
-            
-            /*
-            string[] seriesArray = { "Cats", "Dogs" };
-            int[] pointsArray = { 1, 2 };
+            string netProfit = subtotals.Columns[1].ToString();
+            SalesByProduct.Series["Series 1"].YValueMembers = netProfit;
 
-            this.SalesByProduct.Palette = ChartColorPalette.SeaGreen;
+            SalesByProduct.DataBind();
+        }
 
-            this.SalesByProduct.Titles.Add("Pets");
+        private void SalesByProduct_Click(object sender, EventArgs e)
+        {
 
-            for (int i = 0; i < seriesArray.Length; i++)
-            {
-                Series series = this.SalesByProduct.Series.Add(seriesArray[i]);
-                series.Points.Add(pointsArray[i]);    
-            }
-            */
         }
     }
 }

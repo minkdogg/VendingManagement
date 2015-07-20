@@ -51,6 +51,7 @@
             this.SalesByProduct.Size = new System.Drawing.Size(575, 503);
             this.SalesByProduct.TabIndex = 0;
             this.SalesByProduct.Text = "chart1";
+            this.SalesByProduct.Click += new System.EventHandler(this.SalesByProduct_Click);
             // 
             // ChartSalesByProduct
             // 
