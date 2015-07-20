@@ -1,25 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" dslVersion="1.0.0.0" Id="42e2f7a7-d89b-431e-a991-8007045b1332" name="VendingManagement_TransferManager_UML" linkedPackageId="2311b9b9-d897-4c11-9cc8-5326b6fde308" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
-  <profileInstances>
-    <packageHasProfileInstances Id="7f677175-cbf4-438e-9749-c71bc342acd1">
-      <profileInstance Id="a84367df-76e5-4235-ad8d-1ca19e441a53" name="StandardProfileL2">
-        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
-      </profileInstance>
-      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
-    </packageHasProfileInstances>
-    <packageHasProfileInstances Id="18942fe2-541f-4dda-b9bf-f029cff99d42">
-      <profileInstance Id="a825706f-ee29-40e5-82c3-abde01235ea1" name="StandardProfileL3">
-        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
-      </profileInstance>
-      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
-    </packageHasProfileInstances>
-    <packageHasProfileInstances Id="9b4d482c-50f7-4a1e-9aac-e8f72be7d3f6">
-      <profileInstance Id="c52402d8-35f1-40bb-b3ce-a9be66af20fd" name="CSharpProfile">
-        <elementDefinition Id="701c543c-cb60-4240-b9b2-0cf2c16086e8" />
-      </profileInstance>
-      <elementDefinition Id="d947b216-c83a-482e-87c8-e06f3eccf543" />
-    </packageHasProfileInstances>
-  </profileInstances>
   <packagedElements>
     <logicalClassDesignerModelHasTypes>
       <class Id="25dd06cd-4589-4424-b36b-bb76f09d570b" name="Program" visibility="Package" isAbstract="false" isLeaf="false" isActiveClass="false">
@@ -28271,5 +28251,25 @@
   </packagedElements>
   <package Id="2311b9b9-d897-4c11-9cc8-5326b6fde308" name="VendingManagement_Database_UML">
     <elementDefinition Id="1047b597-414b-44f4-813a-c206b771b084" />
+    <profileInstances>
+      <packageHasProfileInstances Id="7f677175-cbf4-438e-9749-c71bc342acd1">
+        <profileInstance Id="a84367df-76e5-4235-ad8d-1ca19e441a53" name="StandardProfileL2">
+          <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+        </profileInstance>
+        <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="18942fe2-541f-4dda-b9bf-f029cff99d42">
+        <profileInstance Id="a825706f-ee29-40e5-82c3-abde01235ea1" name="StandardProfileL3">
+          <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+        </profileInstance>
+        <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="9b4d482c-50f7-4a1e-9aac-e8f72be7d3f6">
+        <profileInstance Id="c52402d8-35f1-40bb-b3ce-a9be66af20fd" name="CSharpProfile">
+          <elementDefinition Id="701c543c-cb60-4240-b9b2-0cf2c16086e8" />
+        </profileInstance>
+        <elementDefinition Id="d947b216-c83a-482e-87c8-e06f3eccf543" />
+      </packageHasProfileInstances>
+    </profileInstances>
   </package>
 </logicalClassDesignerModel>

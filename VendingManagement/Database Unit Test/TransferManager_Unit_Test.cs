@@ -9,7 +9,7 @@ namespace Database_Unit_Test
     public class TransferManager_Unit_Test
     {
         [TestMethod]
-        public void BuyStock()
+        public void BuyStock_UnitTest()
         {
             // Init
             Database database = new Database();
@@ -28,7 +28,7 @@ namespace Database_Unit_Test
         }
 
         [TestMethod]
-        public void TransferToMachine()
+        public void TransferToMachine_UnitTest()
         {
             // Init
             Database database = new Database();
@@ -54,7 +54,7 @@ namespace Database_Unit_Test
             Assert.AreEqual(listTransactions[2].Amount, -1.25);
         }
         [TestMethod]
-        public void TransferFromMachine()
+        public void TransferFromMachine_UnitTest()
         {
             // Init
             Database database = new Database();
@@ -82,6 +82,32 @@ namespace Database_Unit_Test
         }
 
 
+        [TestMethod]
+        public void MachineSale_UnitTest()
+        {
+            // Init
+            Database database = new Database();
+            TransferManager transferManager = new TransferManager(database);
+            Machine machine = new Machine("Milwaukee", "The Mall", "M101");
+            database.Append(machine);
+            transferManager.buyStock("Snickers", 5, .25f);
+            List<Product> listProduct = database.SelectAllProduct();
+            transferManager.TransferToMachine(machine, listProduct);
+            List<Product> listProductBefore = machine.selectAllProductByType("Snickers");
+            int startingCount = listProductBefore.Count;
+
+            // Action
+            transferManager.machineSale(machine, listProductBefore[0]);
+
+            // Assert
+            List<Product> listProductAfter = machine.selectAllProductByType("Snickers");
+            List<Transactions> listTransactionsAfter = database.SelectAllTransactions();
+            int endingCount = listProductAfter.Count;
+            int transactionCount = listTransactionsAfter.Count;
+            Assert.AreEqual(startingCount - 1, endingCount);
+            Assert.AreEqual(5, transactionCount);
+            
+        }
 
     }
 }
