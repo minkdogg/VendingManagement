@@ -12,19 +12,19 @@ namespace Employee_Unit_Test
         public void TestEmployeeFullName()
         {
             Database database = new Database();
-            Employee employee1 = new Employee("Jeff", "Steiner", "EIO987", "Brookfield");
+            Employee employee1 = new Employee("Jeff", "Test", "EIO987", "Brookfield");
 
             database.Append(employee1);
             
             List<Employee> EmployeeList = database.SelectAllEmployee();
-            Assert.AreEqual("Jeff Steiner", EmployeeList[0].FullName);
+            Assert.AreEqual("Jeff Test", EmployeeList[0].FullName);
         }
 
         [TestMethod]
         public void TestEmployeeDateToday()
         {
             Database database = new Database();
-            Employee employee1 = new Employee("Jeff", "Steiner", "EIO987", "Brookfield");
+            Employee employee1 = new Employee("Jeff", "Test", "EIO987", "Brookfield");
 
             database.Append(employee1);
 
@@ -38,7 +38,7 @@ namespace Employee_Unit_Test
         public void TestEmployeeDateType()
         {
             Database database = new Database();
-            Employee employee1 = new Employee("Jeff", "Steiner", "EIO987", "Brookfield");
+            Employee employee1 = new Employee("Jeff", "Test", "EIO987", "Brookfield");
 
             database.Append(employee1);
 
@@ -47,8 +47,6 @@ namespace Employee_Unit_Test
             List<Employee> EmployeeList = database.SelectAllEmployee();
             Assert.IsInstanceOfType(EmployeeList[0].DateStarted, typeof(DateTime));
         }
-
-
 
 
 
